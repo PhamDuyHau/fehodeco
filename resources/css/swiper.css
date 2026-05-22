@@ -1,0 +1,90 @@
+/* swiper.css */
+.swiper-navigation {
+  /* Using your exact base setup */
+  @apply flex w-fit items-center justify-center gap-4;
+}
+
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  /* CHANGED: Made it 48px (w-12 h-12) to match your layout, added border, text color, and rounded circle */
+  @apply flex h-[48px] w-[48px] shrink-0 items-center justify-center rounded-full border border-gray-400 text-gray-700 bg-transparent transition-all duration-300 cursor-pointer;
+}
+
+.swiper-button-prev-custom i,
+.swiper-button-next-custom i {
+  /* Using your exact icon setup */
+  @apply text-[18px];
+}
+
+.swiper-button-prev-custom:hover,
+.swiper-button-next-custom:hover {
+  /* CHANGED: Replaced low opacity with your requested hover fill bg-primary and white text */
+  @apply bg-primary text-white border-primary opacity-100;
+}
+
+.swiper-pagination-custom {
+  @apply flex items-center justify-center gap-3;
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet {
+  @apply h-[12px] w-[12px] rounded-full border bg-transparent opacity-100 transition-all duration-300;
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet-active {
+  @apply bg-white;
+}
+
+.img-slider {
+  @apply relative w-full py-8 md:py-12 overflow-visible;
+
+  .swiper-slide {
+    @apply flex items-center justify-center transition-all duration-500;
+  }
+
+  .inner-content {
+    @apply relative w-full aspect-video overflow-hidden rounded-xl
+           scale-[0.9]
+           transition-transform duration-500;
+  }
+
+  .overlay {
+    @apply absolute inset-0 bg-black/50 transition-opacity duration-500;
+  }
+
+  .slide-caption {
+    @apply absolute left-4 bottom-4 md:left-8 md:bottom-8
+           z-10 text-white
+           opacity-0 translate-y-4
+           transition-all duration-500;
+
+    h4 {
+      @apply text-[14px] sm:text-[16px] md:text-[20px] lg:text-[24px]
+             font-bold uppercase leading-tight;
+    }
+
+    p {
+      @apply text-[11px] sm:text-[13px] md:text-[15px] lg:text-[16px]
+             opacity-80;
+    }
+
+    hr {
+      @apply my-2 md:my-3 border-white/30;
+    }
+  }
+
+  .swiper-slide-active {
+    z-index: 10;
+
+    .inner-content {
+      @apply scale-105 md:scale-115 lg:scale-125 xl:scale-135;
+    }
+
+    .overlay {
+      @apply opacity-0;
+    }
+
+    .slide-caption {
+      @apply opacity-100 translate-y-0;
+    }
+  }
+}

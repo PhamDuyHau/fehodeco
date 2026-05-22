@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hodeco</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header class="absolute top-0 left-0 w-full z-999">
+        <div class="relative bg-[linear-gradient(180deg,#057DCD_0%,rgba(5,125,205,0)_59.29%)]">
+
+            <div class="flex items-center justify-between gap-5 px-6 py-3">
+
+                <div class="lg:hidden">
+                    <button id="menuBtn" class="text-white text-2xl">☰</button>
+                </div>
+
+                <div class="absolute left-1/2 -translate-x-1/2 lg:hidden">
+                    <a href="index.html">
+                        <img src="/resources/img/hodeco-logo.png" class="h-12 object-contain" alt="Logo" />
+                    </a>
+                </div>
+
+                <div class="hidden lg:flex items-center gap-4 mx-auto">
+
+                    <a href="index.html" class="shrink-0">
+                        <img src="/resources/img/hodeco-logo.png" class="h-12 object-contain" alt="Logo" />
+                    </a>
+
+                    <nav>
+                        <ul class="menu">
+                            <li><a href="about.html">Giới thiệu</a></li>
+                            <li><a href="project.html">Dự án</a></li>
+                            <li><a href="shareholder.html">Quan hệ cổ đông</a></li>
+                            <li><a href="exchange.html">Sàn giao dịch BĐS</a></li>
+                            <li><a href="recruitment.html">Tuyển dụng</a></li>
+                            <li><a href="news.html">Tin tức</a></li>
+                            <li><a href="contact.html">Liên hệ</a></li>
+                        </ul>
+                    </nav>
+                    <span class="w-px h-5 bg-white/40"></span>
+
+                    <div class="relative">
+                        <img src="/resources/img/search.png" id="searchBtn" class="w-5 h-5 cursor-pointer" />
+                        <div id="searchBox" class="hidden absolute right-0 top-[40px]">
+                            <input type="text" placeholder="Search..."
+                                class="w-[220px] h-[40px] px-4 rounded-lg shadow-lg outline-none text-black" />
+                        </div>
+                    </div>
+
+                    <span class="w-px h-5 bg-white/40"></span>
+
+                    <div class="flex items-center gap-2">
+                        <a href="https://facebook.com" target="_blank"><img src="/resources/img/facebook-icon.png"
+                                class="w-5 h-5"></a>
+                        <a href="https://linkedin.com" target="_blank"><img src="/resources/img/linkedin-icon.png"
+                                class="w-5 h-5"></a>
+                        <a href="https://youtube.com" target="_blank"><img src="/resources/img/youtube-icon.png"
+                                class="w-5 h-5"></a>
+                    </div>
+
+                    <span class="w-px h-5 bg-white/40"></span>
+
+                    <div class="flex items-center gap-2">
+                        <img src="/resources/img/vi.png" class="w-6 h-4 object-cover cursor-pointer">
+                        <img src="/resources/img/en.png" class="w-6 h-4 object-cover cursor-pointer">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div id="mobileMenu"
+            class="fixed top-0 left-[-320px] w-[320px] h-full bg-white z-[1000] transition-all duration-300 p-4">
+            <div class="flex items-center justify-between mb-4">
+                <a href="index.html">
+                    <img src="/resources/img/hodeco-logo.png" class="h-10" alt="Home">
+                </a>
+                <button id="closeMenu" class="text-2xl">✕</button>
+            </div>
+            <div class="mb-4">
+                <input type="text" placeholder="Search..."
+                    class="w-full h-[40px] px-4 border rounded-full outline-none" />
+            </div>
+            <ul class="flex flex-col gap-3 mb-6">
+                <li><a href="about.html" class="block py-2 border-b">Giới thiệu</a></li>
+                <li><a href="project.html" class="block py-2 border-b">Dự án</a></li>
+                <li><a href="shareholder.html" class="block py-2 border-b">Quan hệ cổ đông</a></li>
+                <li><a href="exchange.html" class="block py-2 border-b">Sàn giao dịch BĐS</a></li>
+                <li><a href="recruitment.html" class="block py-2 border-b">Tuyển dụng</a></li>
+                <li><a href="news.html" class="block py-2 border-b">Tin tức</a></li>
+                <li><a href="contact.html" class="block py-2 border-b">Liên hệ</a></li>
+            </ul>
+            <div class="flex gap-4">
+                <a href="https://facebook.com" target="_blank"><img src="/resources/img/facebook-icon.png"
+                        class="w-5 h-5"></a>
+                <a href="https://linkedin.com" target="_blank"><img src="/resources/img/linkedin-icon.png"
+                        class="w-5 h-5"></a>
+                <a href="https://youtube.com" target="_blank"><img src="/resources/img/youtube-icon.png"
+                        class="w-5 h-5"></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="w-full">
+        <img src="/resources/img/exchange/exchange-breadcrumb.png" class="w-auto  object-cover" />
+    </section>
+
+    <section class="section container exchange_cate">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+            <div class="text-left" data-animate="slide-in-left">
+                <h2 class="heading-title mt-2 max-w-2xl">
+                    Bất động sản cho thuê
+                </h2>
+            </div>
+
+            <div class="flex justify-end" data-animate="slide-in-right" x-data>
+                <button @click="$dispatch('open-contact-modal')"
+                    class="bg-red-600 text-white px-10 py-3 rounded-full text-sm font-semibold hover:bg-red-700 transition shadow-lg">
+                    Liên hệ ngay
+                </button>
+            </div>
+        </div>
+
+        <div data-animate="reveal-up">
+            <div class="swiper mt-6 w-full" data-fx-slider data-swiper-options='{
+                "slidesPerView": 3,
+                "spaceBetween": 20,
+                "navigation": { "nextEl": ".swiper-button-next-custom", "prevEl": ".swiper-button-prev-custom" },
+                "breakpoints": {
+                    "0": { "slidesPerView": 1 },
+                    "768": { "slidesPerView": 2 },
+                    "1024": { "slidesPerView": 3 }
+                }
+            }'>
+                <div class="swiper-wrapper !items-stretch">
+
+                    <div class="swiper-slide h-full">
+                        <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative h-full p-2">
+                            <div class="h-64 overflow-hidden mx-2 rounded-[24px]">
+                                <img src="resources/img/exchange/exchange-card-1.jpg" class="w-full h-full object-cover" alt="Hodeco Plaza">
+                            </div>
+                            <div class="px-4 py-4 min-h-[80px]">
+                                <h3 class="text-[18px] font-bold text-[#333] leading-tight">Dự án HODECO Plaza - 36 Nguyễn Thái Học</h3>
+                            </div>
+                            <div class="px-6 pt-2 pb-20 flex-1">
+                                <div class="space-y-2 text-[15px] text-gray-600">
+                                    <p class="flex items-start gap-2">
+                                        <span class="mt-1.5 w-1 h-1 bg-gray-600 rounded-full shrink-0"></span>
+                                        <span><strong>Vị trí tọa đặt:</strong> Thành phố Dĩ An</span>
+                                    </p>
+                                    <p class="flex items-start gap-2">
+                                        <span class="mt-1.5 w-1 h-1 bg-gray-600 rounded-full shrink-0"></span>
+                                        <span><strong>Tiến độ:</strong> Đang thực hiện</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <a href="project_detail.html" class="card-corner">
+                                <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
+                                    <i class="fa-solid fa-arrow-right rotate-[-45deg] transition-transform group-hover:scale-110"></i>
+                                </div>
+                            </a>
+                            <div class="absolute left-6 bottom-6 right-24 flex items-center">
+                                <span class="h-[1px] bg-gray-300 flex-1"></span>
+                                <span class="ml-2 text-gray-400 text-sm whitespace-nowrap">Xem thêm</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide h-full">
+                        <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative h-full p-2">
+                            <div class="h-64 overflow-hidden mx-2 rounded-[24px]">
+                                <img src="resources/img/exchange/exchange-card-2.jpg" class="w-full h-full object-cover" alt="Nam Ky Khoi Nghia">
+                            </div>
+                            <div class="px-4 py-4 min-h-[80px]">
+                                <h3 class="text-[18px] font-bold text-[#333] leading-tight">Dự án Chung cư lô A - B Nam Kỳ Khởi Nghĩa</h3>
+                            </div>
+                            <div class="px-6 pt-2 pb-20 flex-1">
+                                <div class="space-y-2 text-[15px] text-gray-600">
+                                    <p class="flex items-start gap-2">
+                                        <span class="mt-1.5 w-1 h-1 bg-gray-600 rounded-full shrink-0"></span>
+                                        <span><strong>Vị trí tọa đặt:</strong> Thành phố Dĩ An</span>
+                                    </p>
+                                    <p class="flex items-start gap-2">
+                                        <span class="mt-1.5 w-1 h-1 bg-gray-600 rounded-full shrink-0"></span>
+                                        <span><strong>Tiến độ:</strong> Đang thực hiện</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <a href="project_detail.html" class="card-corner">
+                                <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
+                                    <i class="fa-solid fa-arrow-right rotate-[-45deg] transition-transform group-hover:scale-110"></i>
+                                </div>
+                            </a>
+                            <div class="absolute left-6 bottom-6 right-24 flex items-center">
+                                <span class="h-[1px] bg-gray-300 flex-1"></span>
+                                <span class="ml-2 text-gray-400 text-sm whitespace-nowrap">Xem thêm</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide h-full">
+                        <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative h-full p-2">
+                            <div class="h-64 overflow-hidden mx-2 rounded-[24px]">
+                                <img src="resources/img/exchange/exchange-card-3.jpg" class="w-full h-full object-cover" alt="Binh An">
+                            </div>
+                            <div class="px-4 py-4 min-h-[80px]">
+                                <h3 class="text-[18px] font-bold text-[#333] leading-tight">Dự án Chung cư Bình An</h3>
+                            </div>
+                            <div class="px-6 pt-2 pb-20 flex-1">
+                                <div class="space-y-2 text-[15px] text-gray-600">
+                                    <p class="flex items-start gap-2">
+                                        <span class="mt-1.5 w-1 h-1 bg-gray-600 rounded-full shrink-0"></span>
+                                        <span><strong>Vị trí tọa đặt:</strong> Thành phố Dĩ An</span>
+                                    </p>
+                                    <p class="flex items-start gap-2">
+                                        <span class="mt-1.5 w-1 h-1 bg-gray-600 rounded-full shrink-0"></span>
+                                        <span><strong>Tiến độ:</strong> Đang thực hiện</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <a href="project_detail.html" class="card-corner">
+                                <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
+                                    <i class="fa-solid fa-arrow-right rotate-[-45deg] transition-transform group-hover:scale-110"></i>
+                                </div>
+                            </a>
+                            <div class="absolute left-6 bottom-6 right-24 flex items-center">
+                                <span class="h-[1px] bg-gray-300 flex-1"></span>
+                                <span class="ml-2 text-gray-400 text-sm whitespace-nowrap">Xem thêm</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide h-full">
+                        <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative h-full p-2">
+                            <div class="h-64 overflow-hidden mx-2 rounded-[24px]">
+                                <img src="resources/img/exchange/exchange-card-1.jpg" class="w-full h-full object-cover" alt="Hodeco Plaza">
+                            </div>
+                            <div class="px-4 py-4 min-h-[80px]">
+                                <h3 class="text-[18px] font-bold text-[#333] leading-tight">Dự án HODECO Plaza - 36 Nguyễn Thái Học</h3>
+                            </div>
+                            <div class="px-6 pt-2 pb-20 flex-1">
+                                <div class="space-y-2 text-[15px] text-gray-600">
+                                    <p class="flex items-start gap-2">
+                                        <span class="mt-1.5 w-1 h-1 bg-gray-600 rounded-full shrink-0"></span>
+                                        <span><strong>Vị trí tọa đặt:</strong> Thành phố Dĩ An</span>
+                                    </p>
+                                    <p class="flex items-start gap-2">
+                                        <span class="mt-1.5 w-1 h-1 bg-gray-600 rounded-full shrink-0"></span>
+                                        <span><strong>Tiến độ:</strong> Đang thực hiện</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <a href="project_detail.html" class="card-corner">
+                                <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
+                                    <i class="fa-solid fa-arrow-right rotate-[-45deg] transition-transform group-hover:scale-110"></i>
+                                </div>
+                            </a>
+                            <div class="absolute left-6 bottom-6 right-24 flex items-center">
+                                <span class="h-[1px] bg-gray-300 flex-1"></span>
+                                <span class="ml-2 text-gray-400 text-sm whitespace-nowrap">Xem thêm</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide h-full">
+                        <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative h-full p-2">
+                            <div class="h-64 overflow-hidden mx-2 rounded-[24px]">
+                                <img src="resources/img/exchange/exchange-card-2.jpg" class="w-full h-full object-cover" alt="Nam Ky Khoi Nghia">
+                            </div>
+                            <div class="px-4 py-4 min-h-[80px]">
+                                <h3 class="text-[18px] font-bold text-[#333] leading-tight">Dự án Chung cư lô A - B Nam Kỳ Khởi Nghĩa</h3>
+                            </div>
+                            <div class="px-6 pt-2 pb-20 flex-1">
+                                <div class="space-y-2 text-[15px] text-gray-600">
+                                    <p class="flex items-start gap-2">
+                                        <span class="mt-1.5 w-1 h-1 bg-gray-600 rounded-full shrink-0"></span>
+                                        <span><strong>Vị trí tọa đặt:</strong> Thành phố Dĩ An</span>
+                                    </p>
+                                    <p class="flex items-start gap-2">
+                                        <span class="mt-1.5 w-1 h-1 bg-gray-600 rounded-full shrink-0"></span>
+                                        <span><strong>Tiến độ:</strong> Đang thực hiện</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <a href="project_detail.html" class="card-corner">
+                                <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
+                                    <i class="fa-solid fa-arrow-right rotate-[-45deg] transition-transform group-hover:scale-110"></i>
+                                </div>
+                            </a>
+                            <div class="absolute left-6 bottom-6 right-24 flex items-center">
+                                <span class="h-[1px] bg-gray-300 flex-1"></span>
+                                <span class="ml-2 text-gray-400 text-sm whitespace-nowrap">Xem thêm</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide h-full">
+                        <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative h-full p-2">
+                            <div class="h-64 overflow-hidden mx-2 rounded-[24px]">
+                                <img src="resources/img/exchange/exchange-card-3.jpg" class="w-full h-full object-cover" alt="Binh An">
+                            </div>
+                            <div class="px-4 py-4 min-h-[80px]">
+                                <h3 class="text-[18px] font-bold text-[#333] leading-tight">Dự án Chung cư Bình An</h3>
+                            </div>
+                            <div class="px-6 pt-2 pb-20 flex-1">
+                                <div class="space-y-2 text-[15px] text-gray-600">
+                                    <p class="flex items-start gap-2">
+                                        <span class="mt-1.5 w-1 h-1 bg-gray-600 rounded-full shrink-0"></span>
+                                        <span><strong>Vị trí tọa đặt:</strong> Thành phố Dĩ An</span>
+                                    </p>
+                                    <p class="flex items-start gap-2">
+                                        <span class="mt-1.5 w-1 h-1 bg-gray-600 rounded-full shrink-0"></span>
+                                        <span><strong>Tiến độ:</strong> Đang thực hiện</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <a href="project_detail.html" class="card-corner">
+                                <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
+                                    <i class="fa-solid fa-arrow-right rotate-[-45deg] transition-transform group-hover:scale-110"></i>
+                                </div>
+                            </a>
+                            <div class="absolute left-6 bottom-6 right-24 flex items-center">
+                                <span class="h-[1px] bg-gray-300 flex-1"></span>
+                                <span class="ml-2 text-gray-400 text-sm whitespace-nowrap">Xem thêm</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="swiper-navigation mx-auto mt-8">
+                    <button class="swiper-button-prev-custom">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <button class="swiper-button-next-custom">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section container exchange_team">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+            <div class="text-left" data-animate="slide-in-left">
+                <h2 class="heading-title mt-2 max-w-2xl">
+                    Đơn vị phân phối
+                </h2>
+            </div>
+            <div class="flex justify-end" data-animate="slide-in-right">
+                <button
+                    class="bg-red-600 text-white px-10 py-3 rounded-full text-sm font-semibold hover:bg-red-700 transition shadow-lg">
+                    Đăng ký làm đại lý
+                </button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="group relative aspect-4/5 border border-[#999999] rounded-2xl overflow-hidden cursor-pointer"
+                data-animate="reveal-up">
+                <img src="resources/img/exchange/exchange-logo-1.png"
+                    class="w-full h-full object-contain p-8 transition-opacity duration-300 group-hover:opacity-10"
+                    alt="Logo">
+                <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 text-center">
+                    <span class="text-gray-800 font-bold">HODECO HUB là đơn vị trực thuộc với 100% vốn từ công ty mẹ
+                        HODECO. Điều này giúp doanh nghiệp không chỉ kế thừa nguồn lực tài chính mạnh mẽ mà còn thụ
+                        hưởng trọn vẹn uy tín và kinh nghiệm quản trị từ một trong những doanh nghiệp đã gắn bó với thị
+                        trường hơn ba thập kỷ.</span>
+                </div>
+            </div>
+
+            <div class="group relative aspect-4/5 border border-[#999999] rounded-2xl overflow-hidden cursor-pointer"
+                data-animate="reveal-up">
+                <img src="resources/img/exchange/exchange-logo-2.png"
+                    class="w-full h-full object-contain p-8 transition-opacity duration-300 group-hover:opacity-10"
+                    alt="Logo">
+                <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 text-center">
+                    <span class="text-gray-800 font-bold">HODECO HUB là đơn vị trực thuộc với 100% vốn từ công ty mẹ
+                        HODECO. Điều này giúp doanh nghiệp không chỉ kế thừa nguồn lực tài chính mạnh mẽ mà còn thụ
+                        hưởng trọn vẹn uy tín và kinh nghiệm quản trị từ một trong những doanh nghiệp đã gắn bó với thị
+                        trường hơn ba thập kỷ.</span>
+                </div>
+            </div>
+
+            <div class="group relative aspect-4/5 border border-[#999999] rounded-2xl overflow-hidden cursor-pointer"
+                data-animate="reveal-up">
+                <img src="resources/img/exchange/exchange-logo-3.png"
+                    class="w-full h-full object-contain p-8 transition-opacity duration-300 group-hover:opacity-10"
+                    alt="Logo">
+                <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 text-center">
+                    <span class="text-gray-800 font-bold">HODECO HUB là đơn vị trực thuộc với 100% vốn từ công ty mẹ
+                        HODECO. Điều này giúp doanh nghiệp không chỉ kế thừa nguồn lực tài chính mạnh mẽ mà còn thụ
+                        hưởng trọn vẹn uy tín và kinh nghiệm quản trị từ một trong những doanh nghiệp đã gắn bó với thị
+                        trường hơn ba thập kỷ.</span>
+                </div>
+            </div>
+
+            <div class="group relative aspect-4/5 border border-[#999999] rounded-2xl overflow-hidden cursor-pointer"
+                data-animate="reveal-up">
+                <img src="resources/img/about/about-partners-1.png"
+                    class="w-full h-full object-contain p-8 transition-opacity duration-300 group-hover:opacity-10"
+                    alt="Logo">
+                <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 text-center">
+                    <span class="text-gray-800 font-bold">HODECO HUB là đơn vị trực thuộc với 100% vốn từ công ty mẹ
+                        HODECO. Điều này giúp doanh nghiệp không chỉ kế thừa nguồn lực tài chính mạnh mẽ mà còn thụ
+                        hưởng trọn vẹn uy tín và kinh nghiệm quản trị từ một trong những doanh nghiệp đã gắn bó với thị
+                        trường hơn ba thập kỷ.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section container exchange_cate">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+            <div class="text-left" data-animate="slide-in-left">
+                <h2 class="heading-title mt-2 max-w-2xl">
+                    Hợp tác chuyển nhượng
+                </h2>
+            </div>
+
+            <div class="flex justify-end" data-animate="slide-in-right" x-data>
+                <button @click="$dispatch('open-contact-modal')"
+                    class="bg-red-600 text-white px-10 py-3 rounded-full text-sm font-semibold hover:bg-red-700 transition shadow-lg">
+                    Liên hệ ngay
+                </button>
+            </div>
+        </div>
+
+        <div data-animate="reveal-up">
+            <div class="swiper mt-6 w-full" data-fx-slider data-swiper-options='{
+                "slidesPerView": 3,
+                "spaceBetween": 20,
+                "navigation": { "nextEl": ".swiper-button-next-custom", "prevEl": ".swiper-button-prev-custom" },
+                "breakpoints": {
+                    "0": { "slidesPerView": 1 },
+                    "768": { "slidesPerView": 2 },
+                    "1024": { "slidesPerView": 3 }
+                }
+            }'>
+                <div class="swiper-wrapper !items-stretch">
+
+                    <div class="swiper-slide h-full">
+                        <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative h-full p-2">
+                            <div class="h-64 overflow-hidden mx-2 rounded-[24px]">
+                                <img src="resources/img/exchange/exchange-card-1.jpg" class="w-full h-full object-cover" alt="Hodeco Plaza">
+                            </div>
+                            <div class="px-4 py-4 min-h-[80px]">
+                                <h3 class="text-[18px] font-bold text-[#333] leading-tight">Dự án HODECO Plaza - 36 Nguyễn Thái Học</h3>
+                            </div>
+                            <div class="px-6 pt-2 pb-20 flex-1">
+                                <div class="space-y-2 text-[15px] text-gray-600">
+                                    <p class="flex items-start gap-2">
+                                        <span class="mt-1.5 w-1 h-1 bg-gray-600 rounded-full shrink-0"></span>
+                                        <span><strong>Vị trí tọa đặt:</strong> Thành phố Dĩ An</span>
+                                    </p>
+                                    <p class="flex items-start gap-2">
+                                        <span class="mt-1.5 w-1 h-1 bg-gray-600 rounded-full shrink-0"></span>
+                                        <span><strong>Tiến độ:</strong> Đang thực hiện</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <a href="project_detail.html" class="card-corner">
+                                <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
+                                    <i class="fa-solid fa-arrow-right rotate-[-45deg] transition-transform group-hover:scale-110"></i>
+                                </div>
+                            </a>
+                            <div class="absolute left-6 bottom-6 right-24 flex items-center">
+                                <span class="h-[1px] bg-gray-300 flex-1"></span>
+                                <span class="ml-2 text-gray-400 text-sm whitespace-nowrap">Xem thêm</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide h-full">
+                        <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative h-full p-2">
+                            <div class="h-64 overflow-hidden mx-2 rounded-[24px]">
+                                <img src="resources/img/exchange/exchange-card-2.jpg" class="w-full h-full object-cover" alt="Nam Ky Khoi Nghia">
+                            </div>
+                            <div class="px-4 py-4 min-h-[80px]">
+                                <h3 class="text-[18px] font-bold text-[#333] leading-tight">Dự án Chung cư lô A - B Nam Kỳ Khởi Nghĩa</h3>
+                            </div>
+                            <div class="px-6 pt-2 pb-20 flex-1">
+                                <div class="space-y-2 text-[15px] text-gray-600">
+                                    <p class="flex items-start gap-2">
+                                        <span class="mt-1.5 w-1 h-1 bg-gray-600 rounded-full shrink-0"></span>
+                                        <span><strong>Vị trí tọa đặt:</strong> Thành phố Dĩ An</span>
+                                    </p>
+                                    <p class="flex items-start gap-2">
+                                        <span class="mt-1.5 w-1 h-1 bg-gray-600 rounded-full shrink-0"></span>
+                                        <span><strong>Tiến độ:</strong> Đang thực hiện</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <a href="project_detail.html" class="card-corner">
+                                <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
+                                    <i class="fa-solid fa-arrow-right rotate-[-45deg] transition-transform group-hover:scale-110"></i>
+                                </div>
+                            </a>
+                            <div class="absolute left-6 bottom-6 right-24 flex items-center">
+                                <span class="h-[1px] bg-gray-300 flex-1"></span>
+                                <span class="ml-2 text-gray-400 text-sm whitespace-nowrap">Xem thêm</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide h-full">
+                        <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative h-full p-2">
+                            <div class="h-64 overflow-hidden mx-2 rounded-[24px]">
+                                <img src="resources/img/exchange/exchange-card-3.jpg" class="w-full h-full object-cover" alt="Binh An">
+                            </div>
+                            <div class="px-4 py-4 min-h-[80px]">
+                                <h3 class="text-[18px] font-bold text-[#333] leading-tight">Dự án Chung cư Bình An</h3>
+                            </div>
+                            <div class="px-6 pt-2 pb-20 flex-1">
+                                <div class="space-y-2 text-[15px] text-gray-600">
+                                    <p class="flex items-start gap-2">
+                                        <span class="mt-1.5 w-1 h-1 bg-gray-600 rounded-full shrink-0"></span>
+                                        <span><strong>Vị trí tọa đặt:</strong> Thành phố Dĩ An</span>
+                                    </p>
+                                    <p class="flex items-start gap-2">
+                                        <span class="mt-1.5 w-1 h-1 bg-gray-600 rounded-full shrink-0"></span>
+                                        <span><strong>Tiến độ:</strong> Đang thực hiện</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <a href="project_detail.html" class="card-corner">
+                                <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
+                                    <i class="fa-solid fa-arrow-right rotate-[-45deg] transition-transform group-hover:scale-110"></i>
+                                </div>
+                            </a>
+                            <div class="absolute left-6 bottom-6 right-24 flex items-center">
+                                <span class="h-[1px] bg-gray-300 flex-1"></span>
+                                <span class="ml-2 text-gray-400 text-sm whitespace-nowrap">Xem thêm</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide h-full">
+                        <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative h-full p-2">
+                            <div class="h-64 overflow-hidden mx-2 rounded-[24px]">
+                                <img src="resources/img/exchange/exchange-card-1.jpg" class="w-full h-full object-cover" alt="Hodeco Plaza">
+                            </div>
+                            <div class="px-4 py-4 min-h-[80px]">
+                                <h3 class="text-[18px] font-bold text-[#333] leading-tight">Dự án HODECO Plaza - 36 Nguyễn Thái Học</h3>
+                            </div>
+                            <div class="px-6 pt-2 pb-20 flex-1">
+                                <div class="space-y-2 text-[15px] text-gray-600">
+                                    <p class="flex items-start gap-2">
+                                        <span class="mt-1.5 w-1 h-1 bg-gray-600 rounded-full shrink-0"></span>
+                                        <span><strong>Vị trí tọa đặt:</strong> Thành phố Dĩ An</span>
+                                    </p>
+                                    <p class="flex items-start gap-2">
+                                        <span class="mt-1.5 w-1 h-1 bg-gray-600 rounded-full shrink-0"></span>
+                                        <span><strong>Tiến độ:</strong> Đang thực hiện</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <a href="project_detail.html" class="card-corner">
+                                <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
+                                    <i class="fa-solid fa-arrow-right rotate-[-45deg] transition-transform group-hover:scale-110"></i>
+                                </div>
+                            </a>
+                            <div class="absolute left-6 bottom-6 right-24 flex items-center">
+                                <span class="h-[1px] bg-gray-300 flex-1"></span>
+                                <span class="ml-2 text-gray-400 text-sm whitespace-nowrap">Xem thêm</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide h-full">
+                        <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative h-full p-2">
+                            <div class="h-64 overflow-hidden mx-2 rounded-[24px]">
+                                <img src="resources/img/exchange/exchange-card-2.jpg" class="w-full h-full object-cover" alt="Nam Ky Khoi Nghia">
+                            </div>
+                            <div class="px-4 py-4 min-h-[80px]">
+                                <h3 class="text-[18px] font-bold text-[#333] leading-tight">Dự án Chung cư lô A - B Nam Kỳ Khởi Nghĩa</h3>
+                            </div>
+                            <div class="px-6 pt-2 pb-20 flex-1">
+                                <div class="space-y-2 text-[15px] text-gray-600">
+                                    <p class="flex items-start gap-2">
+                                        <span class="mt-1.5 w-1 h-1 bg-gray-600 rounded-full shrink-0"></span>
+                                        <span><strong>Vị trí tọa đặt:</strong> Thành phố Dĩ An</span>
+                                    </p>
+                                    <p class="flex items-start gap-2">
+                                        <span class="mt-1.5 w-1 h-1 bg-gray-600 rounded-full shrink-0"></span>
+                                        <span><strong>Tiến độ:</strong> Đang thực hiện</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <a href="project_detail.html" class="card-corner">
+                                <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
+                                    <i class="fa-solid fa-arrow-right rotate-[-45deg] transition-transform group-hover:scale-110"></i>
+                                </div>
+                            </a>
+                            <div class="absolute left-6 bottom-6 right-24 flex items-center">
+                                <span class="h-[1px] bg-gray-300 flex-1"></span>
+                                <span class="ml-2 text-gray-400 text-sm whitespace-nowrap">Xem thêm</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide h-full">
+                        <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative h-full p-2">
+                            <div class="h-64 overflow-hidden mx-2 rounded-[24px]">
+                                <img src="resources/img/exchange/exchange-card-3.jpg" class="w-full h-full object-cover" alt="Binh An">
+                            </div>
+                            <div class="px-4 py-4 min-h-[80px]">
+                                <h3 class="text-[18px] font-bold text-[#333] leading-tight">Dự án Chung cư Bình An</h3>
+                            </div>
+                            <div class="px-6 pt-2 pb-20 flex-1">
+                                <div class="space-y-2 text-[15px] text-gray-600">
+                                    <p class="flex items-start gap-2">
+                                        <span class="mt-1.5 w-1 h-1 bg-gray-600 rounded-full shrink-0"></span>
+                                        <span><strong>Vị trí tọa đặt:</strong> Thành phố Dĩ An</span>
+                                    </p>
+                                    <p class="flex items-start gap-2">
+                                        <span class="mt-1.5 w-1 h-1 bg-gray-600 rounded-full shrink-0"></span>
+                                        <span><strong>Tiến độ:</strong> Đang thực hiện</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <a href="project_detail.html" class="card-corner">
+                                <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
+                                    <i class="fa-solid fa-arrow-right rotate-[-45deg] transition-transform group-hover:scale-110"></i>
+                                </div>
+                            </a>
+                            <div class="absolute left-6 bottom-6 right-24 flex items-center">
+                                <span class="h-[1px] bg-gray-300 flex-1"></span>
+                                <span class="ml-2 text-gray-400 text-sm whitespace-nowrap">Xem thêm</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="swiper-navigation mx-auto mt-8">
+                    <button class="swiper-button-prev-custom">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <button class="swiper-button-next-custom">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div x-data="{ isOpen: false }" @open-contact-modal.window="isOpen = true" x-show="isOpen"
+        class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm" x-cloak>
+
+        <div @click.away="isOpen = false"
+            class="bg-[#0b418d] w-full max-w-5xl rounded-[40px] overflow-hidden shadow-2xl flex flex-col md:flex-row relative">
+
+            <button @click="isOpen = false" class="absolute top-6 right-6 text-white/50 hover:text-white">
+                <i class="fa-solid fa-xmark text-2xl"></i>
+            </button>
+
+            <div class="p-10 md:w-5/12 text-white">
+                <h2 class="text-4xl font-bold mb-6">Thông tin liên hệ</h2>
+                <p class="text-white/80 mb-8 leading-relaxed">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+                <h4 class="text-xl font-semibold mb-6">Hodeco luôn chào đón bạn!</h4>
+
+                <div class="space-y-4">
+                    <div
+                        class="bg-gradient-to-r from-[#3b82f6] to-[#60a5fa] p-4 rounded-2xl flex items-center justify-between">
+                        <div>
+                            <p class="text-xs opacity-80">Hotline</p>
+                            <p class="font-bold">0254.3856.274</p>
+                        </div>
+                        <div class="w-10 h-10 flex items-center justify-center">
+                            <i class="fa-solid fa-headset text-2xl"></i>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-gradient-to-r from-[#f59e0b] to-[#fbbf24] p-4 rounded-2xl flex items-center justify-between">
+                        <div>
+                            <p class="text-xs opacity-80">Email</p>
+                            <p class="font-bold">info@hodeco.vn</p>
+                        </div>
+                        <div class="w-10 h-10 flex items-center justify-center">
+                            <i class="fa-solid fa-envelope text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-10 md:w-7/12">
+                <div class="border border-white/20 rounded-[30px] p-8 h-full">
+                    <form action="#" class="space-y-6">
+                        <div class="relative border-b border-white/40 pb-2 flex items-center gap-3">
+                            <i class="fa-regular fa-user text-white/60"></i>
+                            <input type="text" placeholder="Họ & tên"
+                                class="bg-transparent w-full text-white placeholder-white/60 focus:outline-none">
+                        </div>
+                        <div class="relative border-b border-white/40 pb-2 flex items-center gap-3">
+                            <i class="fa-regular fa-envelope text-white/60"></i>
+                            <input type="email" placeholder="Email"
+                                class="bg-transparent w-full text-white placeholder-white/60 focus:outline-none">
+                        </div>
+                        <div class="relative border-b border-white/40 pb-2 flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-white/60"></i>
+                            <input type="text" placeholder="Số điện thoại"
+                                class="bg-transparent w-full text-white placeholder-white/60 focus:outline-none">
+                        </div>
+
+                        <div class="relative border-b border-white/40 pb-2 flex items-start gap-3">
+                            <i class="fa-regular fa-pen-to-square mt-1 text-white/60"></i>
+                            <textarea placeholder="Nội dung" rows="4"
+                                class="bg-transparent w-full text-white placeholder-white/60 focus:outline-none resize-none"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="mt-4 bg-white text-[#0b418d] px-8 py-3 rounded-full font-bold flex items-center gap-3 hover:bg-gray-100 transition">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Gửi thông tin
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" class="site-footer" itemtype="" itemscope>
+        <div id="footer-main-wrap" class="footer-main-wrap bg-primary text-white relative overflow-hidden">
+            <img src="/resources/img/bg-footer-left.png"
+                class="absolute left-0 top-0 pointer-events-none select-none z-0 w-[120px] md:w-[160px] xl:w-auto"
+                alt="">
+            <img src="/resources/img/bg-footer-right.png"
+                class="absolute right-0 bottom-0 pointer-events-none select-none z-0 w-[240px] md:w-[320px] xl:w-auto"
+                alt="">
+            <div class="container pt-16 relative z-10">
+                <div class="footer-brand-overlay text-center overflow-hidden">
+                    <span
+                        class="text-[12vw] font-semibold uppercase tracking-widest text-transparent block leading-none select-none"
+                        style="-webkit-text-stroke: 1px rgba(255,255,255,0.2); font-size: clamp(40px, 15vw, 220px);">
+                        hodeco
+                    </span>
+                </div>
+
+                <div
+                    class="footer-address-container p-8 md:p-12 rounded-3xl border border-white/20 bg-white/5 backdrop-blur-sm relative">
+                    <div
+                        class="footer-address-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 md:gap-x-12">
+
+                        <div class="address-item flex flex-col relative">
+                            <h4 class="address-title text-lg font-bold uppercase mb-4">Trụ sở chính</h4>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-start gap-3">
+                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                                    <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28
+                                        3456 7890</a>
+                                </div>
+                            </div>
+                            <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                            <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+                        </div>
+
+                        <div class="address-item flex flex-col relative">
+                            <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Gò Vấp</h4>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-start gap-3">
+                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                                    <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28
+                                        3456 7890</a>
+                                </div>
+                            </div>
+                            <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                            <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+                        </div>
+
+                        <div class="address-item flex flex-col relative">
+                            <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Thạnh</h4>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-start gap-3">
+                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                                    <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28
+                                        3456 7890</a>
+                                </div>
+                            </div>
+                            <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                            <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+                        </div>
+
+                        <div class="address-item flex flex-col relative">
+                            <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Tân</h4>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-start gap-3">
+                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                                    <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28
+                                        3456 7890</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-credit py-8 relative z-10">
+                <div class="container flex flex-col items-center justify-center gap-4 text-center">
+                    <div class="footer-copyright text-sm text-white">
+                        <span class="copyright">© 2026 Hodeco,&nbsp;</span>
+                        <span class="hd">
+                            design by
+                            <a class="hover:text-white transition-colors" href="https://webhd.vn/" target="_blank"
+                                rel="noopener noreferrer nofollow">
+                                HD Agency
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script type="module" src="/resources/js/main.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</body>
+
+
+
+</html>

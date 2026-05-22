@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hodeco</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header class="absolute top-0 left-0 w-full z-999">
+        <div class="relative bg-[linear-gradient(180deg,#057DCD_0%,rgba(5,125,205,0)_59.29%)]">
+
+            <div class="flex items-center justify-between gap-5 px-6 py-3">
+
+                <div class="lg:hidden">
+                    <button id="menuBtn" class="text-white text-2xl">☰</button>
+                </div>
+
+                <div class="absolute left-1/2 -translate-x-1/2 lg:hidden">
+                    <a href="index.html">
+                        <img src="/resources/img/hodeco-logo.png" class="h-12 object-contain" alt="Logo" />
+                    </a>
+                </div>
+
+                <div class="hidden lg:flex items-center gap-4 mx-auto">
+
+                    <a href="index.html" class="shrink-0">
+                        <img src="/resources/img/hodeco-logo.png" class="h-12 object-contain" alt="Logo" />
+                    </a>
+
+                    <nav>
+                        <ul class="menu">
+                            <li><a href="about.html">Giới thiệu</a></li>
+                            <li><a href="project.html">Dự án</a></li>
+                            <li><a href="shareholder.html">Quan hệ cổ đông</a></li>
+                            <li><a href="exchange.html">Sàn giao dịch BĐS</a></li>
+                            <li><a href="recruitment.html">Tuyển dụng</a></li>
+                            <li><a href="news.html">Tin tức</a></li>
+                            <li><a href="contact.html">Liên hệ</a></li>
+                        </ul>
+                    </nav>
+                    <span class="w-px h-5 bg-white/40"></span>
+
+                    <div class="relative">
+                        <img src="/resources/img/search.png" id="searchBtn" class="w-5 h-5 cursor-pointer" />
+                        <div id="searchBox" class="hidden absolute right-0 top-[40px]">
+                            <input type="text" placeholder="Search..."
+                                class="w-[220px] h-[40px] px-4 rounded-lg shadow-lg outline-none text-black" />
+                        </div>
+                    </div>
+
+                    <span class="w-px h-5 bg-white/40"></span>
+
+                    <div class="flex items-center gap-2">
+                        <a href="https://facebook.com" target="_blank"><img src="/resources/img/facebook-icon.png"
+                                class="w-5 h-5"></a>
+                        <a href="https://linkedin.com" target="_blank"><img src="/resources/img/linkedin-icon.png"
+                                class="w-5 h-5"></a>
+                        <a href="https://youtube.com" target="_blank"><img src="/resources/img/youtube-icon.png"
+                                class="w-5 h-5"></a>
+                    </div>
+
+                    <span class="w-px h-5 bg-white/40"></span>
+
+                    <div class="flex items-center gap-2">
+                        <img src="/resources/img/vi.png" class="w-6 h-4 object-cover cursor-pointer">
+                        <img src="/resources/img/en.png" class="w-6 h-4 object-cover cursor-pointer">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div id="mobileMenu"
+            class="fixed top-0 left-[-320px] w-[320px] h-full bg-white z-[1000] transition-all duration-300 p-4">
+            <div class="flex items-center justify-between mb-4">
+                <a href="index.html">
+                    <img src="/resources/img/hodeco-logo.png" class="h-10" alt="Home">
+                </a>
+                <button id="closeMenu" class="text-2xl">✕</button>
+            </div>
+            <div class="mb-4">
+                <input type="text" placeholder="Search..."
+                    class="w-full h-[40px] px-4 border rounded-full outline-none" />
+            </div>
+            <ul class="flex flex-col gap-3 mb-6">
+                <li><a href="about.html" class="block py-2 border-b">Giới thiệu</a></li>
+                <li><a href="project.html" class="block py-2 border-b">Dự án</a></li>
+                <li><a href="shareholder.html" class="block py-2 border-b">Quan hệ cổ đông</a></li>
+                <li><a href="exchange.html" class="block py-2 border-b">Sàn giao dịch BĐS</a></li>
+                <li><a href="recruitment.html" class="block py-2 border-b">Tuyển dụng</a></li>
+                <li><a href="news.html" class="block py-2 border-b">Tin tức</a></li>
+                <li><a href="contact.html" class="block py-2 border-b">Liên hệ</a></li>
+            </ul>
+            <div class="flex gap-4">
+                <a href="https://facebook.com" target="_blank"><img src="/resources/img/facebook-icon.png"
+                        class="w-5 h-5"></a>
+                <a href="https://linkedin.com" target="_blank"><img src="/resources/img/linkedin-icon.png"
+                        class="w-5 h-5"></a>
+                <a href="https://youtube.com" target="_blank"><img src="/resources/img/youtube-icon.png"
+                        class="w-5 h-5"></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="w-full overflow-hidden">
+        <img src="/resources/img/about/about-breadcrumb.png" class="w-full h-auto object-cover" alt="" decoding="async"
+            fetchpriority="high" />
+    </section>
+
+    <section
+        class="section container relative mx-auto px-4 py-16 about_vision relative overflow-hidden py-16 bg-[#FAF8F5]">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-12 items-center">
+                <div class="rounded-[24px] overflow-hidden shadow-sm" data-animate="slide-in-left">
+                    <div class="aspect-square w-full">
+                        <img src="/resources/img/about/about-vision-left.webp" class="w-full h-full object-contain"
+                            loading="lazy" decoding="async" alt="HODECO Project View" />
+                    </div>
+                </div>
+
+                <div class="content flex flex-col justify-between h-full min-h-[350px] py-4"
+                    data-animate="slide-in-right">
+
+                    <div>
+                        <h2 class="heading-title">
+                            Tầm nhìn
+                        </h2>
+
+                        <div class="flex items-center gap-6 w-full">
+                            <div class="w-24 h-[3px] bg-[#0B3A7F] mt-[10px] flex-shrink-0"></div>
+
+                            <p class="text-[14px] lg:text-[15px] text-[#555] leading-relaxed max-w-[500px]">
+                                Với khát vọng tiên phong phát triển một xã hội thịnh vượng, giá trị nhân sinh bền vững,
+                                HODECO nỗ lực trở thành tập đoàn kinh tế tư nhân hàng đầu, kiến tạo hệ sinh thái
+                                Bất động sản đa dạng, góp phần nâng tầm vị thế Việt Nam trên trường Quốc tế.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 lg:mt-16 flex items-end gap-5">
+                        <div class="text-[64px] lg:text-[80px] font-bold text-[#0B3A7F] leading-none tracking-tight">
+                            1991
+                        </div>
+
+                        <div class="mb-1.5">
+                            <span class="block text-[13px] text-[#888] font-medium leading-none mb-1">
+                                Hành trình
+                            </span>
+                            <h4 class="text-[18px] lg:text-[20px] font-bold text-[#333] leading-tight">
+                                35 năm kiến tạo giá trị
+                            </h4>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section about-mission relative overflow-hidden text-white bg-[#1a202c] py-16 px-4">
+        <div class="absolute inset-0 z-0">
+            <img src="resources/img/about/about-bg-mission.webp" class="w-full h-full object-cover"
+                alt="City Background">
+        </div>
+
+        <div class="container mx-auto relative z-10">
+
+            <div class="mb-12 text-left">
+                <h2 class="heading-title text-white tracking-wide">
+                    Sứ mệnh của chúng tôi
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-10 md:gap-y-12 mb-24">
+
+                <div class="flex flex-col gap-y-10 md:gap-y-12 pr-0 md:pr-12 md:border-r md:border-white/20">
+                    <div class="flex items-start gap-4 md:gap-5">
+                        <div class="w-8 h-8 md:w-10 md:h-10 flex-shrink-0 mt-1">
+                            <img src="resources/img/about/about-diamond-icon.png" class="w-full h-full object-contain"
+                                alt="Diamond Icon">
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-[16px] uppercase tracking-wider text-white mb-1">Với khách hàng
+                            </h3>
+                            <p class="text-[14px] text-[#ccc] leading-relaxed">
+                                Kiến tạo những sản phẩm, dịch vụ chất lượng, mang đến trải nghiệm tốt nhất, góp phần
+                                nâng cao chất lượng cuộc sống.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 md:gap-5">
+                        <div class="w-8 h-8 md:w-10 md:h-10 flex-shrink-0 mt-1">
+                            <img src="resources/img/about/about-diamond-icon.png" class="w-full h-full object-contain"
+                                alt="Diamond Icon">
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-[16px] uppercase tracking-wider text-white mb-1">Với đối tác
+                            </h3>
+                            <p class="text-[14px] text-[#ccc] leading-relaxed">
+                                Xây dựng mối quan hệ hợp tác tin cậy, cùng phát triển bền vững, đôi bên cùng có lợi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 md:gap-5">
+                        <div class="w-8 h-8 md:w-10 md:h-10 flex-shrink-0 mt-1">
+                            <img src="resources/img/about/about-diamond-icon.png" class="w-full h-full object-contain"
+                                alt="Diamond Icon">
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-[16px] uppercase tracking-wider text-white mb-1">Với Nhà đầu tư
+                            </h3>
+                            <p class="text-[14px] text-[#ccc] leading-relaxed">
+                                Hoạt động minh bạch, hiệu quả, bền vững, nâng cao giá trị doanh nghiệp, đảm bảo lợi ích
+                                tối ưu.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-y-10 md:gap-y-12 pl-0 md:pl-12">
+                    <div class="flex items-start gap-4 md:gap-5">
+                        <div class="w-8 h-8 md:w-10 md:h-10 flex-shrink-0 mt-1">
+                            <img src="resources/img/about/about-diamond-icon.png" class="w-full h-full object-contain"
+                                alt="Diamond Icon">
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-[16px] uppercase tracking-wider text-white mb-1">Với khách hàng
+                            </h3>
+                            <p class="text-[14px] text-[#ccc] leading-relaxed">
+                                Kiến tạo những sản phẩm, dịch vụ chất lượng, mang đến trải nghiệm tốt nhất, góp phần
+                                nâng cao chất lượng cuộc sống.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 md:gap-5">
+                        <div class="w-8 h-8 md:w-10 md:h-10 flex-shrink-0 mt-1">
+                            <img src="resources/img/about/about-diamond-icon.png" class="w-full h-full object-contain"
+                                alt="Diamond Icon">
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-[16px] uppercase tracking-wider text-white mb-1">Với đối tác
+                            </h3>
+                            <p class="text-[14px] text-[#ccc] leading-relaxed">
+                                Xây dựng mối quan hệ hợp tác tin cậy, cùng phát triển bền vững, đôi bên cùng có lợi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 md:gap-5">
+                        <div class="w-8 h-8 md:w-10 md:h-10 flex-shrink-0 mt-1">
+                            <img src="resources/img/about/about-diamond-icon.png" class="w-full h-full object-contain"
+                                alt="Diamond Icon">
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-[16px] uppercase tracking-wider text-white mb-1">Với Nhà đầu tư
+                            </h3>
+                            <p class="text-[14px] text-[#ccc] leading-relaxed">
+                                Hoạt động minh bạch, hiệu quả, bền vững, nâng cao giá trị doanh nghiệp, đảm bảo lợi ích
+                                tối ưu.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12 text-center">
+                <h2 class="text-[36px] md:text-[44px] font-semibold text-white tracking-wide">
+                    Giá trị cốt lõi
+                </h2>
+                <div class="w-24 h-[2px] bg-white/40 mx-auto mt-4"></div>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-6 lg:gap-6">
+
+                <div
+                    class="group w-full sm:w-[calc(50%-12px)] lg:w-[calc(20%-20px)] min-h-[380px] p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:bg-[#003366] hover:border-[#003366] hover:-translate-y-1 flex flex-col justify-start">
+                    <h3
+                        class="text-xl font-semibold tracking-wide text-white mb-4 group-hover:text-white transition-colors duration-200">
+                        “Danh dự”
+                    </h3>
+                    <p
+                        class="text-[14px] text-[#ccc] leading-relaxed group-hover:text-white/90 transition-colors duration-200">
+                        Hodeco coi danh dự là điều thiêng liêng, là giá trị cao nhất, là thước đo của mọi hành động.
+                        Hodeco bảo vệ danh dự của mình bằng cách luôn trung thực, chính trực, minh bạch và uy tín trong
+                        mọi hoạt động kinh doanh. Hodeco cam kết bảo tồn...
+                    </p>
+                </div>
+
+                <div
+                    class="group w-full sm:w-[calc(50%-12px)] lg:w-[calc(20%-20px)] min-h-[380px] p-6 rounded-xl border border-[#003366] bg-[#003366] transition-all duration-300 hover:-translate-y-1 flex flex-col justify-start">
+                    <h3 class="text-xl font-semibold tracking-wide text-white mb-4">
+                        Tinh hoa
+                    </h3>
+                    <p class="text-[14px] text-white/90 leading-relaxed">
+                        Hodeco khao khát quy tụ những con người tinh hoa, tài năng, tâm huyết, có khát vọng cống hiến,
+                        say mê học tập và phù hợp với hệ tư tưởng cốt lõi của công ty. Hodeco tin rằng chính những con
+                        người tinh hoa này, cùng chung chí hướng và chia sẻ những giá trị này, sẽ kiến tạo nên hệ thống
+                        quản trị tốt nhất, sản xuất được sản phẩm, dịch vụ tinh tế, chất lượng cao, mang đến những trải
+                        nghiệm tuyệt vời cho khách hàng và đối tác.
+                    </p>
+                </div>
+
+                <div
+                    class="group w-full sm:w-[calc(50%-12px)] lg:w-[calc(20%-20px)] min-h-[380px] p-6 rounded-xl border border white/10 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:bg-[#003366] hover:border-[#003366] hover:-translate-y-1 flex flex-col justify-start">
+                    <h3
+                        class="text-xl font-semibold tracking-wide text-white mb-4 group-hover:text-white transition-colors duration-200">
+                        “Kỷ luật”
+                    </h3>
+                    <p
+                        class="text-[14px] text-[#ccc] leading-relaxed group-hover:text-white/90 transition-colors duration-200">
+                        Hodeco tin tưởng vào sức mạnh của kỷ luật, coi đó là nền tảng cho sự chuyên nghiệp và hiệu quả.
+                        Kỷ luật luôn được thể hiện trong ý thức và hành động của con người Hodeco: Tuân thủ nội quy, quy
+                        định, quy trình của công ty, pháp luật của nhà nước...
+                    </p>
+                </div>
+
+                <div
+                    class="group w-full sm:w-[calc(50%-12px)] lg:w-[calc(20%-20px)] min-h-[380px] p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:bg-[#003366] hover:border-[#003366] hover:-translate-y-1 flex flex-col justify-start">
+                    <h3
+                        class="text-xl font-semibold tracking-wide text-white mb-4 group-hover:text-white transition-colors duration-200">
+                        “Nhân văn”
+                    </h3>
+                    <p
+                        class="text-[14px] text-[#ccc] leading-relaxed group-hover:text-white/90 transition-colors duration-200">
+                        Hodeco đặt con người làm trọng tâm, vun đắp mối quan hệ hài hòa, thân thiện giữa các thành viên,
+                        đối tác, khách hàng và cộng đồng, dựa trên sự tôn trọng, thấu hiểu và trách nhiệm. Hodeco hướng
+                        tới xây dựng một môi trường làm việc khô...
+                    </p>
+                </div>
+
+                <div
+                    class="group w-full sm:w-[calc(50%-12px)] lg:w-[calc(20%-20px)] min-h-[380px] p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:bg-[#003366] hover:border-[#003366] hover:-translate-y-1 flex flex-col justify-start">
+                    <h3
+                        class="text-xl font-semibold tracking-wide text-white mb-4 group-hover:text-white transition-colors duration-200">
+                        “Năng động”
+                    </h3>
+                    <p
+                        class="text-[14px] text-[#ccc] leading-relaxed group-hover:text-white/90 transition-colors duration-200">
+                        Kiên định với hệ tư tưởng cốt lõi trong mọi hoàn cảnh, con người Hodeco luôn chủ động nắm bắt
+                        thông tin, nhanh chóng thích ứng với những thay đổi của thị trường, linh hoạt điều chỉnh chiến
+                        lược, đưa ra quyết định kịp thời, hành động nhanh v...
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section relative w-full overflow-visible mb-40">
+
+        <img src="resources/img/about/bg-about-year-1.png"
+            class="absolute top-[20%] right-0 pointer-events-none select-none" alt="">
+        <img src="resources/img/about/bg-about-year-2.png"
+            class="absolute top-[45%] left-[30%] pointer-events-none select-none" alt="">
+        <img src="resources/img/about/bg-about-year-3.png"
+            class="absolute bottom-[-7%] right-0 pointer-events-none select-none" alt="">
+
+        <div class="pl-8 lg:pl-20 relative z-10">
+            <div class="flex flex-col max-w-max">
+                <div class="flex items-baseline gap-6">
+                    <strong class="font-['Boheme'] font-normal text-transparent bg-clip-text bg-primary shrink-0"
+                        style="font-size: clamp(120px, 25vw, 450px); line-height: 0.85;">
+                        36
+                    </strong>
+                    <span class="text-[#333333] font-['Montserrat'] font-medium shrink-0 pb-2 lg:pb-6"
+                        style="font-size: clamp(16px, 1.8vw, 24px); letter-spacing: 0.34em;">
+                        năm phát triển bền vững
+                    </span>
+                </div>
+                <p class="text-[#333333] font-['Montserrat'] font-medium mt-4 mb-2"
+                    style="font-size: clamp(16px, 1.8vw, 24px); letter-spacing: 0.34em;">
+                    1991 - 2026
+                </p>
+                <div class="h-px bg-[#333333] w-full"></div>
+            </div>
+        </div>
+
+       <div class="mt-8 w-full relative z-10 road-wrap">
+
+  <svg viewBox="0 0 2549.3333 964"
+       class="w-full h-auto block"
+       xmlns="http://www.w3.org/2000/svg"
+       xmlns:xlink="http://www.w3.org/1999/xlink">
+    <image width="2549.3333" height="964" preserveAspectRatio="none"
+      xlink:href="resources/img/about/about-road.png" />
+    <path
+      style="fill:#000000;fill-opacity:0"
+      d="M 2532.238,72.654929 C 1760.8136,168.81586 1527.8904,198.7326 1837.7423,243.6077 c 309.8519,44.87511 170.9528,192.32188 -589.787,232.92316 -760.73989,40.60128 -660.30514,130.35149 -660.30514,130.35149 0,0 433.79264,175.22659 -59.83347,200.86951 C 34.190555,833.39478 12.821458,844.07932 12.821458,844.07932"
+      id="motionPath" />
+  </svg>
+
+  <img id="dot-slot-0" src="" class="absolute w-20 h-20 object-contain pointer-events-none left-[64%] top-[7%]"  style="opacity:0" alt="">
+  <img id="dot-slot-1" src="" class="absolute w-24 h-24 object-contain pointer-events-none left-[46%] bottom-[46%]" style="opacity:0" alt="">
+  <img id="dot-slot-2" src="" class="absolute w-24 h-24 object-contain pointer-events-none left-[20%] bottom-[37%]" style="opacity:0" alt="">
+  <img id="dot-slot-3" src="" class="absolute w-30 h-30 object-contain pointer-events-none left-[17%] bottom-[15%]" style="opacity:0" alt="">
+
+  <div id="label-slot-0" class="absolute left-[54%] top-[-18%]" style="opacity:0">
+    <span class="label-year block text-[#E32219] font-bold text-xl lg:text-3xl"></span>
+    <span class="label-text block text-[#333333] text-xs lg:text-sm mt-1"></span>
+  </div>
+  <div id="label-slot-1" class="absolute left-[46%] bottom-[20%]" style="opacity:0">
+    <span class="label-year block text-[#E32219] font-bold text-xl lg:text-3xl"></span>
+    <span class="label-text block text-[#333333] text-xs lg:text-sm mt-1 leading-relaxed"></span>
+  </div>
+  <div id="label-slot-2" class="absolute left-[12%] top-[25%]" style="opacity:0">
+    <span class="label-year block text-[#E32219] font-bold text-xl lg:text-3xl"></span>
+    <span class="label-text block text-[#333333] text-xs lg:text-sm mt-1"></span>
+  </div>
+  <div id="label-slot-3" class="absolute left-[22%] bottom-[-6%]" style="opacity:0">
+    <span class="label-year block text-[#E32219] font-bold text-xl lg:text-3xl"></span>
+    <span class="label-text block text-[#333333] text-xs lg:text-sm mt-1"></span>
+  </div>
+
+  <button id="road-next" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white rounded-full w-10 h-10 flex items-center justify-center shadow transition">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#E32219]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+    </svg>
+  </button>
+  <!-- prev arrow -->
+  <button id="road-prev" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white rounded-full w-10 h-10 flex items-center justify-center shadow transition">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#E32219]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/>
+    </svg>
+  </button>
+
+</div>
+    </section>
+
+    <section class="section about-ceo container relative pt-8">
+        <div class="mb-16">
+            <h3 class="heading-title text-center mb-8" data-animate="reveal-up">Hội đồng quản trị</h3>
+            <div class="flex flex-wrap justify-center gap-6 lg:gap-8">
+
+                <div class="ceo-card">
+                    <img src="resources/img/about/about-ceo-1.jpg" alt="Ông Đoàn Hữu Thuận">
+                    <div class="ceo-overlay"></div>
+                    <div class="ceo-content">
+                        <h4 class="ceo-name">Ông Đoàn Hữu Thuận</h4>
+                        <p class="ceo-role">Chủ tịch Hội đồng quản trị</p>
+                    </div>
+                </div>
+
+                <div class="ceo-card">
+                    <img src="resources/img/about/about-ceo-2.jpg" alt="Ông Lê Viết Liên">
+                    <div class="ceo-overlay"></div>
+                    <div class="ceo-content">
+                        <h4 class="ceo-name">Ông Lê Viết Liên</h4>
+                        <p class="ceo-role">Thành viên Hội đồng quản trị</p>
+                    </div>
+                </div>
+
+                <div class="ceo-card">
+                    <img src="resources/img/about/about-ceo-3.jpg" alt="Ông Đoàn Hữu Hà Vinh">
+                    <div class="ceo-overlay"></div>
+                    <div class="ceo-content">
+                        <h4 class="ceo-name">Ông Đoàn Hữu Hà Vinh</h4>
+                        <p class="ceo-role">Thành viên Hội đồng quản trị</p>
+                    </div>
+                </div>
+
+                <div class="ceo-card">
+                    <img src="resources/img/about/about-ceo-4.jpg" alt="Ông Nguyễn Đình Huy">
+                    <div class="ceo-overlay"></div>
+                    <div class="ceo-content">
+                        <h4 class="ceo-name">Ông Nguyễn Đình Huy</h4>
+                        <p class="ceo-role">Thành viên Hội đồng quản trị</p>
+                    </div>
+                </div>
+
+                <div class="ceo-card">
+                    <img src="resources/img/about/about-ceo-5.jpg" alt="Ông Nguyễn Đình Huy">
+                    <div class="ceo-overlay"></div>
+                    <div class="ceo-content">
+                        <h4 class="ceo-name">Ông Nguyễn Đình Huy</h4>
+                        <p class="ceo-role">Thành viên Hội đồng quản trị</p>
+                    </div>
+                </div>
+
+                <div class="ceo-card">
+                    <img src="resources/img/about/about-ceo-6.jpg" alt="Ông Lê Quốc Trung">
+                    <div class="ceo-overlay"></div>
+                    <div class="ceo-content">
+                        <h4 class="ceo-name">Ông Lê Quốc Trung</h4>
+                        <p class="ceo-role">Thành viên Hội đồng quản trị</p>
+                    </div>
+                </div>
+
+                <div class="ceo-card">
+                    <img src="resources/img/about/about-ceo-7.jpg" alt="Ông Nguyễn Tuấn Anh">
+                    <div class="ceo-overlay"></div>
+                    <div class="ceo-content">
+                        <h4 class="ceo-name">Ông Nguyễn Tuấn Anh</h4>
+                        <p class="ceo-role">Thành viên Hội đồng quản trị</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <h3 class="heading-title text-center mb-8 mt-16" data-animate="reveal-up">Ban Tổng Giám đốc</h3>
+            <div class="flex flex-wrap justify-center gap-6 lg:gap-8">
+
+                <div class="ceo-card">
+                    <img src="resources/img/about/about-ceo-2.jpg" alt="Ông Lê Viết Liên">
+                    <div class="ceo-overlay"></div>
+                    <div class="ceo-content">
+                        <h4 class="ceo-name">Ông Lê Viết Liên</h4>
+                        <p class="ceo-role">Tổng Giám đốc</p>
+                    </div>
+                </div>
+
+                <div class="ceo-card">
+                    <img src="resources/img/about/about-ceo-3.jpg" alt="Ông Đoàn Hữu Hà Vinh">
+                    <div class="ceo-overlay"></div>
+                    <div class="ceo-content">
+                        <h4 class="ceo-name">Ông Đoàn Hữu Hà Vinh</h4>
+                        <p class="ceo-role">Phó Tổng Giám đốc</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section about-chart max-w-7xl mx-auto px-4">
+        <h2 class="heading-title text-center mb-10" data-animate="reveal-up">
+            Sơ đồ công ty
+        </h2>
+
+        <div class="w-full flex justify-center overflow-visible" data-animate="soft-scale">
+            <div class="relative flex flex-col items-center origin-top scale-[0.6] sm:scale-[0.75] md:scale-100">
+                <div class="relative flex flex-col items-center">
+                    <div class="flex flex-col items-center relative">
+
+                        <div class="blue-ball-wrap">
+                            <img src="resources/img/about/top-blue-ball.png" class="ball-arc" alt="">
+                            <div class="blue-ball">
+                                ĐẠI HỘI ĐỒNG CỔ ĐÔNG
+                            </div>
+                        </div>
+
+                        <div class="h-50 flex items-center justify-center">
+                            <img src="resources/img/svg/arrow-down.svg" alt="">
+                        </div>
+
+                        <div class="blue-ball-wrap">
+                            <img src="resources/img/about/top-blue-ball.png" class="ball-arc" alt="">
+                            <div class="blue-ball">
+                                HỘI ĐỒNG QUẢN TRỊ
+                            </div>
+                        </div>
+
+                        <div class="h-50 flex items-center justify-center">
+                            <img src="resources/img/svg/arrow-down.svg" alt="">
+                        </div>
+
+                        <div class="blue-ball-wrap">
+                            <img src="resources/img/about/bottom-blue-ball.png" class="ball-arc-bottom" alt="">
+                            <div class="blue-ball">
+                                BAN TỔNG GIÁM ĐỐC
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="absolute inset-0 block">
+
+                        <!-- NO blue-ball-wrap, NO ball-arc — plain blue-ball only -->
+                        <div
+                            class="blue-ball absolute top-[180px] left-[calc(50%+100px)] sm:left-[calc(50%+220px)] md:left-[calc(50%+280px)]">
+                            BAN KIỂM SOÁT
+                            <div class="absolute right-[110%] top-1/2 -translate-y-1/2 w-[60%] sm:w-[150%] md:w-max">
+                                <img src="resources/img/svg/arrow-left.svg" alt="">
+                            </div>
+                        </div>
+
+                        <div
+                            class="blue-ball text-sm absolute bottom-[22%] right-[calc(50%+100px)] sm:right-[calc(50%+200px)] md:right-[calc(50%+280px)]">
+                            TIỂU BAN NGHIÊN CỨU CHIẾN LƯỢC ĐẦU TƯ
+                            <div class="absolute left-[110%] top-1/2 -translate-y-1/2 w-[60%] sm:w-[150%] md:w-max">
+                                <img src="resources/img/svg/arrow-right.svg" alt="">
+                            </div>
+                        </div>
+
+                        <div
+                            class="blue-ball absolute bottom-[22%] left-[calc(50%+100px)] sm:left-[calc(50%+200px)] md:left-[calc(50%+280px)]">
+                            BAN KIỂM TOÁN NỘI BỘ
+                            <div class="absolute right-[110%] top-1/2 -translate-y-1/2 w-[60%] sm:w-[150%] md:w-max">
+                                <img src="resources/img/svg/arrow-left.svg" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative z-0 w-full flex justify-center -mt-18 mb-8">
+            <div class="w-full relative">
+                <img src="resources/img/svg/dual-arrow-wide.svg" class="w-full max-w-[850px] mx-auto" alt="">
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 w-full px-4 items-start">
+
+            <div class="flex flex-col gap-3" data-animate="lift-in-stagger">
+                <div class="chart-pill-bg">KHỐI QUẢN LÝ DỰ ÁN</div>
+                <div class="chart-pill-border">Phòng quản lý đầu tư</div>
+                <div class="chart-pill-border">Phòng quản lý dự án</div>
+            </div>
+
+            <div class="dual-bridge" data-animate="lift-in-stagger">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex flex-col gap-3">
+                        <div class="chart-pill-bg">KHỐI KINH DOANH TÀI CHÍNH</div>
+                        <div class="chart-pill-border">Phòng kinh doanh</div>
+                        <div class="chart-pill-border">Ban quản lý nguồn vốn</div>
+                    </div>
+
+                    <div class="flex flex-col gap-3">
+                        <div class="chart-pill-bg">KHỐI VẬN HÀNH</div>
+                        <div class="chart-pill-border">Phòng kế toán</div>
+                        <div class="chart-pill-border">Phòng hành chính nhân sự</div>
+                        <div class="chart-pill-border">Ban pháp chế</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-3" data-animate="lift-in-stagger">
+                <div class="chart-pill-bg mb-2">KHỐI CÔNG TY CON, LIÊN KẾT</div>
+                <div class="chart-pill-border">Công ty HCC</div>
+                <div class="chart-pill-border">Công ty HCR</div>
+                <div class="chart-pill-border">Công ty HODECO HUB</div>
+                <div class="chart-pill-border">Công ty Ý Ngọc Biển Đá Vàng</div>
+                <div class="chart-pill-border">Công ty CP Xây lắp TTH</div>
+                <div class="chart-pill-border">CN QLKDKS HODECO</div>
+                <div class="chart-pill-border">Công ty Ngôi Sao Tam Thắng</div>
+                <div class="chart-pill-border">Công ty HODECO - Tây Ninh</div>
+                <div class="chart-pill-border">Công ty SI Property</div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section about-award">
+        <div class="container mx-auto px-4">
+            <div class="text-left mb-8">
+                <h2 class="heading-title">
+                    Minh chứng cho chất lượng và<br>
+                    niềm tin khách hàng
+                </h2>
+            </div>
+
+            <div class="award-grid-container">
+                <div>
+                    <div class="award-cover-wrap">
+                        <img src="/resources/img/about/about-card-award-left.png" alt="Giải thưởng thành tựu">
+                        <div class="award-cover-overlay">
+                            <div class="flex items-center gap-6 text-white text-[15px] font-semibold">
+                                <span class="border-b-2 border-white pb-1 cursor-pointer">Bằng khen</span>
+                                <span class="opacity-60 hover:opacity-100 transition-opacity cursor-pointer">Cúp lưu
+                                    niệm</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="award-right-matrix">
+
+                    <div class="award-item-box">
+                        <div class="award-img-frame">
+                            <img src="/resources/img/about/about-award-1.png" alt="Award 1">
+                        </div>
+                        <div class="award-text-frame">
+                            Năm 2019 - Huân chương Lao động Hạng Nhất
+                        </div>
+                    </div>
+
+                    <div class="award-item-box">
+                        <div class="award-img-frame">
+                            <img src="/resources/img/about/about-award-2.png" alt="Award 2">
+                        </div>
+                        <div class="award-text-frame">
+                            Năm 2013 - Huân chương Lao động Hạng Nhì
+                        </div>
+                    </div>
+
+                    <div class="award-item-box">
+                        <div class="award-img-frame">
+                            <img src="/resources/img/about/about-award-3.png" alt="Award 3">
+                        </div>
+                        <div class="award-text-frame">
+                            Năm 2008 - Huân chương Lao động Hạng Ba
+                        </div>
+                    </div>
+
+                    <div class="award-item-box">
+                        <div class="award-img-frame">
+                            <img src="/resources/img/about/about-award-4.png" alt="Award 4">
+                        </div>
+                        <div class="award-text-frame">
+                            Chứng nhận Thương hiệu Quốc gia Việt Nam
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section container about-partners py-10">
+        <h2 class="heading-title text-center mb-10 lg:mb-16" data-animate="reveal-up">
+            Đối Tác Của Chúng Tôi
+        </h2>
+        <div class="swiper w-full" data-fx-slider data-swiper-options='{
+            "slidesPerView": 4,
+            "spaceBetween": 24,
+            "breakpoints": {
+                "0": { "slidesPerView": 1 },
+                "640": { "slidesPerView": 2 },
+                "1024": { "slidesPerView": 3 },
+                "1280": { "slidesPerView": 4 }
+            }
+        }'>
+
+            <div class="swiper-wrapper">
+                <div class="swiper-slide h-auto pb-6">
+                    <div class="partner-interactive-card">
+                        <img src="resources/img/about/about-card-mask.png" class="card-mask-bg" alt="">
+
+                        <div class="card-logo-wrap">
+                            <img src="resources/img/about/about-card-logo.png" alt="Partner Logo">
+                        </div>
+
+                        <div class="card-bottom-group">
+                            <div class="card-info-list">
+                                <div class="card-info-row">
+                                    <span class="card-label">Hotline:</span>
+                                    <span class="card-value">800 1000</span>
+                                </div>
+                                <div class="card-info-row">
+                                    <span class="card-label">Email:</span>
+                                    <span class="card-value">Email@gmail.com</span>
+                                </div>
+                                <div class="card-info-row">
+                                    <span class="card-label">Website:</span>
+                                    <span class="card-value">
+                                        <a href="https://sunworld.vn" target="_blank">sunworld.vn</a>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="card-footer-divider"></div>
+
+                            <div class="card-watermark-num">01.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide h-auto pb-6">
+                    <div class="partner-interactive-card">
+                        <img src="resources/img/about/about-card-mask.png" class="card-mask-bg" alt="">
+
+                        <div class="card-logo-wrap">
+                            <img src="resources/img/about/about-card-logo.png" alt="Partner Logo">
+                        </div>
+
+                        <div class="card-bottom-group">
+                            <div class="card-info-list">
+                                <div class="card-info-row">
+                                    <span class="card-label">Hotline:</span>
+                                    <span class="card-value">800 1000</span>
+                                </div>
+                                <div class="card-info-row">
+                                    <span class="card-label">Email:</span>
+                                    <span class="card-value">Email@gmail.com</span>
+                                </div>
+                                <div class="card-info-row">
+                                    <span class="card-label">Website:</span>
+                                    <span class="card-value">
+                                        <a href="https://sunworld.vn" target="_blank">sunworld.vn</a>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="card-footer-divider"></div>
+
+                            <div class="card-watermark-num">01.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide h-auto pb-6">
+                    <div class="partner-interactive-card">
+                        <img src="resources/img/about/about-card-mask.png" class="card-mask-bg" alt="">
+
+                        <div class="card-logo-wrap">
+                            <img src="resources/img/about/about-card-logo.png" alt="Partner Logo">
+                        </div>
+
+                        <div class="card-bottom-group">
+                            <div class="card-info-list">
+                                <div class="card-info-row">
+                                    <span class="card-label">Hotline:</span>
+                                    <span class="card-value">800 1000</span>
+                                </div>
+                                <div class="card-info-row">
+                                    <span class="card-label">Email:</span>
+                                    <span class="card-value">Email@gmail.com</span>
+                                </div>
+                                <div class="card-info-row">
+                                    <span class="card-label">Website:</span>
+                                    <span class="card-value">
+                                        <a href="https://sunworld.vn" target="_blank">sunworld.vn</a>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="card-footer-divider"></div>
+
+                            <div class="card-watermark-num">01.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide h-auto pb-6">
+                    <div class="partner-interactive-card">
+                        <img src="resources/img/about/about-card-mask.png" class="card-mask-bg" alt="">
+
+                        <div class="card-logo-wrap">
+                            <img src="resources/img/about/about-card-logo.png" alt="Partner Logo">
+                        </div>
+
+                        <div class="card-bottom-group">
+                            <div class="card-info-list">
+                                <div class="card-info-row">
+                                    <span class="card-label">Hotline:</span>
+                                    <span class="card-value">800 1000</span>
+                                </div>
+                                <div class="card-info-row">
+                                    <span class="card-label">Email:</span>
+                                    <span class="card-value">Email@gmail.com</span>
+                                </div>
+                                <div class="card-info-row">
+                                    <span class="card-label">Website:</span>
+                                    <span class="card-value">
+                                        <a href="https://sunworld.vn" target="_blank">sunworld.vn</a>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="card-footer-divider"></div>
+
+                            <div class="card-watermark-num">01.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide h-auto pb-6">
+                    <div class="partner-interactive-card">
+                        <img src="resources/img/about/about-card-mask.png" class="card-mask-bg" alt="">
+
+                        <div class="card-logo-wrap">
+                            <img src="resources/img/about/about-card-logo.png" alt="Partner Logo">
+                        </div>
+
+                        <div class="card-bottom-group">
+                            <div class="card-info-list">
+                                <div class="card-info-row">
+                                    <span class="card-label">Hotline:</span>
+                                    <span class="card-value">800 1000</span>
+                                </div>
+                                <div class="card-info-row">
+                                    <span class="card-label">Email:</span>
+                                    <span class="card-value">Email@gmail.com</span>
+                                </div>
+                                <div class="card-info-row">
+                                    <span class="card-label">Website:</span>
+                                    <span class="card-value">
+                                        <a href="https://sunworld.vn" target="_blank">sunworld.vn</a>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="card-footer-divider"></div>
+
+                            <div class="card-watermark-num">01.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide h-auto pb-6">
+                    <div class="partner-interactive-card">
+                        <img src="resources/img/about/about-card-mask.png" class="card-mask-bg" alt="">
+
+                        <div class="card-logo-wrap">
+                            <img src="resources/img/about/about-card-logo.png" alt="Partner Logo">
+                        </div>
+
+                        <div class="card-bottom-group">
+                            <div class="card-info-list">
+                                <div class="card-info-row">
+                                    <span class="card-label">Hotline:</span>
+                                    <span class="card-value">800 1000</span>
+                                </div>
+                                <div class="card-info-row">
+                                    <span class="card-label">Email:</span>
+                                    <span class="card-value">Email@gmail.com</span>
+                                </div>
+                                <div class="card-info-row">
+                                    <span class="card-label">Website:</span>
+                                    <span class="card-value">
+                                        <a href="https://sunworld.vn" target="_blank">sunworld.vn</a>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="card-footer-divider"></div>
+
+                            <div class="card-watermark-num">01.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-navigation mx-auto mt-8">
+                <button class="swiper-button-prev-custom">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+
+                <button class="swiper-button-next-custom">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="footer" class="site-footer" itemtype="" itemscope>
+        <div id="footer-main-wrap" class="footer-main-wrap bg-primary text-white relative overflow-hidden">
+            <img src="/resources/img/bg-footer-left.png"
+                class="absolute left-0 top-0 pointer-events-none select-none z-0 w-[120px] md:w-[160px] xl:w-auto"
+                alt="">
+            <img src="/resources/img/bg-footer-right.png"
+                class="absolute right-0 bottom-0 pointer-events-none select-none z-0 w-[240px] md:w-[320px] xl:w-auto"
+                alt="">
+            <div class="container pt-16 relative z-10">
+                <div class="footer-brand-overlay text-center overflow-hidden">
+                    <span
+                        class="text-[12vw] font-semibold uppercase tracking-widest text-transparent block leading-none select-none"
+                        style="-webkit-text-stroke: 1px rgba(255,255,255,0.2); font-size: clamp(40px, 15vw, 220px);">
+                        hodeco
+                    </span>
+                </div>
+
+                <div
+                    class="footer-address-container p-8 md:p-12 rounded-3xl border border-white/20 bg-white/5 backdrop-blur-sm relative">
+                    <div
+                        class="footer-address-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 md:gap-x-12">
+
+                        <div class="address-item flex flex-col relative">
+                            <h4 class="address-title text-lg font-bold uppercase mb-4">Trụ sở chính</h4>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-start gap-3">
+                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                                    <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28
+                                        3456 7890</a>
+                                </div>
+                            </div>
+                            <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                            <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+                        </div>
+
+                        <div class="address-item flex flex-col relative">
+                            <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Gò Vấp</h4>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-start gap-3">
+                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                                    <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28
+                                        3456 7890</a>
+                                </div>
+                            </div>
+                            <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                            <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+                        </div>
+
+                        <div class="address-item flex flex-col relative">
+                            <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Thạnh</h4>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-start gap-3">
+                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                                    <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28
+                                        3456 7890</a>
+                                </div>
+                            </div>
+                            <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                            <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+                        </div>
+
+                        <div class="address-item flex flex-col relative">
+                            <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Tân</h4>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-start gap-3">
+                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                                    <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28
+                                        3456 7890</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-credit py-8 relative z-10">
+                <div class="container flex flex-col items-center justify-center gap-4 text-center">
+                    <div class="footer-copyright text-sm text-white">
+                        <span class="copyright">© 2026 Hodeco,&nbsp;</span>
+                        <span class="hd">
+                            design by
+                            <a class="hover:text-white transition-colors" href="https://webhd.vn/" target="_blank"
+                                rel="noopener noreferrer nofollow">
+                                HD Agency
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script type="module" src="/resources/js/main.js"></script>
+</body>
+
+</html>

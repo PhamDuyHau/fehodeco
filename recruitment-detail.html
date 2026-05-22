@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hodeco</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <header class="absolute top-0 left-0 w-full z-999">
+    <div class="relative bg-[linear-gradient(180deg,#057DCD_0%,rgba(5,125,205,0)_59.29%)]">
+
+      <div class="flex items-center justify-between gap-5 px-6 py-3">
+
+        <div class="lg:hidden">
+          <button id="menuBtn" class="text-white text-2xl">☰</button>
+        </div>
+
+        <div class="absolute left-1/2 -translate-x-1/2 lg:hidden">
+          <a href="index.html">
+            <img src="/resources/img/hodeco-logo.png" class="h-12 object-contain" alt="Logo" />
+          </a>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-4 mx-auto">
+
+          <a href="index.html" class="shrink-0">
+            <img src="/resources/img/hodeco-logo.png" class="h-12 object-contain" alt="Logo" />
+          </a>
+
+          <nav>
+            <ul class="menu">
+              <li><a href="about.html">Giới thiệu</a></li>
+              <li><a href="project.html">Dự án</a></li>
+              <li><a href="shareholder.html">Quan hệ cổ đông</a></li>
+              <li><a href="exchange.html">Sàn giao dịch BĐS</a></li>
+              <li><a href="recruitment.html">Tuyển dụng</a></li>
+              <li><a href="news.html">Tin tức</a></li>
+              <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+          </nav>
+          <span class="w-px h-5 bg-white/40"></span>
+
+          <div class="relative">
+            <img src="/resources/img/search.png" id="searchBtn" class="w-5 h-5 cursor-pointer" />
+            <div id="searchBox" class="hidden absolute right-0 top-[40px]">
+              <input type="text" placeholder="Search..."
+                class="w-[220px] h-[40px] px-4 rounded-lg shadow-lg outline-none text-black" />
+            </div>
+          </div>
+
+          <span class="w-px h-5 bg-white/40"></span>
+
+          <div class="flex items-center gap-2">
+            <a href="https://facebook.com" target="_blank"><img src="/resources/img/facebook-icon.png"
+                class="w-5 h-5"></a>
+            <a href="https://linkedin.com" target="_blank"><img src="/resources/img/linkedin-icon.png"
+                class="w-5 h-5"></a>
+            <a href="https://youtube.com" target="_blank"><img src="/resources/img/youtube-icon.png"
+                class="w-5 h-5"></a>
+          </div>
+
+          <span class="w-px h-5 bg-white/40"></span>
+
+          <div class="flex items-center gap-2">
+            <img src="/resources/img/vi.png" class="w-6 h-4 object-cover cursor-pointer">
+            <img src="/resources/img/en.png" class="w-6 h-4 object-cover cursor-pointer">
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div id="mobileMenu"
+      class="fixed top-0 left-[-320px] w-[320px] h-full bg-white z-[1000] transition-all duration-300 p-4">
+      <div class="flex items-center justify-between mb-4">
+        <a href="index.html">
+          <img src="/resources/img/hodeco-logo.png" class="h-10" alt="Home">
+        </a>
+        <button id="closeMenu" class="text-2xl">✕</button>
+      </div>
+      <div class="mb-4">
+        <input type="text" placeholder="Search..." class="w-full h-[40px] px-4 border rounded-full outline-none" />
+      </div>
+      <ul class="flex flex-col gap-3 mb-6">
+        <li><a href="about.html" class="block py-2 border-b">Giới thiệu</a></li>
+        <li><a href="project.html" class="block py-2 border-b">Dự án</a></li>
+        <li><a href="shareholder.html" class="block py-2 border-b">Quan hệ cổ đông</a></li>
+        <li><a href="exchange.html" class="block py-2 border-b">Sàn giao dịch BĐS</a></li>
+        <li><a href="recruitment.html" class="block py-2 border-b">Tuyển dụng</a></li>
+        <li><a href="news.html" class="block py-2 border-b">Tin tức</a></li>
+        <li><a href="contact.html" class="block py-2 border-b">Liên hệ</a></li>
+      </ul>
+      <div class="flex gap-4">
+        <a href="https://facebook.com" target="_blank"><img src="/resources/img/facebook-icon.png" class="w-5 h-5"></a>
+        <a href="https://linkedin.com" target="_blank"><img src="/resources/img/linkedin-icon.png" class="w-5 h-5"></a>
+        <a href="https://youtube.com" target="_blank"><img src="/resources/img/youtube-icon.png" class="w-5 h-5"></a>
+      </div>
+    </div>
+  </header>
+
+    <section class="w-full">
+        <img src="/resources/img/recruitment/recruitment-breadcrumb.png" class="w-auto  object-cover" />
+    </section>
+
+    <section class="section container job-detail">
+        <div class="bg-primary rounded-[2rem] p-8 md:p-12 text-white flex flex-col lg:flex-row gap-12 mb-12 shadow-xl"
+            data-animate="reveal-up">
+            <div class="flex-[2]" data-animate="slide-in-left">
+                <h1 class="text-3xl font-bold mb-2">Công nhân cơ khí</h1>
+                <p class="opacity-70 text-sm mb-8">10/04/2026</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-4 border-t border-white/20 pt-8">
+                    <div class="flex justify-between md:justify-start md:gap-10">
+                        <span class="font-bold w-32">Vị trí:</span>
+                        <span class="opacity-90">Công nhân cơ khí</span>
+                    </div>
+                    <div class="flex justify-between md:justify-start md:gap-10">
+                        <span class="font-bold w-48">Số lượng tuyển dụng:</span>
+                        <span class="opacity-90">01</span>
+                    </div>
+                    <div class="flex justify-between md:justify-start md:gap-10">
+                        <span class="font-bold w-32">Chức vụ:</span>
+                        <span class="opacity-90">Nhân viên</span>
+                    </div>
+                    <div class="flex justify-between md:justify-start md:gap-10">
+                        <span class="font-bold w-48">Địa điểm làm việc:</span>
+                        <span class="opacity-90">Thành phố Hồ Chí Minh</span>
+                    </div>
+                    <div class="flex justify-between md:justify-start md:gap-10">
+                        <span class="font-bold w-32">Yêu cầu bằng cấp:</span>
+                        <span class="opacity-90">Trung cấp</span>
+                    </div>
+                    <div class="flex justify-between md:justify-start md:gap-10">
+                        <span class="font-bold w-48">Hạn nộp hồ sơ:</span>
+                        <span class="opacity-90 font-bold">10/04/2026</span>
+                    </div>
+                    <div class="flex justify-between md:justify-start md:gap-10">
+                        <span class="font-bold w-32">Mức lương:</span>
+                        <span class="opacity-90">Thương lượng</span>
+                    </div>
+                </div>
+
+                <a href="#"
+                    class="inline-flex items-center gap-3 bg-secondary text-white px-8 py-3 rounded-xl font-bold mt-10 hover:brightness-110 transition-all shadow-lg">
+                    Ứng tuyển ngay <i class="fa-solid fa-paper-plane"></i>
+                </a>
+            </div>
+
+            <div class="flex-1 lg:border-l lg:border-white/20 lg:pl-12 flex flex-col gap-6"
+                data-animate="slide-in-right">
+                <h3 class="text-2xl font-bold mb-2">Tổng quan công việc</h3>
+
+                <div class="flex gap-4">
+                    <i class="fa-solid fa-location-dot mt-1"></i>
+                    <div>
+                        <p class="font-bold text-sm uppercase opacity-70 mb-1">Địa chỉ</p>
+                        <p class="text-sm leading-relaxed">131 Hoàng Quốc Việt - Phường Nghĩa Đô - Quận Cầu Giấy - Thành
+                            phố Hà Nội.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <i class="fa-solid fa-phone mt-1"></i>
+                    <div>
+                        <p class="font-bold text-sm uppercase opacity-70 mb-1">Hotline</p>
+                        <p class="text-sm">0973.379.368</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <i class="fa-solid fa-envelope mt-1"></i>
+                    <div>
+                        <p class="font-bold text-sm uppercase opacity-70 mb-1">Email</p>
+                        <p class="text-sm">vietnam@vesbo.com.sg</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-10 text-gray-700 leading-relaxed mt-12">
+
+            <div data-animate="reveal-up">
+                <h4 class="text-primary font-bold text-lg mb-6 uppercase">II. Yêu cầu công việc</h4>
+                <ul class="list-none space-y-4 mb-6">
+                    <li class="flex gap-2">
+                        <span class="text-gray-400">•</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                    </li>
+                </ul>
+                <div class="space-y-4">
+                    <p>Sự hợp tác lần này thể hiện cam kết của Hodeco trong việc đồng hành cùng nhân sự không chỉ về sự
+                        nghiệp mà cả sức khỏe và chất lượng sống. Hodeco khuyến khích toàn thể CBNV tích cực tham gia để
+                        chủ động nắm bắt tình trạng sức khỏe mắt, góp phần duy trì hiệu suất làm việc ổn định và tinh
+                        thần thoải mái mỗi ngày.</p>
+                    <p>Trong thời gian tới, Hodeco sẽ tiếp tục mang đến nhiều chương trình phúc lợi ý nghĩa, nhằm tạo
+                        dựng một môi trường làm việc khỏe mạnh và nhân văn cho toàn thể nhân sự.</p>
+                </div>
+            </div>
+
+            <div data-animate="reveal-up">
+                <h4 class="text-primary font-bold text-lg mb-6 uppercase">III. Quyền lợi</h4>
+                <ul class="list-none space-y-4 mb-6">
+                    <li class="flex gap-2">
+                        <span class="text-gray-400">•</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                    </li>
+                </ul>
+                <div class="space-y-4">
+                    <p>Sự hợp tác lần này thể hiện cam kết của Hodeco trong việc đồng hành cùng nhân sự không chỉ về sự
+                        nghiệp mà cả sức khỏe và chất lượng sống. Hodeco khuyến khích toàn thể CBNV tích cực tham gia để
+                        chủ động nắm bắt tình trạng sức khỏe mắt, góp phần duy trì hiệu suất làm việc ổn định và tinh
+                        thần thoải mái mỗi ngày.</p>
+                    <p>Trong thời gian tới, Hodeco sẽ tiếp tục mang đến nhiều chương trình phúc lợi ý nghĩa, nhằm tạo
+                        dựng một môi trường làm việc khỏe mạnh và nhân văn cho toàn thể nhân sự.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section container job-contact my-16">
+        <div class="bg-primary rounded-[3rem] p-8 md:p-16 flex flex-col lg:flex-row gap-16 text-white shadow-2xl">
+
+            <div class="flex-1 space-y-8" data-animate="slide-in-left">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Ứng tuyển ngay</h2>
+                <p class="text-white/80 leading-relaxed max-w-md">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                </p>
+                <p class="text-2xl font-bold mt-8">
+                    Hodeco <span class="font-normal text-white/90">luôn chào đón bạn!</span>
+                </p>
+
+                <div class="space-y-4 max-w-md">
+                    <div class="flex items-center justify-between p-5 rounded-2xl relative overflow-hidden"
+                        style="background-color: #2686EC;">
+                        <div class="relative z-10 pr-4 border-r border-white/30 flex-1">
+                            <p class="text-sm opacity-80">Hotline</p>
+                            <p class="text-xl font-bold">0254.3856.274</p>
+                        </div>
+                        <div class="pl-4 shrink-0">
+                            <img src="resources/img/recruitment/phone-icon.png" alt="Phone"
+                                class="w-12 h-12 object-contain">
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between p-5 rounded-2xl relative overflow-hidden"
+                        style="background-color: #EB9500;">
+                        <div class="relative z-10 pr-4 border-r border-white/30 flex-1">
+                            <p class="text-sm opacity-80">Email</p>
+                            <p class="text-xl font-bold">info@hodeco.vn</p>
+                        </div>
+                        <div class="pl-4 shrink-0">
+                            <img src="resources/img/recruitment/email-icon.png" alt="Email"
+                                class="w-12 h-12 object-contain">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-1 bg-transparent border border-white/20 rounded-[2rem] p-8 md:p-10"
+                data-animate="slide-in-right">
+                <form action="#" class="space-y-6">
+                    <div class="relative border-b border-white/40 pb-2 flex items-center gap-3">
+                        <i class="fa-regular fa-user opacity-70"></i>
+                        <input type="text" placeholder="Họ & tên"
+                            class="bg-transparent border-none outline-none w-full placeholder:text-white/70">
+                    </div>
+                    <div class="relative border-b border-white/40 pb-2 flex items-center gap-3">
+                        <i class="fa-regular fa-envelope opacity-70"></i>
+                        <input type="email" placeholder="Email"
+                            class="bg-transparent border-none outline-none w-full placeholder:text-white/70">
+                    </div>
+                    <div class="relative border-b border-white/40 pb-2 flex items-center gap-3">
+                        <i class="fa-solid fa-phone-volume opacity-70"></i>
+                        <input type="text" placeholder="Số điện thoại"
+                            class="bg-transparent border-none outline-none w-full placeholder:text-white/70">
+                    </div>
+                    <div class="relative border-b border-white/40 pb-2 flex items-center gap-3">
+                        <i class="fa-regular fa-circle-question opacity-70"></i>
+                        <input type="text" placeholder="Vị trí tuyển dụng trong bài viết"
+                            class="bg-transparent border-none outline-none w-full placeholder:text-white/70">
+                    </div>
+                    <div class="relative border-b border-white/40 pb-2 flex items-center justify-between gap-3">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-regular fa-file-lines opacity-70"></i>
+                            <span class="text-white/70">Tải lên CV</span>
+                        </div>
+                        <label class="cursor-pointer">
+                            <i class="fa-solid fa-cloud-arrow-up text-sm"></i>
+                            <input type="file" class="hidden">
+                        </label>
+                    </div>
+                    <div class="relative border-b border-white/40 pb-2 flex items-start gap-3 pt-4">
+                        <i class="fa-regular fa-pen-to-square opacity-70 mt-1"></i>
+                        <textarea placeholder="Thư ứng tuyển" rows="3"
+                            class="bg-transparent border-none outline-none w-full placeholder:text-white/70 resize-none"></textarea>
+                    </div>
+                    <div class="pt-6">
+                        <button type="submit"
+                            class="bg-white text-primary px-10 py-3 rounded-full font-bold flex items-center gap-3 hover:bg-opacity-90 transition-all">
+                            <i class="fa-solid fa-paper-plane"></i> Gửi thông tin
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section container my-16">
+        <div class="mb-10" data-animate="reveal-up">
+            <h2 class="heading-title text-3xl font-bold text-black">Việc có thể quan tâm</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <div class="group relative bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-all"
+                data-animate="reveal-up">
+                <div
+                    class="absolute top-1 right-1 bg-secondary text-white text-[10px] font-bold px-2 py-1 uppercase tracking-wider z-10">
+                    Hot</div>
+                <div class="flex gap-4 items-start">
+                    <div class="w-20 shrink-0">
+                        <img src="resources/img/hodeco-logo.png" alt="Hodeco Logo" class="w-full object-contain"
+                            loading="lazy">
+                    </div>
+                    <div class="flex-1">
+                        <h3
+                            class="font-bold text-gray-800 leading-snug mb-2 group-hover:text-primary transition-colors">
+                            Nhân viên thực tập Phát triển kinh doanh BĐS</h3>
+                        <p class="text-sm text-gray-500 mb-1">Thành phố Hồ Chí Minh</p>
+                        <div class="flex justify-between items-end">
+                            <p class="text-sm text-gray-500">Số lượng: 01</p>
+                            <a href="#" class="text-primary font-bold text-sm hover:underline">Ứng tuyển</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group relative bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-all"
+                data-animate="reveal-up">
+                <div class="flex gap-4 items-start">
+                    <div class="w-20 shrink-0">
+                        <img src="resources/img/hodeco-logo.png" alt="Hodeco Logo" class="w-full object-contain"
+                            loading="lazy">
+                    </div>
+                    <div class="flex-1">
+                        <h3
+                            class="font-bold text-gray-800 leading-snug mb-2 group-hover:text-primary transition-colors">
+                            Nhân viên thực tập Phát triển kinh doanh BĐS</h3>
+                        <p class="text-sm text-gray-500 mb-1">Thành phố Hồ Chí Minh</p>
+                        <div class="flex justify-between items-end">
+                            <p class="text-sm text-gray-500">Số lượng: 01</p>
+                            <a href="#" class="text-primary font-bold text-sm hover:underline">Ứng tuyển</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group relative bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-all"
+                data-animate="reveal-up">
+                <div
+                    class="absolute top-1 right-1 bg-secondary text-white text-[10px] font-bold px-2 py-1 uppercase tracking-wider z-10">
+                    Hot</div>
+                <div class="flex gap-4 items-start">
+                    <div class="w-20 shrink-0">
+                        <img src="resources/img/hodeco-logo.png" alt="Hodeco Logo" class="w-full object-contain"
+                            loading="lazy">
+                    </div>
+                    <div class="flex-1">
+                        <h3
+                            class="font-bold text-gray-800 leading-snug mb-2 group-hover:text-primary transition-colors">
+                            Nhân viên thực tập Phát triển kinh doanh BĐS</h3>
+                        <p class="text-sm text-gray-500 mb-1">Thành phố Hồ Chí Minh</p>
+                        <div class="flex justify-between items-end">
+                            <p class="text-sm text-gray-500">Số lượng: 01</p>
+                            <a href="#" class="text-primary font-bold text-sm hover:underline">Ứng tuyển</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group relative bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-all"
+                data-animate="reveal-up">
+                <div class="flex gap-4 items-start">
+                    <div class="w-20 shrink-0">
+                        <img src="resources/img/hodeco-logo.png" alt="Hodeco Logo" class="w-full object-contain"
+                            loading="lazy">
+                    </div>
+                    <div class="flex-1">
+                        <h3
+                            class="font-bold text-gray-800 leading-snug mb-2 group-hover:text-primary transition-colors">
+                            Nhân viên thực tập Phát triển kinh doanh BĐS</h3>
+                        <p class="text-sm text-gray-500 mb-1">Thành phố Hồ Chí Minh</p>
+                        <div class="flex justify-between items-end">
+                            <p class="text-sm text-gray-500">Số lượng: 01</p>
+                            <a href="#" class="text-primary font-bold text-sm hover:underline">Ứng tuyển</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group relative bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-all"
+                data-animate="reveal-up">
+                <div
+                    class="absolute top-1 right-1 bg-secondary text-white text-[10px] font-bold px-2 py-1 uppercase tracking-wider z-10">
+                    Hot</div>
+                <div class="flex gap-4 items-start">
+                    <div class="w-20 shrink-0">
+                        <img src="resources/img/hodeco-logo.png" alt="Hodeco Logo" class="w-full object-contain"
+                            loading="lazy">
+                    </div>
+                    <div class="flex-1">
+                        <h3
+                            class="font-bold text-gray-800 leading-snug mb-2 group-hover:text-primary transition-colors">
+                            Nhân viên thực tập Phát triển kinh doanh BĐS</h3>
+                        <p class="text-sm text-gray-500 mb-1">Thành phố Hồ Chí Minh</p>
+                        <div class="flex justify-between items-end">
+                            <p class="text-sm text-gray-500">Số lượng: 01</p>
+                            <a href="#" class="text-primary font-bold text-sm hover:underline">Ứng tuyển</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group relative bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-all"
+                data-animate="reveal-up">
+                <div class="flex gap-4 items-start">
+                    <div class="w-20 shrink-0">
+                        <img src="resources/img/hodeco-logo.png" alt="Hodeco Logo" class="w-full object-contain"
+                            loading="lazy">
+                    </div>
+                    <div class="flex-1">
+                        <h3
+                            class="font-bold text-gray-800 leading-snug mb-2 group-hover:text-primary transition-colors">
+                            Nhân viên thực tập Phát triển kinh doanh BĐS</h3>
+                        <p class="text-sm text-gray-500 mb-1">Thành phố Hồ Chí Minh</p>
+                        <div class="flex justify-between items-end">
+                            <p class="text-sm text-gray-500">Số lượng: 01</p>
+                            <a href="#" class="text-primary font-bold text-sm hover:underline">Ứng tuyển</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="footer" class="site-footer" itemtype="" itemscope>
+        <div id="footer-main-wrap" class="footer-main-wrap bg-primary text-white relative overflow-hidden">
+          <img src="/resources/img/bg-footer-left.png" class="absolute left-0 top-0 pointer-events-none select-none z-0 w-[120px] md:w-[160px] xl:w-auto" alt="">
+          <img src="/resources/img/bg-footer-right.png" class="absolute right-0 bottom-0 pointer-events-none select-none z-0 w-[240px] md:w-[320px] xl:w-auto" alt="">
+          <div class="container pt-16 relative z-10">
+            <div class="footer-brand-overlay text-center overflow-hidden">
+              <span
+                class="text-[12vw] font-semibold uppercase tracking-widest text-transparent block leading-none select-none"
+                style="-webkit-text-stroke: 1px rgba(255,255,255,0.2); font-size: clamp(40px, 15vw, 220px);">
+                hodeco
+              </span>
+            </div>
+
+            <div class="footer-address-container p-8 md:p-12 rounded-3xl border border-white/20 bg-white/5 backdrop-blur-sm relative">
+              <div class="footer-address-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 md:gap-x-12">
+
+                <div class="address-item flex flex-col relative">
+                  <h4 class="address-title text-lg font-bold uppercase mb-4">Trụ sở chính</h4>
+                  <div class="flex flex-col gap-3">
+                    <div class="flex items-start gap-3">
+                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
+                    </div>
+                  </div>
+                  <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                  <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+                </div>
+
+                <div class="address-item flex flex-col relative">
+                  <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Gò Vấp</h4>
+                  <div class="flex flex-col gap-3">
+                    <div class="flex items-start gap-3">
+                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
+                    </div>
+                  </div>
+                  <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                  <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+                </div>
+
+                <div class="address-item flex flex-col relative">
+                  <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Thạnh</h4>
+                  <div class="flex flex-col gap-3">
+                    <div class="flex items-start gap-3">
+                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
+                    </div>
+                  </div>
+                  <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                  <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+                </div>
+
+                <div class="address-item flex flex-col relative">
+                  <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Tân</h4>
+                  <div class="flex flex-col gap-3">
+                    <div class="flex items-start gap-3">
+                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-credit py-8 relative z-10">
+            <div class="container flex flex-col items-center justify-center gap-4 text-center">
+              <div class="footer-copyright text-sm text-white">
+                <span class="copyright">© 2026 Hodeco,&nbsp;</span>
+                <span class="hd">
+                  design by
+                  <a class="hover:text-white transition-colors" href="https://webhd.vn/" target="_blank" rel="noopener noreferrer nofollow">
+                    HD Agency
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </footer>
+
+    <script type="module" src="/resources/js/main.js"></script>
+</body>
+
+</html>

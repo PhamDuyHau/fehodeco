@@ -1,0 +1,17 @@
+node_modules/
+vendor/
+
+dist/
+build/
+
+.env
+.env.local
+
+.DS_Store
+Thumbs.db
+
+.idea/
+.vscode/
+
+*.logdist.zip
+node_modules/

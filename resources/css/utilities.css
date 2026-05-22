@@ -1,0 +1,69 @@
+@utility cutout-base {
+  @apply absolute bottom-0 right-0 flex items-center justify-center z-10;
+
+  &::before,
+  &::after {
+    content: '';
+    @apply absolute bg-transparent pointer-events-none;
+  }
+}
+
+@layer utilities {
+
+  .home-card-corner {
+    @apply cutout-base w-22 h-22 bg-background;
+    border-top-left-radius: 38px;
+
+    &::before {
+      @apply w-6 h-6 right-0;
+      top: -23px;
+      border-bottom-right-radius: 20px;
+      box-shadow: 9px 9px 0 0 var(--color-background);
+    }
+
+    &::after {
+      @apply w-6 h-6 bottom-0;
+      left: -23px;
+      border-bottom-right-radius: 20px;
+      box-shadow: 9px 9px 0 0 var(--color-background);
+    }
+  }
+
+  .cutout-corner {
+    @apply cutout-base w-18 h-18 bg-[#FDFBF5];
+    border-top-left-radius: 38px;
+
+    &::before {
+      @apply w-6 h-6 right-0;
+      top: -23px;
+      border-bottom-right-radius: 20px;
+      box-shadow: 9px 9px 0 0 #FDFBF5;
+    }
+
+    &::after {
+      @apply w-6 h-6 bottom-0;
+      left: -23px;
+      border-bottom-right-radius: 20px;
+      box-shadow: 9px 9px 0 0 #FDFBF5;
+    }
+  }
+
+  .card-corner {
+    @apply cutout-base w-20 h-20 bg-[#FDFBF5];
+    border-top-left-radius: 38px;
+
+    &::before {
+      @apply w-10 h-10 right-0;
+      top: -40px;
+      border-bottom-right-radius: 40px;
+      box-shadow: 10px 10px 0 0 #FDFBF5;
+    }
+
+    &::after {
+      @apply w-10 h-10 bottom-0;
+      left: -40px;
+      border-bottom-right-radius: 40px;
+      box-shadow: 10px 10px 0 0 #FDFBF5;
+    }
+  }
+}

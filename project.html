@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hodeco</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header class="absolute top-0 left-0 w-full z-999">
+        <div class="relative bg-[linear-gradient(180deg,#057DCD_0%,rgba(5,125,205,0)_59.29%)]">
+
+        <div class="flex items-center justify-between gap-5 px-6 py-3">
+
+            <div class="lg:hidden">
+            <button id="menuBtn" class="text-white text-2xl">☰</button>
+            </div>
+
+            <div class="absolute left-1/2 -translate-x-1/2 lg:hidden">
+            <a href="index.html">
+                <img src="/resources/img/hodeco-logo.png" class="h-12 object-contain" alt="Logo" />
+            </a>
+            </div>
+
+            <div class="hidden lg:flex items-center gap-4 mx-auto">
+
+            <a href="index.html" class="shrink-0">
+                <img src="/resources/img/hodeco-logo.png" class="h-12 object-contain" alt="Logo" />
+            </a>
+
+            <nav>
+                <ul class="menu">
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="project.html">Dự án</a></li>
+                <li><a href="shareholder.html">Quan hệ cổ đông</a></li>
+                <li><a href="exchange.html">Sàn giao dịch BĐS</a></li>
+                <li><a href="recruitment.html">Tuyển dụng</a></li>
+                <li><a href="news.html">Tin tức</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <span class="w-px h-5 bg-white/40"></span>
+
+            <div class="relative">
+                <img src="/resources/img/search.png" id="searchBtn" class="w-5 h-5 cursor-pointer" />
+                <div id="searchBox" class="hidden absolute right-0 top-[40px]">
+                <input type="text" placeholder="Search..."
+                    class="w-[220px] h-[40px] px-4 rounded-lg shadow-lg outline-none text-black" />
+                </div>
+            </div>
+
+            <span class="w-px h-5 bg-white/40"></span>
+
+            <div class="flex items-center gap-2">
+                <a href="https://facebook.com" target="_blank"><img src="/resources/img/facebook-icon.png"
+                    class="w-5 h-5"></a>
+                <a href="https://linkedin.com" target="_blank"><img src="/resources/img/linkedin-icon.png"
+                    class="w-5 h-5"></a>
+                <a href="https://youtube.com" target="_blank"><img src="/resources/img/youtube-icon.png"
+                    class="w-5 h-5"></a>
+            </div>
+
+            <span class="w-px h-5 bg-white/40"></span>
+
+            <div class="flex items-center gap-2">
+                <img src="/resources/img/vi.png" class="w-6 h-4 object-cover cursor-pointer">
+                <img src="/resources/img/en.png" class="w-6 h-4 object-cover cursor-pointer">
+            </div>
+
+            </div>
+
+        </div>
+        </div>
+
+        <div id="mobileMenu"
+        class="fixed top-0 left-[-320px] w-[320px] h-full bg-white z-[1000] transition-all duration-300 p-4">
+        <div class="flex items-center justify-between mb-4">
+            <a href="index.html">
+            <img src="/resources/img/hodeco-logo.png" class="h-10" alt="Home">
+            </a>
+            <button id="closeMenu" class="text-2xl">✕</button>
+        </div>
+        <div class="mb-4">
+            <input type="text" placeholder="Search..." class="w-full h-[40px] px-4 border rounded-full outline-none" />
+        </div>
+        <ul class="flex flex-col gap-3 mb-6">
+            <li><a href="about.html" class="block py-2 border-b">Giới thiệu</a></li>
+            <li><a href="project.html" class="block py-2 border-b">Dự án</a></li>
+            <li><a href="shareholder.html" class="block py-2 border-b">Quan hệ cổ đông</a></li>
+            <li><a href="exchange.html" class="block py-2 border-b">Sàn giao dịch BĐS</a></li>
+            <li><a href="recruitment.html" class="block py-2 border-b">Tuyển dụng</a></li>
+            <li><a href="news.html" class="block py-2 border-b">Tin tức</a></li>
+            <li><a href="contact.html" class="block py-2 border-b">Liên hệ</a></li>
+        </ul>
+        <div class="flex gap-4">
+            <a href="https://facebook.com" target="_blank"><img src="/resources/img/facebook-icon.png" class="w-5 h-5"></a>
+            <a href="https://linkedin.com" target="_blank"><img src="/resources/img/linkedin-icon.png" class="w-5 h-5"></a>
+            <a href="https://youtube.com" target="_blank"><img src="/resources/img/youtube-icon.png" class="w-5 h-5"></a>
+        </div>
+        </div>
+    </header>
+
+    <section class="w-full">
+        <img src="/resources/img/project/project-breadcrumb.jpg" class="w-auto  object-cover" />
+    </section>
+
+    <section class="section container project_cate">
+        <div class="flex flex-col gap-6 mb-10">
+            <div class="text-center mx-auto max-w-4xl" data-animate="reveal-up">
+                <h2 class="heading-title mb-4">Bất động sản dân dụng</h2>
+                <p class="text-[16px] text-gray-600 leading-relaxed">
+                    Với 35 năm phát triển, Hodeco không ngừng kiến tạo những không gian sống chất lượng, hiện đại và
+                    bền vững tại Bà Rịa – Vũng Tàu. Chúng tôi tự hào là một trong những đơn vị tiên phong xây dựng các
+                    khu đô thị kiểu mẫu, góp phần định hình diện mạo đô thị khu vực.
+                </p>
+            </div>
+
+            <div class="flex justify-end" data-animate="reveal-up">
+                <div class="flex items-center gap-3 bg-[#F5F5F5] p-2 rounded-full border border-gray-200">
+                    <div class="relative px-4">
+                        <select class="bg-transparent text-sm focus:outline-none appearance-none pr-8 cursor-pointer">
+                            <option>Tình trạng dự án</option>
+                            <option>Đang nhận hồ sơ</option>
+                            <option>Đang thực hiện</option>
+                            <option>Đang triển khai</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 text-xs"></i>
+                    </div>
+                    <button class="bg-secondary text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-red-700 transition">
+                        Tìm kiếm
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative" data-animate="lift-in-stagger">
+                <div class="h-64 overflow-hidden m-4 rounded-[24px]">
+                    <img src="resources/img/project/project-card-1.jpg" class="w-full h-full object-cover" alt="Chung cư NOXH Eco Home 1">
+                </div>
+                <div class="px-6 pb-20">
+                    <h3 class="text-xl font-bold mb-4 text-[#333]">Chung cư NOXH Eco Home 1</h3>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <p><strong>Dòng sản phẩm:</strong> Chung cư</p>
+                        <p><strong>Vị trí:</strong> Mặt tiền đường Trường Chinh, Phường Phú Mỹ, Hồ Chí Minh</p>
+                        <p><strong>Quy mô dự án:</strong> 340 căn hộ</p>
+                        <p><strong>Tiến độ:</strong> Đang nhận hồ sơ</p>
+                        <a href="project_detail.html" class="text-blue-900 font-medium block mt-4 underline underline-offset-4">Link giới thiệu dự án</a>
+                    </div>
+                </div>
+                <a href="project_detail.html" class="card-corner">
+                    <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
+                        <i class="fa-solid fa-arrow-right fa-beat"></i>
+                    </div>
+                </a>
+                <div class="absolute left-4 bottom-4 right-24 flex items-center">
+                    <span class="h-[1px] bg-gray-300 flex-1"></span>
+                    <span class="ml-2 text-gray-400 whitespace-nowrap">Xem thêm</span>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative" data-animate="lift-in-stagger">
+                <div class="h-64 overflow-hidden m-4 rounded-[24px]">
+                    <img src="resources/img/project/project-card-2.jpg" class="w-full h-full object-cover" alt="The Light City">
+                </div>
+                <div class="px-6 pb-20">
+                    <h3 class="text-xl font-bold mb-4 text-[#333]">The Light City</h3>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <p><strong>Dòng sản phẩm:</strong> Chung cư</p>
+                        <p><strong>Vị trí:</strong> Đường Chi Lăng, Phường Phước Thắng, Hồ Chí Minh</p>
+                        <p><strong>Quy mô dự án:</strong> 49ha</p>
+                        <p><strong>Tiến độ:</strong> Đang thực hiện</p>
+                    </div>
+                </div>
+                <a href="project_detail.html" class="card-corner">
+                    <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
+                        <i class="fa-solid fa-arrow-right fa-beat"></i>
+                    </div>
+                </a>
+                <div class="absolute left-4 bottom-4 right-24 flex items-center">
+                    <span class="h-[1px] bg-gray-300 flex-1"></span>
+                    <span class="ml-2 text-gray-400 whitespace-nowrap">Xem thêm</span>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative" data-animate="lift-in-stagger">
+                <div class="h-64 overflow-hidden m-4 rounded-[24px]">
+                    <img src="resources/img/project/project-card-3.png" class="w-full h-full object-cover" alt="Ecotown Phú Mỹ">
+                </div>
+                <div class="px-6 pb-20">
+                    <h3 class="text-xl font-bold mb-4 text-[#333]">Ecotown Phú Mỹ</h3>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <p><strong>Dòng sản phẩm:</strong> Khu đô thị</p>
+                        <p><strong>Vị trí:</strong> Mặt tiền đường Trường Chinh, Phường Phú Mỹ, Hồ Chí Minh</p>
+                        <p><strong>Quy mô dự án:</strong> Tổng diện tích 63.133,5m2</p>
+                        <p><strong>Tiến độ:</strong> Đang triển khai</p>
+                    </div>
+                </div>
+                <a href="project_detail.html" class="card-corner">
+                    <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
+                        <i class="fa-solid fa-arrow-right fa-beat"></i>
+                    </div>
+                </a>
+                <div class="absolute left-4 bottom-4 right-24 flex items-center">
+                    <span class="h-[1px] bg-gray-300 flex-1"></span>
+                    <span class="ml-2 text-gray-400 whitespace-nowrap">Xem thêm</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section container project_cate">
+        <div class="flex flex-col gap-6 mb-10">
+            <div class="text-center mx-auto max-w-4xl" data-animate="reveal-up">
+                <h2 class="heading-title mb-4">Bất động sản dân dụng</h2>
+                <p class="text-[16px] text-gray-600 leading-relaxed">
+                    Với 35 năm phát triển, Hodeco không ngừng kiến tạo những không gian sống chất lượng, hiện đại và
+                    bền vững tại Bà Rịa – Vũng Tàu. Chúng tôi tự hào là một trong những đơn vị tiên phong xây dựng các
+                    khu đô thị kiểu mẫu, góp phần định hình diện mạo đô thị khu vực.
+                </p>
+            </div>
+
+            <div class="flex justify-end" data-animate="reveal-up">
+                <div class="flex items-center gap-3 bg-[#F5F5F5] p-2 rounded-full border border-gray-200">
+                    <div class="relative px-4">
+                        <select class="bg-transparent text-sm focus:outline-none appearance-none pr-8 cursor-pointer">
+                            <option>Tình trạng dự án</option>
+                            <option>Đã vận hành</option>
+                            <option>Đang thực hiện</option>
+                            <option>Sắp triển khai</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 text-xs"></i>
+                    </div>
+                    <button class="bg-secondary text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-secondary-hover transition">
+                        Tìm kiếm
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative" data-animate="lift-in-stagger">
+                <div class="h-64 overflow-hidden m-4 rounded-[24px]">
+                    <img src="resources/img/project/project-card-4.jpg" class="w-full h-full object-cover" alt="Fusion Suites Vũng Tàu">
+                </div>
+                <div class="px-6 pb-20">
+                    <h3 class="text-xl font-bold mb-4 text-[#333]">Fusion Suites Vũng Tàu</h3>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <p><strong>Dòng sản phẩm:</strong> Nghỉ dưỡng</p>
+                        <p><strong>Vị trí:</strong> Đường Trương Công Định, Phường Vũng Tàu, Hồ Chí Minh</p>
+                        <p><strong>Quy mô dự án:</strong> 171 phòng</p>
+                        <p><strong>Tiến độ:</strong> Đã vận hành</p>
+                    </div>
+                </div>
+                <a href="project_detail.html" class="card-corner">
+                    <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
+                        <i class="fa-solid fa-arrow-right fa-beat"></i>
+                    </div>
+                </a>
+                <div class="absolute left-4 bottom-4 right-24 flex items-center">
+                    <span class="h-[1px] bg-gray-300 flex-1"></span>
+                    <span class="ml-2 text-gray-400 whitespace-nowrap">Xem thêm</span>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative" data-animate="lift-in-stagger">
+                <div class="h-64 overflow-hidden m-4 rounded-[24px]">
+                    <img src="resources/img/project/project-card-1.jpg" class="w-full h-full object-cover" alt="Khu du lịch Biển Đá Vàng">
+                </div>
+                <div class="px-6 pb-20">
+                    <h3 class="text-xl font-bold mb-4 text-[#333]">Khu du lịch Biển Đá Vàng</h3>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <p><strong>Dòng sản phẩm:</strong> Chung cư</p>
+                        <p><strong>Vị trí:</strong> Đường Chi Lăng, Phường Phước Thắng, Hồ Chí Minh</p>
+                        <p><strong>Quy mô dự án:</strong> 49ha</p>
+                        <p><strong>Tiến độ:</strong> Đang thực hiện</p>
+                    </div>
+                </div>
+                <a href="project_detail.html" class="card-corner">
+                    <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
+                        <i class="fa-solid fa-arrow-right fa-beat"></i>
+                    </div>
+                </a>
+                <div class="absolute left-4 bottom-4 right-24 flex items-center">
+                    <span class="h-[1px] bg-gray-300 flex-1"></span>
+                    <span class="ml-2 text-gray-400 whitespace-nowrap">Xem thêm</span>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative" data-animate="lift-in-stagger">
+                <div class="h-64 overflow-hidden m-4 rounded-[24px]">
+                    <img src="resources/img/project/project-card-2.jpg" class="w-full h-full object-cover" alt="Khu du lịch sinh thái Antares Vũng Tàu">
+                </div>
+                <div class="px-6 pb-20">
+                    <h3 class="text-xl font-bold mb-4 text-[#333]">Khu du lịch sinh thái Antares Vũng Tàu</h3>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <p><strong>Dòng sản phẩm:</strong> Nghỉ dưỡng</p>
+                        <p><strong>Vị trí:</strong> Phường Phước Thắng, Hồ Chí Minh</p>
+                        <p><strong>Quy mô dự án:</strong> 234,4 ha</p>
+                        <p><strong>Tiến độ:</strong> Sắp triển khai</p>
+                    </div>
+                </div>
+                <a href="project_detail.html" class="card-corner">
+                    <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
+                        <i class="fa-solid fa-arrow-right fa-beat"></i>
+                    </div>
+                </a>
+                <div class="absolute left-4 bottom-4 right-24 flex items-center">
+                    <span class="h-[1px] bg-gray-300 flex-1"></span>
+                    <span class="ml-2 text-gray-400 whitespace-nowrap">Xem thêm</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section container project_cate">
+        <div class="flex flex-col gap-6 mb-10">
+            <div class="text-center mx-auto max-w-4xl" data-animate="reveal-up">
+                <h2 class="heading-title mb-4">Bất động sản dân dụng</h2>
+                <p class="text-[16px] text-gray-600 leading-relaxed">
+                    Với 35 năm phát triển, Hodeco không ngừng kiến tạo những không gian sống chất lượng, hiện đại và
+                    bền vững tại Bà Rịa – Vũng Tàu. Chúng tôi tự hào là một trong những đơn vị tiên phong xây dựng các
+                    khu đô thị kiểu mẫu, góp phần định hình diện mạo đô thị khu vực.
+                </p>
+            </div>
+
+            <div class="flex justify-end" data-animate="reveal-up">
+                <div class="flex items-center gap-3 bg-[#F5F5F5] p-2 rounded-full border border-gray-200">
+                    <div class="relative px-4">
+                        <select class="bg-transparent text-sm focus:outline-none appearance-none pr-8 cursor-pointer">
+                            <option>Tình trạng dự án</option>
+                            <option>Đang nhận hồ sơ</option>
+                            <option>Đang thực hiện</option>
+                            <option>Đang triển khai</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 text-xs"></i>
+                    </div>
+                    <button class="bg-secondary text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-red-700 transition">
+                        Tìm kiếm
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative" data-animate="lift-in-stagger">
+                <div class="h-64 overflow-hidden m-4 rounded-[24px]">
+                    <img src="resources/img/project/project-card-1.jpg" class="w-full h-full object-cover" alt="Chung cư NOXH Eco Home 1">
+                </div>
+                <div class="px-6 pb-20">
+                    <h3 class="text-xl font-bold mb-4 text-[#333]">Chung cư NOXH Eco Home 1</h3>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <p><strong>Dòng sản phẩm:</strong> Chung cư</p>
+                        <p><strong>Vị trí:</strong> Mặt tiền đường Trường Chinh, Phường Phú Mỹ, Hồ Chí Minh</p>
+                        <p><strong>Quy mô dự án:</strong> 340 căn hộ</p>
+                        <p><strong>Tiến độ:</strong> Đang nhận hồ sơ</p>
+                        <a href="project_detail.html" class="text-blue-900 font-medium block mt-4 underline underline-offset-4">Link giới thiệu dự án</a>
+                    </div>
+                </div>
+                <a href="project_detail.html" class="card-corner">
+                    <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
+                        <i class="fa-solid fa-arrow-right fa-beat"></i>
+                    </div>
+                </a>
+                <div class="absolute left-4 bottom-4 right-24 flex items-center">
+                    <span class="h-[1px] bg-gray-300 flex-1"></span>
+                    <span class="ml-2 text-gray-400 whitespace-nowrap">Xem thêm</span>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative" data-animate="lift-in-stagger">
+                <div class="h-64 overflow-hidden m-4 rounded-[24px]">
+                    <img src="resources/img/project/project-card-2.jpg" class="w-full h-full object-cover" alt="The Light City">
+                </div>
+                <div class="px-6 pb-20">
+                    <h3 class="text-xl font-bold mb-4 text-[#333]">The Light City</h3>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <p><strong>Dòng sản phẩm:</strong> Chung cư</p>
+                        <p><strong>Vị trí:</strong> Đường Chi Lăng, Phường Phước Thắng, Hồ Chí Minh</p>
+                        <p><strong>Quy mô dự án:</strong> 49ha</p>
+                        <p><strong>Tiến độ:</strong> Đang thực hiện</p>
+                    </div>
+                </div>
+                <a href="project_detail.html" class="card-corner">
+                    <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
+                        <i class="fa-solid fa-arrow-right fa-beat"></i>
+                    </div>
+                </a>
+                <div class="absolute left-4 bottom-4 right-24 flex items-center">
+                    <span class="h-[1px] bg-gray-300 flex-1"></span>
+                    <span class="ml-2 text-gray-400 whitespace-nowrap">Xem thêm</span>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative" data-animate="lift-in-stagger">
+                <div class="h-64 overflow-hidden m-4 rounded-[24px]">
+                    <img src="resources/img/project/project-card-3.png" class="w-full h-full object-cover" alt="Ecotown Phú Mỹ">
+                </div>
+                <div class="px-6 pb-20">
+                    <h3 class="text-xl font-bold mb-4 text-[#333]">Ecotown Phú Mỹ</h3>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <p><strong>Dòng sản phẩm:</strong> Khu đô thị</p>
+                        <p><strong>Vị trí:</strong> Mặt tiền đường Trường Chinh, Phường Phú Mỹ, Hồ Chí Minh</p>
+                        <p><strong>Quy mô dự án:</strong> Tổng diện tích 63.133,5m2</p>
+                        <p><strong>Tiến độ:</strong> Đang triển khai</p>
+                    </div>
+                </div>
+                <a href="project_detail.html" class="card-corner">
+                    <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
+                        <i class="fa-solid fa-arrow-right fa-beat"></i>
+                    </div>
+                </a>
+                <div class="absolute left-4 bottom-4 right-24 flex items-center">
+                    <span class="h-[1px] bg-gray-300 flex-1"></span>
+                    <span class="ml-2 text-gray-400 whitespace-nowrap">Xem thêm</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="footer" class="site-footer" itemtype="" itemscope>
+        <div id="footer-main-wrap" class="footer-main-wrap bg-primary text-white relative overflow-hidden">
+          <img src="/resources/img/bg-footer-left.png" class="absolute left-0 top-0 pointer-events-none select-none z-0 w-[120px] md:w-[160px] xl:w-auto" alt="">
+          <img src="/resources/img/bg-footer-right.png" class="absolute right-0 bottom-0 pointer-events-none select-none z-0 w-[240px] md:w-[320px] xl:w-auto" alt="">
+          <div class="container pt-16 relative z-10">
+            <div class="footer-brand-overlay text-center overflow-hidden">
+              <span
+                class="text-[12vw] font-semibold uppercase tracking-widest text-transparent block leading-none select-none"
+                style="-webkit-text-stroke: 1px rgba(255,255,255,0.2); font-size: clamp(40px, 15vw, 220px);">
+                hodeco
+              </span>
+            </div>
+
+            <div class="footer-address-container p-8 md:p-12 rounded-3xl border border-white/20 bg-white/5 backdrop-blur-sm relative">
+              <div class="footer-address-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 md:gap-x-12">
+
+                <div class="address-item flex flex-col relative">
+                  <h4 class="address-title text-lg font-bold uppercase mb-4">Trụ sở chính</h4>
+                  <div class="flex flex-col gap-3">
+                    <div class="flex items-start gap-3">
+                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
+                    </div>
+                  </div>
+                  <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                  <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+                </div>
+
+                <div class="address-item flex flex-col relative">
+                  <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Gò Vấp</h4>
+                  <div class="flex flex-col gap-3">
+                    <div class="flex items-start gap-3">
+                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
+                    </div>
+                  </div>
+                  <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                  <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+                </div>
+
+                <div class="address-item flex flex-col relative">
+                  <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Thạnh</h4>
+                  <div class="flex flex-col gap-3">
+                    <div class="flex items-start gap-3">
+                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
+                    </div>
+                  </div>
+                  <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                  <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+                </div>
+
+                <div class="address-item flex flex-col relative">
+                  <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Tân</h4>
+                  <div class="flex flex-col gap-3">
+                    <div class="flex items-start gap-3">
+                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-credit py-8 relative z-10">
+            <div class="container flex flex-col items-center justify-center gap-4 text-center">
+              <div class="footer-copyright text-sm text-white">
+                <span class="copyright">© 2026 Hodeco,&nbsp;</span>
+                <span class="hd">
+                  design by
+                  <a class="hover:text-white transition-colors" href="https://webhd.vn/" target="_blank" rel="noopener noreferrer nofollow">
+                    HD Agency
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </footer>
+
+    <script type="module" src="/resources/js/main.js"></script>
+</body>
+
+</html>

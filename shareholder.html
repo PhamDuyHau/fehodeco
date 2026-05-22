@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hodeco</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <header class="absolute top-0 left-0 w-full z-999">
+    <div class="relative bg-[linear-gradient(180deg,#057DCD_0%,rgba(5,125,205,0)_59.29%)]">
+
+      <div class="flex items-center justify-between gap-5 px-6 py-3">
+
+        <div class="lg:hidden">
+          <button id="menuBtn" class="text-white text-2xl">☰</button>
+        </div>
+
+        <div class="absolute left-1/2 -translate-x-1/2 lg:hidden">
+          <a href="index.html">
+            <img src="/resources/img/hodeco-logo.png" class="h-12 object-contain" alt="Logo" />
+          </a>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-4 mx-auto">
+
+          <a href="index.html" class="shrink-0">
+            <img src="/resources/img/hodeco-logo.png" class="h-12 object-contain" alt="Logo" />
+          </a>
+
+          <nav>
+            <ul class="menu">
+              <li><a href="about.html">Giới thiệu</a></li>
+              <li><a href="project.html">Dự án</a></li>
+              <li><a href="shareholder.html">Quan hệ cổ đông</a></li>
+              <li><a href="exchange.html">Sàn giao dịch BĐS</a></li>
+              <li><a href="recruitment.html">Tuyển dụng</a></li>
+              <li><a href="news.html">Tin tức</a></li>
+              <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+          </nav>
+          <span class="w-px h-5 bg-white/40"></span>
+
+          <div class="relative">
+            <img src="/resources/img/search.png" id="searchBtn" class="w-5 h-5 cursor-pointer" />
+            <div id="searchBox" class="hidden absolute right-0 top-[40px]">
+              <input type="text" placeholder="Search..."
+                class="w-[220px] h-[40px] px-4 rounded-lg shadow-lg outline-none text-black" />
+            </div>
+          </div>
+
+          <span class="w-px h-5 bg-white/40"></span>
+
+          <div class="flex items-center gap-2">
+            <a href="https://facebook.com" target="_blank"><img src="/resources/img/facebook-icon.png"
+                class="w-5 h-5"></a>
+            <a href="https://linkedin.com" target="_blank"><img src="/resources/img/linkedin-icon.png"
+                class="w-5 h-5"></a>
+            <a href="https://youtube.com" target="_blank"><img src="/resources/img/youtube-icon.png"
+                class="w-5 h-5"></a>
+          </div>
+
+          <span class="w-px h-5 bg-white/40"></span>
+
+          <div class="flex items-center gap-2">
+            <img src="/resources/img/vi.png" class="w-6 h-4 object-cover cursor-pointer">
+            <img src="/resources/img/en.png" class="w-6 h-4 object-cover cursor-pointer">
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div id="mobileMenu"
+      class="fixed top-0 left-[-320px] w-[320px] h-full bg-white z-[1000] transition-all duration-300 p-4">
+      <div class="flex items-center justify-between mb-4">
+        <a href="index.html">
+          <img src="/resources/img/hodeco-logo.png" class="h-10" alt="Home">
+        </a>
+        <button id="closeMenu" class="text-2xl">✕</button>
+      </div>
+      <div class="mb-4">
+        <input type="text" placeholder="Search..." class="w-full h-[40px] px-4 border rounded-full outline-none" />
+      </div>
+      <ul class="flex flex-col gap-3 mb-6">
+        <li><a href="about.html" class="block py-2 border-b">Giới thiệu</a></li>
+        <li><a href="project.html" class="block py-2 border-b">Dự án</a></li>
+        <li><a href="shareholder.html" class="block py-2 border-b">Quan hệ cổ đông</a></li>
+        <li><a href="exchange.html" class="block py-2 border-b">Sàn giao dịch BĐS</a></li>
+        <li><a href="recruitment.html" class="block py-2 border-b">Tuyển dụng</a></li>
+        <li><a href="news.html" class="block py-2 border-b">Tin tức</a></li>
+        <li><a href="contact.html" class="block py-2 border-b">Liên hệ</a></li>
+      </ul>
+      <div class="flex gap-4">
+        <a href="https://facebook.com" target="_blank"><img src="/resources/img/facebook-icon.png" class="w-5 h-5"></a>
+        <a href="https://linkedin.com" target="_blank"><img src="/resources/img/linkedin-icon.png" class="w-5 h-5"></a>
+        <a href="https://youtube.com" target="_blank"><img src="/resources/img/youtube-icon.png" class="w-5 h-5"></a>
+      </div>
+    </div>
+  </header>
+
+    <section class="w-full">
+        <img src="/resources/img/shareholder/shareholder-breadcrumb.jpg" class="w-auto  object-cover" />
+    </section>
+
+    <section class="section container shareholder-chart">
+        <div class="text-center" data-animate="reveal-up">
+            <h3 class="sub-title justify-center">Giá trị cốt lõi</h3>
+            <h2 class="heading-title">Nền tảng vững chãi từ sự chính trực và tận tâm</h2>
+            <p class="font-semibold text-[24px] text-center">(HOSE: HDC)</p>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-between items-end pb-2 mt-8"
+            style="border-bottom: 1px solid #E8E8ED" data-animate="reveal-up">
+            <div class="text-sm text-gray-500 pb-1">
+                Ngành: <span class="text-primary font-medium">Bất động sản/ Bất động sản/ Quản lý và phát triển bất
+                    động sản</span>
+            </div>
+            <div class="flex items-center gap-4 text-sm text-gray-500 pb-1">
+                <span class="tab-item active">1 ngày</span>
+                <span class="tab-item">5 ngày</span>
+                <span class="tab-item">3 tháng</span>
+                <span class="tab-item">6 tháng</span>
+                <span class="tab-item">12 tháng</span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 py-8">
+            <div class="flex flex-col items-center justify-center text-center" data-animate="slide-in-left">
+                <h1 class="text-6xl font-bold text-[#109703] flex items-center gap-2">
+                    19,430 <i class="fa-solid fa-arrow-up text-4xl"></i>
+                </h1>
+                <p class="text-[#109703] text-xl font-bold mt-2">+750 (+3.59%)</p>
+                <div class="text-gray-400 text-sm mt-4 flex items-center gap-2">
+                    <i class="fa-solid fa-rotate"></i> Cập nhật lúc: 30/03/2026 | 09:33
+                </div>
+                <p class="text-[#109703] font-bold mt-1">Đang giao dịch</p>
+            </div>
+
+            <div class="lg:col-span-2 relative h-64" data-animate="slide-in-right">
+                <div class="absolute top-0 left-0 text-gray-400 text-xs">HDC (Giá điều chỉnh)</div>
+                <div class="absolute top-0 right-0 text-gray-400 text-xs">@Vietstock.vn</div>
+                <canvas id="hdcChart" class="mt-6"></canvas>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="data-card" data-animate="lift-in-stagger">
+                <div class="space-y-3">
+                    <div class="data-row"><span>Mở cửa</span><span class="text-yellow-500 font-bold">19,800</span></div>
+                    <div class="data-row"><span>Cao nhất</span><span class="text-pink-500 font-bold">20,300</span></div>
+                    <div class="data-row"><span>Thấp nhất</span><span class="text-cyan-500 font-bold">19,800</span>
+                    </div>
+                    <div class="data-row"><span>KLGD</span><span class="font-bold">748,000</span></div>
+                    <div class="data-row"><span>Vốn hóa</span><span class="font-bold">4,005.08</span></div>
+                </div>
+                <div class="space-y-3">
+                    <div class="data-row"><span>Dư mua</span><span class="font-bold">96,000</span></div>
+                    <div class="data-row"><span>Dư bán</span><span class="font-bold">32,700</span></div>
+                    <div class="data-row"><span>Cao 52T</span><span class="font-bold">37,500</span></div>
+                    <div class="data-row"><span>Thấp 52T</span><span class="font-bold">18,700</span></div>
+                    <div class="data-row"><span>KLBQ 52T</span><span class="font-bold">4,766,632</span></div>
+                </div>
+            </div>
+
+            <div class="data-card" data-animate="lift-in-stagger">
+                <div class="space-y-3">
+                    <div class="data-row"><span>NN mua</span><span class="font-bold">4,200</span></div>
+                    <div class="data-row"><span>% NN sở hữu</span><span class="font-bold">1.67</span></div>
+                    <div class="data-row"><span>Cổ tức TM</span><span class="font-bold">-</span></div>
+                    <div class="data-row"><span>T/S cổ tức</span><span class="font-bold">-</span></div>
+                    <div class="data-row"><span>Beta</span><span class="font-bold">1.15</span></div>
+                </div>
+                <div class="space-y-3">
+                    <div class="data-row"><span>EPS</span><span class="font-bold">3,550</span></div>
+                    <div class="data-row"><span>P/E</span><span class="font-bold">5.89</span></div>
+                    <div class="data-row"><span>F P/E</span><span class="font-bold">9.85</span></div>
+                    <div class="data-row"><span>BVPS</span><span class="font-bold">14,703</span></div>
+                    <div class="data-row"><span>P/B</span><span class="font-bold">1.42</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section container shareholder-profile">
+        <div class="text-center my-8" data-animate="reveal-up">
+            <h2 class="heading-title text-primary">Hồ sơ doanh nghiệp</h2>
+        </div>
+
+        <div class="flex md:justify-center gap-3 mb-10 overflow-x-auto whitespace-nowrap px-2 scrollbar-none">
+            <button class="pill-profile active">Hồ sơ doanh nghiệp</button>
+            <button class="pill-profile">HĐQT & BKS</button>
+            <button class="pill-profile">Quy chế quản trị</button>
+            <button class="pill-profile">Điều lệ công ty</button>
+        </div>
+
+        <div class="timeline-container relative mb-8 py-4">
+            <div class="absolute bottom-[66%] lg:bottom-[63%] left-0 w-full h-[2px] bg-primary"></div>
+
+            <div data-animate="soft-scale">
+                <div class="swiper" id="swiper-shareholder-year" data-fx-slider data-swiper-options='{
+                "slidesPerView": 6,
+                "loop": true,
+                "pagination": { "el": ".swiper-pagination-custom", "clickable": true },
+                "navigation": { "nextEl": ".swiper-button-next-custom", "prevEl": ".swiper-button-prev-custom" }
+            }'>
+                    <div class="swiper-wrapper h-32 pb-4">
+                        <div class="swiper-slide">
+                            <div class="year-node active" data-index="2026">
+                                <span class="year-label">2026</span>
+                                <div class="year-dot"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="year-node" data-index="2025">
+                                <span class="year-label">2025</span>
+                                <div class="year-dot"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="year-node" data-index="2024">
+                                <span class="year-label">2024</span>
+                                <div class="year-dot"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="year-node" data-index="2023">
+                                <span class="year-label">2023</span>
+                                <div class="year-dot"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="year-node" data-index="2022">
+                                <span class="year-label">2022</span>
+                                <div class="year-dot"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="year-node" data-index="2021">
+                                <span class="year-label">2021</span>
+                                <div class="year-dot"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="year-node" data-index="2020">
+                                <span class="year-label">2020</span>
+                                <div class="year-dot"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="year-node" data-index="2019">
+                                <span class="year-label">2019</span>
+                                <div class="year-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-navigation ml-auto">
+                        <button
+                            class="swiper-button-prev-custom cursor-pointer text-primary w-10 h-10 flex items-center justify-center rounded-full">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                        <div class="swiper-pagination-custom flex gap-2
+                        [&_.swiper-pagination-bullet]:border
+                        [&_.swiper-pagination-bullet]:border-primary
+                        [&_.swiper-pagination-bullet]:bg-transparent
+                        [&_.swiper-pagination-bullet-active]:!bg-primary
+                    "></div>
+                        <button
+                            class="swiper-button-next-custom cursor-pointer text-primary w-10 h-10 flex items-center justify-center rounded-full">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="doc-list mt-10">
+            <div class="doc-row" data-tab="0" data-year="2026" data-animate="reveal-up">
+                <span class="doc-name">QHCĐ - Công bố thông tin: Công bố thông tin</span>
+                <div class="doc-controls">
+                    <span class="doc-link-text">Xem tài liệu</span>
+                    <div class="doc-connector"></div>
+                    <a href="#" class="doc-download"><i class="fa-solid fa-file-pdf"></i></a>
+                    <span class="doc-timestamp">16/08/2024 | 10:30</span>
+                </div>
+            </div>
+
+            <div class="doc-row" data-tab="0" data-year="2026" data-animate="reveal-up">
+                <span class="doc-name">QHCĐ - Công bố thông tin: Công bố thông tin</span>
+                <div class="doc-controls">
+                    <span class="doc-link-text">Xem tài liệu</span>
+                    <div class="doc-connector"></div>
+                    <a href="#" class="doc-download"><i class="fa-solid fa-file-pdf"></i></a>
+                    <span class="doc-timestamp">16/08/2024 | 10:30</span>
+                </div>
+            </div>
+
+            <div class="doc-row" data-tab="0" data-year="2026" data-animate="reveal-up">
+                <span class="doc-name">QHCĐ - Công bố thông tin: Công bố thông tin</span>
+                <div class="doc-controls">
+                    <span class="doc-link-text">Xem tài liệu</span>
+                    <div class="doc-connector"></div>
+                    <a href="#" class="doc-download"><i class="fa-solid fa-file-pdf"></i></a>
+                    <span class="doc-timestamp">16/08/2024 | 10:30</span>
+                </div>
+            </div>
+
+            <div class="doc-row" data-tab="0" data-year="2026" data-animate="reveal-up">
+                <span class="doc-name">QHCĐ - Công bố thông tin: Công bố thông tin</span>
+                <div class="doc-controls">
+                    <span class="doc-link-text">Xem tài liệu</span>
+                    <div class="doc-connector"></div>
+                    <a href="#" class="doc-download"><i class="fa-solid fa-file-pdf"></i></a>
+                    <span class="doc-timestamp">16/08/2024 | 10:30</span>
+                </div>
+            </div>
+
+            <div class="doc-row" data-tab="0" data-year="2026" data-animate="reveal-up">
+                <span class="doc-name">QHCĐ - Công bố thông tin: Công bố thông tin</span>
+                <div class="doc-controls">
+                    <span class="doc-link-text">Xem tài liệu</span>
+                    <div class="doc-connector"></div>
+                    <a href="#" class="doc-download"><i class="fa-solid fa-file-pdf"></i></a>
+                    <span class="doc-timestamp">16/08/2024 | 10:30</span>
+                </div>
+            </div>
+
+            <div class="doc-row" data-tab="1" data-year="2026" data-animate="reveal-up">
+                <span class="doc-name">Danh sách thành viên HĐQT 2026</span>
+                <div class="doc-controls">
+                    <span class="doc-link-text">Xem tài liệu</span>
+                    <div class="doc-connector"></div>
+                    <a href="#" class="doc-download"><i class="fa-solid fa-file-pdf"></i></a>
+                    <span class="doc-timestamp">16/08/2024 | 10:30</span>
+                </div>
+            </div>
+
+            <div class="doc-row" data-tab="2" data-year="2026" data-animate="reveal-up">
+                <span class="doc-name">Quy chế quản trị nội bộ 2026</span>
+                <div class="doc-controls">
+                    <span class="doc-link-text">Xem tài liệu</span>
+                    <div class="doc-connector"></div>
+                    <a href="#" class="doc-download"><i class="fa-solid fa-file-pdf"></i></a>
+                    <span class="doc-timestamp">16/08/2024 | 10:30</span>
+                </div>
+            </div>
+
+            <div class="doc-row" data-tab="3" data-year="2026" data-animate="reveal-up">
+                <span class="doc-name">Điều lệ công ty sửa đổi 2026</span>
+                <div class="doc-controls">
+                    <span class="doc-link-text">Xem tài liệu</span>
+                    <div class="doc-connector"></div>
+                    <a href="#" class="doc-download"><i class="fa-solid fa-file-pdf"></i></a>
+                    <span class="doc-timestamp">16/08/2024 | 10:30</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section container shareholder-profile">
+        <div class="text-center my-8" data-animate="reveal-up">
+            <h2 class="heading-title text-primary">Công bố thông tin</h2>
+        </div>
+
+        <div class="flex md:justify-center gap-3 mb-10 overflow-x-auto whitespace-nowrap px-2 scrollbar-none">
+            <button class="pill-profile active">Báo cáo tài chính</button>
+            <button class="pill-profile">Báo cáo thường niên</button>
+            <button class="pill-profile">Báo cáo quản trị</button>
+            <button class="pill-profile">Đại hội cổ đông</button>
+            <button class="pill-profile">Bản cáo bạch</button>
+            <button class="pill-profile">Công bố thông tin</button>
+        </div>
+
+        <div class="timeline-container relative mb-8 py-4">
+            <div class="absolute bottom-[66%] lg:bottom-[63%] left-0 w-full h-[2px] bg-primary"></div>
+
+            <div data-animate="soft-scale">
+                <div class="swiper" id="swiper-shareholder-year" data-fx-slider data-swiper-options='{
+                "slidesPerView": 6,
+                "loop": true,
+                "pagination": { "el": ".swiper-pagination-custom", "clickable": true },
+                "navigation": { "nextEl": ".swiper-button-next-custom", "prevEl": ".swiper-button-prev-custom" }
+            }'>
+                    <div class="swiper-wrapper h-32 pb-4">
+                        <div class="swiper-slide">
+                            <div class="year-node active" data-index="2026">
+                                <span class="year-label">2026</span>
+                                <div class="year-dot"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="year-node" data-index="2025">
+                                <span class="year-label">2025</span>
+                                <div class="year-dot"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="year-node" data-index="2024">
+                                <span class="year-label">2024</span>
+                                <div class="year-dot"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="year-node" data-index="2023">
+                                <span class="year-label">2023</span>
+                                <div class="year-dot"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="year-node" data-index="2022">
+                                <span class="year-label">2022</span>
+                                <div class="year-dot"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="year-node" data-index="2021">
+                                <span class="year-label">2021</span>
+                                <div class="year-dot"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="year-node" data-index="2020">
+                                <span class="year-label">2020</span>
+                                <div class="year-dot"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="year-node" data-index="2019">
+                                <span class="year-label">2019</span>
+                                <div class="year-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-navigation ml-auto">
+                        <button
+                            class="swiper-button-prev-custom cursor-pointer text-primary w-10 h-10 flex items-center justify-center rounded-full">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                        <div class="swiper-pagination-custom flex gap-2
+                        [&_.swiper-pagination-bullet]:border
+                        [&_.swiper-pagination-bullet]:border-primary
+                        [&_.swiper-pagination-bullet]:bg-transparent
+                        [&_.swiper-pagination-bullet-active]:!bg-primary
+                    "></div>
+                        <button
+                            class="swiper-button-next-custom cursor-pointer text-primary w-10 h-10 flex items-center justify-center rounded-full">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="doc-list mt-10">
+            <div class="doc-row" data-tab="0" data-year="2026" data-animate="reveal-up">
+                <span class="doc-name">QHCĐ - Công bố thông tin: Công bố thông tin</span>
+                <div class="doc-controls">
+                    <span class="doc-link-text">Xem tài liệu</span>
+                    <div class="doc-connector"></div>
+                    <a href="#" class="doc-download"><i class="fa-solid fa-file-pdf"></i></a>
+                    <span class="doc-timestamp">16/08/2024 | 10:30</span>
+                </div>
+            </div>
+
+            <div class="doc-row" data-tab="0" data-year="2026" data-animate="reveal-up">
+                <span class="doc-name">QHCĐ - Công bố thông tin: Công bố thông tin</span>
+                <div class="doc-controls">
+                    <span class="doc-link-text">Xem tài liệu</span>
+                    <div class="doc-connector"></div>
+                    <a href="#" class="doc-download"><i class="fa-solid fa-file-pdf"></i></a>
+                    <span class="doc-timestamp">16/08/2024 | 10:30</span>
+                </div>
+            </div>
+
+            <div class="doc-row" data-tab="0" data-year="2026" data-animate="reveal-up">
+                <span class="doc-name">QHCĐ - Công bố thông tin: Công bố thông tin</span>
+                <div class="doc-controls">
+                    <span class="doc-link-text">Xem tài liệu</span>
+                    <div class="doc-connector"></div>
+                    <a href="#" class="doc-download"><i class="fa-solid fa-file-pdf"></i></a>
+                    <span class="doc-timestamp">16/08/2024 | 10:30</span>
+                </div>
+            </div>
+
+            <div class="doc-row" data-tab="0" data-year="2026" data-animate="reveal-up">
+                <span class="doc-name">QHCĐ - Công bố thông tin: Công bố thông tin</span>
+                <div class="doc-controls">
+                    <span class="doc-link-text">Xem tài liệu</span>
+                    <div class="doc-connector"></div>
+                    <a href="#" class="doc-download"><i class="fa-solid fa-file-pdf"></i></a>
+                    <span class="doc-timestamp">16/08/2024 | 10:30</span>
+                </div>
+            </div>
+
+            <div class="doc-row" data-tab="0" data-year="2026" data-animate="reveal-up">
+                <span class="doc-name">QHCĐ - Công bố thông tin: Công bố thông tin</span>
+                <div class="doc-controls">
+                    <span class="doc-link-text">Xem tài liệu</span>
+                    <div class="doc-connector"></div>
+                    <a href="#" class="doc-download"><i class="fa-solid fa-file-pdf"></i></a>
+                    <span class="doc-timestamp">16/08/2024 | 10:30</span>
+                </div>
+            </div>
+
+            <div class="doc-row" data-tab="1" data-year="2026" data-animate="reveal-up">
+                <span class="doc-name">Danh sách thành viên HĐQT 2026</span>
+                <div class="doc-controls">
+                    <span class="doc-link-text">Xem tài liệu</span>
+                    <div class="doc-connector"></div>
+                    <a href="#" class="doc-download"><i class="fa-solid fa-file-pdf"></i></a>
+                    <span class="doc-timestamp">16/08/2024 | 10:30</span>
+                </div>
+            </div>
+
+            <div class="doc-row" data-tab="2" data-year="2026" data-animate="reveal-up">
+                <span class="doc-name">Quy chế quản trị nội bộ 2026</span>
+                <div class="doc-controls">
+                    <span class="doc-link-text">Xem tài liệu</span>
+                    <div class="doc-connector"></div>
+                    <a href="#" class="doc-download"><i class="fa-solid fa-file-pdf"></i></a>
+                    <span class="doc-timestamp">16/08/2024 | 10:30</span>
+                </div>
+            </div>
+
+            <div class="doc-row" data-tab="3" data-year="2026" data-animate="reveal-up">
+                <span class="doc-name">Điều lệ công ty sửa đổi 2026</span>
+                <div class="doc-controls">
+                    <span class="doc-link-text">Xem tài liệu</span>
+                    <div class="doc-connector"></div>
+                    <a href="#" class="doc-download"><i class="fa-solid fa-file-pdf"></i></a>
+                    <span class="doc-timestamp">16/08/2024 | 10:30</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="footer" class="site-footer" itemtype="" itemscope>
+        <div id="footer-main-wrap" class="footer-main-wrap bg-primary text-white relative overflow-hidden">
+          <img src="/resources/img/bg-footer-left.png" class="absolute left-0 top-0 pointer-events-none select-none z-0 w-[120px] md:w-[160px] xl:w-auto" alt="">
+          <img src="/resources/img/bg-footer-right.png" class="absolute right-0 bottom-0 pointer-events-none select-none z-0 w-[240px] md:w-[320px] xl:w-auto" alt="">
+          <div class="container pt-16 relative z-10">
+            <div class="footer-brand-overlay text-center overflow-hidden">
+              <span
+                class="text-[12vw] font-semibold uppercase tracking-widest text-transparent block leading-none select-none"
+                style="-webkit-text-stroke: 1px rgba(255,255,255,0.2); font-size: clamp(40px, 15vw, 220px);">
+                hodeco
+              </span>
+            </div>
+
+            <div class="footer-address-container p-8 md:p-12 rounded-3xl border border-white/20 bg-white/5 backdrop-blur-sm relative">
+              <div class="footer-address-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 md:gap-x-12">
+
+                <div class="address-item flex flex-col relative">
+                  <h4 class="address-title text-lg font-bold uppercase mb-4">Trụ sở chính</h4>
+                  <div class="flex flex-col gap-3">
+                    <div class="flex items-start gap-3">
+                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
+                    </div>
+                  </div>
+                  <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                  <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+                </div>
+
+                <div class="address-item flex flex-col relative">
+                  <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Gò Vấp</h4>
+                  <div class="flex flex-col gap-3">
+                    <div class="flex items-start gap-3">
+                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
+                    </div>
+                  </div>
+                  <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                  <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+                </div>
+
+                <div class="address-item flex flex-col relative">
+                  <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Thạnh</h4>
+                  <div class="flex flex-col gap-3">
+                    <div class="flex items-start gap-3">
+                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
+                    </div>
+                  </div>
+                  <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                  <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+                </div>
+
+                <div class="address-item flex flex-col relative">
+                  <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Tân</h4>
+                  <div class="flex flex-col gap-3">
+                    <div class="flex items-start gap-3">
+                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-credit py-8 relative z-10">
+            <div class="container flex flex-col items-center justify-center gap-4 text-center">
+              <div class="footer-copyright text-sm text-white">
+                <span class="copyright">© 2026 Hodeco,&nbsp;</span>
+                <span class="hd">
+                  design by
+                  <a class="hover:text-white transition-colors" href="https://webhd.vn/" target="_blank" rel="noopener noreferrer nofollow">
+                    HD Agency
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </footer>
+
+    <script type="module" src="/resources/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
+</html>

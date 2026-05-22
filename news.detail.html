@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hodeco</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <header class="absolute top-0 left-0 w-full z-999">
+    <div class="relative bg-[linear-gradient(180deg,#057DCD_0%,rgba(5,125,205,0)_59.29%)]">
+
+      <div class="flex items-center justify-between gap-5 px-6 py-3">
+
+        <div class="lg:hidden">
+          <button id="menuBtn" class="text-white text-2xl">☰</button>
+        </div>
+
+        <div class="absolute left-1/2 -translate-x-1/2 lg:hidden">
+          <a href="index.html">
+            <img src="/resources/img/hodeco-logo.png" class="h-12 object-contain" alt="Logo" />
+          </a>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-4 mx-auto">
+
+          <a href="index.html" class="shrink-0">
+            <img src="/resources/img/hodeco-logo.png" class="h-12 object-contain" alt="Logo" />
+          </a>
+
+          <nav>
+            <ul class="menu">
+              <li><a href="about.html">Giới thiệu</a></li>
+              <li><a href="project.html">Dự án</a></li>
+              <li><a href="shareholder.html">Quan hệ cổ đông</a></li>
+              <li><a href="exchange.html">Sàn giao dịch BĐS</a></li>
+              <li><a href="recruitment.html">Tuyển dụng</a></li>
+              <li><a href="news.html">Tin tức</a></li>
+              <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+          </nav>
+          <span class="w-px h-5 bg-white/40"></span>
+
+          <div class="relative">
+            <img src="/resources/img/search.png" id="searchBtn" class="w-5 h-5 cursor-pointer" />
+            <div id="searchBox" class="hidden absolute right-0 top-[40px]">
+              <input type="text" placeholder="Search..."
+                class="w-[220px] h-[40px] px-4 rounded-lg shadow-lg outline-none text-black" />
+            </div>
+          </div>
+
+          <span class="w-px h-5 bg-white/40"></span>
+
+          <div class="flex items-center gap-2">
+            <a href="https://facebook.com" target="_blank"><img src="/resources/img/facebook-icon.png"
+                class="w-5 h-5"></a>
+            <a href="https://linkedin.com" target="_blank"><img src="/resources/img/linkedin-icon.png"
+                class="w-5 h-5"></a>
+            <a href="https://youtube.com" target="_blank"><img src="/resources/img/youtube-icon.png"
+                class="w-5 h-5"></a>
+          </div>
+
+          <span class="w-px h-5 bg-white/40"></span>
+
+          <div class="flex items-center gap-2">
+            <img src="/resources/img/vi.png" class="w-6 h-4 object-cover cursor-pointer">
+            <img src="/resources/img/en.png" class="w-6 h-4 object-cover cursor-pointer">
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div id="mobileMenu"
+      class="fixed top-0 left-[-320px] w-[320px] h-full bg-white z-[1000] transition-all duration-300 p-4">
+      <div class="flex items-center justify-between mb-4">
+        <a href="index.html">
+          <img src="/resources/img/hodeco-logo.png" class="h-10" alt="Home">
+        </a>
+        <button id="closeMenu" class="text-2xl">✕</button>
+      </div>
+      <div class="mb-4">
+        <input type="text" placeholder="Search..." class="w-full h-[40px] px-4 border rounded-full outline-none" />
+      </div>
+      <ul class="flex flex-col gap-3 mb-6">
+        <li><a href="about.html" class="block py-2 border-b">Giới thiệu</a></li>
+        <li><a href="project.html" class="block py-2 border-b">Dự án</a></li>
+        <li><a href="shareholder.html" class="block py-2 border-b">Quan hệ cổ đông</a></li>
+        <li><a href="exchange.html" class="block py-2 border-b">Sàn giao dịch BĐS</a></li>
+        <li><a href="recruitment.html" class="block py-2 border-b">Tuyển dụng</a></li>
+        <li><a href="news.html" class="block py-2 border-b">Tin tức</a></li>
+        <li><a href="contact.html" class="block py-2 border-b">Liên hệ</a></li>
+      </ul>
+      <div class="flex gap-4">
+        <a href="https://facebook.com" target="_blank"><img src="/resources/img/facebook-icon.png" class="w-5 h-5"></a>
+        <a href="https://linkedin.com" target="_blank"><img src="/resources/img/linkedin-icon.png" class="w-5 h-5"></a>
+        <a href="https://youtube.com" target="_blank"><img src="/resources/img/youtube-icon.png" class="w-5 h-5"></a>
+      </div>
+    </div>
+  </header>
+
+    <section class="w-full">
+        <img src="/resources/img/news/news-breadcrumb.jpg" class="w-auto  object-cover" />
+    </section>
+
+    <section class="section container my-16">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-12">
+
+            <div class="lg:col-span-8">
+
+                <div class="mb-10 flex flex-wrap items-center gap-4" data-animate="slide-in-left">
+                    <img src="/resources/img/news/avatar.jpg" alt="Author" class="h-16 w-16 rounded-full object-cover">
+
+                    <div class="flex flex-wrap items-center gap-3 text-[18px]">
+                        <span class="font-semibold text-black">
+                            Nguyễn Văn A
+                        </span>
+
+                        <span class="text-gray-400">•</span>
+
+                        <span class="text-primary">
+                            19 Th02, 2026
+                        </span>
+                    </div>
+                </div>
+                <div class="space-y-8 text-[20px] leading-[1.9] text-[#4D4D4D]">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam
+                    </p>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam
+                    </p>
+
+                    <h3 class="text-[28px] font-bold text-black">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    </h3>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam
+                    </p>
+
+                    <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+                        <img src="/resources/img/news/news-detail-1.jpg" alt=""
+                            class="h-[320px] w-full rounded-xl object-cover">
+
+                        <img src="/resources/img/news/news-detail-2.jpg" alt=""
+                            class="h-[320px] w-full rounded-xl object-cover">
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam
+                    </p>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam
+                    </p>
+
+                    <blockquote class="bg-[#F8F9FB] border-l-4 border-primary p-8 md:p-12 my-10 relative">
+                        <div class="mb-4">
+                            <i class="fa-solid fa-quote-left text-4xl text-gray-300"></i>
+                        </div>
+                        <p class="text-gray-600 italic">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam
+                        </p>
+                    </blockquote>
+
+                    <h3 class="text-xl font-bold text-gray-800 pt-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    </h3>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam
+                    </p>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam
+                    </p>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam
+                    </p>
+
+                    <div class="my-10">
+                        <img src="resources/img/news/news-detail-3.jpg" alt="Interior Design"
+                            class="w-full rounded-2xl shadow-sm">
+                    </div>
+
+                    <p class="text-gray-700 leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam
+                    </p>
+
+                    <div class="mt-16 pt-8 border-t border-gray-300">
+                        <div class="flex flex-col items-center sm:items-start gap-4">
+                            
+                            <span class="font-bold text-gray-800">
+                                Chia sẻ bài viết
+                            </span>
+
+                            <div class="flex gap-2">
+                                <a href="#"
+                                    class="w-10 h-10 border border-gray-400 rounded-full flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white hover:border-primary transition-all">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-10 h-10 border border-gray-400 rounded-full flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white hover:border-primary transition-all">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-10 h-10 border border-gray-400 rounded-full flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white hover:border-primary transition-all">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-10 h-10 border border-gray-400 rounded-full flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white hover:border-primary transition-all">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-10 h-10 border border-gray-400 rounded-full flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white hover:border-primary transition-all">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 border-b border-gray-300"></div>
+                    <div class="mt-12 flex justify-start" data-animate="slide-in-left">
+                        <a href="javascript:history.back()"
+                            class="group flex items-center gap-4 px-2 py-2 pr-10 rounded-full border-2 border-primary text-primary transition-all duration-300 hover:bg-[#1e40af] hover:text-white">
+
+                            <div
+                                class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white text-lg transition-all duration-300 group-hover:bg-white group-hover:text-[#1e40af]">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+
+                            <span class="text-xl font-bold">Quay lại</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-4" data-animate="slide-in-right">
+                <div class="sticky top-10">
+                    <h3 class="heading-title mb-6">
+                        Bài viết liên quan 
+                    </h3>
+
+                    <div class="space-y-5">
+                        <a href="#" class="group flex gap-4 border-b border-gray-200 pb-5">
+                            <img src="/resources/img/news/related-1.jpg" alt="Tin tức dự án"
+                                class="h-[80px] w-[110px] lg:h-[110px] lg:w-[150px] shrink-0 rounded-xl object-cover transition duration-500 group-hover:scale-105">
+                            <div>
+                                <p class="mb-1 text-[13px] lg:text-[14px] text-primary font-medium">
+                                    19 Th02, 2026
+                                </p>
+                                <h4 class="line-clamp-3 text-[16px] lg:text-[20px] font-semibold leading-snug transition group-hover:text-primary">
+                                    Hưng Thịnh Land nhận giải thưởng Top 10 Nhà phát triển Bất động sản tiêu biểu
+                                </h4>
+                            </div>
+                        </a>
+
+                        <a href="#" class="group flex gap-4 border-b border-gray-200 pb-5">
+                            <img src="/resources/img/news/related-2.jpg" alt="Thị trường bất động sản"
+                                class="h-[80px] w-[110px] lg:h-[110px] lg:w-[150px] shrink-0 rounded-xl object-cover transition duration-500 group-hover:scale-105">
+                            <div>
+                                <p class="mb-1 text-[13px] lg:text-[14px] text-primary font-medium">
+                                    15 Th02, 2026
+                                </p>
+                                <h4 class="line-clamp-3 text-[16px] lg:text-[20px] font-semibold leading-snug transition group-hover:text-primary">
+                                    Tiềm năng tăng giá của các dự án đô thị vệ tinh trong năm 2026
+                                </h4>
+                            </div>
+                        </a>
+
+                        <a href="#" class="group flex gap-4 border-b border-gray-200 pb-5">
+                            <img src="/resources/img/news/related-3.jpg" alt="Tiến độ dự án"
+                                class="h-[80px] w-[110px] lg:h-[110px] lg:w-[150px] shrink-0 rounded-xl object-cover transition duration-500 group-hover:scale-105">
+                            <div>
+                                <p class="mb-1 text-[13px] lg:text-[14px] text-primary font-medium">
+                                    10 Th02, 2026
+                                </p>
+                                <h4 class="line-clamp-3 text-[16px] lg:text-[20px] font-semibold leading-snug transition group-hover:text-primary">
+                                    Cập nhật tiến độ thi công dự án căn hộ cao cấp tại trung tâm thành phố
+                                </h4>
+                            </div>
+                        </a>
+
+                        <a href="#" class="group flex gap-4 border-b border-gray-200 pb-5">
+                            <img src="/resources/img/news/related-4.jpg" alt="Hoạt động cộng đồng"
+                                class="h-[80px] w-[110px] lg:h-[110px] lg:w-[150px] shrink-0 rounded-xl object-cover transition duration-500 group-hover:scale-105">
+                            <div>
+                                <p class="mb-1 text-[13px] lg:text-[14px] text-primary font-medium">
+                                    05 Th02, 2026
+                                </p>
+                                <h4 class="line-clamp-3 text-[16px] lg:text-[20px] font-semibold leading-snug transition group-hover:text-primary">
+                                    Chương trình thiện nguyện: Gắn kết yêu thương cùng cộng đồng cư dân
+                                </h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="footer" class="site-footer" itemtype="" itemscope>
+        <div id="footer-main-wrap" class="footer-main-wrap bg-primary text-white relative overflow-hidden">
+          <img src="/resources/img/bg-footer-left.png" class="absolute left-0 top-0 pointer-events-none select-none z-0 w-[120px] md:w-[160px] xl:w-auto" alt="">
+          <img src="/resources/img/bg-footer-right.png" class="absolute right-0 bottom-0 pointer-events-none select-none z-0 w-[240px] md:w-[320px] xl:w-auto" alt="">
+          <div class="container pt-16 relative z-10">
+            <div class="footer-brand-overlay text-center overflow-hidden">
+              <span
+                class="text-[12vw] font-semibold uppercase tracking-widest text-transparent block leading-none select-none"
+                style="-webkit-text-stroke: 1px rgba(255,255,255,0.2); font-size: clamp(40px, 15vw, 220px);">
+                hodeco
+              </span>
+            </div>
+
+            <div class="footer-address-container p-8 md:p-12 rounded-3xl border border-white/20 bg-white/5 backdrop-blur-sm relative">
+              <div class="footer-address-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 md:gap-x-12">
+
+                <div class="address-item flex flex-col relative">
+                  <h4 class="address-title text-lg font-bold uppercase mb-4">Trụ sở chính</h4>
+                  <div class="flex flex-col gap-3">
+                    <div class="flex items-start gap-3">
+                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
+                    </div>
+                  </div>
+                  <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                  <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+                </div>
+
+                <div class="address-item flex flex-col relative">
+                  <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Gò Vấp</h4>
+                  <div class="flex flex-col gap-3">
+                    <div class="flex items-start gap-3">
+                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
+                    </div>
+                  </div>
+                  <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                  <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+                </div>
+
+                <div class="address-item flex flex-col relative">
+                  <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Thạnh</h4>
+                  <div class="flex flex-col gap-3">
+                    <div class="flex items-start gap-3">
+                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
+                    </div>
+                  </div>
+                  <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                  <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+                </div>
+
+                <div class="address-item flex flex-col relative">
+                  <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Tân</h4>
+                  <div class="flex flex-col gap-3">
+                    <div class="flex items-start gap-3">
+                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-credit py-8 relative z-10">
+            <div class="container flex flex-col items-center justify-center gap-4 text-center">
+              <div class="footer-copyright text-sm text-white">
+                <span class="copyright">© 2026 Hodeco,&nbsp;</span>
+                <span class="hd">
+                  design by
+                  <a class="hover:text-white transition-colors" href="https://webhd.vn/" target="_blank" rel="noopener noreferrer nofollow">
+                    HD Agency
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </footer>
+
+    <script type="module" src="/resources/js/main.js"></script>
+</body>
+
+</html>
