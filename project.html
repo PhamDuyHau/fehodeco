@@ -14,7 +14,6 @@
         <div class="relative bg-[linear-gradient(180deg,#057DCD_0%,rgba(5,125,205,0)_59.29%)]">
 
         <div class="flex items-center justify-between gap-5 px-6 py-3">
-
             <div class="lg:hidden">
             <button id="menuBtn" class="text-white text-2xl">☰</button>
             </div>
@@ -129,85 +128,66 @@
                         </select>
                         <i class="fa-solid fa-chevron-down absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 text-xs"></i>
                     </div>
-                    <button class="bg-secondary text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-red-700 transition">
+                    <button class="bg-secondary cursor-pointer text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-red-700 transition">
                         Tìm kiếm
                     </button>
                 </div>
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+            <div data-animate="lift-in-stagger" class="flex flex-col h-full">
+                <div class="aspect-square overflow-hidden rounded-[24px] mb-4">
+                    <img src="resources/img/project/project-card-1.jpg"
+                        class="w-full h-full object-cover"
+                        alt="Chung cư NOXH Eco Home 1">
+                </div>
+                <h3 class="text-2xl font-semibold text-primary mb-5 leading-9 min-h-18">
+                    Chung cư NOXH Eco Home 1
+                </h3>
+                <div class="text-base text-[#333333] space-y-2 grow">
+                    <p><strong>Dòng sản phẩm:</strong> Chung cư</p>
+                    <p><strong>Vị trí:</strong> Mặt tiền đường Trường Chinh, Phường Phú Mỹ, Hồ Chí Minh</p>
+                    <p><strong>Quy mô dự án:</strong> 340 căn hộ</p>
+                    <p><strong>Tiến độ:</strong> Đang nhận hồ sơ</p>
+                    <p>Link giới thiệu dự án</p>
+                </div>
+            </div>
+            <div data-animate="lift-in-stagger" class="flex flex-col h-full">
+                <div class="aspect-square overflow-hidden rounded-[24px] mb-4">
+                    <img src="resources/img/project/project-card-2.jpg"
+                        class="w-full h-full object-cover"
+                        alt="The Light City">
+                </div>
 
-            <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative" data-animate="lift-in-stagger">
-                <div class="h-64 overflow-hidden m-4 rounded-[24px]">
-                    <img src="resources/img/project/project-card-1.jpg" class="w-full h-full object-cover" alt="Chung cư NOXH Eco Home 1">
-                </div>
-                <div class="px-6 pb-20">
-                    <h3 class="text-xl font-bold mb-4 text-[#333]">Chung cư NOXH Eco Home 1</h3>
-                    <div class="space-y-2 text-sm text-gray-600">
-                        <p><strong>Dòng sản phẩm:</strong> Chung cư</p>
-                        <p><strong>Vị trí:</strong> Mặt tiền đường Trường Chinh, Phường Phú Mỹ, Hồ Chí Minh</p>
-                        <p><strong>Quy mô dự án:</strong> 340 căn hộ</p>
-                        <p><strong>Tiến độ:</strong> Đang nhận hồ sơ</p>
-                        <a href="project_detail.html" class="text-blue-900 font-medium block mt-4 underline underline-offset-4">Link giới thiệu dự án</a>
-                    </div>
-                </div>
-                <a href="project_detail.html" class="card-corner">
-                    <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
-                        <i class="fa-solid fa-arrow-right fa-beat"></i>
-                    </div>
-                </a>
-                <div class="absolute left-4 bottom-4 right-24 flex items-center">
-                    <span class="h-[1px] bg-gray-300 flex-1"></span>
-                    <span class="ml-2 text-gray-400 whitespace-nowrap">Xem thêm</span>
+                <h3 class="text-2xl font-semibold text-primary mb-5 leading-[36px] min-h-[72px]">
+                    The Light City
+                </h3>
+
+                <div class="text-base text-[#333333] space-y-2 flex-grow">
+                    <p><strong>Dòng sản phẩm:</strong> Chung cư</p>
+                    <p><strong>Vị trí:</strong> Đường Chi Lăng, Phường Phước Thắng, Hồ Chí Minh</p>
+                    <p><strong>Quy mô dự án:</strong> 49ha</p>
+                    <p><strong>Tiến độ:</strong> Đang thực hiện</p>
                 </div>
             </div>
 
-            <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative" data-animate="lift-in-stagger">
-                <div class="h-64 overflow-hidden m-4 rounded-[24px]">
-                    <img src="resources/img/project/project-card-2.jpg" class="w-full h-full object-cover" alt="The Light City">
+            <div data-animate="lift-in-stagger" class="flex flex-col h-full">
+                <div class="aspect-square overflow-hidden rounded-[24px] mb-4">
+                    <img src="resources/img/project/project-card-3.png"
+                        class="w-full h-full object-cover"
+                        alt="Ecotown Phú Mỹ">
                 </div>
-                <div class="px-6 pb-20">
-                    <h3 class="text-xl font-bold mb-4 text-[#333]">The Light City</h3>
-                    <div class="space-y-2 text-sm text-gray-600">
-                        <p><strong>Dòng sản phẩm:</strong> Chung cư</p>
-                        <p><strong>Vị trí:</strong> Đường Chi Lăng, Phường Phước Thắng, Hồ Chí Minh</p>
-                        <p><strong>Quy mô dự án:</strong> 49ha</p>
-                        <p><strong>Tiến độ:</strong> Đang thực hiện</p>
-                    </div>
-                </div>
-                <a href="project_detail.html" class="card-corner">
-                    <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
-                        <i class="fa-solid fa-arrow-right fa-beat"></i>
-                    </div>
-                </a>
-                <div class="absolute left-4 bottom-4 right-24 flex items-center">
-                    <span class="h-[1px] bg-gray-300 flex-1"></span>
-                    <span class="ml-2 text-gray-400 whitespace-nowrap">Xem thêm</span>
-                </div>
-            </div>
 
-            <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative" data-animate="lift-in-stagger">
-                <div class="h-64 overflow-hidden m-4 rounded-[24px]">
-                    <img src="resources/img/project/project-card-3.png" class="w-full h-full object-cover" alt="Ecotown Phú Mỹ">
-                </div>
-                <div class="px-6 pb-20">
-                    <h3 class="text-xl font-bold mb-4 text-[#333]">Ecotown Phú Mỹ</h3>
-                    <div class="space-y-2 text-sm text-gray-600">
-                        <p><strong>Dòng sản phẩm:</strong> Khu đô thị</p>
-                        <p><strong>Vị trí:</strong> Mặt tiền đường Trường Chinh, Phường Phú Mỹ, Hồ Chí Minh</p>
-                        <p><strong>Quy mô dự án:</strong> Tổng diện tích 63.133,5m2</p>
-                        <p><strong>Tiến độ:</strong> Đang triển khai</p>
-                    </div>
-                </div>
-                <a href="project_detail.html" class="card-corner">
-                    <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
-                        <i class="fa-solid fa-arrow-right fa-beat"></i>
-                    </div>
-                </a>
-                <div class="absolute left-4 bottom-4 right-24 flex items-center">
-                    <span class="h-[1px] bg-gray-300 flex-1"></span>
-                    <span class="ml-2 text-gray-400 whitespace-nowrap">Xem thêm</span>
+                <h3 class="text-2xl font-semibold text-primary mb-5 leading-[36px] min-h-[72px]">
+                    Ecotown Phú Mỹ
+                </h3>
+
+                <div class="text-base text-[#333333] space-y-2 flex-grow">
+                    <p><strong>Dòng sản phẩm:</strong> Khu đô thị</p>
+                    <p><strong>Vị trí:</strong> Mặt tiền đường Trường Chinh, Phường Phú Mỹ, Hồ Chí Minh</p>
+                    <p><strong>Quy mô dự án:</strong> Tổng diện tích 63.133,5m2</p>
+                    <p><strong>Tiến độ:</strong> Đang triển khai</p>
                 </div>
             </div>
 
@@ -217,7 +197,7 @@
     <section class="section container project_cate">
         <div class="flex flex-col gap-6 mb-10">
             <div class="text-center mx-auto max-w-4xl" data-animate="reveal-up">
-                <h2 class="heading-title mb-4">Bất động sản dân dụng</h2>
+                <h2 class="heading-title mb-4">Bất động sản nghỉ dưỡng</h2>
                 <p class="text-[16px] text-gray-600 leading-relaxed">
                     Với 35 năm phát triển, Hodeco không ngừng kiến tạo những không gian sống chất lượng, hiện đại và
                     bền vững tại Bà Rịa – Vũng Tàu. Chúng tôi tự hào là một trong những đơn vị tiên phong xây dựng các
@@ -243,77 +223,62 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
 
-            <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative" data-animate="lift-in-stagger">
-                <div class="h-64 overflow-hidden m-4 rounded-[24px]">
-                    <img src="resources/img/project/project-card-4.jpg" class="w-full h-full object-cover" alt="Fusion Suites Vũng Tàu">
+            <div data-animate="lift-in-stagger" class="flex flex-col h-full">
+                <div class="aspect-square overflow-hidden rounded-[24px] mb-4">
+                    <img src="resources/img/project/project-card-4.jpg"
+                        class="w-full h-full object-cover"
+                        alt="Fusion Suites Vũng Tàu">
                 </div>
-                <div class="px-6 pb-20">
-                    <h3 class="text-xl font-bold mb-4 text-[#333]">Fusion Suites Vũng Tàu</h3>
-                    <div class="space-y-2 text-sm text-gray-600">
-                        <p><strong>Dòng sản phẩm:</strong> Nghỉ dưỡng</p>
-                        <p><strong>Vị trí:</strong> Đường Trương Công Định, Phường Vũng Tàu, Hồ Chí Minh</p>
-                        <p><strong>Quy mô dự án:</strong> 171 phòng</p>
-                        <p><strong>Tiến độ:</strong> Đã vận hành</p>
-                    </div>
-                </div>
-                <a href="project_detail.html" class="card-corner">
-                    <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
-                        <i class="fa-solid fa-arrow-right fa-beat"></i>
-                    </div>
-                </a>
-                <div class="absolute left-4 bottom-4 right-24 flex items-center">
-                    <span class="h-[1px] bg-gray-300 flex-1"></span>
-                    <span class="ml-2 text-gray-400 whitespace-nowrap">Xem thêm</span>
+
+                <h3 class="text-2xl font-semibold text-primary mb-5 leading-9 min-h-[72px]">
+                    Fusion Suites Vũng Tàu
+                </h3>
+
+                <div class="text-base text-[#333333] space-y-2 grow">
+                    <p><strong>Dòng sản phẩm:</strong> Nghỉ dưỡng</p>
+                    <p><strong>Vị trí:</strong> Đường Trương Công Định, Phường Vũng Tàu, Hồ Chí Minh</p>
+                    <p><strong>Quy mô dự án:</strong> 171 phòng</p>
+                    <p><strong>Tiến độ:</strong> Đã vận hành</p>
                 </div>
             </div>
 
-            <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative" data-animate="lift-in-stagger">
-                <div class="h-64 overflow-hidden m-4 rounded-[24px]">
-                    <img src="resources/img/project/project-card-1.jpg" class="w-full h-full object-cover" alt="Khu du lịch Biển Đá Vàng">
+            <div data-animate="lift-in-stagger" class="flex flex-col h-full">
+                <div class="aspect-square overflow-hidden rounded-[24px] mb-4">
+                    <img src="resources/img/project/project-card-1.jpg"
+                        class="w-full h-full object-cover"
+                        alt="Khu du lịch Biển Đá Vàng">
                 </div>
-                <div class="px-6 pb-20">
-                    <h3 class="text-xl font-bold mb-4 text-[#333]">Khu du lịch Biển Đá Vàng</h3>
-                    <div class="space-y-2 text-sm text-gray-600">
-                        <p><strong>Dòng sản phẩm:</strong> Chung cư</p>
-                        <p><strong>Vị trí:</strong> Đường Chi Lăng, Phường Phước Thắng, Hồ Chí Minh</p>
-                        <p><strong>Quy mô dự án:</strong> 49ha</p>
-                        <p><strong>Tiến độ:</strong> Đang thực hiện</p>
-                    </div>
-                </div>
-                <a href="project_detail.html" class="card-corner">
-                    <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
-                        <i class="fa-solid fa-arrow-right fa-beat"></i>
-                    </div>
-                </a>
-                <div class="absolute left-4 bottom-4 right-24 flex items-center">
-                    <span class="h-[1px] bg-gray-300 flex-1"></span>
-                    <span class="ml-2 text-gray-400 whitespace-nowrap">Xem thêm</span>
+
+                <h3 class="text-2xl font-semibold text-primary mb-5 leading-9 min-h-[72px]">
+                    Khu du lịch Biển Đá Vàng
+                </h3>
+
+                <div class="text-base text-[#333333] space-y-2 grow">
+                    <p><strong>Dòng sản phẩm:</strong> Chung cư</p>
+                    <p><strong>Vị trí:</strong> Đường Chi Lăng, Phường Phước Thắng, Hồ Chí Minh</p>
+                    <p><strong>Quy mô dự án:</strong> 49ha</p>
+                    <p><strong>Tiến độ:</strong> Đang thực hiện</p>
                 </div>
             </div>
 
-            <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative" data-animate="lift-in-stagger">
-                <div class="h-64 overflow-hidden m-4 rounded-[24px]">
-                    <img src="resources/img/project/project-card-2.jpg" class="w-full h-full object-cover" alt="Khu du lịch sinh thái Antares Vũng Tàu">
+            <div data-animate="lift-in-stagger" class="flex flex-col h-full">
+                <div class="aspect-square overflow-hidden rounded-[24px] mb-4">
+                    <img src="resources/img/project/project-card-2.jpg"
+                        class="w-full h-full object-cover"
+                        alt="Khu du lịch sinh thái Antares Vũng Tàu">
                 </div>
-                <div class="px-6 pb-20">
-                    <h3 class="text-xl font-bold mb-4 text-[#333]">Khu du lịch sinh thái Antares Vũng Tàu</h3>
-                    <div class="space-y-2 text-sm text-gray-600">
-                        <p><strong>Dòng sản phẩm:</strong> Nghỉ dưỡng</p>
-                        <p><strong>Vị trí:</strong> Phường Phước Thắng, Hồ Chí Minh</p>
-                        <p><strong>Quy mô dự án:</strong> 234,4 ha</p>
-                        <p><strong>Tiến độ:</strong> Sắp triển khai</p>
-                    </div>
-                </div>
-                <a href="project_detail.html" class="card-corner">
-                    <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
-                        <i class="fa-solid fa-arrow-right fa-beat"></i>
-                    </div>
-                </a>
-                <div class="absolute left-4 bottom-4 right-24 flex items-center">
-                    <span class="h-[1px] bg-gray-300 flex-1"></span>
-                    <span class="ml-2 text-gray-400 whitespace-nowrap">Xem thêm</span>
+
+                <h3 class="text-2xl font-semibold text-primary mb-5 leading-9 min-h-[72px]">
+                    Khu du lịch sinh thái Antares Vũng Tàu
+                </h3>
+
+                <div class="text-base text-[#333333] space-y-2 grow">
+                    <p><strong>Dòng sản phẩm:</strong> Nghỉ dưỡng</p>
+                    <p><strong>Vị trí:</strong> Phường Phước Thắng, Hồ Chí Minh</p>
+                    <p><strong>Quy mô dự án:</strong> 234,4 ha</p>
+                    <p><strong>Tiến độ:</strong> Sắp triển khai</p>
                 </div>
             </div>
 
@@ -323,7 +288,7 @@
     <section class="section container project_cate">
         <div class="flex flex-col gap-6 mb-10">
             <div class="text-center mx-auto max-w-4xl" data-animate="reveal-up">
-                <h2 class="heading-title mb-4">Bất động sản dân dụng</h2>
+                <h2 class="heading-title mb-4">Bất động sản công nghiệp</h2>
                 <p class="text-[16px] text-gray-600 leading-relaxed">
                     Với 35 năm phát triển, Hodeco không ngừng kiến tạo những không gian sống chất lượng, hiện đại và
                     bền vững tại Bà Rịa – Vũng Tàu. Chúng tôi tự hào là một trong những đơn vị tiên phong xây dựng các
@@ -342,85 +307,69 @@
                         </select>
                         <i class="fa-solid fa-chevron-down absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 text-xs"></i>
                     </div>
-                    <button class="bg-secondary text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-red-700 transition">
+                    <button class="bg-secondary cursor-pointer text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-red-700 transition">
                         Tìm kiếm
                     </button>
                 </div>
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
 
-            <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative" data-animate="lift-in-stagger">
-                <div class="h-64 overflow-hidden m-4 rounded-[24px]">
-                    <img src="resources/img/project/project-card-1.jpg" class="w-full h-full object-cover" alt="Chung cư NOXH Eco Home 1">
+            <div data-animate="lift-in-stagger" class="flex flex-col h-full">
+                <div class="aspect-square overflow-hidden rounded-[24px] mb-4">
+                    <img src="resources/img/project/project-card-1.jpg"
+                        class="w-full h-full object-cover"
+                        alt="Chung cư NOXH Eco Home 1">
                 </div>
-                <div class="px-6 pb-20">
-                    <h3 class="text-xl font-bold mb-4 text-[#333]">Chung cư NOXH Eco Home 1</h3>
-                    <div class="space-y-2 text-sm text-gray-600">
-                        <p><strong>Dòng sản phẩm:</strong> Chung cư</p>
-                        <p><strong>Vị trí:</strong> Mặt tiền đường Trường Chinh, Phường Phú Mỹ, Hồ Chí Minh</p>
-                        <p><strong>Quy mô dự án:</strong> 340 căn hộ</p>
-                        <p><strong>Tiến độ:</strong> Đang nhận hồ sơ</p>
-                        <a href="project_detail.html" class="text-blue-900 font-medium block mt-4 underline underline-offset-4">Link giới thiệu dự án</a>
-                    </div>
-                </div>
-                <a href="project_detail.html" class="card-corner">
-                    <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
-                        <i class="fa-solid fa-arrow-right fa-beat"></i>
-                    </div>
-                </a>
-                <div class="absolute left-4 bottom-4 right-24 flex items-center">
-                    <span class="h-[1px] bg-gray-300 flex-1"></span>
-                    <span class="ml-2 text-gray-400 whitespace-nowrap">Xem thêm</span>
+
+                <h3 class="text-2xl font-semibold text-primary mb-5 leading-9 min-h-[72px]">
+                    Chung cư NOXH Eco Home 1
+                </h3>
+
+                <div class="text-base text-[#333333] space-y-2 grow">
+                    <p><strong>Dòng sản phẩm:</strong> Chung cư</p>
+                    <p><strong>Vị trí:</strong> Mặt tiền đường Trường Chinh, Phường Phú Mỹ, Hồ Chí Minh</p>
+                    <p><strong>Quy mô dự án:</strong> 340 căn hộ</p>
+                    <p><strong>Tiến độ:</strong> Đang nhận hồ sơ</p>
                 </div>
             </div>
 
-            <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative" data-animate="lift-in-stagger">
-                <div class="h-64 overflow-hidden m-4 rounded-[24px]">
-                    <img src="resources/img/project/project-card-2.jpg" class="w-full h-full object-cover" alt="The Light City">
+            <div data-animate="lift-in-stagger" class="flex flex-col h-full">
+                <div class="aspect-square overflow-hidden rounded-[24px] mb-4">
+                    <img src="resources/img/project/project-card-2.jpg"
+                        class="w-full h-full object-cover"
+                        alt="The Light City">
                 </div>
-                <div class="px-6 pb-20">
-                    <h3 class="text-xl font-bold mb-4 text-[#333]">The Light City</h3>
-                    <div class="space-y-2 text-sm text-gray-600">
-                        <p><strong>Dòng sản phẩm:</strong> Chung cư</p>
-                        <p><strong>Vị trí:</strong> Đường Chi Lăng, Phường Phước Thắng, Hồ Chí Minh</p>
-                        <p><strong>Quy mô dự án:</strong> 49ha</p>
-                        <p><strong>Tiến độ:</strong> Đang thực hiện</p>
-                    </div>
-                </div>
-                <a href="project_detail.html" class="card-corner">
-                    <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
-                        <i class="fa-solid fa-arrow-right fa-beat"></i>
-                    </div>
-                </a>
-                <div class="absolute left-4 bottom-4 right-24 flex items-center">
-                    <span class="h-[1px] bg-gray-300 flex-1"></span>
-                    <span class="ml-2 text-gray-400 whitespace-nowrap">Xem thêm</span>
+
+                <h3 class="text-2xl font-semibold text-primary mb-5 leading-9 min-h-[72px]">
+                    The Light City
+                </h3>
+
+                <div class="text-base text-[#333333] space-y-2 grow">
+                    <p><strong>Dòng sản phẩm:</strong> Chung cư</p>
+                    <p><strong>Vị trí:</strong> Đường Chi Lăng, Phường Phước Thắng, Hồ Chí Minh</p>
+                    <p><strong>Quy mô dự án:</strong> 49ha</p>
+                    <p><strong>Tiến độ:</strong> Đang thực hiện</p>
                 </div>
             </div>
 
-            <div class="bg-white rounded-[32px] overflow-hidden flex flex-col relative" data-animate="lift-in-stagger">
-                <div class="h-64 overflow-hidden m-4 rounded-[24px]">
-                    <img src="resources/img/project/project-card-3.png" class="w-full h-full object-cover" alt="Ecotown Phú Mỹ">
+            <div data-animate="lift-in-stagger" class="flex flex-col h-full">
+                <div class="aspect-square overflow-hidden rounded-[24px] mb-4">
+                    <img src="resources/img/project/project-card-3.png"
+                        class="w-full h-full object-cover"
+                        alt="Ecotown Phú Mỹ">
                 </div>
-                <div class="px-6 pb-20">
-                    <h3 class="text-xl font-bold mb-4 text-[#333]">Ecotown Phú Mỹ</h3>
-                    <div class="space-y-2 text-sm text-gray-600">
-                        <p><strong>Dòng sản phẩm:</strong> Khu đô thị</p>
-                        <p><strong>Vị trí:</strong> Mặt tiền đường Trường Chinh, Phường Phú Mỹ, Hồ Chí Minh</p>
-                        <p><strong>Quy mô dự án:</strong> Tổng diện tích 63.133,5m2</p>
-                        <p><strong>Tiến độ:</strong> Đang triển khai</p>
-                    </div>
-                </div>
-                <a href="project_detail.html" class="card-corner">
-                    <div class="w-14 h-14 bg-[#1e40af] rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition">
-                        <i class="fa-solid fa-arrow-right fa-beat"></i>
-                    </div>
-                </a>
-                <div class="absolute left-4 bottom-4 right-24 flex items-center">
-                    <span class="h-[1px] bg-gray-300 flex-1"></span>
-                    <span class="ml-2 text-gray-400 whitespace-nowrap">Xem thêm</span>
+
+                <h3 class="text-2xl font-semibold text-primary mb-5 leading-9 min-h-[72px]">
+                    Ecotown Phú Mỹ
+                </h3>
+
+                <div class="text-base text-[#333333] space-y-2 grow">
+                    <p><strong>Dòng sản phẩm:</strong> Khu đô thị</p>
+                    <p><strong>Vị trí:</strong> Mặt tiền đường Trường Chinh, Phường Phú Mỹ, Hồ Chí Minh</p>
+                    <p><strong>Quy mô dự án:</strong> Tổng diện tích 63.133,5m2</p>
+                    <p><strong>Tiến độ:</strong> Đang triển khai</p>
                 </div>
             </div>
 

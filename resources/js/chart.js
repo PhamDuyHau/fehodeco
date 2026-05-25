@@ -1,5 +1,9 @@
-// chart.js
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Chart, registerables } from 'chart.js';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+Chart.register(...registerables);
+gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', () => {
     const chartEl = document.getElementById('hdcChart');
@@ -18,11 +22,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 {
                     type: 'line',
                     data: new Array(lineData.length).fill(0),
-                    borderColor: '#B91C1C',
+                    borderColor: '#BA1A1A',
                     borderWidth: 2,
                     pointRadius: 0,
+                    pointHoverRadius: 0,
+                    pointHoverBackgroundColor: '#BA1A1A',
+                    pointHoverBorderColor: '#fff',
+                    pointHoverBorderWidth: 2,
                     fill: false,
-                    tension: 0.3,
+                    tension: 0,
                 },
                 {
                     type: 'bar',
@@ -35,12 +43,26 @@ document.addEventListener('DOMContentLoaded', () => {
         options: {
             responsive: true,
             maintainAspectRatio: false,
+            interaction: {
+                mode: 'index',
+                intersect: false,
+            },
             animation: {
                 duration: 2000,
                 easing: 'easeInOutQuart',
             },
             plugins: {
-                legend: { display: false }
+                legend: { display: false },
+                tooltip: {
+                    mode: 'index',
+                    intersect: false,
+                    callbacks: {
+                        label: (item) => {
+                            if (item.datasetIndex === 0) return `Giá: ${item.raw.toLocaleString('vi-VN')}`;
+                            if (item.datasetIndex === 1) return `KL: ${item.raw.toLocaleString('vi-VN')}`;
+                        }
+                    }
+                }
             },
             layout: {
                 padding: { bottom: 20 }
@@ -91,8 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 i++;
                 if (i >= barData.length) clearInterval(interval);
             }, 40);
-
-            // Final full update for line
             chart.update();
         }
     });

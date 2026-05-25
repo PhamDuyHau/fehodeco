@@ -108,15 +108,10 @@ body.intro-playing .home-banner {
 
 .sub-title {
   @apply relative flex items-center gap-3 font-semibold text-[16px] lg:text-[24px] leading-[24px] text-[#333333];
-
-  &::before {
-    content: "";
-    @apply w-2.5 h-2.5 bg-red-500 rounded-full shrink-0;
-  }
 }
 
 .heading-title {
-  @apply text-[24px] md:text-[32px] lg:text-[44px] font-semibold mt-4;
+  @apply text-[24px] md:text-[32px] lg:text-[44px] font-bold text-primary mt-4;
 }
 
 .activity-btn {
@@ -442,7 +437,7 @@ body.intro-playing .home-banner {
 
 .section.shareholder-chart {
   .data-card {
-    @apply relative grid grid-cols-1 md:grid-cols-2 gap-x-12 p-6 bg-white rounded-2xl shadow-sm border border-gray-100 text-sm;
+    @apply relative grid grid-cols-1 md:grid-cols-2 gap-x-12 p-6 rounded-2xl shadow-sm border border-gray-100 text-sm;
   }
 
   .data-card::after {
@@ -606,7 +601,7 @@ body.intro-playing .home-banner {
 
 section.recru-reason {
   .title-wrapper {
-    @apply text-center max-w-3xl mx-auto mb-12 flex flex-col items-center justify-center;
+    @apply text-center max-w-4xl mx-auto mb-12 flex flex-col items-center justify-center;
   }
 
   .reason-card {
