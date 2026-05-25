@@ -111,7 +111,7 @@ body.intro-playing .home-banner {
 }
 
 .heading-title {
-  @apply text-[24px] md:text-[32px] lg:text-[44px] font-bold text-primary mt-4;
+  @apply text-[24px] md:text-[32px] lg:text-[44px] font-bold text-primary uppercase mt-4;
 }
 
 .activity-btn {
