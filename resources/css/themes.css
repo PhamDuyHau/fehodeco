@@ -51,3 +51,9 @@ html:has(body.intro-playing) {
     @apply leading-none;
   }
 }
+
+[data-animate="slide-in-left"],
+[data-animate="slide-in-right"] {
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+}

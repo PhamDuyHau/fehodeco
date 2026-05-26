@@ -112,18 +112,21 @@
             fetchpriority="high" />
     </section>
 
-    <section class="section about_vision relative overflow-hidden">
+    <section class="section about_vision container overflow-hidden">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-8 lg:gap-12 items-center">
-                <div class="rounded-[20px] lg:rounded-[24px] overflow-hidden shadow-sm" data-animate="slide-in-left">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+                
+                <div class="lg:col-span-5 rounded-[20px] lg:rounded-[24px] overflow-hidden will-change-transform" data-animate="slide-in-left">
                     <div class="aspect-square w-full max-h-[320px] sm:max-h-[400px] lg:max-h-none">
                         <img src="/resources/img/about/about-vision-left.webp"
-                            class="w-full h-full object-cover lg:object-contain" loading="lazy" decoding="async"
+                            class="w-full h-full object-cover" 
+                            loading="lazy" 
+                            decoding="async"
                             alt="HODECO Project View" />
                     </div>
                 </div>
 
-                <div class="content flex flex-col justify-between lg:min-h-[350px] py-2 lg:py-4"
+                <div class="lg:col-span-7 content flex flex-col justify-between lg:min-h-[380px] py-2 lg:py-4 will-change-transform"
                     data-animate="slide-in-right">
 
                     <div>
@@ -131,12 +134,10 @@
                             Tầm nhìn
                         </h2>
 
-                        <div class="flex flex-col lg:flex-row lg:items-start gap-4 lg:gap-6 w-full">
-                            <div class="w-16 lg:w-24 h-[3px] bg-[#0B3A7F] mx-auto lg:mx-0 lg:mt-[10px] flex-shrink-0">
-                            </div>
+                        <div class="flex flex-col sm:flex-row lg:items-start gap-4 lg:gap-6 w-full">
+                            <div class="w-16 lg:w-24 h-[3px] bg-[#0B3A7F] mx-auto lg:mx-0 lg:mt-[14px] flex-shrink-0"></div>
 
-                            <p
-                                class="text-[14px] lg:text-[15px] text-[#555] leading-relaxed text-center lg:text-left max-w-full lg:max-w-[500px]">
+                            <p class="text-[14px] lg:text-[16px] text-[#555] leading-relaxed text-center lg:text-left max-w-full lg:max-w-[580px]">
                                 Với khát vọng tiên phong phát triển một xã hội thịnh vượng, giá trị nhân sinh bền vững,
                                 HODECO nỗ lực trở thành tập đoàn kinh tế tư nhân hàng đầu, kiến tạo hệ sinh thái
                                 Bất động sản đa dạng, góp phần nâng tầm vị thế Việt Nam trên trường Quốc tế.
@@ -144,10 +145,9 @@
                         </div>
                     </div>
 
-                    <div class="mt-8 lg:mt-16 flex items-end justify-center lg:justify-start gap-4 lg:gap-5">
-                        <div
-                            class="text-[52px] sm:text-[64px] lg:text-[80px] font-bold text-[#0B3A7F] leading-none tracking-tight">
-                            1991
+                    <div class="mt-8 lg:mt-12 flex items-end justify-center lg:justify-start gap-4 lg:gap-5">
+                        <div class="text-[52px] sm:text-[64px] lg:text-[80px] font-bold text-[#0B3A7F] leading-none tracking-tight">
+                            1990
                         </div>
 
                         <div class="mb-1 lg:mb-1.5 text-left">
@@ -155,7 +155,7 @@
                                 Hành trình
                             </span>
                             <h4 class="text-[16px] lg:text-[20px] font-bold text-[#333] leading-tight">
-                                35 năm kiến tạo giá trị
+                                36 năm kiến tạo giá trị
                             </h4>
                         </div>
                     </div>
@@ -418,23 +418,23 @@
             </div>
 
             <div id="label-slot-0" class="absolute left-[22%] bottom-[-6%]" style="opacity:0">
-                <span class="label-year block text-[#E32219] font-bold text-xl lg:text-3xl"></span>
+                <span class="label-year block text-secondary font-bold text-xl lg:text-3xl"></span>
                 <span class="label-text block text-[#333333] text-xs lg:text-sm mt-1"></span>
             </div>
 
             <div id="label-slot-1" class="absolute left-[12%] top-[25%]" style="opacity:0">
-                <span class="label-year block text-[#E32219] font-bold text-xl lg:text-3xl"></span>
+                <span class="label-year block text-secondary font-bold text-xl lg:text-3xl"></span>
                 <span class="label-text block text-[#333333] text-xs lg:text-sm mt-1 leading-relaxed"></span>
             </div>
 
             <div id="label-slot-2" class="absolute left-[46%] bottom-[20%]" style="opacity:0">
-                <span class="label-year block text-[#E32219] font-bold text-xl lg:text-3xl"></span>
+                <span class="label-year block text-secondary font-bold text-xl lg:text-3xl"></span>
                 <span class="label-text block text-[#333333] text-xs lg:text-sm mt-1"></span>
             </div>
 
             <div id="label-slot-3" class="absolute left-[54%] top-[-18%]" style="opacity:0">
-                <span class="label-year block text-[#E32219] font-bold text-xl lg:text-3xl"></span>
-                <span class="label-text block text-[#333333] text-xs lg:text-sm mt-1"></span>
+                <span class="label-year block text-secondary font-bold text-xl lg:text-3xl"></span>
+                <span class="label-text block text-secondary text-xs lg:text-sm mt-1"></span>
             </div>
 
             <div class="flex items-center justify-center gap-3 mt-4">
@@ -754,298 +754,397 @@
         </div>
     </section>
 
-    <section class="section about-award">
-        <div class="container mx-auto px-4">
-            <div class="text-left mb-8">
-                <h2 class="heading-title">
-                    Minh chứng cho chất lượng và<br>
-                    niềm tin khách hàng
-                </h2>
-            </div>
+    <section class="section container about-award about-award-wrapper">
+        <div class="text-center mb-8">
+            <h2 class="heading-title">
+                THÀNH TỰU & GIẢI THƯỞNG
+            </h2>
+        </div>
 
-            <div class="award-grid-container">
-                <div>
-                    <div class="award-cover-wrap">
-                        <img src="/resources/img/about/about-card-award-left.png" alt="Giải thưởng thành tựu">
-                        <div class="award-cover-overlay">
-                            <div class="flex items-center gap-6 text-white text-[15px] font-semibold">
-                                <span class="border-b-2 border-white pb-1 cursor-pointer">Bằng khen</span>
-                                <span class="opacity-60 hover:opacity-100 transition-opacity cursor-pointer">Cúp lưu
-                                    niệm</span>
+        <div class="award-tabs">
+            <button class="award-btn" data-index="0">
+                Bằng khen
+            </button>
+
+            <button class="award-btn" data-index="1">
+                Cúp lưu niệm
+            </button>
+        </div>
+
+        <div class="award-item active" data-index="0">
+            <div class="swiper w-full" data-fx-slider data-swiper-options='{
+                "slidesPerView": 1,
+                "spaceBetween": 24,
+                "navigation": {
+                    "nextEl": ".award-nav-next-1",
+                    "prevEl": ".award-nav-prev-1"
+                },
+                "breakpoints": {
+                    "640": { "slidesPerView": 1.5 },
+                    "768": { "slidesPerView": 2 },
+                    "1280": { "slidesPerView": 3 }
+                }
+            }'>
+
+                <div class="swiper-wrapper">
+
+                    <!-- 1 -->
+                    <div class="swiper-slide">
+                        <div class="award-card">
+                            <div class="award-card-image">
+                                <img src="/resources/img/about/about-award-1.png" alt="">
+                            </div>
+
+                            <div class="award-card-content">
+                                <div class="award-year">Năm 2019</div>
+                                <h3 class="award-title">
+                                    Huân chương Lao động Hạng Nhất
+                                </h3>
                             </div>
                         </div>
                     </div>
+
+                    <!-- 2 -->
+                    <div class="swiper-slide">
+                        <div class="award-card">
+                            <div class="award-card-image">
+                                <img src="/resources/img/about/about-award-2.png" alt="">
+                            </div>
+
+                            <div class="award-card-content">
+                                <div class="award-year">Năm 2013</div>
+                                <h3 class="award-title">
+                                    Huân chương Lao động Hạng Nhì
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="swiper-slide">
+                        <div class="award-card">
+                            <div class="award-card-image">
+                                <img src="/resources/img/about/about-award-3.png" alt="">
+                            </div>
+
+                            <div class="award-card-content">
+                                <div class="award-year">Năm 2008</div>
+                                <h3 class="award-title">
+                                    Huân chương Lao động Hạng Ba
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="swiper-slide">
+                        <div class="award-card">
+                            <div class="award-card-image">
+                                <img src="/resources/img/about/about-award-4.png" alt="">
+                            </div>
+
+                            <div class="award-card-content">
+                                <div class="award-year">Năm 2024</div>
+                                <h3 class="award-title">
+                                    Chứng nhận Thương hiệu Quốc gia Việt Nam
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="award-right-matrix">
+                <!-- reuse your global swiper button css -->
+                <div class="swiper-navigation mx-auto mt-8">
+                    <button class="swiper-button-prev-custom award-nav-prev-1">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
 
-                    <div class="award-item-box">
-                        <div class="award-img-frame">
-                            <img src="/resources/img/about/about-award-1.png" alt="Award 1">
-                        </div>
-                        <div class="award-text-frame">
-                            Năm 2019 - Huân chương Lao động Hạng Nhất
-                        </div>
-                    </div>
-
-                    <div class="award-item-box">
-                        <div class="award-img-frame">
-                            <img src="/resources/img/about/about-award-2.png" alt="Award 2">
-                        </div>
-                        <div class="award-text-frame">
-                            Năm 2013 - Huân chương Lao động Hạng Nhì
-                        </div>
-                    </div>
-
-                    <div class="award-item-box">
-                        <div class="award-img-frame">
-                            <img src="/resources/img/about/about-award-3.png" alt="Award 3">
-                        </div>
-                        <div class="award-text-frame">
-                            Năm 2008 - Huân chương Lao động Hạng Ba
-                        </div>
-                    </div>
-
-                    <div class="award-item-box">
-                        <div class="award-img-frame">
-                            <img src="/resources/img/about/about-award-4.png" alt="Award 4">
-                        </div>
-                        <div class="award-text-frame">
-                            Chứng nhận Thương hiệu Quốc gia Việt Nam
-                        </div>
-                    </div>
-
+                    <button class="swiper-button-next-custom award-nav-next-1">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
                 </div>
-
             </div>
         </div>
-    </section>
 
-    <section class="section container about-partners py-10">
-        <h2 class="heading-title text-center mb-10 lg:mb-16" data-animate="reveal-up">
-            Đối Tác Của Chúng Tôi
-        </h2>
-        <div class="swiper w-full" data-fx-slider data-swiper-options='{
-            "slidesPerView": 4,
+        <div class="award-item" data-index="1">
+            <div class="swiper w-full" data-fx-slider data-swiper-options='{
+            "slidesPerView": 1,
             "spaceBetween": 24,
+            "navigation": {
+                "nextEl": ".award-nav-next-2",
+                "prevEl": ".award-nav-prev-2"
+            },
             "breakpoints": {
-                "0": { "slidesPerView": 1 },
-                "640": { "slidesPerView": 2 },
-                "1024": { "slidesPerView": 3 },
-                "1280": { "slidesPerView": 4 }
+                "640": { "slidesPerView": 1.5 },
+                "768": { "slidesPerView": 2 },
+                "1280": { "slidesPerView": 3 }
             }
         }'>
 
-            <div class="swiper-wrapper">
-                <div class="swiper-slide h-auto pb-6">
-                    <div class="partner-interactive-card">
-                        <img src="resources/img/about/about-card-mask.png" class="card-mask-bg" alt="">
+                <div class="swiper-wrapper">
 
-                        <div class="card-logo-wrap">
-                            <img src="resources/img/about/about-card-logo.png" alt="Partner Logo">
-                        </div>
-
-                        <div class="card-bottom-group">
-                            <div class="card-info-list">
-                                <div class="card-info-row">
-                                    <span class="card-label">Hotline:</span>
-                                    <span class="card-value">800 1000</span>
-                                </div>
-                                <div class="card-info-row">
-                                    <span class="card-label">Email:</span>
-                                    <span class="card-value">Email@gmail.com</span>
-                                </div>
-                                <div class="card-info-row">
-                                    <span class="card-label">Website:</span>
-                                    <span class="card-value">
-                                        <a href="https://sunworld.vn" target="_blank">sunworld.vn</a>
-                                    </span>
-                                </div>
+                    <!-- 1 -->
+                    <div class="swiper-slide">
+                        <div class="award-card">
+                            <div class="award-card-image">
+                                <img src="/resources/img/about/about-award-4.png" alt="">
                             </div>
 
-                            <div class="card-footer-divider"></div>
-
-                            <div class="card-watermark-num">01.</div>
+                            <div class="award-card-content">
+                                <div class="award-year">Năm 2024</div>
+                                <h3 class="award-title">
+                                    Cúp lưu niệm Quốc gia
+                                </h3>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- 2 -->
+                    <div class="swiper-slide">
+                        <div class="award-card">
+                            <div class="award-card-image">
+                                <img src="/resources/img/about/about-award-4.png" alt="">
+                            </div>
+
+                            <div class="award-card-content">
+                                <div class="award-year">Năm 2021</div>
+                                <h3 class="award-title">
+                                    Cúp vinh danh Doanh nghiệp tiêu biểu
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="swiper-slide">
+                        <div class="award-card">
+                            <div class="award-card-image">
+                                <img src="/resources/img/about/about-award-4.png" alt="">
+                            </div>
+
+                            <div class="award-card-content">
+                                <div class="award-year">Năm 2018</div>
+                                <h3 class="award-title">
+                                    Cúp lưu niệm Thành tựu xuất sắc
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="swiper-slide">
+                        <div class="award-card">
+                            <div class="award-card-image">
+                                <img src="/resources/img/about/about-award-4.png" alt="">
+                            </div>
+
+                            <div class="award-card-content">
+                                <div class="award-year">Năm 2015</div>
+                                <h3 class="award-title">
+                                    Cúp ghi nhận đóng góp cộng đồng
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="swiper-slide h-auto pb-6">
-                    <div class="partner-interactive-card">
-                        <img src="resources/img/about/about-card-mask.png" class="card-mask-bg" alt="">
+                <div class="swiper-navigation mx-auto mt-8">
+                    <button class="swiper-button-prev-custom award-nav-prev-2">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
 
-                        <div class="card-logo-wrap">
-                            <img src="resources/img/about/about-card-logo.png" alt="Partner Logo">
-                        </div>
-
-                        <div class="card-bottom-group">
-                            <div class="card-info-list">
-                                <div class="card-info-row">
-                                    <span class="card-label">Hotline:</span>
-                                    <span class="card-value">800 1000</span>
-                                </div>
-                                <div class="card-info-row">
-                                    <span class="card-label">Email:</span>
-                                    <span class="card-value">Email@gmail.com</span>
-                                </div>
-                                <div class="card-info-row">
-                                    <span class="card-label">Website:</span>
-                                    <span class="card-value">
-                                        <a href="https://sunworld.vn" target="_blank">sunworld.vn</a>
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="card-footer-divider"></div>
-
-                            <div class="card-watermark-num">01.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide h-auto pb-6">
-                    <div class="partner-interactive-card">
-                        <img src="resources/img/about/about-card-mask.png" class="card-mask-bg" alt="">
-
-                        <div class="card-logo-wrap">
-                            <img src="resources/img/about/about-card-logo.png" alt="Partner Logo">
-                        </div>
-
-                        <div class="card-bottom-group">
-                            <div class="card-info-list">
-                                <div class="card-info-row">
-                                    <span class="card-label">Hotline:</span>
-                                    <span class="card-value">800 1000</span>
-                                </div>
-                                <div class="card-info-row">
-                                    <span class="card-label">Email:</span>
-                                    <span class="card-value">Email@gmail.com</span>
-                                </div>
-                                <div class="card-info-row">
-                                    <span class="card-label">Website:</span>
-                                    <span class="card-value">
-                                        <a href="https://sunworld.vn" target="_blank">sunworld.vn</a>
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="card-footer-divider"></div>
-
-                            <div class="card-watermark-num">01.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide h-auto pb-6">
-                    <div class="partner-interactive-card">
-                        <img src="resources/img/about/about-card-mask.png" class="card-mask-bg" alt="">
-
-                        <div class="card-logo-wrap">
-                            <img src="resources/img/about/about-card-logo.png" alt="Partner Logo">
-                        </div>
-
-                        <div class="card-bottom-group">
-                            <div class="card-info-list">
-                                <div class="card-info-row">
-                                    <span class="card-label">Hotline:</span>
-                                    <span class="card-value">800 1000</span>
-                                </div>
-                                <div class="card-info-row">
-                                    <span class="card-label">Email:</span>
-                                    <span class="card-value">Email@gmail.com</span>
-                                </div>
-                                <div class="card-info-row">
-                                    <span class="card-label">Website:</span>
-                                    <span class="card-value">
-                                        <a href="https://sunworld.vn" target="_blank">sunworld.vn</a>
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="card-footer-divider"></div>
-
-                            <div class="card-watermark-num">01.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide h-auto pb-6">
-                    <div class="partner-interactive-card">
-                        <img src="resources/img/about/about-card-mask.png" class="card-mask-bg" alt="">
-
-                        <div class="card-logo-wrap">
-                            <img src="resources/img/about/about-card-logo.png" alt="Partner Logo">
-                        </div>
-
-                        <div class="card-bottom-group">
-                            <div class="card-info-list">
-                                <div class="card-info-row">
-                                    <span class="card-label">Hotline:</span>
-                                    <span class="card-value">800 1000</span>
-                                </div>
-                                <div class="card-info-row">
-                                    <span class="card-label">Email:</span>
-                                    <span class="card-value">Email@gmail.com</span>
-                                </div>
-                                <div class="card-info-row">
-                                    <span class="card-label">Website:</span>
-                                    <span class="card-value">
-                                        <a href="https://sunworld.vn" target="_blank">sunworld.vn</a>
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="card-footer-divider"></div>
-
-                            <div class="card-watermark-num">01.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide h-auto pb-6">
-                    <div class="partner-interactive-card">
-                        <img src="resources/img/about/about-card-mask.png" class="card-mask-bg" alt="">
-
-                        <div class="card-logo-wrap">
-                            <img src="resources/img/about/about-card-logo.png" alt="Partner Logo">
-                        </div>
-
-                        <div class="card-bottom-group">
-                            <div class="card-info-list">
-                                <div class="card-info-row">
-                                    <span class="card-label">Hotline:</span>
-                                    <span class="card-value">800 1000</span>
-                                </div>
-                                <div class="card-info-row">
-                                    <span class="card-label">Email:</span>
-                                    <span class="card-value">Email@gmail.com</span>
-                                </div>
-                                <div class="card-info-row">
-                                    <span class="card-label">Website:</span>
-                                    <span class="card-value">
-                                        <a href="https://sunworld.vn" target="_blank">sunworld.vn</a>
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="card-footer-divider"></div>
-
-                            <div class="card-watermark-num">01.</div>
-                        </div>
-                    </div>
+                    <button class="swiper-button-next-custom award-nav-next-2">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
                 </div>
             </div>
+        </div>
 
-            <div class="swiper-navigation mx-auto mt-8">
-                <button class="swiper-button-prev-custom">
+    </section>
+
+    <section class="section container about-partners">
+        <h2 class="heading-title text-center mb-10 lg:mb-16">
+            ĐỐI TÁC CỦA CHÚNG TÔI
+        </h2>
+
+        <div class="swiper w-full" data-fx-slider data-swiper-options='{
+                "slidesPerView": 1,
+                "spaceBetween": 24,
+                "navigation": {
+                    "nextEl": ".partner-next",
+                    "prevEl": ".partner-prev"
+                }
+            }'>
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="partner-showcase">
+                        <div class="partner-logo-side">
+                            <img src="/resources/img/about/acb-logo.png" alt="">
+                        </div>
+
+                        <div class="partner-content-side">
+                            <div class="partner-banner">
+                                <img src="/resources/img/about/bg-about-slider.webp" alt="Partner">
+
+                                <div class="partner-overlay">
+                                    <p class="partner-overlay-text">
+                                        Ngân hàng thương mại cổ phần Ngoại thương Việt Nam
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="partner-showcase">
+                        <div class="partner-logo-side">
+                            <img src="/resources/img/about/vcb-logo.png" alt="">
+                        </div>
+
+                        <div class="partner-content-side">
+                            <div class="partner-banner">
+                                <img src="/resources/img/about/bg-about-slider.webp" alt="Partner">
+
+                                <div class="partner-overlay">
+                                    <p class="partner-overlay-text">
+                                        Ngân hàng thương mại cổ phần Ngoại thương Việt Nam
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="partner-showcase">
+                        <div class="partner-logo-side">
+                            <img src="/resources/img/about/ocb-logo.png" alt="">
+                        </div>
+
+                        <div class="partner-content-side">
+                            <div class="partner-banner">
+                                <img src="/resources/img/about/bg-about-slider.webp" alt="Partner">
+
+                                <div class="partner-overlay">
+                                    <p class="partner-overlay-text">
+                                        Ngân hàng thương mại cổ phần Ngoại thương Việt Nam
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="partner-showcase">
+                        <div class="partner-logo-side">
+                            <img src="/resources/img/about/acb-logo.png" alt="">
+                        </div>
+
+                        <div class="partner-content-side">
+                            <div class="partner-banner">
+                                <img src="/resources/img/about/bg-about-slider.webp" alt="Partner">
+
+                                <div class="partner-overlay">
+                                    <p class="partner-overlay-text">
+                                        Ngân hàng thương mại cổ phần Ngoại thương Việt Nam
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+
+                    <div class="partner-showcase">
+                        <div class="partner-logo-side">
+                            <img src="/resources/img/about/acb-logo.png" alt="ACB">
+                        </div>
+
+                        <div class="partner-content-side">
+                            <div class="partner-banner">
+                                <img src="/resources/img/about/bg-about-slider.webp" alt="Partner">
+
+                                <div class="partner-overlay">
+                                    <p class="partner-overlay-text">
+                                        Ngân hàng thương mại cổ phần Á Châu
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="partner-showcase">
+                        <div class="partner-logo-side">
+                            <img src="/resources/img/about/vcb-logo.png" alt="Vietcombank">
+                        </div>
+
+                        <div class="partner-content-side">
+                            <div class="partner-banner">
+                                <img src="/resources/img/about/bg-about-slider.webp" alt="Partner">
+
+                                <div class="partner-overlay">
+                                    <p class="partner-overlay-text">
+                                        Ngân hàng thương mại cổ phần Ngoại thương Việt Nam
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="partner-showcase">
+                        <div class="partner-logo-side">
+                            <img src="/resources/img/about/ocb-logo.png" alt="OCB">
+                        </div>
+
+                        <div class="partner-content-side">
+                            <div class="partner-banner">
+                                <img src="/resources/img/about/bg-about-slider.webp" alt="Partner">
+
+                                <div class="partner-overlay">
+                                    <p class="partner-overlay-text">
+                                        Ngân hàng thương mại cổ phần Phương Đông
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="partner-showcase">
+                        <div class="partner-logo-side">
+                            <img src="/resources/img/about/bidv-logo.png" alt="BIDV">
+                        </div>
+
+                        <div class="partner-content-side">
+                            <div class="partner-banner">
+                                <img src="/resources/img/about/bg-about-slider.webp" alt="Partner">
+
+                                <div class="partner-overlay">
+                                    <p class="partner-overlay-text">
+                                        Ngân hàng thương mại cổ phần Đầu tư và Phát triển Việt Nam
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="swiper-navigation mx-auto mt-10">
+                <button class="swiper-button-prev-custom partner-prev">
                     <i class="fa-solid fa-arrow-left"></i>
                 </button>
 
-                <button class="swiper-button-next-custom">
+                <button class="swiper-button-next-custom partner-next">
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
             </div>
-
         </div>
     </section>
 

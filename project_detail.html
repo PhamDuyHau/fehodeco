@@ -13,87 +13,91 @@
     <header class="absolute top-0 left-0 w-full z-999">
         <div class="relative bg-[linear-gradient(180deg,#057DCD_0%,rgba(0,7,104,0)_105%)]">
 
-        <div class="flex items-center justify-between gap-5 px-6 py-3 relative">
-            <div class="lg:hidden">
-            <button id="menuBtn" class="text-white text-2xl">☰</button>
-            </div>
-            <div class="absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0">
-            <a href="index.html">
-                <img src="/resources/img/hodeco-logo.png" class="h-12 object-contain" alt="Logo" />
-            </a>
-            </div>
-
-            <nav class="hidden lg:block">
-            <ul class="menu">
-                <li><a href="about.html">Giới thiệu</a></li>
-                <li><a href="project.html">Dự án</a></li>
-                <li><a href="shareholder.html">Quan hệ cổ đông</a></li>
-                <li><a href="exchange.html">Sàn giao dịch BĐS</a></li>
-                <li><a href="recruitment.html">Tuyển dụng</a></li>
-                <li><a href="news.html">Tin tức</a></li>
-                <li><a href="contact.html">Liên hệ</a></li>
-            </ul>
-            </nav>
-
-            <div class="flex items-center gap-4 relative">
-
-            <div class="hidden lg:flex items-center gap-4 relative">
-
-                <div class="relative">
-                <img src="/resources/img/search.png" id="searchBtn" class="w-5 h-5 cursor-pointer" />
-                <div id="searchBox" class="hidden absolute right-0 top-[40px]">
-                    <input type="text" placeholder="Search..."
-                    class="w-[220px] h-[40px] px-4 rounded-lg shadow-lg outline-none text-black" />
+            <div class="flex items-center justify-between gap-5 px-6 py-3 relative">
+                <div class="lg:hidden">
+                    <button id="menuBtn" class="text-white text-2xl">☰</button>
                 </div>
+                <div class="absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0">
+                    <a href="index.html">
+                        <img src="/resources/img/hodeco-logo.png" class="h-12 object-contain" alt="Logo" />
+                    </a>
                 </div>
 
-                <span class="w-px h-5 bg-white/40"></span>
+                <nav class="hidden lg:block">
+                    <ul class="menu">
+                        <li><a href="about.html">Giới thiệu</a></li>
+                        <li><a href="project.html">Dự án</a></li>
+                        <li><a href="shareholder.html">Quan hệ cổ đông</a></li>
+                        <li><a href="exchange.html">Sàn giao dịch BĐS</a></li>
+                        <li><a href="recruitment.html">Tuyển dụng</a></li>
+                        <li><a href="news.html">Tin tức</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </nav>
 
-                <div class="flex items-center gap-2">
-                <a href="https://facebook.com" target="_blank"><img src="/resources/img/facebook-icon.png"
-                    class="w-5 h-5"></a>
-                <a href="https://linkedin.com" target="_blank"><img src="/resources/img/linkedin-icon.png"
-                    class="w-5 h-5"></a>
-                <a href="https://youtube.com" target="_blank"><img src="/resources/img/youtube-icon.png"
-                    class="w-5 h-5"></a>
+                <div class="flex items-center gap-4 relative">
+
+                    <div class="hidden lg:flex items-center gap-4 relative">
+
+                        <div class="relative">
+                            <img src="/resources/img/search.png" id="searchBtn" class="w-5 h-5 cursor-pointer" />
+                            <div id="searchBox" class="hidden absolute right-0 top-[40px]">
+                                <input type="text" placeholder="Search..."
+                                    class="w-[220px] h-[40px] px-4 rounded-lg shadow-lg outline-none text-black" />
+                            </div>
+                        </div>
+
+                        <span class="w-px h-5 bg-white/40"></span>
+
+                        <div class="flex items-center gap-2">
+                            <a href="https://facebook.com" target="_blank"><img src="/resources/img/facebook-icon.png"
+                                    class="w-5 h-5"></a>
+                            <a href="https://linkedin.com" target="_blank"><img src="/resources/img/linkedin-icon.png"
+                                    class="w-5 h-5"></a>
+                            <a href="https://youtube.com" target="_blank"><img src="/resources/img/youtube-icon.png"
+                                    class="w-5 h-5"></a>
+                        </div>
+                        <span class="w-px h-5 bg-white/40"></span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <img src="/resources/img/vi.png" class="w-6 h-4 object-cover cursor-pointer">
+                        <img src="/resources/img/en.png" class="w-6 h-4 object-cover cursor-pointer">
+                    </div>
+
                 </div>
-                <span class="w-px h-5 bg-white/40"></span>
             </div>
-            <div class="flex items-center gap-2">
-                <img src="/resources/img/vi.png" class="w-6 h-4 object-cover cursor-pointer">
-                <img src="/resources/img/en.png" class="w-6 h-4 object-cover cursor-pointer">
-            </div>
-
-            </div>
-        </div>
         </div>
         <div id="mobileMenu"
-        class="fixed top-0 left-[-320px] w-[320px] h-full bg-white z-[1000] transition-all duration-300 p-4">
+            class="fixed top-0 left-[-320px] w-[320px] h-full bg-white z-[1000] transition-all duration-300 p-4">
 
-        <div class="flex items-center justify-between mb-4">
-            <a href="index.html">
-            <img src="/resources/img/hodeco-logo.png" class="h-10" alt="Home">
-            </a>
-            <button id="closeMenu" class="text-2xl">✕</button>
-        </div>
+            <div class="flex items-center justify-between mb-4">
+                <a href="index.html">
+                    <img src="/resources/img/hodeco-logo.png" class="h-10" alt="Home">
+                </a>
+                <button id="closeMenu" class="text-2xl">✕</button>
+            </div>
 
-        <div class="mb-4">
-            <input type="text" placeholder="Search..." class="w-full h-[40px] px-4 border rounded-full outline-none" />
-        </div>
-        <ul class="flex flex-col gap-3 mb-6">
-            <li><a href="about.html" class="block py-2 border-b">Giới thiệu</a></li>
-            <li><a href="project.html" class="block py-2 border-b">Dự án</a></li>
-            <li><a href="shareholder.html" class="block py-2 border-b">Quan hệ cổ đông</a></li>
-            <li><a href="exchange.html" class="block py-2 border-b">Sàn giao dịch BĐS</a></li>
-            <li><a href="recruitment.html" class="block py-2 border-b">Tuyển dụng</a></li>
-            <li><a href="news.html" class="block py-2 border-b">Tin tức</a></li>
-            <li><a href="contact.html" class="block py-2 border-b">Liên hệ</a></li>
-        </ul>
-        <div class="flex gap-4">
-            <a href="https://facebook.com" target="_blank"><img src="/resources/img/facebook-icon.png" class="w-5 h-5"></a>
-            <a href="https://linkedin.com" target="_blank"><img src="/resources/img/linkedin-icon.png" class="w-5 h-5"></a>
-            <a href="https://youtube.com" target="_blank"><img src="/resources/img/youtube-icon.png" class="w-5 h-5"></a>
-        </div>
+            <div class="mb-4">
+                <input type="text" placeholder="Search..."
+                    class="w-full h-[40px] px-4 border rounded-full outline-none" />
+            </div>
+            <ul class="flex flex-col gap-3 mb-6">
+                <li><a href="about.html" class="block py-2 border-b">Giới thiệu</a></li>
+                <li><a href="project.html" class="block py-2 border-b">Dự án</a></li>
+                <li><a href="shareholder.html" class="block py-2 border-b">Quan hệ cổ đông</a></li>
+                <li><a href="exchange.html" class="block py-2 border-b">Sàn giao dịch BĐS</a></li>
+                <li><a href="recruitment.html" class="block py-2 border-b">Tuyển dụng</a></li>
+                <li><a href="news.html" class="block py-2 border-b">Tin tức</a></li>
+                <li><a href="contact.html" class="block py-2 border-b">Liên hệ</a></li>
+            </ul>
+            <div class="flex gap-4">
+                <a href="https://facebook.com" target="_blank"><img src="/resources/img/facebook-icon.png"
+                        class="w-5 h-5"></a>
+                <a href="https://linkedin.com" target="_blank"><img src="/resources/img/linkedin-icon.png"
+                        class="w-5 h-5"></a>
+                <a href="https://youtube.com" target="_blank"><img src="/resources/img/youtube-icon.png"
+                        class="w-5 h-5"></a>
+            </div>
 
         </div>
     </header>
@@ -101,7 +105,8 @@
     <section class="relative w-full overflow-hidden">
         <div class="absolute inset-0 bg-primary" style="clip-path: ellipse(105% 100% at 55% 0%);"></div>
 
-        <div class="absolute inset-0 bg-secondary -translate-y-1" style="clip-path: ellipse(102% 100% at 50% 0%);"></div>
+        <div class="absolute inset-0 bg-secondary -translate-y-1" style="clip-path: ellipse(102% 100% at 50% 0%);">
+        </div>
 
         <img src="/resources/img/project-detail/project-detail-breadcrumb.png"
             class="relative w-full h-auto object-cover block z-10 -translate-y-5"
@@ -116,138 +121,120 @@
     </section>
 
     <section class="section container mt-12">
-        <div class="text-center">
-            <h3 class="sub-title justify-center">Tổng quan bài viết</h3>
-            <h2 class="heading-title">
-                Kết nối với chúng tôi để được tư vấn nhanh<br>
-                chóng và chính xác
-            </h2>
-        </div>
-
         <div class="grid md:grid-cols-2 gap-8 mb-12 text-gray-600 text-sm leading-relaxed text-justify">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            <div>
+                <h3 class="font-bold text-gray-800 uppercase mb-2">VỊ TRÍ TRUNG TÂM, KẾT NỐI HOÀN CHỈNH</h3>
+                <p class="mb-6">
+                    Chung cư NOXH Eco Home 1 tọa lạc tại mặt tiền đường Trường Chinh, tuyến đường sầm uất bậc nhất tại
+                    Phú Mỹ.
+                    Từ Eco Home 1, dễ dàng kết nối với Quốc Lộ 51, cao tốc Biên Hòa - Vũng Tàu, sân bay quốc tế Long
+                    Thành,
+                    trung tâm hành chính Hồ Chí Minh, Khu du lịch Bãi Trước, Bãi Sau và cụm KCN Phú Mỹ...
+                </p>
+
+                <h3 class="font-bold text-gray-800 uppercase mb-2">TIỆN ÍCH ĐA DẠNG, GIA TĂNG TRẢI NGHIỆM</h3>
+                <p>
+                    Eco Home 1 sở hữu tiện ích nội khu và ngoại khu đủ đầy, giúp gia tăng tận hưởng và trải nghiệm sống
+                    của cư dân.
+                    Nằm trong khu dân cư Ecotown Phú Mỹ, chủ nhân tương lai của Eco Home 1 được sinh sống trong cộng
+                    đồng văn minh
+                    và không gian xanh và hài hòa với thiên nhiên. Điểm đặc biệt của Eco Home 1 là nằm liền kề ngay núi
+                    Thị Vải,
+                    nơi được mệnh danh là "lá phổi xanh" của Phú Mỹ và là điểm đến yên bình, xua tan mệt mỏi và áp lực
+                    của cuộc sống hiện đại.
+                </p>
+            </div>
+
+            <div>
+                <p class="mb-4">
+                    Với những ưu điểm hiếm có khó tìm tại một dự án NOXH, Eco Home 1 là chìa khóa mở ra cánh cửa gần hơn
+                    với ước mơ
+                    an cư lạc nghiệp của người dân tại Phú Mỹ. Đi cùng với những chính sách vai ưu đãi dành cho khách
+                    hàng như sau:
+                </p>
+                <ul class="list-disc pl-5 mb-4 space-y-1">
+                    <li><strong>Ngân hàng BIDV:</strong> Lãi suất vay 5.6% trong thời gian vay từ 1/1/2026 - 30/6/2026.
+                    </li>
+                    <li><strong>Ngân hàng Chính sách xã hội:</strong> Lãi suất vay 5.4%, mức vay tới 80% trong thời gian
+                        tối đa 25 năm.</li>
+                </ul>
+                <p class="italic text-xs mb-6 text-gray-500">Lưu ý: Lãi suất vay có thể thay đổi, theo tình hình thực
+                    tế.</p>
+
+                <p class="font-semibold text-gray-800 mb-2">Để nộp hồ sơ đăng ký, khách hàng có thể liên hệ:</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>
+                        <strong>Nộp trực tiếp tại:</strong> Công ty TNHH MTV Sàn giao dịch Bất động sản và Dịch vụ
+                        HODECO (HODECO HUB)
+                    </li>
+                    <li>
+                        <strong>Địa chỉ:</strong> Tầng 3 tòa nhà HODECO Plaza, Số 36 đường Nguyễn Thái Học, Phường 7,
+                        Thành phố Vũng Tàu
+                    </li>
+                    <li>
+                        <strong>Số điện thoại:</strong> 0254 3522370 - 0901861799
+                    </li>
+                </ul>
+            </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div class="rounded-[2rem] overflow-hidden h-[350px]">
-                <img src="resources/img/project-detail/img-detail-1.jpg" class="w-full h-full object-cover"
-                    alt="Building exterior">
+        <div class="space-y-6 mb-12">
+            
+            <div class="rounded-[2rem] overflow-hidden w-full aspect-[16/9]">
+                <img src="resources/img/project-detail/project-detail.webp" class="w-full h-full object-cover" alt="Phối cảnh chung cư Eco Home 1">
             </div>
 
-            <div class="rounded-[2rem] overflow-hidden h-[350px]">
-                <img src="resources/img/project-detail/img-detail-2.jpg" class="w-full h-full object-cover"
-                    alt="Interior view">
-            </div>
-
-            <div class="bg-[#FDFBF5] border border-gray-100 rounded-[2rem] p-8 shadow-sm flex flex-col justify-between">
+            <div class="bg-[#FDFBF5] border border-gray-100 rounded-[2rem] p-8 shadow-sm">
                 <h4 class="text-xl font-bold mb-6">Thông tin dự án</h4>
-                <div class="space-y-4 text-sm">
-                    <div class="flex justify-between border-b border-gray-100 pb-3">
-                        <span class="text-gray-400">Dòng sản phẩm</span>
-                        <span class="font-bold">Flora</span>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-sm">
+                    
+                    <div class="space-y-4">
+                        <div class="flex justify-between border-b border-gray-100 pb-3">
+                            <span class="text-gray-400">Diện tích phù hợp QH</span>
+                            <span class="font-bold">3,767.50 m²</span>
+                        </div>
+                        <div class="flex justify-between border-b border-gray-100 pb-3">
+                            <span class="text-gray-400">Diện tích xây dựng</span>
+                            <span class="font-bold">1,671.35 m²</span>
+                        </div>
+                        <div class="flex justify-between border-b border-gray-100 pb-3">
+                            <span class="text-gray-400">Mật độ xây dựng</span>
+                            <span class="font-bold">44.36 %</span>
+                        </div>
+                        <div class="flex justify-between border-b border-gray-100 pb-3">
+                            <span class="text-gray-400">Tầng cao</span>
+                            <span class="font-bold">13 tầng</span>
+                        </div>
+                        <div class="flex justify-between border-b border-gray-100 md:border-none pb-3 md:pb-0">
+                            <span class="text-gray-400">Tầng đế</span>
+                            <span class="font-bold">1 tầng</span>
+                        </div>
                     </div>
-                    <div class="flex justify-between border-b border-gray-100 pb-3">
-                        <span class="text-gray-400">Vị trí</span>
-                        <span class="font-bold text-right">An Lạc, Thành phố Hồ Chí Minh</span>
-                    </div>
-                    <div class="flex justify-between border-b border-gray-100 pb-3">
-                        <span class="text-gray-400">Quy mô dự án</span>
-                        <span class="font-bold">8.5ha</span>
-                    </div>
-                    <div class="flex justify-between border-b border-gray-100 pb-3">
-                        <span class="text-gray-400">Tiến độ</span>
-                        <span class="font-bold">Đang triển khai</span>
-                    </div>
-                    <div class="flex justify-between">
-                        <span class="text-gray-400">Nội dung</span>
-                        <span class="font-bold">...</span>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="flex flex-wrap justify-center gap-4">
-            <a href="#"
-                class="cursor-pointer bg-secondary text-white px-10 py-3 rounded-full font-bold hover:bg-red-700 transition duration-300 flex items-center justify-center">
-                Liên hệ ngay
-            </a>
-
-            <a href="#" download
-                class="cursor-pointer bg-primary text-white px-10 py-3 rounded-full font-bold hover:bg-blue-900 transition duration-300 flex items-center justify-center">
-                Download brochure
-            </a>
-        </div>
-    </section>
-
-    <section class="section container mt-12">
-        <div class="text-center">
-            <h3 class="sub-title justify-center">Tổng quan bài viết</h3>
-            <h2 class="heading-title">
-                Kết nối với chúng tôi để được tư vấn nhanh<br>
-                chóng và chính xác
-            </h2>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8 mb-12 text-gray-600 text-sm leading-relaxed text-justify">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div class="rounded-[2rem] overflow-hidden h-[350px]">
-                <img src="resources/img/project-detail/img-detail-1.jpg" class="w-full h-full object-cover"
-                    alt="Building exterior">
-            </div>
-
-            <div class="rounded-[2rem] overflow-hidden h-[350px]">
-                <img src="resources/img/project-detail/img-detail-2.jpg" class="w-full h-full object-cover"
-                    alt="Interior view">
-            </div>
-
-            <div class="bg-[#FDFBF5] border border-gray-100 rounded-[2rem] p-8 shadow-sm flex flex-col justify-between">
-                <h4 class="text-xl font-bold mb-6">Thông tin dự án</h4>
-                <div class="space-y-4 text-sm">
-                    <div class="flex justify-between border-b border-gray-100 pb-3">
-                        <span class="text-gray-400">Dòng sản phẩm</span>
-                        <span class="font-bold">Flora</span>
+                    <div class="space-y-4">
+                        <div class="flex justify-between border-b border-gray-100 pb-3">
+                            <span class="text-gray-400">Tầng căn hộ</span>
+                            <span class="font-bold">12</span>
+                        </div>
+                        <div class="flex justify-between border-b border-gray-100 pb-3">
+                            <span class="text-gray-400">Tầng hầm</span>
+                            <span class="font-bold">1 tầng</span>
+                        </div>
+                        <div class="flex justify-between border-b border-gray-100 pb-3">
+                            <span class="text-gray-400">Chiều cao công trình</span>
+                            <span class="font-bold">48m</span>
+                        </div>
+                        <div class="flex justify-between border-b border-gray-100 pb-3">
+                            <span class="text-gray-400">Tổng số căn hộ</span>
+                            <span class="font-bold">340 căn</span>
+                        </div>
+                        <div class="flex justify-between pb-3">
+                            <span class="text-gray-400">Nội dung</span>
+                            <span class="font-bold text-gray-300">---</span>
+                        </div>
                     </div>
-                    <div class="flex justify-between border-b border-gray-100 pb-3">
-                        <span class="text-gray-400">Vị trí</span>
-                        <span class="font-bold text-right">An Lạc, Thành phố Hồ Chí Minh</span>
-                    </div>
-                    <div class="flex justify-between border-b border-gray-100 pb-3">
-                        <span class="text-gray-400">Quy mô dự án</span>
-                        <span class="font-bold">8.5ha</span>
-                    </div>
-                    <div class="flex justify-between border-b border-gray-100 pb-3">
-                        <span class="text-gray-400">Tiến độ</span>
-                        <span class="font-bold">Đang triển khai</span>
-                    </div>
-                    <div class="flex justify-between">
-                        <span class="text-gray-400">Nội dung</span>
-                        <span class="font-bold">...</span>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -290,7 +277,8 @@
 
                     <div class="swiper-slide">
                         <div class="inner-content">
-                            <img src="/resources/img/project-detail/img-detail-1.jpg" alt="Project" class="h-full w-full object-cover" loading="lazy">
+                            <img src="/resources/img/project-detail/img-detail-1.jpg" alt="Project"
+                                class="h-full w-full object-cover" loading="lazy">
                             <div class="overlay"></div>
                             <div class="slide-caption">
                                 <h4 class="text-[24px] font-bold uppercase">Dự án xây dựng bất động sản nghỉ dưỡng</h4>
@@ -303,7 +291,8 @@
 
                     <div class="swiper-slide">
                         <div class="inner-content">
-                            <img src="/resources/img/project-detail/img-detail-1.jpg" alt="Project" class="h-full w-full object-cover" loading="lazy">
+                            <img src="/resources/img/project-detail/img-detail-1.jpg" alt="Project"
+                                class="h-full w-full object-cover" loading="lazy">
                             <div class="overlay"></div>
                             <div class="slide-caption">
                                 <h4 class="text-[24px] font-bold uppercase">Dự án xây dựng bất động sản nghỉ dưỡng</h4>
@@ -316,7 +305,8 @@
 
                     <div class="swiper-slide">
                         <div class="inner-content">
-                            <img src="/resources/img/project-detail/img-detail-1.jpg" alt="Project" class="h-full w-full object-cover" loading="lazy">
+                            <img src="/resources/img/project-detail/img-detail-1.jpg" alt="Project"
+                                class="h-full w-full object-cover" loading="lazy">
                             <div class="overlay"></div>
                             <div class="slide-caption">
                                 <h4 class="text-[24px] font-bold uppercase">Dự án xây dựng bất động sản nghỉ dưỡng</h4>
@@ -329,7 +319,8 @@
 
                     <div class="swiper-slide">
                         <div class="inner-content">
-                            <img src="/resources/img/project-detail/img-detail-1.jpg" alt="Project" class="h-full w-full object-cover" loading="lazy">
+                            <img src="/resources/img/project-detail/img-detail-1.jpg" alt="Project"
+                                class="h-full w-full object-cover" loading="lazy">
                             <div class="overlay"></div>
                             <div class="slide-caption">
                                 <h4 class="text-[24px] font-bold uppercase">Dự án xây dựng bất động sản nghỉ dưỡng</h4>
@@ -342,7 +333,8 @@
 
                     <div class="swiper-slide">
                         <div class="inner-content">
-                            <img src="/resources/img/project-detail/img-detail-1.jpg" alt="Project" class="h-full w-full object-cover" loading="lazy">
+                            <img src="/resources/img/project-detail/img-detail-1.jpg" alt="Project"
+                                class="h-full w-full object-cover" loading="lazy">
                             <div class="overlay"></div>
                             <div class="slide-caption">
                                 <h4 class="text-[24px] font-bold uppercase">Dự án xây dựng bất động sản nghỉ dưỡng</h4>
@@ -355,7 +347,8 @@
 
                     <div class="swiper-slide">
                         <div class="inner-content">
-                            <img src="/resources/img/project-detail/img-detail-1.jpg" alt="Project" class="h-full w-full object-cover" loading="lazy">
+                            <img src="/resources/img/project-detail/img-detail-1.jpg" alt="Project"
+                                class="h-full w-full object-cover" loading="lazy">
                             <div class="overlay"></div>
                             <div class="slide-caption">
                                 <h4 class="text-[24px] font-bold uppercase">Dự án xây dựng bất động sản nghỉ dưỡng</h4>
@@ -369,7 +362,8 @@
                 </div>
 
                 <div class="swiper-navigation mx-auto mt-8 lg:mt-24">
-                    <button class="swiper-button-prev-custom cursor-pointer text-primary w-10 h-10 flex items-center justify-center rounded-full">
+                    <button
+                        class="swiper-button-prev-custom cursor-pointer text-primary w-10 h-10 flex items-center justify-center rounded-full">
                         <i class="fa-solid fa-arrow-left"></i>
                     </button>
                     <div class="swiper-pagination-custom flex gap-2
@@ -378,7 +372,8 @@
                         [&_.swiper-pagination-bullet]:bg-transparent
                         [&_.swiper-pagination-bullet-active]:bg-primary!">
                     </div>
-                    <button class="swiper-button-next-custom cursor-pointer text-primary w-10 h-10 flex items-center justify-center rounded-full">
+                    <button
+                        class="swiper-button-next-custom cursor-pointer text-primary w-10 h-10 flex items-center justify-center rounded-full">
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>
@@ -388,99 +383,110 @@
 
     <footer id="footer" class="site-footer" itemtype="" itemscope>
         <div id="footer-main-wrap" class="footer-main-wrap bg-primary text-white relative overflow-hidden">
-          <img src="/resources/img/bg-footer-left.png" class="absolute left-0 top-0 pointer-events-none select-none z-0 w-[120px] md:w-[160px] xl:w-auto" alt="">
-          <img src="/resources/img/bg-footer-right.png" class="absolute right-0 bottom-0 pointer-events-none select-none z-0 w-[240px] md:w-[320px] xl:w-auto" alt="">
-          <div class="container pt-16 relative z-10">
-            <div class="footer-brand-overlay text-center overflow-hidden">
-              <span
-                class="text-[12vw] font-semibold uppercase tracking-widest text-transparent block leading-none select-none"
-                style="-webkit-text-stroke: 1px rgba(255,255,255,0.2); font-size: clamp(40px, 15vw, 220px);">
-                hodeco
-              </span>
+            <img src="/resources/img/bg-footer-left.png"
+                class="absolute left-0 top-0 pointer-events-none select-none z-0 w-[120px] md:w-[160px] xl:w-auto"
+                alt="">
+            <img src="/resources/img/bg-footer-right.png"
+                class="absolute right-0 bottom-0 pointer-events-none select-none z-0 w-[240px] md:w-[320px] xl:w-auto"
+                alt="">
+            <div class="container pt-16 relative z-10">
+                <div class="footer-brand-overlay text-center overflow-hidden">
+                    <span
+                        class="text-[12vw] font-semibold uppercase tracking-widest text-transparent block leading-none select-none"
+                        style="-webkit-text-stroke: 1px rgba(255,255,255,0.2); font-size: clamp(40px, 15vw, 220px);">
+                        hodeco
+                    </span>
+                </div>
+
+                <div
+                    class="footer-address-container p-8 md:p-12 rounded-3xl border border-white/20 bg-white/5 backdrop-blur-sm relative">
+                    <div
+                        class="footer-address-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 md:gap-x-12">
+
+                        <div class="address-item flex flex-col relative">
+                            <h4 class="address-title text-lg font-bold uppercase mb-4">Trụ sở chính</h4>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-start gap-3">
+                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                                    <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28
+                                        3456 7890</a>
+                                </div>
+                            </div>
+                            <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                            <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+                        </div>
+
+                        <div class="address-item flex flex-col relative">
+                            <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Gò Vấp</h4>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-start gap-3">
+                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                                    <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28
+                                        3456 7890</a>
+                                </div>
+                            </div>
+                            <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                            <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+                        </div>
+
+                        <div class="address-item flex flex-col relative">
+                            <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Thạnh</h4>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-start gap-3">
+                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                                    <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28
+                                        3456 7890</a>
+                                </div>
+                            </div>
+                            <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                            <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+                        </div>
+
+                        <div class="address-item flex flex-col relative">
+                            <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Tân</h4>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-start gap-3">
+                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                                    <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28
+                                        3456 7890</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
-            <div class="footer-address-container p-8 md:p-12 rounded-3xl border border-white/20 bg-white/5 backdrop-blur-sm relative">
-              <div class="footer-address-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 md:gap-x-12">
-
-                <div class="address-item flex flex-col relative">
-                  <h4 class="address-title text-lg font-bold uppercase mb-4">Trụ sở chính</h4>
-                  <div class="flex flex-col gap-3">
-                    <div class="flex items-start gap-3">
-                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
-                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+            <div class="footer-credit py-8 relative z-10">
+                <div class="container flex flex-col items-center justify-center gap-4 text-center">
+                    <div class="footer-copyright text-sm text-white">
+                        <span class="copyright">© 2026 Hodeco,&nbsp;</span>
+                        <span class="hd">
+                            design by
+                            <a class="hover:text-white transition-colors" href="https://webhd.vn/" target="_blank"
+                                rel="noopener noreferrer nofollow">
+                                HD Agency
+                            </a>
+                        </span>
                     </div>
-                    <div class="flex items-center gap-3">
-                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
-                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
-                    </div>
-                  </div>
-                  <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
-                  <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
                 </div>
-
-                <div class="address-item flex flex-col relative">
-                  <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Gò Vấp</h4>
-                  <div class="flex flex-col gap-3">
-                    <div class="flex items-start gap-3">
-                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
-                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
-                    </div>
-                    <div class="flex items-center gap-3">
-                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
-                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
-                    </div>
-                  </div>
-                  <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
-                  <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
-                </div>
-
-                <div class="address-item flex flex-col relative">
-                  <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Thạnh</h4>
-                  <div class="flex flex-col gap-3">
-                    <div class="flex items-start gap-3">
-                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
-                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
-                    </div>
-                    <div class="flex items-center gap-3">
-                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
-                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
-                    </div>
-                  </div>
-                  <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
-                  <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
-                </div>
-
-                <div class="address-item flex flex-col relative">
-                  <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Tân</h4>
-                  <div class="flex flex-col gap-3">
-                    <div class="flex items-start gap-3">
-                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
-                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
-                    </div>
-                    <div class="flex items-center gap-3">
-                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
-                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
             </div>
-          </div>
-
-          <div class="footer-credit py-8 relative z-10">
-            <div class="container flex flex-col items-center justify-center gap-4 text-center">
-              <div class="footer-copyright text-sm text-white">
-                <span class="copyright">© 2026 Hodeco,&nbsp;</span>
-                <span class="hd">
-                  design by
-                  <a class="hover:text-white transition-colors" href="https://webhd.vn/" target="_blank" rel="noopener noreferrer nofollow">
-                    HD Agency
-                  </a>
-                </span>
-              </div>
-            </div>
-          </div>
 
         </div>
     </footer>

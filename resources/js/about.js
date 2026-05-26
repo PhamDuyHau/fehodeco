@@ -41,6 +41,7 @@ function initAboutYearSync() {
     }
   });
 }
+
 function initCeoCards() {
   const cards = document.querySelectorAll(".ceo-card");
 
@@ -48,13 +49,17 @@ function initCeoCards() {
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
+
         const card = entry.target;
-        const siblings = [...card.parentElement.querySelectorAll(".ceo-card")];
+        const siblings = [
+          ...card.parentElement.querySelectorAll(".ceo-card"),
+        ];
+
         const index = siblings.indexOf(card);
 
-        // stagger delay via inline style, then add class
         card.style.transitionDelay = `${index * 0.07}s`;
         card.classList.add("is-visible");
+
         observer.unobserve(card);
       });
     },
@@ -64,9 +69,58 @@ function initCeoCards() {
   cards.forEach((card) => observer.observe(card));
 }
 
+function initAwardTabs() {
+  const wrappers = document.querySelectorAll(".about-award-wrapper");
+
+  wrappers.forEach((wrapper) => {
+    const buttons = wrapper.querySelectorAll(".award-btn");
+    const items = wrapper.querySelectorAll(".award-item");
+
+    if (!buttons.length || !items.length) return;
+
+    items.forEach((item, idx) => {
+      item.classList.toggle("active", idx === 0);
+    });
+
+    buttons.forEach((btn, idx) => {
+      btn.classList.toggle("award-btn-active", idx === 0);
+    });
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const index = button.dataset.index;
+
+        buttons.forEach((btn) => {
+          btn.classList.remove("award-btn-active");
+        });
+
+        button.classList.add("award-btn-active");
+
+        // content active
+        items.forEach((item) => {
+          item.classList.remove("active");
+        });
+
+        const activeItem = wrapper.querySelector(
+          `.award-item[data-index="${index}"]`
+        );
+
+        if (!activeItem) return;
+
+        activeItem.classList.add("active");
+
+        const swiperEl = activeItem.querySelector(".swiper");
+
+        if (swiperEl?.swiper) {
+          swiperEl.swiper.update();
+        }
+      });
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initAboutYearSync();
   initCeoCards();
+  initAwardTabs();
 });
-
-

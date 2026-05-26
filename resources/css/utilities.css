@@ -9,7 +9,6 @@
 }
 
 @layer utilities {
-
   .home-card-corner {
     @apply cutout-base w-22 h-22 bg-background;
     border-top-left-radius: 38px;

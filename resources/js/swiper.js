@@ -1,7 +1,7 @@
 // swiper.js
 
 import Swiper from 'swiper';
-import { Navigation, Pagination, Grid } from 'swiper/modules';
+import { Navigation, Pagination, Grid, Controller } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -37,5 +37,79 @@ export function initSwipers() {
         yearNode.click();
       });
     }
+  });
+}
+
+export function initProjectSlider2() {
+  const section = document.querySelector('.home-project-2');
+  if (!section) return;
+
+  const items   = [...section.querySelectorAll('.project-data-2 > [data-number]')];
+  if (!items.length) return;
+
+  const frontEl = section.querySelector('.project-img-front-2');
+  const backEl  = section.querySelector('.project-img-back-2');
+  const numEl   = section.querySelector('.project-number-2');
+  const titleEl = section.querySelector('.project-title-2');
+  const ctaEl   = section.querySelector('.project-cta-2');
+
+  // Build slides into both
+  [frontEl, backEl].forEach((el, i) => {
+    const wrapper = el.querySelector('.swiper-wrapper');
+    items.forEach(item => {
+      const slide = document.createElement('div');
+      slide.className = 'swiper-slide';
+      const src = i === 0 ? item.dataset.imgFront : item.dataset.imgBack;
+      slide.innerHTML = `<img src="${src}" class="w-full h-full object-cover" style="display:block" alt="">`;
+      wrapper.appendChild(slide);
+    });
+  });
+
+  const backSwiper = new Swiper(backEl, {
+    modules: [Controller],
+    loop: true,
+    speed: 700,
+    allowTouchMove: false,
+  });
+
+  const frontSwiper = new Swiper(frontEl, {
+    modules: [Navigation, Controller],
+    loop: true,
+    speed: 700,
+    grabCursor: true,
+    navigation: {
+      nextEl: section.querySelector('.swiper-button-next-custom'),
+      prevEl: section.querySelector('.swiper-button-prev-custom'),
+    },
+    controller: {
+      control: backSwiper,   // ← front drives back, direction is automatic
+    },
+  });
+
+  backSwiper.controller.control = frontSwiper; // ← back also drives front (for completeness)
+
+  // Content sync
+  frontSwiper.on('slideChange', () => {
+    const item = items[frontSwiper.realIndex];
+
+    [numEl, titleEl].forEach(el => {
+      el.style.transition = 'opacity 0.25s, transform 0.25s';
+      el.style.opacity    = '0';
+      el.style.transform  = 'translateY(12px)';
+    });
+
+    setTimeout(() => {
+      numEl.textContent    = item.dataset.number;
+      titleEl.textContent  = item.dataset.title;
+      ctaEl.href           = item.dataset.href;
+
+      numEl.style.transition   = 'opacity 0.4s 0.05s, transform 0.4s 0.05s';
+      numEl.style.opacity      = '1';
+      numEl.style.transform    = 'translateY(0)';
+
+      titleEl.style.transition = 'opacity 0.4s 0.15s, transform 0.4s 0.15s';
+      titleEl.style.opacity    = '1';
+      titleEl.style.transform  = 'translateY(0)';
+    }, 250);
   });
 }
