@@ -177,17 +177,39 @@ body.intro-playing .home-banner {
   }
 }
 
-.pagi-item {
-  @apply w-12 h-12 flex items-center justify-center rounded-xl bg-white border border-gray-200 text-gray-500 font-bold shadow-sm transition-all duration-300 hover:border-primary hover:text-primary;
-
-  &.active {
-    @apply bg-primary border-primary text-white shadow-md;
+.section.home-project {
+  .project-slider {
+    @apply flex flex-col lg:flex-row relative;
   }
 
-  i {
-    @apply leading-none;
+  .project-content {
+    @apply relative shrink-0 p-6 flex flex-col justify-center min-h-0 lg:min-h-[520px];
+  }
+
+  .project-number {
+    @apply text-[80px] lg:text-[160px] font-bold leading-none select-none;
+    -webkit-text-stroke: 2px #33333330;
+    color: transparent;
+  }
+
+  .project-title {
+    @apply text-[22px] lg:text-[32px] font-bold leading-[1.2] mt-2 mb-6 max-w-full lg:max-w-[230px] text-[#333] min-h-0 lg:min-h-[4.8em];
+  }
+
+  .project-img-back,
+  .project-img-front {
+    @apply absolute overflow-hidden;
+  }
+
+  .project-img-back {
+    @apply top-1/2 -translate-y-1/2 right-0 left-0 lg:left-[35%] h-full lg:h-[110%] rounded-[24px] lg:rounded-l-[24px] lg:rounded-r-none;
+  }
+
+  .project-img-front {
+    @apply top-1/2 -translate-y-1/2 left-[5%] lg:left-[20%] w-[60%] lg:w-[58%] h-[80%] lg:h-[88%] rounded-[24px] shadow-2xl z-10;
   }
 }
+
 
 .section.home-partner {
   .partner-interactive-card {
@@ -374,7 +396,6 @@ body.intro-playing .home-banner {
 }
 
 .section.about-partners {
-
   .partner-showcase {
     @apply flex flex-col lg:flex-row items-center justify-center gap-8 w-full relative cursor-pointer;
   }

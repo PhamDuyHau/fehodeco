@@ -40,20 +40,19 @@ export function initSwipers() {
   });
 }
 
-export function initProjectSlider2() {
-  const section = document.querySelector('.home-project-2');
+export function initProjectSlider() {
+  const section = document.querySelector('.home-project');
   if (!section) return;
 
-  const items   = [...section.querySelectorAll('.project-data-2 > [data-number]')];
+  const items   = [...section.querySelectorAll('.project-data > [data-number]')];
   if (!items.length) return;
 
-  const frontEl = section.querySelector('.project-img-front-2');
-  const backEl  = section.querySelector('.project-img-back-2');
-  const numEl   = section.querySelector('.project-number-2');
-  const titleEl = section.querySelector('.project-title-2');
-  const ctaEl   = section.querySelector('.project-cta-2');
+  const frontEl = section.querySelector('.project-img-front');
+  const backEl  = section.querySelector('.project-img-back');
+  const numEl   = section.querySelector('.project-number');
+  const titleEl = section.querySelector('.project-title');
+  const ctaEl   = section.querySelector('.project-cta');
 
-  // Build slides into both
   [frontEl, backEl].forEach((el, i) => {
     const wrapper = el.querySelector('.swiper-wrapper');
     items.forEach(item => {
@@ -81,14 +80,11 @@ export function initProjectSlider2() {
       nextEl: section.querySelector('.swiper-button-next-custom'),
       prevEl: section.querySelector('.swiper-button-prev-custom'),
     },
-    controller: {
-      control: backSwiper,   // ← front drives back, direction is automatic
-    },
+    controller: { control: backSwiper },
   });
 
-  backSwiper.controller.control = frontSwiper; // ← back also drives front (for completeness)
+  backSwiper.controller.control = frontSwiper;
 
-  // Content sync
   frontSwiper.on('slideChange', () => {
     const item = items[frontSwiper.realIndex];
 
@@ -99,9 +95,9 @@ export function initProjectSlider2() {
     });
 
     setTimeout(() => {
-      numEl.textContent    = item.dataset.number;
-      titleEl.textContent  = item.dataset.title;
-      ctaEl.href           = item.dataset.href;
+      numEl.textContent   = item.dataset.number;
+      titleEl.textContent = item.dataset.title;
+      ctaEl.href          = item.dataset.href;
 
       numEl.style.transition   = 'opacity 0.4s 0.05s, transform 0.4s 0.05s';
       numEl.style.opacity      = '1';

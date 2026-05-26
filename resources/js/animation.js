@@ -302,14 +302,14 @@ function initRoadAnimation() {
     blue: "resources/img/about/blue-location-dot.png",
   };
 
-  const endPositions = [0.23, 0.54, 0.73, 0.86];
-  const PAGE_SIZE = 4;
+const endPositions = [0.23, 0.38, 0.54, 0.73, 0.80, 0.86];
+const PAGE_SIZE = 6;
   let currentPage = 0;
   const totalPages = Math.ceil(allYears.length / PAGE_SIZE);
   let isAnimating = false;
 
-  const slots = [0, 1, 2, 3].map((i) => document.querySelector(`#dot-slot-${i}`));
-  const labels = [0, 1, 2, 3].map((i) => document.querySelector(`#label-slot-${i}`));
+const slots = [0, 1, 2, 3, 4, 5].map((i) => document.querySelector(`#dot-slot-${i}`));
+const labels = [0, 1, 2, 3, 4, 5].map((i) => document.querySelector(`#label-slot-${i}`));
   const btnNext = document.querySelector("#road-next");
   const btnPrev = document.querySelector("#road-prev");
 
@@ -383,84 +383,6 @@ function initRoadAnimation() {
   }
 }
 
-function initProjectSlider() {
-  const wrap = document.querySelector('.project-slider');
-  if (!wrap) return;
-
-  const slides = [...document.querySelectorAll('.project-data [data-number]')];
-  if (!slides.length) return;
-
-  const elNumber = wrap.querySelector('.project-number');
-  const elTitle = wrap.querySelector('.project-title');
-  const elCta = wrap.querySelector('.project-cta');
-  const imgFront = wrap.querySelector('.project-img-front img');
-  const imgBack = wrap.querySelector('.project-img-back img');
-  const wrapFront = wrap.querySelector('.project-img-front');
-  const wrapBack = wrap.querySelector('.project-img-back');
-  const btnNext = wrap.querySelector('.proj-next');
-  const btnPrev = wrap.querySelector('.proj-prev');
-
-  let current = 0;
-  let animating = false;
-
-  function goTo(index, dir = 1) {
-    if (animating) return;
-    animating = true;
-
-    const data = slides[index];
-    const xOut = dir * -60;
-    const xIn = dir * 80;
-
-    const tl = gsap.timeline({
-      onComplete: () => { animating = false; }
-    });
-
-    // content exits
-    tl.to([elNumber, elTitle, elCta], {
-      x: xOut, opacity: 0, duration: 0.35,
-      ease: 'power2.in', stagger: 0.05
-    })
-
-    // images: front exits fast, back exits slow (depth feel)
-    .to(wrapFront, { x: dir * -120, opacity: 0, duration: 0.4, ease: 'power2.in' }, '<')
-    .to(wrapBack,  { x: dir * -60,  opacity: 0, duration: 0.5, ease: 'power2.in' }, '<')
-
-    // swap content
-    .call(() => {
-      elNumber.textContent = data.dataset.number;
-      elTitle.textContent = data.dataset.title;
-      elCta.href = data.dataset.href;
-      imgFront.src = data.dataset.imgFront;
-      imgBack.src = data.dataset.imgBack;
-      gsap.set([elNumber, elTitle, elCta], { x: xIn });
-      gsap.set(wrapFront, { x: dir * 120 });
-      gsap.set(wrapBack,  { x: dir * 60 });
-    })
-
-    // content enters with stagger
-    .to([elNumber, elTitle, elCta], {
-      x: 0, opacity: 1, duration: 0.55,
-      ease: 'power3.out', stagger: 0.07
-    })
-
-    // images enter: back first (slower/deeper), front after (faster/closer)
-    .to(wrapBack,  { x: 0, opacity: 1, duration: 0.6, ease: 'power3.out' }, '<')
-    .to(wrapFront, { x: 0, opacity: 1, duration: 0.5, ease: 'power3.out' }, '<+0.1')
-
-    // subtle scale breathe on front image for life
-    .fromTo(imgFront, { scale: 1.08 }, { scale: 1.0, duration: 0.8, ease: 'power2.out' }, '<');
-  }
-
-  btnNext.addEventListener('click', () => {
-    current = (current + 1) % slides.length;
-    goTo(current, 1);
-  });
-
-  btnPrev.addEventListener('click', () => {
-    current = (current - 1 + slides.length) % slides.length;
-    goTo(current, -1);
-  });
-}
 
 function initAll() {
   window.__GSAP_INITED__ = true;
@@ -468,7 +390,6 @@ function initAll() {
   initPageAnimations();
   initHoverEffects();
   initRoadAnimation();
-  initProjectSlider();
 }
 
 function waitForHeroImage() {

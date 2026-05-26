@@ -1,5 +1,5 @@
 // home.js
-import { initSwipers, initProjectSlider2 } from './swiper';
+import { initSwipers, initProjectSlider } from './swiper';
 
 function initActivityTabs() {
   const wrappers = document.querySelectorAll('.activity-wrapper');
@@ -88,5 +88,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initSwipers();
   initActivityTabs();
   initPartnerCards();
-  initProjectSlider2();
+  initProjectSlider();
 });
