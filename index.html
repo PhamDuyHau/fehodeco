@@ -31,7 +31,7 @@
   </div> -->
 
   <header class="absolute top-0 left-0 w-full z-999">
-    <div class="relative bg-[linear-gradient(180deg,#057DCD_0%,rgba(5,125,205,0)_59.29%)]">
+    <div class="relative bg-[linear-gradient(180deg,rgba(5,125,205,0)_0%,rgba(0,7,104,0)_105%)]">
 
       <div class="flex items-center justify-between gap-5 px-6 py-3">
 
@@ -160,8 +160,8 @@
     </div>
   </section>
 
-  <section class="section home-about relative overflow-hidden lg:overflow-visible">
-    <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 my-20">
+  <section class="section container home-about relative overflow-hidden lg:overflow-visible">
+    <div class="flex flex-col lg:flex-row justify-items-center">
       <div class="w-full lg:w-1/2 flex justify-center" data-animate="slide-in-left">
         <img src="/resources/img/intro-avatar.png" class="max-w-full h-auto object-contain" />
       </div>
@@ -363,7 +363,7 @@
         <div class="project-number" style="-webkit-text-stroke: 2px #0E4087;">01</div>
         <h2 class="project-title">Bất động sản dân dụng & đô thị</h2>
         <div class="flex items-center gap-3 mt-6">
-          <a href="#"
+          <a href="/project.html#urban"
             class="project-cta inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm bg-primary border border-primary text-white hover:bg-transparent hover:text-primary transition">
             Khám phá ngay
           </a>
@@ -377,14 +377,10 @@
       </div>
       <div class="project-images-wrap relative grow aspect-[4/3] lg:aspect-[5/2] mt-4 lg:mt-0">
         <div class="project-img-back">
-          <div class="swiper-wrapper">
-            <img class="project-back-img w-full h-full object-cover" src="/resources/img/project-1b.jpg" alt="">
-          </div>
+          <div class="swiper-wrapper"></div>
         </div>
         <div class="project-img-front">
-          <div class="swiper-wrapper">
-            <img class="project-front-img w-full h-full object-cover" src="/resources/img/project-1a.jpg" alt="">
-          </div>
+          <div class="swiper-wrapper"></div>
         </div>
       </div>
     </div>
@@ -399,162 +395,247 @@
     </div>
   </section>
 
-  <section class="section container home-partner">
-    <h2 class="heading-title text-center mb-8">
+  <section class="section container home-partner bg-neutral-50 py-12">
+    <h2 class="heading-title text-center mb-8 text-2xl font-bold text-[#333]">
       Công ty con & Công ty liên kết
     </h2>
-    <div class="swiper" data-fx-slider data-swiper-options='{
-    "slidesPerView": 1,
-    "spaceBetween": 24,
-    "navigation": {
-      "prevEl": ".partner-prev",
-      "nextEl": ".partner-next"
-    },
-    "breakpoints": {
-      "1024": {
-        "slidesPerView": 2
+
+    <div class="swiper px-4" data-fx-slider data-swiper-options='{
+      "slidesPerView": 1,
+      "spaceBetween": 24,
+      "navigation": {
+        "prevEl": ".partner-prev",
+        "nextEl": ".partner-next"
+      },
+      "breakpoints": {
+        "1024": {
+          "slidesPerView": 2
+        }
       }
-    }
-  }'>
-
+    }'>
       <div class="swiper-wrapper">
+
         <div class="swiper-slide">
-          <div class="h-full overflow-hidden rounded-[28px]">
-            <div class="grid lg:grid-cols-2 h-full">
-              <div class="p-4">
-                <img src="/resources/img/home-partner-left.webp" class="w-full h-full object-cover rounded-[20px]"
-                  alt="" />
+          <div class="h-full flex flex-col">
+            <div
+              class="relative w-full aspect-[2/1] overflow-hidden rounded-xl bg-gradient-to-br from-blue-600 to-blue-800">
+              <img src="/resources/img/home-partner-left.webp" class="w-full h-full object-cover opacity-80" alt="" />
+
+              <div class="absolute -bottom-8 -right-8 z-10">
+                <div class="w-[150px] h-[150px] rounded-full bg-white flex items-center justify-center">
+                  <div class="w-[93px] h-[69px] flex items-center justify-center p-1">
+                    <img src="/resources/img/logo-hodeco-cr.png" class="w-full h-full object-contain"
+                      alt="Hodeco CR Logo" />
+                  </div>
+                </div>
               </div>
-              <div class="p-6 flex flex-col">
-                <div class="flex items-center gap-4 mb-5">
-                  <div class="size-[72px] shrink-0">
-                    <img src="/resources/img/logo-hodeco-cr.png" class="w-full h-full object-contain" alt="" />
-                  </div>
-                  <div class="flex-1">
-                    <h3 class="text-[14px] lg:text-[16px] font-bold uppercase leading-tight text-[#333]">
-                      Công ty CP Xây dựng - Bất động sản HODECO
-                    </h3>
-                  </div>
+            </div>
+
+            <div class="py-5 flex flex-col flex-grow gap-4">
+              <h3 class="text-[15px] lg:text-[17px] font-bold uppercase leading-tight text-[#333] tracking-wide">
+                Công ty CP Xây dựng - Bất động sản HODECO
+              </h3>
+
+              <div class="space-y-3 text-[14px] text-neutral-700 font-medium">
+                <p class="flex items-start gap-3">
+                  <img src="resources\img\diamond-dot-icon.png" class="w-4 h-4 object-contain mt-0.5 flex-shrink-0"
+                    alt="icon" />
+                  <span>Số 23 Nguyễn Hữu Cầu, Phường Vũng Tàu, TP. Hồ Chí Minh</span>
+                </p>
+                <p class="flex items-center gap-3">
+                  <img src="resources\img\diamond-dot-icon.png" class="w-4 h-4 object-contain flex-shrink-0"
+                    alt="icon" />
+                  <span>0254 3856 646</span>
+                </p>
+              </div>
+
+              <div class="mt-2 flex flex-col gap-2 flex-grow">
+                <h4 class="font-bold uppercase text-[14px] text-[#333] tracking-wider">
+                  Ngành nghề kinh doanh
+                </h4>
+                <div class="space-y-3 text-[14px] text-neutral-600 leading-relaxed font-normal">
+                  <p>Kinh doanh bất động sản, quyền sử dụng đất thuộc chủ sở hữu, mua nhà, công trình xây dựng để bán,
+                    cho thuê, đầu tư cải tạo đất và đầu tư các công trình hạ tầng</p>
+                  <p>Xây dựng công trình kỹ thuật dân dụng</p>
                 </div>
-                <div class="grow flex flex-col justify-between">
-                  <div>
-                    <div class="space-y-2 text-[14px] text-neutral-600">
-                      <p>Số 23 Nguyễn Hữu Cầu, Phường Vũng Tàu, TP. Hồ Chí Minh</p>
-                      <p>0254 3856 646</p>
-                    </div>
-                    <h4 class="font-bold uppercase text-[16px] text-[#333] mt-5 mb-3">
-                      Ngành nghề kinh doanh
-                    </h4>
-                    <div class="space-y-3 text-[14px] text-neutral-600 leading-relaxed">
-                      <p>Kinh doanh bất động sản, quyền sử dụng đất thuộc chủ sở hữu, mua nhà, công trình xây dựng để
-                        bán, cho thuê, đầu tư cải tạo đất và đầu tư các công trình hạ tầng.</p>
-                      <p>Xây dựng công trình kỹ thuật dân dụng.</p>
-                    </div>
-                  </div>
-                  <div class="pt-5 space-y-2 text-[14px]">
-                    <p>Vốn điều lệ: <strong>15 tỷ đồng</strong></p>
-                    <p>Tỷ lệ HODECO nắm giữ: <strong>51%</strong></p>
-                  </div>
-                </div>
+              </div>
+
+              <div class="space-y-2 mt-2 text-[14px] text-neutral-700">
+                <p>Vốn điều lệ: <span class="font-bold text-[#333]">15 tỷ đồng</span></p>
+                <p>Tỷ lệ HODECO nắm giữ: <span class="font-bold text-[#333]">51%</span></p>
               </div>
             </div>
           </div>
         </div>
 
         <div class="swiper-slide">
-          <div class="h-full overflow-hidden rounded-[28px]">
-            <div class="grid lg:grid-cols-2 h-full">
-              <div class="p-4">
-                <img src="/resources/img/home-partner-left.webp" class="w-full h-full object-cover rounded-[20px]"
-                  alt="" />
+          <div class="h-full flex flex-col">
+            <div
+              class="relative w-full aspect-[2/1] overflow-hidden rounded-xl bg-gradient-to-br from-blue-600 to-blue-800">
+              <img src="/resources/img/home-partner-left.webp" class="w-full h-full object-cover opacity-80" alt="" />
+
+              <div class="absolute -bottom-8 -right-8 z-10">
+                <div class="w-[150px] h-[150px] rounded-full bg-white flex items-center justify-center">
+                  <div class="w-[93px] h-[69px] flex items-center justify-center p-1">
+                    <img src="/resources/img/logo-hodeco-cr.png" class="w-full h-full object-contain"
+                      alt="Hodeco CR Logo" />
+                  </div>
+                </div>
               </div>
-              <div class="p-6 flex flex-col">
-                <div class="flex items-center gap-4 mb-5">
-                  <div class="size-[72px] shrink-0">
-                    <img src="/resources/img/logo-hodeco-cr.png" class="w-full h-full object-contain" alt="" />
-                  </div>
-                  <div class="flex-1">
-                    <h3 class="text-[14px] lg:text-[16px] font-bold uppercase leading-tight text-[#333]">
-                      Công ty CP Xây dựng - Bất động sản HODECO
-                    </h3>
-                  </div>
+            </div>
+
+            <div class="py-5 flex flex-col flex-grow gap-4">
+              <h3 class="text-[15px] lg:text-[17px] font-bold uppercase leading-tight text-[#333] tracking-wide">
+                CÔNG TY CP BÊ TÔNG & XÂY LẮP HODECO
+              </h3>
+
+              <div class="space-y-3 text-[14px] text-neutral-700 font-medium">
+                <p class="flex items-start gap-3">
+                  <img src="resources\img\diamond-dot-icon.png" class="w-4 h-4 object-contain mt-0.5 flex-shrink-0"
+                    alt="icon" />
+                  <span>Thôn 9 Gò Găng, Xã Long Sơn, TP. Hồ Chí Minh</span>
+                </p>
+                <p class="flex items-center gap-3">
+                  <img src="resources\img\diamond-dot-icon.png" class="w-4 h-4 object-contain flex-shrink-0"
+                    alt="icon" />
+                  <span>0254 3523 407</span>
+                </p>
+              </div>
+
+              <div class="mt-2 flex flex-col gap-2 flex-grow">
+                <h4 class="font-bold uppercase text-[14px] text-[#333] tracking-wider">
+                  Ngành nghề kinh doanh
+                </h4>
+                <div class="space-y-3 text-[14px] text-neutral-600 leading-relaxed font-normal">
+                  <p>Sản xuất bê tông, các sản phẩm khác từ xi măng, vận tải hóa, cho thuê các loại bơm bê tông và xe
+                    vận chuyển bê tông, sản xuất, kinh doanh VLXD</p>
+                  <p>Xây dựng công trình kỹ thuật dân dụng</p>
                 </div>
-                <div class="grow flex flex-col justify-between">
-                  <div>
-                    <div class="space-y-2 text-[14px] text-neutral-600">
-                      <p>Số 23 Nguyễn Hữu Cầu, Phường Vũng Tàu, TP. Hồ Chí Minh</p>
-                      <p>0254 3856 646</p>
-                    </div>
-                    <h4 class="font-bold uppercase text-[16px] text-[#333] mt-5 mb-3">
-                      Ngành nghề kinh doanh
-                    </h4>
-                    <div class="space-y-3 text-[14px] text-neutral-600 leading-relaxed">
-                      <p>Kinh doanh bất động sản, quyền sử dụng đất thuộc chủ sở hữu, mua nhà, công trình xây dựng để
-                        bán, cho thuê, đầu tư cải tạo đất và đầu tư các công trình hạ tầng.</p>
-                      <p>Xây dựng công trình kỹ thuật dân dụng.</p>
-                    </div>
-                  </div>
-                  <div class="pt-5 space-y-2 text-[14px]">
-                    <p>Vốn điều lệ: <strong>15 tỷ đồng</strong></p>
-                    <p>Tỷ lệ HODECO nắm giữ: <strong>51%</strong></p>
-                  </div>
-                </div>
+              </div>
+
+              <div class="space-y-2 mt-2 text-[14px] text-neutral-700">
+                <p>Vốn điều lệ: <span class="font-bold text-[#333]">30 tỷ đồng</span></p>
+                <p>Tỷ lệ HODECO nắm giữ: <span class="font-bold text-[#333]">60%</span></p>
               </div>
             </div>
           </div>
         </div>
 
         <div class="swiper-slide">
-          <div class="h-full overflow-hidden rounded-[28px]">
-            <div class="grid lg:grid-cols-2 h-full">
-              <div class="p-4">
-                <img src="/resources/img/home-partner-left.webp" class="w-full h-full object-cover rounded-[20px]"
-                  alt="" />
-              </div>
-              <div class="p-6 flex flex-col">
-                <div class="flex items-center gap-4 mb-5">
-                  <div class="size-[72px] shrink-0">
-                    <img src="/resources/img/logo-hodeco-cr.png" class="w-full h-full object-contain" alt="" />
-                  </div>
-                  <div class="flex-1">
-                    <h3 class="text-[14px] lg:text-[16px] font-bold uppercase leading-tight text-[#333]">
-                      Công ty CP Xây dựng - Bất động sản HODECO
-                    </h3>
-                  </div>
-                </div>
-                <div class="grow flex flex-col justify-between">
-                  <div>
-                    <div class="space-y-2 text-[14px] text-neutral-600">
-                      <p>Số 23 Nguyễn Hữu Cầu, Phường Vũng Tàu, TP. Hồ Chí Minh</p>
-                      <p>0254 3856 646</p>
-                    </div>
-                    <h4 class="font-bold uppercase text-[16px] text-[#333] mt-5 mb-3">
-                      Ngành nghề kinh doanh
-                    </h4>
-                    <div class="space-y-3 text-[14px] text-neutral-600 leading-relaxed">
-                      <p>Kinh doanh bất động sản, quyền sử dụng đất thuộc chủ sở hữu, mua nhà, công trình xây dựng để
-                        bán, cho thuê, đầu tư cải tạo đất và đầu tư các công trình hạ tầng.</p>
-                      <p>Xây dựng công trình kỹ thuật dân dụng.</p>
-                    </div>
-                  </div>
-                  <div class="pt-5 space-y-2 text-[14px]">
-                    <p>Vốn điều lệ: <strong>15 tỷ đồng</strong></p>
-                    <p>Tỷ lệ HODECO nắm giữ: <strong>51%</strong></p>
+          <div class="h-full flex flex-col">
+            <div
+              class="relative w-full aspect-[2/1] overflow-hidden rounded-xl bg-gradient-to-br from-blue-600 to-blue-800">
+              <img src="/resources/img/home-partner-left.webp" class="w-full h-full object-cover opacity-80" alt="" />
+
+              <div class="absolute -bottom-8 -right-8 z-10">
+                <div class="w-[150px] h-[150px] rounded-full bg-white flex items-center justify-center">
+                  <div class="w-[93px] h-[69px] flex items-center justify-center p-1">
+                    <img src="/resources/img/logo-hodeco-cr.png" class="w-full h-full object-contain"
+                      alt="Hodeco CR Logo" />
                   </div>
                 </div>
               </div>
             </div>
+
+            <div class="py-5 flex flex-col flex-grow gap-4">
+              <h3 class="text-[15px] lg:text-[17px] font-bold uppercase leading-tight text-[#333] tracking-wide">
+                Công ty CP Xây dựng - Bất động sản HODECO
+              </h3>
+
+              <div class="space-y-3 text-[14px] text-neutral-700 font-medium">
+                <p class="flex items-start gap-3">
+                  <img src="resources\img\diamond-dot-icon.png" class="w-4 h-4 object-contain mt-0.5 flex-shrink-0"
+                    alt="icon" />
+                  <span>Số 23 Nguyễn Hữu Cầu, Phường Vũng Tàu, TP. Hồ Chí Minh</span>
+                </p>
+                <p class="flex items-center gap-3">
+                  <img src="resources\img\diamond-dot-icon.png" class="w-4 h-4 object-contain flex-shrink-0"
+                    alt="icon" />
+                  <span>0254 3856 646</span>
+                </p>
+              </div>
+
+              <div class="mt-2 flex flex-col gap-2 flex-grow">
+                <h4 class="font-bold uppercase text-[14px] text-[#333] tracking-wider">
+                  Ngành nghề kinh doanh
+                </h4>
+                <div class="space-y-3 text-[14px] text-neutral-600 leading-relaxed font-normal">
+                  <p>Kinh doanh bất động sản, quyền sử dụng đất thuộc chủ sở hữu, mua nhà, công trình xây dựng để bán,
+                    cho thuê, đầu tư cải tạo đất và đầu tư các công trình hạ tầng</p>
+                  <p>Xây dựng công trình kỹ thuật dân dụng</p>
+                </div>
+              </div>
+
+              <div class="space-y-2 mt-2 text-[14px] text-neutral-700">
+                <p>Vốn điều lệ: <span class="font-bold text-[#333]">15 tỷ đồng</span></p>
+                <p>Tỷ lệ HODECO nắm giữ: <span class="font-bold text-[#333]">51%</span></p>
+              </div>
+            </div>
           </div>
         </div>
+
+        <div class="swiper-slide">
+          <div class="h-full flex flex-col">
+            <div
+              class="relative w-full aspect-[2/1] overflow-hidden rounded-xl bg-gradient-to-br from-blue-600 to-blue-800">
+              <img src="/resources/img/home-partner-left.webp" class="w-full h-full object-cover opacity-80" alt="" />
+
+              <div class="absolute -bottom-8 -right-8 z-10">
+                <div class="w-[150px] h-[150px] rounded-full bg-white flex items-center justify-center">
+                  <div class="w-[93px] h-[69px] flex items-center justify-center p-1">
+                    <img src="/resources/img/logo-hodeco-cr.png" class="w-full h-full object-contain"
+                      alt="Hodeco CR Logo" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="py-5 flex flex-col flex-grow gap-4">
+              <h3 class="text-[15px] lg:text-[17px] font-bold uppercase leading-tight text-[#333] tracking-wide">
+                CÔNG TY CP BÊ TÔNG & XÂY LẮP HODECO
+              </h3>
+
+              <div class="space-y-3 text-[14px] text-neutral-700 font-medium">
+                <p class="flex items-start gap-3">
+                  <img src="resources\img\diamond-dot-icon.png" class="w-4 h-4 object-contain mt-0.5 flex-shrink-0"
+                    alt="icon" />
+                  <span>Thôn 9 Gò Găng, Xã Long Sơn, TP. Hồ Chí Minh</span>
+                </p>
+                <p class="flex items-center gap-3">
+                  <img src="resources\img\diamond-dot-icon.png" class="w-4 h-4 object-contain flex-shrink-0"
+                    alt="icon" />
+                  <span>0254 3523 407</span>
+                </p>
+              </div>
+
+              <div class="mt-2 flex flex-col gap-2 flex-grow">
+                <h4 class="font-bold uppercase text-[14px] text-[#333] tracking-wider">
+                  Ngành nghề kinh doanh
+                </h4>
+                <div class="space-y-3 text-[14px] text-neutral-600 leading-relaxed font-normal">
+                  <p>Sản xuất bê tông, các sản phẩm khác từ xi măng, vận tải hóa, cho thuê các loại bơm bê tông và xe
+                    vận chuyển bê tông, sản xuất, kinh doanh VLXD</p>
+                  <p>Xây dựng công trình kỹ thuật dân dụng</p>
+                </div>
+              </div>
+
+              <div class="space-y-2 mt-2 text-[14px] text-neutral-700">
+                <p>Vốn điều lệ: <span class="font-bold text-[#333]">30 tỷ đồng</span></p>
+                <p>Tỷ lệ HODECO nắm giữ: <span class="font-bold text-[#333]">60%</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-
     </div>
 
     <div class="swiper-navigation mx-auto mt-8">
-      <button class="swiper-button-prev-custom">
+      <button class="swiper-button-prev-custom award-nav-prev-1">
         <i class="fa-solid fa-arrow-left"></i>
       </button>
-      <button class="swiper-button-next-custom">
+
+      <button class="swiper-button-next-custom award-nav-next-1">
         <i class="fa-solid fa-arrow-right"></i>
       </button>
     </div>
@@ -577,17 +658,37 @@
 
         <div
           class="footer-address-container p-8 md:p-12 rounded-3xl border border-white/20 bg-white/5 backdrop-blur-sm relative">
-          <div class="footer-address-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 md:gap-x-12">
+          <div class="footer-address-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-12">
 
-            <div class="address-item flex flex-col relative">
-              <h4 class="address-title text-lg font-bold uppercase mb-4">Trụ sở chính</h4>
+            <div class="address-item flex flex-col relative justify-start">
+              <h4 class="address-title text-lg font-bold uppercase mb-4 lg:min-h-[56px] flex items-end">Trụ sở chính
+              </h4>
               <div class="flex flex-col gap-3">
-                <div class="flex items-start gap-3">
-                  <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
-                  <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                <div class="flex items-start gap-3 min-h-[60px]">
+                  <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm w-4 flex-shrink-0"></i>
+                  <p class="text-sm leading-relaxed text-white/90">Tầng 3, HODECO Plaza, 36 Nguyễn Thái Học, Phường Tam
+                    Thắng, Thành phố Hồ Chí Minh</p>
                 </div>
-                <div class="flex items-center gap-3">
-                  <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                <div class="flex items-center gap-3 mt-1">
+                  <i class="fa-solid fa-phone text-white/60 text-sm w-4 flex-shrink-0"></i>
+                  <a href="tel:02543856274" class="text-sm hover:text-white text-white/90">0254.3856.274</a>
+                </div>
+              </div>
+              <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+              <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+            </div>
+
+            <div class="address-item flex flex-col relative justify-start">
+              <h4 class="address-title text-lg font-bold uppercase mb-4 lg:min-h-[56px] flex items-end">Văn phòng đại
+                diện</h4>
+              <div class="flex flex-col gap-3">
+                <div class="flex items-start gap-3 min-h-[60px]">
+                  <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm w-4 flex-shrink-0"></i>
+                  <p class="text-sm leading-relaxed text-white/90">Số 9 đường số 33, khu phố 2, Phường An Khánh, Thành
+                    phố Hồ Chí Minh</p>
+                </div>
+                <div class="flex items-center gap-3 mt-1">
+                  <i class="fa-solid fa-phone text-white/60 text-sm w-4 flex-shrink-0"></i>
                   <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
                 </div>
               </div>
@@ -595,48 +696,18 @@
               <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
             </div>
 
-            <div class="address-item flex flex-col relative">
-              <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Gò Vấp</h4>
+            <div class="address-item flex flex-col relative justify-start">
+              <h4 class="address-title text-lg font-bold uppercase mb-4 lg:min-h-[56px] flex items-end">Chi nhánh quản
+                lý Kinh doanh khách sạn HODECO</h4>
               <div class="flex flex-col gap-3">
-                <div class="flex items-start gap-3">
-                  <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
-                  <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                <div class="flex items-start gap-3 min-h-[60px]">
+                  <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm w-4 flex-shrink-0"></i>
+                  <p class="text-sm leading-relaxed text-white/90">Số 02 Trương Công Định, Phường Vũng Tàu, Thành phố Hồ
+                    Chí Minh</p>
                 </div>
-                <div class="flex items-center gap-3">
-                  <i class="fa-solid fa-phone text-white/60 text-sm"></i>
-                  <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
-                </div>
-              </div>
-              <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
-              <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
-            </div>
-
-            <div class="address-item flex flex-col relative">
-              <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Thạnh</h4>
-              <div class="flex flex-col gap-3">
-                <div class="flex items-start gap-3">
-                  <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
-                  <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
-                </div>
-                <div class="flex items-center gap-3">
-                  <i class="fa-solid fa-phone text-white/60 text-sm"></i>
-                  <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
-                </div>
-              </div>
-              <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
-              <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
-            </div>
-
-            <div class="address-item flex flex-col relative">
-              <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Tân</h4>
-              <div class="flex flex-col gap-3">
-                <div class="flex items-start gap-3">
-                  <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
-                  <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
-                </div>
-                <div class="flex items-center gap-3">
-                  <i class="fa-solid fa-phone text-white/60 text-sm"></i>
-                  <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
+                <div class="flex items-center gap-3 mt-1">
+                  <i class="fa-solid fa-phone text-white/60 text-sm w-4 flex-shrink-0"></i>
+                  <a href="tel:02546257272" class="text-sm hover:text-white text-white/90">0254 6257272</a>
                 </div>
               </div>
             </div>

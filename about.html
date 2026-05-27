@@ -11,7 +11,7 @@
 
 <body>
     <header class="absolute top-0 left-0 w-full z-999">
-        <div class="relative bg-[linear-gradient(180deg,#057DCD_0%,rgba(5,125,205,0)_59.29%)]">
+        <div class="relative bg-[linear-gradient(180deg,rgba(5,125,205,0)_0%,rgba(0,7,104,0)_105%)]">
 
             <div class="flex items-center justify-between gap-5 px-6 py-3">
 
@@ -107,60 +107,62 @@
         </div>
     </header>
 
-    <section class="w-full overflow-hidden">
-        <img src="/resources/img/about/about-breadcrumb.png" class="w-full h-auto object-cover" alt="" decoding="async"
+    <section class="w-full overflow-hidden relative">
+        <img src="/resources/img/about/about-breadcrumb.webp" class="w-full h-auto object-cover" alt="" decoding="async"
             fetchpriority="high" />
+
+        <div class="absolute inset-0 pointer-events-none bg-gradient-to-b from-black/75 to-transparent"></div>
     </section>
 
     <section class="section about_vision container overflow-hidden">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
 
-                <div class="lg:col-span-5 rounded-[20px] lg:rounded-[24px] overflow-hidden will-change-transform"
-                    data-animate="slide-in-left">
-                    <div class="aspect-square w-full max-h-[320px] sm:max-h-[400px] lg:max-h-none">
-                        <img src="/resources/img/about/about-vision-left.webp" class="w-full h-full object-cover"
-                            loading="lazy" decoding="async" alt="HODECO Project View" />
+            <div class="lg:col-span-5 rounded-[20px] lg:rounded-[24px] overflow-hidden will-change-transform"
+                data-animate="slide-in-left">
+                <div class="aspect-square w-full max-h-[320px] sm:max-h-[400px] lg:max-h-none">
+                    <img src="/resources/img/about/about-vision-left.webp" class="w-full h-full object-cover"
+                        loading="lazy" decoding="async" alt="HODECO Project View" />
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 content flex flex-col justify-between h-full py-2 lg:py-4 will-change-transform"
+                data-animate="slide-in-right">
+
+                <div>
+                    <h2 class="heading-title text-center lg:text-left mb-6 lg:mb-8">
+                        Tầm nhìn
+                    </h2>
+
+                    <div class="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-6 w-full">
+                        <div class="w-fit mx-auto lg:mx-0 flex-shrink-0">
+                            <div class="h-[3px] bg-[#0B3A7F] w-full"></div>
+                            <span
+                                class="heading-title invisible block pointer-events-none select-none h-0 overflow-hidden">Tầm
+                                nhìn</span>
+                        </div>
+
+                        <p
+                            class="text-[14px] lg:text-[16px] text-[#555] leading-relaxed text-center lg:text-left max-w-full lg:max-w-[580px] mx-auto lg:mx-0">
+                            Với khát vọng tiên phong phát triển một xã hội thịnh vượng, giá trị nhân sinh bền vững,
+                            HODECO nỗ lực trở thành tập đoàn kinh tế tư nhân hàng đầu, kiến tạo hệ sinh thái
+                            Bất động sản đa dạng, góp phần nâng tầm vị thế Việt Nam trên trường Quốc tế.
+                        </p>
                     </div>
                 </div>
 
-                <div class="lg:col-span-7 content flex flex-col justify-between lg:min-h-[380px] py-2 lg:py-4 will-change-transform"
-                    data-animate="slide-in-right">
-
-                    <div>
-                        <h2 class="heading-title text-center lg:text-left mb-6 lg:mb-8">
-                            Tầm nhìn
-                        </h2>
-
-                        <div class="flex flex-col sm:flex-row lg:items-start gap-4 lg:gap-6 w-full">
-                            <div class="w-16 lg:w-24 h-[3px] bg-[#0B3A7F] mx-auto lg:mx-0 lg:mt-[14px] flex-shrink-0">
-                            </div>
-
-                            <p
-                                class="text-[14px] lg:text-[16px] text-[#555] leading-relaxed text-center lg:text-left max-w-full lg:max-w-[580px]">
-                                Với khát vọng tiên phong phát triển một xã hội thịnh vượng, giá trị nhân sinh bền vững,
-                                HODECO nỗ lực trở thành tập đoàn kinh tế tư nhân hàng đầu, kiến tạo hệ sinh thái
-                                Bất động sản đa dạng, góp phần nâng tầm vị thế Việt Nam trên trường Quốc tế.
-                            </p>
-                        </div>
+                <div class="mt-8 lg:mt-12 flex items-end justify-center lg:justify-start gap-4 lg:gap-5">
+                    <div
+                        class="text-[52px] sm:text-[64px] lg:text-[80px] font-bold text-[#0B3A7F] leading-none tracking-tight">
+                        1990
                     </div>
-
-                    <div class="mt-8 lg:mt-12 flex items-end justify-center lg:justify-start gap-4 lg:gap-5">
-                        <div
-                            class="text-[52px] sm:text-[64px] lg:text-[80px] font-bold text-[#0B3A7F] leading-none tracking-tight">
-                            1990
-                        </div>
-
-                        <div class="mb-1 lg:mb-1.5 text-left">
-                            <span class="block text-[12px] lg:text-[13px] text-[#888] font-medium leading-none mb-1">
-                                Hành trình
-                            </span>
-                            <h4 class="text-[16px] lg:text-[20px] font-bold text-[#333] leading-tight">
-                                36 năm kiến tạo giá trị
-                            </h4>
-                        </div>
+                    <div class="mb-1 lg:mb-1.5 text-left">
+                        <span class="block text-[12px] lg:text-[13px] text-[#888] font-medium leading-none mb-1">
+                            Hành trình
+                        </span>
+                        <h4 class="text-[16px] lg:text-[20px] font-bold text-[#333] leading-tight">
+                            36 năm kiến tạo giá trị
+                        </h4>
                     </div>
-
                 </div>
 
             </div>
@@ -176,7 +178,7 @@
         <div class="container mx-auto relative z-10">
 
             <div class="mb-12 text-left">
-                <h2 class="heading-title text-white tracking-wide">
+                <h2 class="heading-title text-white! tracking-wide" data-animate="reveal-up">
                     Sứ mệnh của chúng tôi
                 </h2>
             </div>
@@ -184,7 +186,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-y-10 md:gap-y-12 mb-24">
 
                 <div class="flex flex-col gap-y-10 md:gap-y-12 pr-0 md:pr-12 md:border-r md:border-white/20">
-                    <div class="flex items-start gap-4 md:gap-5">
+                    <div class="flex items-start gap-4 md:gap-5" data-animate="slide-in-left">
                         <div class="w-8 h-8 md:w-10 md:h-10 flex-shrink-0 mt-1">
                             <img src="resources/img/about/about-diamond-icon.png" class="w-full h-full object-contain"
                                 alt="Diamond Icon">
@@ -199,7 +201,7 @@
                         </div>
                     </div>
 
-                    <div class="flex items-start gap-4 md:gap-5">
+                    <div class="flex items-start gap-4 md:gap-5" data-animate="slide-in-left">
                         <div class="w-8 h-8 md:w-10 md:h-10 flex-shrink-0 mt-1">
                             <img src="resources/img/about/about-diamond-icon.png" class="w-full h-full object-contain"
                                 alt="Diamond Icon">
@@ -213,7 +215,7 @@
                         </div>
                     </div>
 
-                    <div class="flex items-start gap-4 md:gap-5">
+                    <div class="flex items-start gap-4 md:gap-5" data-animate="slide-in-left">
                         <div class="w-8 h-8 md:w-10 md:h-10 flex-shrink-0 mt-1">
                             <img src="resources/img/about/about-diamond-icon.png" class="w-full h-full object-contain"
                                 alt="Diamond Icon">
@@ -230,7 +232,7 @@
                 </div>
 
                 <div class="flex flex-col gap-y-10 md:gap-y-12 pl-0 md:pl-12">
-                    <div class="flex items-start gap-4 md:gap-5">
+                    <div class="flex items-start gap-4 md:gap-5" data-animate="slide-in-right">
                         <div class="w-8 h-8 md:w-10 md:h-10 flex-shrink-0 mt-1">
                             <img src="resources/img/about/about-diamond-icon.png" class="w-full h-full object-contain"
                                 alt="Diamond Icon">
@@ -245,7 +247,7 @@
                         </div>
                     </div>
 
-                    <div class="flex items-start gap-4 md:gap-5">
+                    <div class="flex items-start gap-4 md:gap-5" data-animate="slide-in-right">
                         <div class="w-8 h-8 md:w-10 md:h-10 flex-shrink-0 mt-1">
                             <img src="resources/img/about/about-diamond-icon.png" class="w-full h-full object-contain"
                                 alt="Diamond Icon">
@@ -259,7 +261,7 @@
                         </div>
                     </div>
 
-                    <div class="flex items-start gap-4 md:gap-5">
+                    <div class="flex items-start gap-4 md:gap-5" data-animate="slide-in-right">
                         <div class="w-8 h-8 md:w-10 md:h-10 flex-shrink-0 mt-1">
                             <img src="resources/img/about/about-diamond-icon.png" class="w-full h-full object-contain"
                                 alt="Diamond Icon">
@@ -276,17 +278,17 @@
                 </div>
             </div>
 
-            <div class="mb-12 text-center">
+            <div class="mb-12 text-center" data-animate="reveal-up">
                 <h2 class="text-[36px] md:text-[44px] font-semibold text-white tracking-wide">
                     Giá trị cốt lõi
                 </h2>
                 <div class="w-24 h-[2px] bg-white/40 mx-auto mt-4"></div>
             </div>
 
-            <div class="flex flex-wrap lg:flex-nowrap justify-center items-stretch gap-6">
+            <div class="flex flex-wrap xl:flex-nowrap justify-center items-stretch gap-6">
 
-                <div
-                    class="group w-full sm:w-[calc(50%-12px)] lg:w-auto lg:flex-[1_1_0%] min-h-[380px] p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-500 ease-out hover:bg-[#003366] hover:border-[#003366] hover:-translate-y-1 flex flex-col justify-start overflow-hidden">
+                <div class="group w-full sm:w-[calc(50%-12px)] xl:w-auto xl:flex-[1_1_0%] min-h-[380px] p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-500 ease-out hover:bg-[#003366] hover:border-[#003366] hover:-translate-y-1 flex flex-col justify-start overflow-hidden"
+                    data-animate="lift-in-stagger">
                     <h3 class="text-xl font-semibold tracking-wide text-white mb-4">"Danh dự"</h3>
                     <p
                         class="text-[14px] text-[#ccc] leading-relaxed group-hover:text-white/90 transition-colors duration-500 [display:-webkit-box] [-webkit-line-clamp:5] [-webkit-box-orient:vertical] overflow-hidden group-hover:[display:block]">
@@ -298,8 +300,8 @@
                     </p>
                 </div>
 
-                <div
-                    class="group w-full sm:w-[calc(50%-12px)] lg:w-auto lg:flex-[1_1_0%] min-h-[380px] p-6 rounded-xl border border-[#003366] bg-[#003366] transition-all duration-500 ease-out hover:-translate-y-1 flex flex-col justify-start overflow-hidden">
+                <div class="group w-full sm:w-[calc(50%-12px)] xl:w-auto xl:flex-[1_1_0%] min-h-[380px] p-6 rounded-xl border border-[#003366] bg-[#003366] transition-all duration-500 ease-out hover:-translate-y-1 flex flex-col justify-start overflow-hidden"
+                    data-animate="lift-in-stagger">
                     <h3 class="text-xl font-semibold tracking-wide text-white mb-4">Tinh hoa</h3>
                     <p class="text-[14px] text-white/90 leading-relaxed">
                         Hodeco khao khát quy tụ những con người tinh hoa, tài năng, tâm huyết, có khát vọng cống hiến,
@@ -310,8 +312,8 @@
                     </p>
                 </div>
 
-                <div
-                    class="group w-full sm:w-[calc(50%-12px)] lg:w-auto lg:flex-[1_1_0%] min-h-[380px] p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-500 ease-out hover:bg-[#003366] hover:border-[#003366] hover:-translate-y-1 flex flex-col justify-start overflow-hidden">
+                <div class="group w-full sm:w-[calc(50%-12px)] xl:w-auto xl:flex-[1_1_0%] min-h-[380px] p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-500 ease-out hover:bg-[#003366] hover:border-[#003366] hover:-translate-y-1 flex flex-col justify-start overflow-hidden"
+                    data-animate="lift-in-stagger">
                     <h3 class="text-xl font-semibold tracking-wide text-white mb-4">"Kỷ luật"</h3>
                     <p
                         class="text-[14px] text-[#ccc] leading-relaxed group-hover:text-white/90 transition-colors duration-500 [display:-webkit-box] [-webkit-line-clamp:5] [-webkit-box-orient:vertical] overflow-hidden group-hover:[display:block]">
@@ -323,8 +325,8 @@
                     </p>
                 </div>
 
-                <div
-                    class="group w-full sm:w-[calc(50%-12px)] lg:w-auto lg:flex-[1_1_0%] min-h-[380px] p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-500 ease-out hover:bg-[#003366] hover:border-[#003366] hover:-translate-y-1 flex flex-col justify-start overflow-hidden">
+                <div class="group w-full sm:w-[calc(50%-12px)] xl:w-auto xl:flex-[1_1_0%] min-h-[380px] p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-500 ease-out hover:bg-[#003366] hover:border-[#003366] hover:-translate-y-1 flex flex-col justify-start overflow-hidden"
+                    data-animate="lift-in-stagger">
                     <h3 class="text-xl font-semibold tracking-wide text-white mb-4">"Nhân văn"</h3>
                     <p
                         class="text-[14px] text-[#ccc] leading-relaxed group-hover:text-white/90 transition-colors duration-500 [display:-webkit-box] [-webkit-line-clamp:5] [-webkit-box-orient:vertical] overflow-hidden group-hover:[display:block]">
@@ -335,8 +337,8 @@
                     </p>
                 </div>
 
-                <div
-                    class="group w-full sm:w-[calc(50%-12px)] lg:w-auto lg:flex-[1_1_0%] min-h-[380px] p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-500 ease-out hover:bg-[#003366] hover:border-[#003366] hover:-translate-y-1 flex flex-col justify-start overflow-hidden">
+                <div class="group w-full sm:w-[calc(50%-12px)] xl:w-auto xl:flex-[1_1_0%] min-h-[380px] p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-500 ease-out hover:bg-[#003366] hover:border-[#003366] hover:-translate-y-1 flex flex-col justify-start overflow-hidden"
+                    data-animate="lift-in-stagger">
                     <h3 class="text-xl font-semibold tracking-wide text-white mb-4">"Năng động"</h3>
                     <p
                         class="text-[14px] text-[#ccc] leading-relaxed group-hover:text-white/90 transition-colors duration-500 [display:-webkit-box] [-webkit-line-clamp:5] [-webkit-box-orient:vertical] overflow-hidden group-hover:[display:block]">
@@ -353,15 +355,15 @@
 
     <section class="section relative w-full overflow-visible mb-40">
         <img src="resources/img/about/bg-about-year-1.png"
-            class="absolute lg:top-[-10%] lg:top-[20%] right-0 pointer-events-none select-none scale-50 3xl:scale-100 origin-right"
+            class="absolute lg:top-[-10%] lg:top-[20%] right-0 pointer-events-none select-none scale-80 3xl:scale-100 origin-right"
             alt="">
 
         <img src="resources/img/about/bg-about-year-2.png"
-            class="absolute top-[70%] lg:top-[45%] left-[-24%] md:left-0  lg:left-[30%] pointer-events-none select-none scale-50 3xl:scale-100 origin-center"
+            class="absolute top-[70%] lg:top-[41%] left-[-24%] md:left-0  lg:left-[27%] pointer-events-none select-none scale-80 3xl:scale-100 origin-center"
             alt="">
 
         <img src="resources/img/about/bg-about-year-3.png"
-            class="absolute bottom-[-35%] md:bottom-[-45%] lg:bottom-[-7%] right-0 pointer-events-none select-none scale-50 3xl:scale-100 origin-bottom-right"
+            class="absolute bottom-[-35%] md:bottom-[-45%] lg:bottom-[-7%] right-0 pointer-events-none select-none scale-80 3xl:scale-100 origin-bottom-right"
             alt="">
         <div class="pl-8 lg:pl-20 relative z-10">
             <div class="flex flex-col max-w-max">
@@ -383,6 +385,7 @@
                 <div class="h-px bg-[#333333] w-full"></div>
             </div>
         </div>
+        
         <div class="mt-8 w-full relative z-10 road-wrap hidden lg:block">
             <svg viewBox="0 0 2549.3333 964" class="w-full h-auto block" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -393,82 +396,54 @@
                     id="motionPath" />
             </svg>
 
-            <img id="dot-slot-0" src=""
-                class="absolute w-20 h-20 object-contain pointer-events-none left-[12%] bottom-[18%]" style="opacity:0"
-                alt="">
-            <img id="dot-slot-1" src=""
-                class="absolute w-24 h-24 object-contain pointer-events-none left-[16%] top-[38%]" style="opacity:0"
-                alt="">
-            <img id="dot-slot-2" src=""
-                class="absolute w-24 h-24 object-contain pointer-events-none left-[30%] bottom-[28%]" style="opacity:0"
-                alt="">
-            <img id="dot-slot-3" src=""
-                class="absolute w-20 h-20 object-contain pointer-events-none left-[43%] bottom-[38%]" style="opacity:0"
-                alt="">
-            <img id="dot-slot-4" src=""
-                class="absolute w-20 h-20 object-contain pointer-events-none left-[54%] top-[42%]" style="opacity:0"
-                alt="">
-            <img id="dot-slot-5" src=""
-                class="absolute w-20 h-20 object-contain pointer-events-none left-[65%] top-[22%]" style="opacity:0"
-                alt="">
-
-            <div class="road-year-data" hidden>
-                <div data-year="2026" data-text="Vốn điều lệ 1.998 tỷ đồng" data-img="orange"></div>
-                <div data-year="2022" data-text="Vốn điều lệ 1.080 tỷ đồng" data-img="blue"></div>
-                <div data-year="2019" data-text="Huân chương lao động hạng I.<br>Vốn điều lệ 580 tỷ đồng"
-                    data-img="orange"></div>
-                <div data-year="2015" data-text="Vốn điều lệ 411 tỷ đồng" data-img="blue"></div>
-
-                <div data-year="2013" data-text="Huân chương lao động hạng II" data-img="blue"></div>
-                <div data-year="2010" data-text="Vốn điều lệ 200 tỷ đồng" data-img="orange"></div>
-                <div data-year="2008" data-text="Vốn điều lệ 280 tỷ đồng" data-img="orange"></div>
-                <div data-year="2005" data-text="Mở rộng quy mô thị trường" data-img="blue"></div>
-                <div data-year="2000" data-text="Vốn điều lệ 120 tỷ đồng" data-img="blue"></div>
-                <div data-year="1998" data-text="Phát triển hệ thống chi nhánh" data-img="orange"></div>
-                <div data-year="1995" data-text="Vốn điều lệ 50 tỷ đồng" data-img="orange"></div>
-                <div data-year="1991" data-text="Thành lập công ty" data-img="blue"></div>
-            </div>
+            <img id="dot-slot-0" src="resources/img/about/blue-location-dot.png"
+                class="absolute w-20 h-20 object-contain pointer-events-none" style="opacity:0" alt="">
+            <img id="dot-slot-1" src="resources/img/about/orange-location-dot.png"
+                class="absolute w-24 h-24 object-contain pointer-events-none" style="opacity:0" alt="">
+            <img id="dot-slot-2" src="resources/img/about/blue-location-dot.png"
+                class="absolute w-24 h-24 object-contain pointer-events-none" style="opacity:0" alt="">
+            <img id="dot-slot-3" src="resources/img/about/orange-location-dot.png"
+                class="absolute w-20 h-20 object-contain pointer-events-none" style="opacity:0" alt="">
+            <img id="dot-slot-4" src="resources/img/about/blue-location-dot.png"
+                class="absolute w-20 h-20 object-contain pointer-events-none" style="opacity:0" alt="">
+            <img id="dot-slot-5" src="resources/img/about/orange-location-dot.png"
+                class="absolute w-20 h-20 object-contain pointer-events-none" style="opacity:0" alt="">
+            <img id="dot-slot-6" src="resources/img/about/blue-location-dot.png"
+                class="absolute w-20 h-20 object-contain pointer-events-none" style="opacity:0" alt="">
 
             <div id="label-slot-0" class="absolute left-[10%] bottom-[-6%]" style="opacity:0">
-                <span class="label-year block text-secondary font-bold text-xl lg:text-3xl"></span>
-                <span class="label-text block text-[#333333] text-xs lg:text-sm mt-1"></span>
+                <span class="label-year block text-secondary font-bold text-xl lg:text-3xl">1991</span>
+                <span class="label-text block text-[#333333] text-xs lg:text-sm mt-1">Thành lập công ty</span>
             </div>
 
             <div id="label-slot-1" class="absolute left-[8%] top-[28%]" style="opacity:0">
-                <span class="label-year block text-secondary font-bold text-xl lg:text-3xl"></span>
-                <span class="label-text block text-[#333333] text-xs lg:text-sm mt-1 leading-relaxed"></span>
+                <span class="label-year block text-secondary font-bold text-xl lg:text-3xl">2000</span>
+                <span class="label-text block text-[#333333] text-xs lg:text-sm mt-1 leading-relaxed">Vốn điều lệ 120 tỷ đồng</span>
             </div>
 
             <div id="label-slot-2" class="absolute left-[28%] bottom-[2%]" style="opacity:0">
-                <span class="label-year block text-secondary font-bold text-xl lg:text-3xl"></span>
-                <span class="label-text block text-[#333333] text-xs lg:text-sm mt-1"></span>
+                <span class="label-year block text-secondary font-bold text-xl lg:text-3xl">2008</span>
+                <span class="label-text block text-[#333333] text-xs lg:text-sm mt-1">Vốn điều lệ 280 tỷ đồng</span>
             </div>
 
             <div id="label-slot-3" class="absolute left-[42%] bottom-[18%]" style="opacity:0">
-                <span class="label-year block text-secondary font-bold text-xl lg:text-3xl"></span>
-                <span class="label-text block text-[#333333] text-xs lg:text-sm mt-1"></span>
+                <span class="label-year block text-secondary font-bold text-xl lg:text-3xl">2013</span>
+                <span class="label-text block text-[#333333] text-xs lg:text-sm mt-1">Huân chương lao động hạng II</span>
             </div>
 
             <div id="label-slot-4" class="absolute left-[52%] top-[28%]" style="opacity:0">
-                <span class="label-year block text-secondary font-bold text-xl lg:text-3xl"></span>
-                <span class="label-text block text-[#333333] text-xs lg:text-sm mt-1"></span>
+                <span class="label-year block text-secondary font-bold text-xl lg:text-3xl">2019</span>
+                <span class="label-text block text-[#333333] text-xs lg:text-sm mt-1 leading-relaxed">Huân chương lao động hạng I.<br>Vốn điều lệ 580 tỷ đồng</span>
             </div>
 
             <div id="label-slot-5" class="absolute left-[62%] top-[-5%]" style="opacity:0">
-                <span class="label-year block text-secondary font-bold text-xl lg:text-3xl"></span>
-                <span class="label-text block text-[#333333] text-xs lg:text-sm mt-1"></span>
+                <span class="label-year block text-secondary font-bold text-xl lg:text-3xl">2022</span>
+                <span class="label-text block text-[#333333] text-xs lg:text-sm mt-1">Vốn điều lệ 1.080 tỷ đồng</span>
             </div>
 
-            <div class="flex items-center justify-center gap-3 mt-4">
-                <button id="road-prev"
-                    class="rounded-full w-10 h-10 flex items-center justify-center shadow transition">
-                    <i class="fa-solid fa-arrow-left text-[#333333] text-sm"></i>
-                </button>
-
-                <button id="road-next"
-                    class="rounded-full w-10 h-10 flex items-center justify-center shadow transition">
-                    <i class="fa-solid fa-arrow-right text-[#333333] text-sm"></i>
-                </button>
+            <div id="label-slot-6" class="absolute left-[76%] top-[-5%]" style="opacity:0">
+                <span class="label-year block text-secondary font-bold text-xl lg:text-3xl">2026</span>
+                <span class="label-text block text-[#333333] text-xs lg:text-sm mt-1">Vốn điều lệ 1.998 tỷ đồng</span>
             </div>
         </div>
 
@@ -702,7 +677,9 @@
         </h2>
 
         <div class="w-full flex justify-center overflow-visible" data-animate="soft-scale">
-            <div class="relative flex flex-col items-center origin-top scale-[0.6] sm:scale-[0.75] md:scale-100">
+            <div
+                class="relative flex flex-col items-center origin-top scale-[0.6] -mb-60 sm:scale-[0.75] sm:-mb-28 md:scale-100 md:mb-0">
+
                 <div class="relative flex flex-col items-center">
                     <div class="flex flex-col items-center relative">
 
@@ -767,7 +744,7 @@
             </div>
         </div>
 
-        <div class="relative z-0 w-full flex justify-center -mt-18 mb-8">
+        <div class="relative z-0 w-full flex justify-center -mt-18 mb-8 hidden md:flex">
             <div class="w-full relative">
                 <img src="resources/img/svg/dual-arrow-wide.svg" class="w-full max-w-[850px] mx-auto" alt="">
             </div>
@@ -845,16 +822,6 @@
             "1280": { "slidesPerView": 3 }
             }
         }'>
-
-                <div class="pointer-events-none absolute inset-y-0 left-0 z-10
-            w-[40px] md:w-[80px] xl:w-[180px]
-            bg-gradient-to-r from-[#FDFBF5] via-[#FDFBF5]/80 to-transparent">
-                </div>
-
-                <div class="pointer-events-none absolute inset-y-0 right-0 z-10
-            w-[40px] md:w-[80px] xl:w-[180px]
-            bg-gradient-to-l from-[#FDFBF5] via-[#FDFBF5]/80 to-transparent">
-                </div>
 
                 <div class="swiper-wrapper">
 
@@ -947,18 +914,7 @@
             }
         }'>
 
-                <div class="pointer-events-none absolute inset-y-0 left-0 z-10
-            w-[40px] md:w-[80px] xl:w-[180px]
-            bg-gradient-to-r from-[#FDFBF5] via-[#FDFBF5]/80 to-transparent">
-                </div>
-
-                <div class="pointer-events-none absolute inset-y-0 right-0 z-10
-            w-[40px] md:w-[80px] xl:w-[180px]
-            bg-gradient-to-l from-[#FDFBF5] via-[#FDFBF5]/80 to-transparent">
-                </div>
-
                 <div class="swiper-wrapper">
-
                     <div class="swiper-slide">
                         <div class="award-card">
                             <div class="award-card-image">
@@ -1009,106 +965,74 @@
             ĐỐI TÁC CỦA CHÚNG TÔI
         </h2>
 
-        <div class="swiper w-full" data-fx-slider data-swiper-options='{
-        "slidesPerView": 2,
-        "spaceBetween": 24,
-        "loop": true,
-        "autoplay": {
-            "delay": 2500,
-            "disableOnInteraction": false
-        },
-        "navigation": {
-            "nextEl": ".partner-next",
-            "prevEl": ".partner-prev"
-        },
-        "breakpoints": {
-            "640": {
-            "slidesPerView": 3
-            },
-            "1024": {
-            "slidesPerView": 5
-            },
-            "1536": {
-            "slidesPerView": 6
-            }
-        }
-        }'>
+        <div class="flex flex-col items-center gap-6">
 
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
+            <div class="flex flex-wrap justify-center w-full [&>div]:w-1/3 [&>div]:sm:w-1/3 [&>div]:lg:w-1/5">
+                <div class="flex items-center justify-center px-6 py-4">
                     <img src="/resources/img/about/acb-logo.png" class="mx-auto h-[40px] object-contain lg:h-[60px]"
                         alt="ACB">
                 </div>
-
-                <div class="swiper-slide">
+                <div class="flex items-center justify-center px-6 py-4">
                     <img src="/resources/img/about/vcb-logo.png" class="mx-auto h-[40px] object-contain lg:h-[60px]"
                         alt="VCB">
                 </div>
-
-                <div class="swiper-slide">
+                <div class="flex items-center justify-center px-6 py-4">
                     <img src="/resources/img/about/ocb-logo.png" class="mx-auto h-[40px] object-contain lg:h-[60px]"
                         alt="OCB">
                 </div>
-
-                <div class="swiper-slide">
+                <div class="flex items-center justify-center px-6 py-4">
                     <img src="/resources/img/about/bidv-logo.png" class="mx-auto h-[40px] object-contain lg:h-[60px]"
                         alt="BIDV">
                 </div>
+            </div>
 
-                <div class="swiper-slide">
+            <div class="flex flex-wrap justify-center w-full [&>div]:w-1/3 [&>div]:sm:w-1/3 [&>div]:lg:w-1/5">
+                <div class="flex items-center justify-center px-6 py-4">
                     <img src="/resources/img/about/hdbank-logo.png" class="mx-auto h-[40px] object-contain lg:h-[60px]"
-                        alt="ACB">
+                        alt="HDBank">
                 </div>
-
-                <div class="swiper-slide">
+                <div class="flex items-center justify-center px-6 py-4">
                     <img src="/resources/img/about/pgbank-logo.png" class="mx-auto h-[40px] object-contain lg:h-[60px]"
+                        alt="PGBank">
+                </div>
+                <div class="flex items-center justify-center px-6 py-4">
+                    <img src="/resources/img/about/acb-logo.png" class="mx-auto h-[40px] object-contain lg:h-[60px]"
                         alt="ACB">
                 </div>
+                <div class="flex items-center justify-center px-6 py-4">
+                    <img src="/resources/img/about/vcb-logo.png" class="mx-auto h-[40px] object-contain lg:h-[60px]"
+                        alt="VCB">
+                </div>
+                <div class="flex items-center justify-center px-6 py-4">
+                    <img src="/resources/img/about/ocb-logo.png" class="mx-auto h-[40px] object-contain lg:h-[60px]"
+                        alt="OCB">
+                </div>
+            </div>
 
-                <div class="swiper-slide">
+            <div class="flex flex-wrap justify-center w-full [&>div]:w-1/3 [&>div]:sm:w-1/3 [&>div]:lg:w-1/5">
+                <div class="flex items-center justify-center px-6 py-4">
                     <img src="/resources/img/about/bidv-logo.png" class="mx-auto h-[40px] object-contain lg:h-[60px]"
                         alt="BIDV">
                 </div>
-
-                <div class="swiper-slide">
+                <div class="flex items-center justify-center px-6 py-4">
                     <img src="/resources/img/about/hdbank-logo.png" class="mx-auto h-[40px] object-contain lg:h-[60px]"
-                        alt="ACB">
+                        alt="HDBank">
                 </div>
-
-                <div class="swiper-slide">
+                <div class="flex items-center justify-center px-6 py-4">
                     <img src="/resources/img/about/pgbank-logo.png" class="mx-auto h-[40px] object-contain lg:h-[60px]"
+                        alt="PGBank">
+                </div>
+                <div class="flex items-center justify-center px-6 py-4">
+                    <img src="/resources/img/about/acb-logo.png" class="mx-auto h-[40px] object-contain lg:h-[60px]"
                         alt="ACB">
                 </div>
             </div>
-        </div>
 
-        <div class="pointer-events-none absolute inset-y-0 left-0 z-10 w-[120px]
-        bg-gradient-to-r from-[#FDFBF5] to-transparent">
-        </div>
-
-        <div class="pointer-events-none absolute inset-y-0 right-0 z-10 w-[120px]
-        bg-gradient-to-l from-[#FDFBF5] to-transparent">
-        </div>
-
-        <div class="swiper-navigation mx-auto mt-10">
-            <button class="swiper-button-prev-custom partner-prev">
-                <i class="fa-solid fa-arrow-left"></i>
-            </button>
-
-            <button class="swiper-button-next-custom partner-next">
-                <i class="fa-solid fa-arrow-right"></i>
-            </button>
         </div>
     </section>
 
     <footer id="footer" class="site-footer" itemtype="" itemscope>
         <div id="footer-main-wrap" class="footer-main-wrap bg-primary text-white relative overflow-hidden">
-            <img src="/resources/img/bg-footer-left.png"
-                class="absolute left-0 top-0 pointer-events-none select-none z-0 w-[120px] md:w-[160px] xl:w-auto"
-                alt="">
-            <img src="/resources/img/bg-footer-right.png"
-                class="absolute right-0 bottom-0 pointer-events-none select-none z-0 w-[240px] md:w-[320px] xl:w-auto"
-                alt="">
             <div class="container pt-16 relative z-10">
                 <div class="footer-brand-overlay text-center overflow-hidden">
                     <span
@@ -1121,14 +1045,33 @@
                 <div
                     class="footer-address-container p-8 md:p-12 rounded-3xl border border-white/20 bg-white/5 backdrop-blur-sm relative">
                     <div
-                        class="footer-address-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 md:gap-x-12">
+                        class="footer-address-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-12">
 
                         <div class="address-item flex flex-col relative">
                             <h4 class="address-title text-lg font-bold uppercase mb-4">Trụ sở chính</h4>
                             <div class="flex flex-col gap-3">
                                 <div class="flex items-start gap-3">
                                     <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
-                                    <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                                    <p class="text-sm leading-relaxed text-white/90">Tầng 3, HODECO Plaza, 36 Nguyễn
+                                        Thái Học, Phường Tam Thắng, Thành phố Hồ Chí Minh</p>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                                    <a href="tel:02543856274"
+                                        class="text-sm hover:text-white text-white/90">0254.3856.274</a>
+                                </div>
+                            </div>
+                            <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                            <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+                        </div>
+
+                        <div class="address-item flex flex-col relative">
+                            <h4 class="address-title text-lg font-bold uppercase mb-4">Văn phòng đại diện</h4>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-start gap-3">
+                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                                    <p class="text-sm leading-relaxed text-white/90">Số 9 đường số 33, khu phố 2, Phường
+                                        An Khánh, Thành phố Hồ Chí Minh</p>
                                 </div>
                                 <div class="flex items-center gap-3">
                                     <i class="fa-solid fa-phone text-white/60 text-sm"></i>
@@ -1141,50 +1084,18 @@
                         </div>
 
                         <div class="address-item flex flex-col relative">
-                            <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Gò Vấp</h4>
+                            <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh quản lý Kinh doanh
+                                khách sạn HODECO</h4>
                             <div class="flex flex-col gap-3">
                                 <div class="flex items-start gap-3">
                                     <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
-                                    <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                                    <p class="text-sm leading-relaxed text-white/90">Số 02 Trương Công Định, Phường Vũng
+                                        Tàu, Thành phố Hồ Chí Minh</p>
                                 </div>
                                 <div class="flex items-center gap-3">
                                     <i class="fa-solid fa-phone text-white/60 text-sm"></i>
-                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28
-                                        3456 7890</a>
-                                </div>
-                            </div>
-                            <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
-                            <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
-                        </div>
-
-                        <div class="address-item flex flex-col relative">
-                            <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Thạnh</h4>
-                            <div class="flex flex-col gap-3">
-                                <div class="flex items-start gap-3">
-                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
-                                    <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
-                                </div>
-                                <div class="flex items-center gap-3">
-                                    <i class="fa-solid fa-phone text-white/60 text-sm"></i>
-                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28
-                                        3456 7890</a>
-                                </div>
-                            </div>
-                            <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
-                            <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
-                        </div>
-
-                        <div class="address-item flex flex-col relative">
-                            <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Tân</h4>
-                            <div class="flex flex-col gap-3">
-                                <div class="flex items-start gap-3">
-                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
-                                    <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
-                                </div>
-                                <div class="flex items-center gap-3">
-                                    <i class="fa-solid fa-phone text-white/60 text-sm"></i>
-                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28
-                                        3456 7890</a>
+                                    <a href="tel:02546257272" class="text-sm hover:text-white text-white/90">0254
+                                        6257272</a>
                                 </div>
                             </div>
                         </div>

@@ -11,104 +11,100 @@
 
 <body>
     <header class="absolute top-0 left-0 w-full z-999">
-        <div class="relative bg-[linear-gradient(180deg,#057DCD_0%,rgba(5,125,205,0)_59.29%)]">
+        <div class="relative bg-[linear-gradient(180deg,rgba(5,125,205,0)_0%,rgba(0,7,104,0)_105%)]">
 
-            <div class="flex items-center justify-between gap-5 px-6 py-3">
+        <div class="flex items-center justify-between gap-5 px-6 py-3">
 
-                <div class="lg:hidden">
-                    <button id="menuBtn" class="text-white text-2xl">☰</button>
+            <div class="lg:hidden">
+            <button id="menuBtn" class="text-white text-2xl">☰</button>
+            </div>
+
+            <div class="absolute left-1/2 -translate-x-1/2 lg:hidden">
+            <a href="index.html">
+                <img src="/resources/img/hodeco-logo.png" class="h-12 object-contain" alt="Logo" />
+            </a>
+            </div>
+
+            <div class="hidden lg:flex items-center gap-4 mx-auto">
+
+            <a href="index.html" class="shrink-0">
+                <img src="/resources/img/hodeco-logo.png" class="h-12 object-contain" alt="Logo" />
+            </a>
+
+            <nav>
+                <ul class="menu">
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="project.html">Dự án</a></li>
+                <li><a href="shareholder.html">Quan hệ cổ đông</a></li>
+                <li><a href="exchange.html">Sàn giao dịch BĐS</a></li>
+                <li><a href="recruitment.html">Tuyển dụng</a></li>
+                <li><a href="news.html">Tin tức</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <span class="w-px h-5 bg-white/40"></span>
+
+            <div class="relative">
+                <img src="/resources/img/search.png" id="searchBtn" class="w-5 h-5 cursor-pointer" />
+                <div id="searchBox" class="hidden absolute right-0 top-[40px]">
+                <input type="text" placeholder="Search..."
+                    class="w-[220px] h-[40px] px-4 rounded-lg shadow-lg outline-none text-black" />
                 </div>
+            </div>
 
-                <div class="absolute left-1/2 -translate-x-1/2 lg:hidden">
-                    <a href="index.html">
-                        <img src="/resources/img/hodeco-logo.png" class="h-12 object-contain" alt="Logo" />
-                    </a>
-                </div>
+            <span class="w-px h-5 bg-white/40"></span>
 
-                <div class="hidden lg:flex items-center gap-4 mx-auto">
+            <div class="flex items-center gap-2">
+                <a href="https://facebook.com" target="_blank"><img src="/resources/img/facebook-icon.png"
+                    class="w-5 h-5"></a>
+                <a href="https://linkedin.com" target="_blank"><img src="/resources/img/linkedin-icon.png"
+                    class="w-5 h-5"></a>
+                <a href="https://youtube.com" target="_blank"><img src="/resources/img/youtube-icon.png"
+                    class="w-5 h-5"></a>
+            </div>
 
-                    <a href="index.html" class="shrink-0">
-                        <img src="/resources/img/hodeco-logo.png" class="h-12 object-contain" alt="Logo" />
-                    </a>
+            <span class="w-px h-5 bg-white/40"></span>
 
-                    <nav>
-                        <ul class="menu">
-                            <li><a href="about.html">Giới thiệu</a></li>
-                            <li><a href="project.html">Dự án</a></li>
-                            <li><a href="shareholder.html">Quan hệ cổ đông</a></li>
-                            <li><a href="exchange.html">Sàn giao dịch BĐS</a></li>
-                            <li><a href="recruitment.html">Tuyển dụng</a></li>
-                            <li><a href="news.html">Tin tức</a></li>
-                            <li><a href="contact.html">Liên hệ</a></li>
-                        </ul>
-                    </nav>
-                    <span class="w-px h-5 bg-white/40"></span>
-
-                    <div class="relative">
-                        <img src="/resources/img/search.png" id="searchBtn" class="w-5 h-5 cursor-pointer" />
-                        <div id="searchBox" class="hidden absolute right-0 top-[40px]">
-                            <input type="text" placeholder="Search..."
-                                class="w-[220px] h-[40px] px-4 rounded-lg shadow-lg outline-none text-black" />
-                        </div>
-                    </div>
-
-                    <span class="w-px h-5 bg-white/40"></span>
-
-                    <div class="flex items-center gap-2">
-                        <a href="https://facebook.com" target="_blank"><img src="/resources/img/facebook-icon.png"
-                                class="w-5 h-5"></a>
-                        <a href="https://linkedin.com" target="_blank"><img src="/resources/img/linkedin-icon.png"
-                                class="w-5 h-5"></a>
-                        <a href="https://youtube.com" target="_blank"><img src="/resources/img/youtube-icon.png"
-                                class="w-5 h-5"></a>
-                    </div>
-
-                    <span class="w-px h-5 bg-white/40"></span>
-
-                    <div class="flex items-center gap-2">
-                        <img src="/resources/img/vi.png" class="w-6 h-4 object-cover cursor-pointer">
-                        <img src="/resources/img/en.png" class="w-6 h-4 object-cover cursor-pointer">
-                    </div>
-
-                </div>
+            <div class="flex items-center gap-2">
+                <img src="/resources/img/vi.png" class="w-6 h-4 object-cover cursor-pointer">
+                <img src="/resources/img/en.png" class="w-6 h-4 object-cover cursor-pointer">
+            </div>
 
             </div>
+
+        </div>
         </div>
 
         <div id="mobileMenu"
-            class="fixed top-0 left-[-320px] w-[320px] h-full bg-white z-[1000] transition-all duration-300 p-4">
-            <div class="flex items-center justify-between mb-4">
-                <a href="index.html">
-                    <img src="/resources/img/hodeco-logo.png" class="h-10" alt="Home">
-                </a>
-                <button id="closeMenu" class="text-2xl">✕</button>
-            </div>
-            <div class="mb-4">
-                <input type="text" placeholder="Search..."
-                    class="w-full h-[40px] px-4 border rounded-full outline-none" />
-            </div>
-            <ul class="flex flex-col gap-3 mb-6">
-                <li><a href="about.html" class="block py-2 border-b">Giới thiệu</a></li>
-                <li><a href="project.html" class="block py-2 border-b">Dự án</a></li>
-                <li><a href="shareholder.html" class="block py-2 border-b">Quan hệ cổ đông</a></li>
-                <li><a href="exchange.html" class="block py-2 border-b">Sàn giao dịch BĐS</a></li>
-                <li><a href="recruitment.html" class="block py-2 border-b">Tuyển dụng</a></li>
-                <li><a href="news.html" class="block py-2 border-b">Tin tức</a></li>
-                <li><a href="contact.html" class="block py-2 border-b">Liên hệ</a></li>
-            </ul>
-            <div class="flex gap-4">
-                <a href="https://facebook.com" target="_blank"><img src="/resources/img/facebook-icon.png"
-                        class="w-5 h-5"></a>
-                <a href="https://linkedin.com" target="_blank"><img src="/resources/img/linkedin-icon.png"
-                        class="w-5 h-5"></a>
-                <a href="https://youtube.com" target="_blank"><img src="/resources/img/youtube-icon.png"
-                        class="w-5 h-5"></a>
-            </div>
+        class="fixed top-0 left-[-320px] w-[320px] h-full bg-white z-[1000] transition-all duration-300 p-4">
+        <div class="flex items-center justify-between mb-4">
+            <a href="index.html">
+            <img src="/resources/img/hodeco-logo.png" class="h-10" alt="Home">
+            </a>
+            <button id="closeMenu" class="text-2xl">✕</button>
+        </div>
+        <div class="mb-4">
+            <input type="text" placeholder="Search..." class="w-full h-[40px] px-4 border rounded-full outline-none" />
+        </div>
+        <ul class="flex flex-col gap-3 mb-6">
+            <li><a href="about.html" class="block py-2 border-b">Giới thiệu</a></li>
+            <li><a href="project.html" class="block py-2 border-b">Dự án</a></li>
+            <li><a href="shareholder.html" class="block py-2 border-b">Quan hệ cổ đông</a></li>
+            <li><a href="exchange.html" class="block py-2 border-b">Sàn giao dịch BĐS</a></li>
+            <li><a href="recruitment.html" class="block py-2 border-b">Tuyển dụng</a></li>
+            <li><a href="news.html" class="block py-2 border-b">Tin tức</a></li>
+            <li><a href="contact.html" class="block py-2 border-b">Liên hệ</a></li>
+        </ul>
+        <div class="flex gap-4">
+            <a href="https://facebook.com" target="_blank"><img src="/resources/img/facebook-icon.png" class="w-5 h-5"></a>
+            <a href="https://linkedin.com" target="_blank"><img src="/resources/img/linkedin-icon.png" class="w-5 h-5"></a>
+            <a href="https://youtube.com" target="_blank"><img src="/resources/img/youtube-icon.png" class="w-5 h-5"></a>
+        </div>
         </div>
     </header>
-
     <section class="w-full">
         <img src="/resources/img/exchange/exchange-breadcrumb.png" class="w-auto  object-cover" />
+        <div class="absolute inset-0 pointer-events-none bg-gradient-to-b from-black/75 to-transparent"></div>
     </section>
 
     <section class="section container exchange_cate">
@@ -142,7 +138,7 @@
 
                     <div class="swiper-slide h-auto">
                         <div class="flex flex-col h-full">
-                            <div class="aspect-square overflow-hidden rounded-[24px] mb-4">
+                            <div class="aspect-3/2 overflow-hidden rounded-[24px] mb-4">
                                 <img src="resources/img/exchange/exchange-card-1.jpg" class="w-full h-full object-cover"
                                     alt="HODECO Plaza">
                             </div>
@@ -181,7 +177,7 @@
 
                     <div class="swiper-slide h-auto">
                         <div class="flex flex-col h-full">
-                            <div class="aspect-square overflow-hidden rounded-[24px] mb-4">
+                            <div class="aspect-3/2 overflow-hidden rounded-[24px] mb-4">
                                 <img src="resources/img/exchange/exchange-card-2.jpg" class="w-full h-full object-cover"
                                     alt="Nam Ky Khoi Nghia">
                             </div>
@@ -220,7 +216,7 @@
 
                     <div class="swiper-slide h-auto">
                         <div class="flex flex-col h-full">
-                            <div class="aspect-square overflow-hidden rounded-[24px] mb-4">
+                            <div class="aspect-3/2 overflow-hidden rounded-[24px] mb-4">
                                 <img src="resources/img/exchange/exchange-card-3.jpg" class="w-full h-full object-cover"
                                     alt="Binh An">
                             </div>
@@ -259,7 +255,7 @@
 
                     <div class="swiper-slide h-auto">
                         <div class="flex flex-col h-full">
-                            <div class="aspect-square overflow-hidden rounded-[24px] mb-4">
+                            <div class="aspect-3/2 overflow-hidden rounded-[24px] mb-4">
                                 <img src="resources/img/exchange/exchange-card-2.jpg" class="w-full h-full object-cover"
                                     alt="Nam Ky Khoi Nghia">
                             </div>
@@ -298,7 +294,7 @@
 
                     <div class="swiper-slide h-auto">
                         <div class="flex flex-col h-full">
-                            <div class="aspect-square overflow-hidden rounded-[24px] mb-4">
+                            <div class="aspect-3/2 overflow-hidden rounded-[24px] mb-4">
                                 <img src="resources/img/exchange/exchange-card-3.jpg" class="w-full h-full object-cover"
                                     alt="Binh An">
                             </div>
@@ -513,7 +509,7 @@
                 <div class="swiper-wrapper items-stretch">
                     <div class="swiper-slide h-auto">
                         <div class="flex flex-col h-full">
-                            <div class="aspect-square overflow-hidden rounded-[24px] mb-4">
+                            <div class="aspect-3/2 overflow-hidden rounded-[24px] mb-4">
                                 <img src="resources/img/exchange/exchange-card-1.jpg" class="w-full h-full object-cover"
                                     alt="Trung tâm y tế">
                             </div>
@@ -553,7 +549,7 @@
 
                     <div class="swiper-slide h-auto">
                         <div class="flex flex-col h-full">
-                            <div class="aspect-square overflow-hidden rounded-[24px] mb-4">
+                            <div class="aspect-3/2 overflow-hidden rounded-[24px] mb-4">
                                 <img src="resources/img/exchange/exchange-card-2.jpg" class="w-full h-full object-cover"
                                     alt="Trường học">
                             </div>
@@ -592,7 +588,7 @@
 
                     <div class="swiper-slide h-auto">
                         <div class="flex flex-col h-full">
-                            <div class="aspect-square overflow-hidden rounded-[24px] mb-4">
+                            <div class="aspect-3/2 overflow-hidden rounded-[24px] mb-4">
                                 <img src="resources/img/exchange/exchange-card-3.jpg" class="w-full h-full object-cover"
                                     alt="Nhà trẻ Phú Mỹ">
                             </div>

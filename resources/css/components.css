@@ -34,26 +34,20 @@ body.intro-playing .home-banner {
 }
 
 .container {
-  @apply w-full max-w-[1536px] mx-auto px-8;
+  @apply w-full max-w-[1536px] mx-auto px-2 lg:px-8;
 }
 
 .menu {
   @apply flex items-center gap-6 xl:gap-8;
 
   & li a {
-    @apply relative text-white font-bold text-[15px] uppercase transition-all duration-300;
-
+    @apply text-white font-bold text-[15px] uppercase transition-colors duration-300 no-underline;
     &::after {
-      content: '';
-      @apply absolute bottom-[-6px] left-1/2 -translate-x-1/2 w-0 h-[2px] bg-white opacity-0 transition-all duration-300;
+      content: none;
     }
 
     &:hover {
-      @apply text-blue-200;
-
-      &::after {
-        @apply w-full opacity-100;
-      }
+      @apply text-secondary no-underline;
     }
   }
 }
@@ -123,19 +117,27 @@ body.intro-playing .home-banner {
   }
 }
 
-.activity-wrapper {
-  @apply relative;
-}
-
-.activity-item {
-  @apply absolute inset-0 opacity-0 pointer-events-none translate-y-5 transition-all duration-500;
-}
-
-.activity-item.active {
-  @apply relative opacity-100 pointer-events-auto translate-y-0;
-}
-
 .section.home-activity {
+  .activity-btn {
+    @apply border border-primary text-primary transition-all duration-300;
+
+    &:hover,
+    &.activity-btn-active {
+      @apply bg-secondary border-secondary text-white;
+    }
+  }
+
+  .activity-wrapper {
+    @apply relative;
+  }
+
+  .activity-item {
+    @apply absolute inset-0 opacity-0 pointer-events-none translate-y-5 transition-all duration-500;
+  }
+
+  .activity-item.active {
+    @apply relative opacity-100 pointer-events-auto translate-y-0;
+  }
   .activity-tab-wrap {
     @apply flex flex-wrap justify-center gap-3 mb-10;
   }
@@ -161,7 +163,53 @@ body.intro-playing .home-banner {
   }
 
   .activity-card {
-    @apply px-8 lg:px-12 py-8 lg:py-24 relative flex flex-col lg:-translate-x-[15px] items-start;
+    @apply px-2 lg:px-12 py-8 lg:py-24 relative flex flex-col lg:-translate-x-[15px] items-start;
+  }
+
+  .activity-title {
+    @apply text-[24px] lg:text-[28px] font-bold mb-4 text-slate-800 uppercase tracking-wide leading-tight;
+  }
+
+  .activity-description {
+    @apply text-[15px] leading-[26px] text-slate-600 mb-6;
+  }
+
+  .activity-action-btn {
+    @apply px-8 py-3 bg-[#0A3B8C] text-white text-[14px] font-medium rounded-full hover:bg-blue-900 transition-colors inline-block text-center whitespace-nowrap;
+  }
+}
+
+.section.home-activity {
+  .activity-tab-wrap {
+    @apply flex flex-wrap justify-center gap-3 mb-10;
+  }
+
+  .activity-tab-btn {
+    @apply cursor-pointer px-6 py-3 rounded-full text-[14px] font-medium border border-slate-300 text-slate-700 bg-transparent transition-colors;
+    
+    &.activity-btn-active {
+      @apply bg-secondary text-white border-transparent;
+    }
+  }
+
+  .activity-layout {
+    @apply grid grid-cols-1 lg:grid-cols-[60%_40%] lg:items-center;
+  }
+
+  .activity-media {
+    @apply w-full relative z-10 mb-[-20px] lg:mb-0 lg:translate-x-[15px];
+  }
+
+  .activity-media-img {
+    @apply w-full h-auto object-cover rounded-[20px] shadow-sm;
+  }
+
+  .activity-card {
+    @apply px-0 lg:px-12 py-8 lg:py-24 
+          relative flex flex-col 
+          items-center text-center  
+          lg:items-start lg:text-left
+          lg:-translate-x-[15px];
   }
 
   .activity-title {
@@ -209,7 +257,6 @@ body.intro-playing .home-banner {
     @apply top-1/2 -translate-y-1/2 left-[5%] lg:left-[20%] w-[60%] lg:w-[58%] h-[80%] lg:h-[88%] rounded-[24px] shadow-2xl z-10;
   }
 }
-
 
 .section.home-partner {
   .partner-interactive-card {
@@ -317,11 +364,11 @@ body.intro-playing .home-banner {
   }
 
   .dual-bridge {
-    @apply relative pt-16 md:col-span-2;
+    @apply relative pt-0 md:pt-16 md:col-span-2;
 
     &::before {
       content: "";
-      @apply absolute top-8 -left-3 w-[105%] h-85 z-0;
+      @apply hidden md:block absolute top-8 -left-3 w-[105%] h-85 z-0;
       background-image: url("resources/img/svg/dual-arrow-short.svg");
       background-repeat: no-repeat;
       background-position: center top;
@@ -633,13 +680,11 @@ section.recru-reason {
   .reason-card {
     background: linear-gradient(180deg, #7bb1ff 0%, rgba(255, 255, 255, 0) 100%);
 
-    /* Perfect center layout stays identical on both states */
     @apply relative flex min-h-[420px] w-full flex-col items-center justify-center text-center overflow-hidden rounded-[2rem] p-4 md:min-h-[500px] md:flex-1 cursor-pointer transform-gpu;
     flex: 1 1 0;
     will-change: flex, background-color;
 
-    /* SLOWED DOWN: 800ms expansion for a calm, premium movement */
-    transition: flex 800ms cubic-bezier(0.25, 1, 0.3, 1), background-color 800ms ease;
+    transition: flex 800ms cubic-bezier(0.25, 1, 0.3, 1), background 800ms ease;
     backface-visibility: hidden;
 
     .card-inner-transform {
@@ -662,7 +707,6 @@ section.recru-reason {
       @apply w-full overflow-hidden pointer-events-none;
       max-height: 0px;
       opacity: 0;
-      /* Synchronized with the card speed so everything glides open together */
       transition: max-height 800ms cubic-bezier(0.25, 1, 0.3, 1), opacity 800ms ease;
     }
 
@@ -670,10 +714,9 @@ section.recru-reason {
       @apply text-white text-sm text-center leading-relaxed w-full px-4 pt-2;
     }
 
-    /* HOVER STATE: Only grows width and changes color smoothly */
     &:hover {
       @apply bg-primary;
-      flex: 3;
+      flex: 1;
 
       .card-icon {
         filter: brightness(0) invert(1);

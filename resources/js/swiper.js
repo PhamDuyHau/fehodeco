@@ -44,7 +44,7 @@ export function initProjectSlider() {
   const section = document.querySelector('.home-project');
   if (!section) return;
 
-  const items   = [...section.querySelectorAll('.project-data > [data-number]')];
+  const items = [...section.querySelectorAll('.project-data > [data-number]')];
   if (!items.length) return;
 
   const frontEl = section.querySelector('.project-img-front');
@@ -55,6 +55,7 @@ export function initProjectSlider() {
 
   [frontEl, backEl].forEach((el, i) => {
     const wrapper = el.querySelector('.swiper-wrapper');
+    wrapper.innerHTML = '';
     items.forEach(item => {
       const slide = document.createElement('div');
       slide.className = 'swiper-slide';
@@ -64,9 +65,15 @@ export function initProjectSlider() {
     });
   });
 
+  // seed initial state from item 0
+  numEl.textContent   = items[0].dataset.number;
+  titleEl.textContent = items[0].dataset.title;
+  ctaEl.href          = items[0].dataset.href;
+
   const backSwiper = new Swiper(backEl, {
     modules: [Controller],
     loop: true,
+    loopedSlides: items.length,
     speed: 700,
     allowTouchMove: false,
   });
@@ -74,6 +81,7 @@ export function initProjectSlider() {
   const frontSwiper = new Swiper(frontEl, {
     modules: [Navigation, Controller],
     loop: true,
+    loopedSlides: items.length,
     speed: 700,
     grabCursor: true,
     navigation: {
@@ -87,6 +95,7 @@ export function initProjectSlider() {
 
   frontSwiper.on('slideChange', () => {
     const item = items[frontSwiper.realIndex];
+    if (!item) return;
 
     [numEl, titleEl].forEach(el => {
       el.style.transition = 'opacity 0.25s, transform 0.25s';

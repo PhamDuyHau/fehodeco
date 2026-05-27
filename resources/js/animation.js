@@ -291,95 +291,47 @@ function initRoadAnimation() {
   const path = document.querySelector("#motionPath");
   if (!path) return;
 
-  const allYears = [...document.querySelectorAll(".road-year-data [data-year]")]
-    .map((el) => ({ year: el.dataset.year, text: el.dataset.text, img: el.dataset.img }))
-    .sort((a, b) => b.year - a.year);
-
-  if (!allYears.length) return;
-
-  const imgMap = {
-    orange: "resources/img/about/orange-location-dot.png",
-    blue: "resources/img/about/blue-location-dot.png",
-  };
-
-const endPositions = [0.23, 0.38, 0.54, 0.73, 0.80, 0.86];
-const PAGE_SIZE = 6;
-  let currentPage = 0;
-  const totalPages = Math.ceil(allYears.length / PAGE_SIZE);
-  let isAnimating = false;
-
-const slots = [0, 1, 2, 3, 4, 5].map((i) => document.querySelector(`#dot-slot-${i}`));
-const labels = [0, 1, 2, 3, 4, 5].map((i) => document.querySelector(`#label-slot-${i}`));
-  const btnNext = document.querySelector("#road-next");
-  const btnPrev = document.querySelector("#road-prev");
+  const slots = [0, 1, 2, 3, 4, 5, 6].map((i) => document.querySelector(`#dot-slot-${i}`));
+  const labels = [0, 1, 2, 3, 4, 5, 6].map((i) => document.querySelector(`#label-slot-${i}`));
 
   if (!slots[0] || !labels[0]) return;
 
-  function updateArrows() {
-    gsap.to(btnPrev, { opacity: currentPage === 0 ? 0.3 : 1, duration: 0.3 });
-    gsap.to(btnNext, { opacity: currentPage === totalPages - 1 ? 0.3 : 1, duration: 0.3 });
-    btnPrev.style.pointerEvents = currentPage === 0 ? "none" : "auto";
-    btnNext.style.pointerEvents = currentPage === totalPages - 1 ? "none" : "auto";
-  }
+  const endPositions = [0.23, 0.38, 0.54, 0.73, 0.80, 0.86, 0.93];
 
-  function playPage(page) {
-    isAnimating = true;
-    const years = allYears.slice(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE);
-    gsap.killTweensOf([...slots, ...labels]);
-    gsap.to([...slots, ...labels], {
+  slots.forEach((slot) => {
+    gsap.set(slot, {
       opacity: 0,
-      duration: 0.4,
-      ease: "power2.in",
-      onComplete() {
-        years.forEach((data, i) => {
-          slots[i].src = imgMap[data.img];
-          labels[i].querySelector(".label-year").textContent = data.year;
-          labels[i].querySelector(".label-text").innerHTML = data.text;
-          gsap.set(slots[i], {
-            opacity: 0, scale: 1,
-            motionPath: { path: "#motionPath", align: "#motionPath", alignOrigin: [0.5, 1], autoRotate: false, start: 0, end: 0 },
-          });
-          gsap.set(labels[i], { opacity: 0, y: 8 });
-        });
+      scale: 1,
+      motionPath: { path: "#motionPath", align: "#motionPath", alignOrigin: [0.5, 1], autoRotate: false, start: 0, end: 0 },
+    });
+  });
 
-        let completed = 0;
-        const total = years.length;
-        const safetyTimer = gsap.delayedCall(2.5 + total * 0.15 + 1, () => { isAnimating = false; });
+  labels.forEach((label) => {
+    gsap.set(label, { opacity: 0, y: 8 });
+  });
 
-        years.forEach((data, i) => {
-          gsap.killTweensOf(slots[i]);
-          gsap.killTweensOf(labels[i]);
-          gsap.timeline({ delay: i * 0.15 })
-            .to(slots[i], { opacity: 1, duration: 0.3, ease: "power2.out" })
-            .to(slots[i], {
-              motionPath: { path: "#motionPath", align: "#motionPath", alignOrigin: [0.5, 1], autoRotate: false, start: 0, end: endPositions[i] },
-              duration: 2.5,
-              ease: "sine.inOut",
-            })
-            .to(slots[i], { scale: 1.15, duration: 0.2, ease: "sine.out" })
-            .to(slots[i], { scale: 1, duration: 0.3, ease: "sine.inOut" })
-            .to(labels[i], { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, "-=0.2")
-            .call(() => {
-              completed++;
-              if (completed === total) { safetyTimer.kill(); isAnimating = false; }
-            });
-        });
-
-        updateArrows();
-      },
+  function playAll() {
+    slots.forEach((slot, i) => {
+      gsap.timeline({ delay: i * 0.15 })
+        .to(slot, { opacity: 1, duration: 0.3, ease: "power2.out" })
+        .to(slot, {
+          motionPath: { path: "#motionPath", align: "#motionPath", alignOrigin: [0.5, 1], autoRotate: false, start: 0, end: endPositions[i] },
+          duration: 2.5,
+          ease: "sine.inOut",
+        })
+        .to(slot, { scale: 1.15, duration: 0.2, ease: "sine.out" })
+        .to(slot, { scale: 1, duration: 0.3, ease: "sine.inOut" })
+        .to(labels[i], { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, "-=0.2");
     });
   }
-
-  btnNext.addEventListener("click", () => { if (currentPage < totalPages - 1) { currentPage++; playPage(currentPage); } });
-  btnPrev.addEventListener("click", () => { if (currentPage > 0) { currentPage--; playPage(currentPage); } });
 
   ScrollTrigger.refresh();
   const roadWrap = document.querySelector(".road-wrap");
   const rect = roadWrap.getBoundingClientRect();
   if (rect.top < window.innerHeight * 0.85) {
-    gsap.delayedCall(0.3, () => playPage(0));
+    gsap.delayedCall(0.3, playAll);
   } else {
-    ScrollTrigger.create({ trigger: ".road-wrap", start: "top 70%", once: true, onEnter: () => playPage(0) });
+    ScrollTrigger.create({ trigger: ".road-wrap", start: "top 70%", once: true, onEnter: playAll });
   }
 }
 
