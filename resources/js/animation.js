@@ -296,7 +296,7 @@ function initRoadAnimation() {
 
   if (!slots[0] || !labels[0]) return;
 
-  const endPositions = [0.23, 0.38, 0.54, 0.73, 0.80, 0.86, 0.93];
+  const endPositions = [0.23, 0.34, 0.44, 0.54, 0.73, 0.80, 0.93];
 
   slots.forEach((slot) => {
     gsap.set(slot, {
