@@ -206,7 +206,6 @@
                 <div class="swiper" id="swiper-shareholder-year" data-fx-slider data-swiper-options='{
                 "slidesPerView": 6,
                 "loop": true,
-                "pagination": { "el": ".swiper-pagination-custom", "clickable": true },
                 "navigation": { "nextEl": ".swiper-button-next-custom", "prevEl": ".swiper-button-prev-custom" }
             }'>
                     <div class="swiper-wrapper h-32 pb-4">
@@ -264,12 +263,7 @@
                             class="swiper-button-prev-custom cursor-pointer text-primary w-10 h-10 flex items-center justify-center rounded-full">
                             <i class="fa-solid fa-arrow-left"></i>
                         </button>
-                        <div class="swiper-pagination-custom flex gap-2
-                        [&_.swiper-pagination-bullet]:border
-                        [&_.swiper-pagination-bullet]:border-primary
-                        [&_.swiper-pagination-bullet]:bg-transparent
-                        [&_.swiper-pagination-bullet-active]:!bg-primary
-                    "></div>
+
                         <button
                             class="swiper-button-next-custom cursor-pointer text-primary w-10 h-10 flex items-center justify-center rounded-full">
                             <i class="fa-solid fa-arrow-right"></i>
@@ -382,11 +376,10 @@
 
             <div data-animate="soft-scale">
                 <div class="swiper" id="swiper-shareholder-year" data-fx-slider data-swiper-options='{
-                "slidesPerView": 6,
-                "loop": true,
-                "pagination": { "el": ".swiper-pagination-custom", "clickable": true },
-                "navigation": { "nextEl": ".swiper-button-next-custom", "prevEl": ".swiper-button-prev-custom" }
-            }'>
+                    "slidesPerView": 6,
+                    "loop": true,
+                    "navigation": { "nextEl": ".swiper-button-next-custom", "prevEl": ".swiper-button-prev-custom" }
+                }'>
                     <div class="swiper-wrapper h-32 pb-4">
                         <div class="swiper-slide">
                             <div class="year-node active" data-index="2026">
@@ -442,12 +435,7 @@
                             class="swiper-button-prev-custom cursor-pointer text-primary w-10 h-10 flex items-center justify-center rounded-full">
                             <i class="fa-solid fa-arrow-left"></i>
                         </button>
-                        <div class="swiper-pagination-custom flex gap-2
-                        [&_.swiper-pagination-bullet]:border
-                        [&_.swiper-pagination-bullet]:border-primary
-                        [&_.swiper-pagination-bullet]:bg-transparent
-                        [&_.swiper-pagination-bullet-active]:!bg-primary
-                    "></div>
+
                         <button
                             class="swiper-button-next-custom cursor-pointer text-primary w-10 h-10 flex items-center justify-center rounded-full">
                             <i class="fa-solid fa-arrow-right"></i>
