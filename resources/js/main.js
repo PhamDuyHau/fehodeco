@@ -3,6 +3,7 @@ import "./about.js";
 import "./shareholder.js";
 import "./animation.js";
 import "./chart.js";
+import "./news.js";
 import "../css/style.css";
 
 function initIntro() {

@@ -13,112 +13,133 @@
     <header class="absolute top-0 left-0 w-full z-999">
         <div class="relative bg-[linear-gradient(180deg,rgba(5,125,205,0)_0%,rgba(0,7,104,0)_105%)]">
 
-        <div class="flex items-center justify-between gap-5 px-6 py-3">
+            <div class="flex items-center justify-between gap-5 px-6 py-3">
 
-            <div class="lg:hidden">
-            <button id="menuBtn" class="text-white text-2xl">☰</button>
-            </div>
-
-            <div class="absolute left-1/2 -translate-x-1/2 lg:hidden">
-            <a href="index.html">
-                <img src="/resources/img/hodeco-logo.png" class="h-12 object-contain" alt="Logo" />
-            </a>
-            </div>
-
-            <div class="hidden lg:flex items-center gap-4 mx-auto">
-
-            <a href="index.html" class="shrink-0">
-                <img src="/resources/img/hodeco-logo.png" class="h-12 object-contain" alt="Logo" />
-            </a>
-
-            <nav>
-                <ul class="menu">
-                <li><a href="about.html">Giới thiệu</a></li>
-                <li><a href="project.html">Dự án</a></li>
-                <li><a href="shareholder.html">Quan hệ cổ đông</a></li>
-                <li><a href="exchange.html">Sàn giao dịch BĐS</a></li>
-                <li><a href="recruitment.html">Tuyển dụng</a></li>
-                <li><a href="news.html">Tin tức</a></li>
-                <li><a href="contact.html">Liên hệ</a></li>
-                </ul>
-            </nav>
-            <span class="w-px h-5 bg-white/40"></span>
-
-            <div class="relative">
-                <img src="/resources/img/search.png" id="searchBtn" class="w-5 h-5 cursor-pointer" />
-                <div id="searchBox" class="hidden absolute right-0 top-[40px]">
-                <input type="text" placeholder="Search..."
-                    class="w-[220px] h-[40px] px-4 rounded-lg shadow-lg outline-none text-black" />
+                <div class="lg:hidden">
+                    <button id="menuBtn" class="text-white text-2xl">☰</button>
                 </div>
+
+                <div class="absolute left-1/2 -translate-x-1/2 lg:hidden">
+                    <a href="index.html">
+                        <img src="/resources/img/hodeco-logo.png" class="h-12 object-contain" alt="Logo" />
+                    </a>
+                </div>
+
+                <div class="hidden lg:flex items-center gap-4 mx-auto">
+
+                    <a href="index.html" class="shrink-0">
+                        <img src="/resources/img/hodeco-logo.png" class="h-12 object-contain" alt="Logo" />
+                    </a>
+
+                    <nav>
+                        <ul class="menu">
+                            <li><a href="about.html">Giới thiệu</a></li>
+                            <li><a href="project.html">Dự án</a></li>
+                            <li><a href="shareholder.html">Quan hệ cổ đông</a></li>
+                            <li><a href="exchange.html">Sàn giao dịch BĐS</a></li>
+                            <li><a href="recruitment.html">Tuyển dụng</a></li>
+                            <li><a href="news.html">Tin tức</a></li>
+                            <li><a href="contact.html">Liên hệ</a></li>
+                        </ul>
+                    </nav>
+                    <span class="w-px h-5 bg-white/40"></span>
+
+                    <div class="relative">
+                        <img src="/resources/img/search.png" id="searchBtn" class="w-5 h-5 cursor-pointer" />
+                        <div id="searchBox" class="hidden absolute right-0 top-[40px]">
+                            <input type="text" placeholder="Search..."
+                                class="w-[220px] h-[40px] px-4 rounded-lg shadow-lg outline-none text-black" />
+                        </div>
+                    </div>
+
+                    <span class="w-px h-5 bg-white/40"></span>
+
+                    <div class="flex items-center gap-2">
+                        <a href="https://facebook.com" target="_blank"><img src="/resources/img/facebook-icon.png"
+                                class="w-5 h-5"></a>
+                        <a href="https://linkedin.com" target="_blank"><img src="/resources/img/linkedin-icon.png"
+                                class="w-5 h-5"></a>
+                        <a href="https://youtube.com" target="_blank"><img src="/resources/img/youtube-icon.png"
+                                class="w-5 h-5"></a>
+                    </div>
+
+                    <span class="w-px h-5 bg-white/40"></span>
+
+                    <div class="flex items-center gap-2">
+                        <img src="/resources/img/vi.png" class="w-6 h-4 object-cover cursor-pointer">
+                        <img src="/resources/img/en.png" class="w-6 h-4 object-cover cursor-pointer">
+                    </div>
+
+                </div>
+
             </div>
-
-            <span class="w-px h-5 bg-white/40"></span>
-
-            <div class="flex items-center gap-2">
-                <a href="https://facebook.com" target="_blank"><img src="/resources/img/facebook-icon.png"
-                    class="w-5 h-5"></a>
-                <a href="https://linkedin.com" target="_blank"><img src="/resources/img/linkedin-icon.png"
-                    class="w-5 h-5"></a>
-                <a href="https://youtube.com" target="_blank"><img src="/resources/img/youtube-icon.png"
-                    class="w-5 h-5"></a>
-            </div>
-
-            <span class="w-px h-5 bg-white/40"></span>
-
-            <div class="flex items-center gap-2">
-                <img src="/resources/img/vi.png" class="w-6 h-4 object-cover cursor-pointer">
-                <img src="/resources/img/en.png" class="w-6 h-4 object-cover cursor-pointer">
-            </div>
-
-            </div>
-
-        </div>
         </div>
 
         <div id="mobileMenu"
-        class="fixed top-0 left-[-320px] w-[320px] h-full bg-white z-[1000] transition-all duration-300 p-4">
-        <div class="flex items-center justify-between mb-4">
-            <a href="index.html">
-            <img src="/resources/img/hodeco-logo.png" class="h-10" alt="Home">
-            </a>
-            <button id="closeMenu" class="text-2xl">✕</button>
-        </div>
-        <div class="mb-4">
-            <input type="text" placeholder="Search..." class="w-full h-[40px] px-4 border rounded-full outline-none" />
-        </div>
-        <ul class="flex flex-col gap-3 mb-6">
-            <li><a href="about.html" class="block py-2 border-b">Giới thiệu</a></li>
-            <li><a href="project.html" class="block py-2 border-b">Dự án</a></li>
-            <li><a href="shareholder.html" class="block py-2 border-b">Quan hệ cổ đông</a></li>
-            <li><a href="exchange.html" class="block py-2 border-b">Sàn giao dịch BĐS</a></li>
-            <li><a href="recruitment.html" class="block py-2 border-b">Tuyển dụng</a></li>
-            <li><a href="news.html" class="block py-2 border-b">Tin tức</a></li>
-            <li><a href="contact.html" class="block py-2 border-b">Liên hệ</a></li>
-        </ul>
-        <div class="flex gap-4">
-            <a href="https://facebook.com" target="_blank"><img src="/resources/img/facebook-icon.png" class="w-5 h-5"></a>
-            <a href="https://linkedin.com" target="_blank"><img src="/resources/img/linkedin-icon.png" class="w-5 h-5"></a>
-            <a href="https://youtube.com" target="_blank"><img src="/resources/img/youtube-icon.png" class="w-5 h-5"></a>
-        </div>
+            class="fixed top-0 left-[-320px] w-[320px] h-full bg-white z-[1000] transition-all duration-300 p-4">
+            <div class="flex items-center justify-between mb-4">
+                <a href="index.html">
+                    <img src="/resources/img/hodeco-logo.png" class="h-10" alt="Home">
+                </a>
+                <button id="closeMenu" class="text-2xl">✕</button>
+            </div>
+            <div class="mb-4">
+                <input type="text" placeholder="Search..."
+                    class="w-full h-[40px] px-4 border rounded-full outline-none" />
+            </div>
+            <ul class="flex flex-col gap-3 mb-6">
+                <li><a href="about.html" class="block py-2 border-b">Giới thiệu</a></li>
+                <li><a href="project.html" class="block py-2 border-b">Dự án</a></li>
+                <li><a href="shareholder.html" class="block py-2 border-b">Quan hệ cổ đông</a></li>
+                <li><a href="exchange.html" class="block py-2 border-b">Sàn giao dịch BĐS</a></li>
+                <li><a href="recruitment.html" class="block py-2 border-b">Tuyển dụng</a></li>
+                <li><a href="news.html" class="block py-2 border-b">Tin tức</a></li>
+                <li><a href="contact.html" class="block py-2 border-b">Liên hệ</a></li>
+            </ul>
+            <div class="flex gap-4">
+                <a href="https://facebook.com" target="_blank"><img src="/resources/img/facebook-icon.png"
+                        class="w-5 h-5"></a>
+                <a href="https://linkedin.com" target="_blank"><img src="/resources/img/linkedin-icon.png"
+                        class="w-5 h-5"></a>
+                <a href="https://youtube.com" target="_blank"><img src="/resources/img/youtube-icon.png"
+                        class="w-5 h-5"></a>
+            </div>
         </div>
     </header>
 
     <section class="relative w-full overflow-hidden">
-        <div class="absolute inset-0 bg-primary" style="clip-path: ellipse(105% 100% at 55% 0%);"></div>
+        <section class="relative w-full overflow-hidden">
 
-        <div class="absolute inset-0 bg-secondary -translate-y-1" style="clip-path: ellipse(102% 100% at 50% 0%);">
-        </div>
-
-        <img src="/resources/img/project-detail/project-detail-breadcrumb.png"
-            class="relative w-full h-auto object-cover block z-10 -translate-y-5"
-            style="clip-path: ellipse(100% 100% at 50% 0%);" alt="Project Detail">
-
-        <div class="absolute inset-0 z-20 flex items-center justify-center p-4 translate-y-40">
-            <div class="w-full max-w-4xl p-8 rounded-2xl text-center text-white font-semibold text-2xl 
-                        bg-white/12 border border-white/90 backdrop-blur-xl">
-                Nhà mặt phố Sun House Group
+            <div class="absolute inset-0 bg-primary" style="clip-path: ellipse(105% 100% at 55% 0%);">
             </div>
-        </div>
+
+            <div class="absolute inset-0 bg-secondary -translate-y-1" style="clip-path: ellipse(102% 100% at 50% 0%);">
+            </div>
+
+            <img src="/resources/img/project-detail/project-detail-breadcrumb.png"
+                class="relative w-full h-auto object-cover block z-10 -translate-y-5"
+                style="clip-path: ellipse(100% 100% at 50% 0%);" alt="Project Detail">
+
+            <div class="absolute inset-0 pointer-events-none bg-[linear-gradient(180deg,rgba(0,0,0,0.2)_0%,rgba(0,0,0,0)_79.33%)]"></div>
+
+            <div class="absolute inset-0 z-20 flex items-center justify-center px-4">
+                <div class="max-w-4xl text-center text-white">
+
+                    <h1 class="heading-title !text-white !mt-0">
+                        CHUNG CƯ NOXH ECO HOME 1
+                    </h1>
+
+                    <p class="mt-4 text-[16px] leading-[24px] font-normal text-white/90">
+                        Chung cư NOXH Eco Home 1 là dự án tâm huyết do Công ty Cổ phần Phát triển Nhà Bà Rịa - Vũng Tàu
+                        (HODECO) làm chủ đầu tư tại phường Phú Mỹ, TP Hồ Chí Minh (Bà Rịa - Vũng Tàu cũ) với tổng mức
+                        đầu tư 320 tỷ đồng. Dự án được khởi công xây dựng theo giấy phép số 20/GPXD ngày 25/10/2024 vào
+                        ngày 2.11.2024.
+                    </p>
+
+                </div>
+            </div>
+
+        </section>
     </section>
 
     <section class="section container mt-12">
@@ -180,16 +201,17 @@
         </div>
 
         <div class="space-y-6 mb-12">
-            
+
             <div class="rounded-[2rem] overflow-hidden w-full aspect-[16/9]">
-                <img src="resources/img/project-detail/project-detail.webp" class="w-full h-full object-cover" alt="Phối cảnh chung cư Eco Home 1">
+                <img src="resources/img/project-detail/project-detail.webp" class="w-full h-full object-cover"
+                    alt="Phối cảnh chung cư Eco Home 1">
             </div>
 
             <div class="bg-[#FDFBF5] border border-gray-100 rounded-[2rem] p-8 shadow-sm">
                 <h4 class="text-xl font-bold mb-6">Thông tin dự án</h4>
-                
+
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-sm">
-                    
+
                     <div class="space-y-4">
                         <div class="flex justify-between border-b border-gray-100 pb-3">
                             <span class="text-gray-400">Diện tích phù hợp QH</span>
@@ -385,16 +407,16 @@
     <footer id="footer" class="site-footer" itemtype="" itemscope>
         <div id="footer-main-wrap" class="footer-main-wrap bg-primary text-white relative overflow-hidden">
             <img src="/resources/img/bg-footer-left.png"
-                class="absolute left-0 top-0 pointer-events-none select-none z-0 w-[120px] md:w-[160px] xl:w-auto"
+                class="absolute left-[-100px] xl:left-[-120px] 2xl:left-[-140px] 3xl:left-0 top-0 pointer-events-none select-none z-0 w-[120px] md:w-[160px] xl:w-auto"
                 alt="">
             <img src="/resources/img/bg-footer-right.png"
                 class="absolute right-0 bottom-0 pointer-events-none select-none z-0 w-[240px] md:w-[320px] xl:w-auto"
                 alt="">
             <div class="container pt-16 relative z-10">
                 <div class="footer-brand-overlay text-center overflow-hidden">
-                    <span
-                        class="text-[12vw] font-semibold uppercase tracking-widest text-transparent block leading-none select-none"
-                        style="-webkit-text-stroke: 1px rgba(255,255,255,0.2); font-size: clamp(40px, 15vw, 220px);">
+                    <span class="font-semibold uppercase tracking-widest text-transparent block leading-none select-none
+                      text-[140px] 2xl:text-[180px] xl:text-[160px] lg:text-[130px] md:text-[100px] text-[72px]"
+                        style="-webkit-text-stroke: 1px rgba(255,255,255,0.2);">
                         hodeco
                     </span>
                 </div>

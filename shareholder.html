@@ -103,8 +103,11 @@
         </div>
     </header>
 
-    <section class="w-full">
-        <img src="/resources/img/shareholder/shareholder-breadcrumb.jpg" class="w-auto  object-cover" />
+    <section class="relative w-full h-[80vh] overflow-hidden">
+        <img 
+            src="/resources/img/shareholder/shareholder-breadcrumb.jpg"
+            class="w-full h-full object-cover"
+        />
         <div class="absolute inset-0 pointer-events-none bg-gradient-to-b from-black/75 to-transparent"></div>
     </section>
 
@@ -531,13 +534,14 @@
 
     <footer id="footer" class="site-footer" itemtype="" itemscope>
         <div id="footer-main-wrap" class="footer-main-wrap bg-primary text-white relative overflow-hidden">
-          <img src="/resources/img/bg-footer-left.png" class="absolute left-0 top-0 pointer-events-none select-none z-0 w-[120px] md:w-[160px] xl:w-auto" alt="">
+          <img src="/resources/img/bg-footer-left.png" class="absolute left-[-100px] xl:left-[-120px] 2xl:left-[-140px] 3xl:left-0 top-0 pointer-events-none select-none z-0 w-[120px] md:w-[160px] xl:w-auto" alt="">
           <img src="/resources/img/bg-footer-right.png" class="absolute right-0 bottom-0 pointer-events-none select-none z-0 w-[240px] md:w-[320px] xl:w-auto" alt="">
           <div class="container pt-16 relative z-10">
             <div class="footer-brand-overlay text-center overflow-hidden">
               <span
-                class="text-[12vw] font-semibold uppercase tracking-widest text-transparent block leading-none select-none"
-                style="-webkit-text-stroke: 1px rgba(255,255,255,0.2); font-size: clamp(40px, 15vw, 220px);">
+                class="font-semibold uppercase tracking-widest text-transparent block leading-none select-none
+                      text-[140px] 2xl:text-[180px] xl:text-[160px] lg:text-[130px] md:text-[100px] text-[72px]"
+                style="-webkit-text-stroke: 1px rgba(255,255,255,0.2);">
                 hodeco
               </span>
             </div>

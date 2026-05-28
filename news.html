@@ -103,34 +103,31 @@
         </div>
     </header>
 
-    <section class="w-full">
-        <img src="/resources/img/news/news-breadcrumb.jpg" class="w-auto  object-cover" />
-        <div class="absolute inset-0 pointer-events-none bg-gradient-to-b from-black/75 to-transparent"></div>
+    <section class="w-full h-[90vh]">
+        <img src="/resources/img/news/news-breadcrumb.jpg" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 pointer-events-none bg-[linear-gradient(180deg,rgba(0,0,0,0.2)_0%,rgba(0,0,0,0)_79.33%)]"></div>
     </section>
 
     <section class="section container my-16">
-
         <div class="mb-8 flex flex-wrap justify-center items-center gap-4" data-animate="reveal-up">
-            <button
-                class="rounded-full bg-secondary px-8 py-4 text-[20px] font-bold text-white transition-all duration-300 hover:opacity-90">
+            <button data-category="tin-hodeco" class="cate-btn active rounded-full border border-primary bg-transparent px-8 py-4 text-[20px] font-bold text-primary transition-all duration-300 hover:bg-secondary hover:text-white">
                 Tin Hodeco
             </button>
-            <button
-                class="rounded-full border border-primary bg-transparent px-8 py-4 text-[20px] font-bold text-primary transition-all duration-300 hover:bg-primary hover:text-white">
+            <button data-category="hoat-dong-doan-the" class="cate-btn rounded-full border border-primary bg-transparent px-8 py-4 text-[20px] font-bold text-primary transition-all duration-300 hover:bg-secondary hover:text-white">
                 Hoạt động đoàn thể
             </button>
         </div>
 
         <div class="mb-10" data-animate="reveal-up">
-            <h2 class="heading-title">TIN HODECO</h2>
+            <h2 id="category-heading" class="heading-title">TIN HODECO</h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-animate="reveal-up">
 
-            <div class="group">
+            <div class="group news-card" data-category="tin-hodeco">
                 <a href="news.detail.html" class="block overflow-hidden rounded-[24px]">
                     <img src="resources/img/news/news-card-1.png" alt="Hodeco News" loading="lazy"
-                        class="aspect-square w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+                        class="aspect-4/3 w-full object-cover transition duration-500 group-hover:scale-[1.03]">
                 </a>
                 <div class="pt-5">
                     <h3 class="text-[20px] font-bold leading-snug text-primary">
@@ -140,15 +137,13 @@
                         Ngày 22/5/2026 vừa qua, Công ty Cổ Phần Phát triển Nhà Bà Rịa - Vũng Tàu đã đón tiếp đoàn công
                         tác của Hội Doanh nghiệp Nam TP Hồ Chí Minh (SHBA) trong...
                     </p>
-
                 </div>
-
             </div>
 
-            <div class="group">
+            <div class="group news-card" data-category="hoat-dong-doan-the">
                 <a href="news.detail.html" class="block overflow-hidden rounded-[24px]">
                     <img src="resources/img/news/news-card-1.png" alt="Hodeco News" loading="lazy"
-                        class="aspect-square w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+                        class="aspect-4/3 w-full object-cover transition duration-500 group-hover:scale-[1.03]">
                 </a>
                 <div class="pt-5">
                     <h3 class="text-[20px] font-bold leading-snug text-primary">
@@ -158,15 +153,13 @@
                         Ngày 22/5/2026 vừa qua, Công ty Cổ Phần Phát triển Nhà Bà Rịa - Vũng Tàu đã đón tiếp đoàn công
                         tác của Hội Doanh nghiệp Nam TP Hồ Chí Minh (SHBA) trong...
                     </p>
-
                 </div>
-
             </div>
 
-            <div class="group">
+            <div class="group news-card" data-category="tin-hodeco">
                 <a href="news.detail.html" class="block overflow-hidden rounded-[24px]">
                     <img src="resources/img/news/news-card-1.png" alt="Hodeco News" loading="lazy"
-                        class="aspect-square w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+                        class="aspect-4/3 w-full object-cover transition duration-500 group-hover:scale-[1.03]">
                 </a>
                 <div class="pt-5">
                     <h3 class="text-[20px] font-bold leading-snug text-primary">
@@ -176,14 +169,13 @@
                         Ngày 22/5/2026 vừa qua, Công ty Cổ Phần Phát triển Nhà Bà Rịa - Vũng Tàu đã đón tiếp đoàn công
                         tác của Hội Doanh nghiệp Nam TP Hồ Chí Minh (SHBA) trong...
                     </p>
-
                 </div>
-
             </div>
-            <div class="group">
+
+            <div class="group news-card" data-category="hoat-dong-doan-the">
                 <a href="news.detail.html" class="block overflow-hidden rounded-[24px]">
                     <img src="resources/img/news/news-card-1.png" alt="Hodeco News" loading="lazy"
-                        class="aspect-square w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+                        class="aspect-4/3 w-full object-cover transition duration-500 group-hover:scale-[1.03]">
                 </a>
                 <div class="pt-5">
                     <h3 class="text-[20px] font-bold leading-snug text-primary">
@@ -193,15 +185,13 @@
                         Ngày 22/5/2026 vừa qua, Công ty Cổ Phần Phát triển Nhà Bà Rịa - Vũng Tàu đã đón tiếp đoàn công
                         tác của Hội Doanh nghiệp Nam TP Hồ Chí Minh (SHBA) trong...
                     </p>
-
                 </div>
-
             </div>
 
-            <div class="group">
+            <div class="group news-card" data-category="tin-hodeco">
                 <a href="news.detail.html" class="block overflow-hidden rounded-[24px]">
                     <img src="resources/img/news/news-card-1.png" alt="Hodeco News" loading="lazy"
-                        class="aspect-square w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+                        class="aspect-4/3 w-full object-cover transition duration-500 group-hover:scale-[1.03]">
                 </a>
                 <div class="pt-5">
                     <h3 class="text-[20px] font-bold leading-snug text-primary">
@@ -211,15 +201,13 @@
                         Ngày 22/5/2026 vừa qua, Công ty Cổ Phần Phát triển Nhà Bà Rịa - Vũng Tàu đã đón tiếp đoàn công
                         tác của Hội Doanh nghiệp Nam TP Hồ Chí Minh (SHBA) trong...
                     </p>
-
                 </div>
-
             </div>
 
-            <div class="group">
+            <div class="group news-card" data-category="hoat-dong-doan-the">
                 <a href="news.detail.html" class="block overflow-hidden rounded-[24px]">
                     <img src="resources/img/news/news-card-1.png" alt="Hodeco News" loading="lazy"
-                        class="aspect-square w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+                        class="aspect-4/3 w-full object-cover transition duration-500 group-hover:scale-[1.03]">
                 </a>
                 <div class="pt-5">
                     <h3 class="text-[20px] font-bold leading-snug text-primary">
@@ -229,15 +217,13 @@
                         Ngày 22/5/2026 vừa qua, Công ty Cổ Phần Phát triển Nhà Bà Rịa - Vũng Tàu đã đón tiếp đoàn công
                         tác của Hội Doanh nghiệp Nam TP Hồ Chí Minh (SHBA) trong...
                     </p>
-
                 </div>
-
             </div>
 
-            <div class="group">
+            <div class="group news-card" data-category="tin-hodeco">
                 <a href="news.detail.html" class="block overflow-hidden rounded-[24px]">
                     <img src="resources/img/news/news-card-1.png" alt="Hodeco News" loading="lazy"
-                        class="aspect-square w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+                        class="aspect-4/3 w-full object-cover transition duration-500 group-hover:scale-[1.03]">
                 </a>
                 <div class="pt-5">
                     <h3 class="text-[20px] font-bold leading-snug text-primary">
@@ -247,14 +233,13 @@
                         Ngày 22/5/2026 vừa qua, Công ty Cổ Phần Phát triển Nhà Bà Rịa - Vũng Tàu đã đón tiếp đoàn công
                         tác của Hội Doanh nghiệp Nam TP Hồ Chí Minh (SHBA) trong...
                     </p>
-
                 </div>
-
             </div>
-            <div class="group">
+
+            <div class="group news-card" data-category="tin-hodeco">
                 <a href="news.detail.html" class="block overflow-hidden rounded-[24px]">
                     <img src="resources/img/news/news-card-1.png" alt="Hodeco News" loading="lazy"
-                        class="aspect-square w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+                        class="aspect-4/3 w-full object-cover transition duration-500 group-hover:scale-[1.03]">
                 </a>
                 <div class="pt-5">
                     <h3 class="text-[20px] font-bold leading-snug text-primary">
@@ -264,15 +249,13 @@
                         Ngày 22/5/2026 vừa qua, Công ty Cổ Phần Phát triển Nhà Bà Rịa - Vũng Tàu đã đón tiếp đoàn công
                         tác của Hội Doanh nghiệp Nam TP Hồ Chí Minh (SHBA) trong...
                     </p>
-
                 </div>
-
             </div>
 
-            <div class="group">
+            <div class="group news-card" data-category="hoat-dong-doan-the">
                 <a href="news.detail.html" class="block overflow-hidden rounded-[24px]">
                     <img src="resources/img/news/news-card-1.png" alt="Hodeco News" loading="lazy"
-                        class="aspect-square w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+                        class="aspect-4/3 w-full object-cover transition duration-500 group-hover:scale-[1.03]">
                 </a>
                 <div class="pt-5">
                     <h3 class="text-[20px] font-bold leading-snug text-primary">
@@ -282,15 +265,13 @@
                         Ngày 22/5/2026 vừa qua, Công ty Cổ Phần Phát triển Nhà Bà Rịa - Vũng Tàu đã đón tiếp đoàn công
                         tác của Hội Doanh nghiệp Nam TP Hồ Chí Minh (SHBA) trong...
                     </p>
-
                 </div>
-
             </div>
 
-            <div class="group">
+                        <div class="group news-card" data-category="tin-hodeco">
                 <a href="news.detail.html" class="block overflow-hidden rounded-[24px]">
                     <img src="resources/img/news/news-card-1.png" alt="Hodeco News" loading="lazy"
-                        class="aspect-square w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+                        class="aspect-4/3 w-full object-cover transition duration-500 group-hover:scale-[1.03]">
                 </a>
                 <div class="pt-5">
                     <h3 class="text-[20px] font-bold leading-snug text-primary">
@@ -300,15 +281,13 @@
                         Ngày 22/5/2026 vừa qua, Công ty Cổ Phần Phát triển Nhà Bà Rịa - Vũng Tàu đã đón tiếp đoàn công
                         tác của Hội Doanh nghiệp Nam TP Hồ Chí Minh (SHBA) trong...
                     </p>
-
                 </div>
-
             </div>
 
-            <div class="group">
+            <div class="group news-card" data-category="hoat-dong-doan-the">
                 <a href="news.detail.html" class="block overflow-hidden rounded-[24px]">
                     <img src="resources/img/news/news-card-1.png" alt="Hodeco News" loading="lazy"
-                        class="aspect-square w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+                        class="aspect-4/3 w-full object-cover transition duration-500 group-hover:scale-[1.03]">
                 </a>
                 <div class="pt-5">
                     <h3 class="text-[20px] font-bold leading-snug text-primary">
@@ -318,15 +297,14 @@
                         Ngày 22/5/2026 vừa qua, Công ty Cổ Phần Phát triển Nhà Bà Rịa - Vũng Tàu đã đón tiếp đoàn công
                         tác của Hội Doanh nghiệp Nam TP Hồ Chí Minh (SHBA) trong...
                     </p>
-
                 </div>
-
             </div>
 
-            <div class="group">
+
+                        <div class="group news-card" data-category="tin-hodeco">
                 <a href="news.detail.html" class="block overflow-hidden rounded-[24px]">
                     <img src="resources/img/news/news-card-1.png" alt="Hodeco News" loading="lazy"
-                        class="aspect-square w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+                        class="aspect-4/3 w-full object-cover transition duration-500 group-hover:scale-[1.03]">
                 </a>
                 <div class="pt-5">
                     <h3 class="text-[20px] font-bold leading-snug text-primary">
@@ -336,10 +314,91 @@
                         Ngày 22/5/2026 vừa qua, Công ty Cổ Phần Phát triển Nhà Bà Rịa - Vũng Tàu đã đón tiếp đoàn công
                         tác của Hội Doanh nghiệp Nam TP Hồ Chí Minh (SHBA) trong...
                     </p>
-
                 </div>
-
             </div>
+
+            <div class="group news-card" data-category="hoat-dong-doan-the">
+                <a href="news.detail.html" class="block overflow-hidden rounded-[24px]">
+                    <img src="resources/img/news/news-card-1.png" alt="Hodeco News" loading="lazy"
+                        class="aspect-4/3 w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+                </a>
+                <div class="pt-5">
+                    <h3 class="text-[20px] font-bold leading-snug text-primary">
+                        HODECO chuyển đổi mô hình kinh doanh mới
+                    </h3>
+                    <p class="mt-3 text-sm text-gray-500 leading-relaxed">
+                        Ngày 22/5/2026 vừa qua, Công ty Cổ Phần Phát triển Nhà Bà Rịa - Vũng Tàu đã đón tiếp đoàn công
+                        tác của Hội Doanh nghiệp Nam TP Hồ Chí Minh (SHBA) trong...
+                    </p>
+                </div>
+            </div>
+
+
+                        <div class="group news-card" data-category="tin-hodeco">
+                <a href="news.detail.html" class="block overflow-hidden rounded-[24px]">
+                    <img src="resources/img/news/news-card-1.png" alt="Hodeco News" loading="lazy"
+                        class="aspect-4/3 w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+                </a>
+                <div class="pt-5">
+                    <h3 class="text-[20px] font-bold leading-snug text-primary">
+                        HODECO chuyển đổi mô hình kinh doanh mới
+                    </h3>
+                    <p class="mt-3 text-sm text-gray-500 leading-relaxed">
+                        Ngày 22/5/2026 vừa qua, Công ty Cổ Phần Phát triển Nhà Bà Rịa - Vũng Tàu đã đón tiếp đoàn công
+                        tác của Hội Doanh nghiệp Nam TP Hồ Chí Minh (SHBA) trong...
+                    </p>
+                </div>
+            </div>
+
+            <div class="group news-card" data-category="hoat-dong-doan-the">
+                <a href="news.detail.html" class="block overflow-hidden rounded-[24px]">
+                    <img src="resources/img/news/news-card-1.png" alt="Hodeco News" loading="lazy"
+                        class="aspect-4/3 w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+                </a>
+                <div class="pt-5">
+                    <h3 class="text-[20px] font-bold leading-snug text-primary">
+                        HODECO chuyển đổi mô hình kinh doanh mới
+                    </h3>
+                    <p class="mt-3 text-sm text-gray-500 leading-relaxed">
+                        Ngày 22/5/2026 vừa qua, Công ty Cổ Phần Phát triển Nhà Bà Rịa - Vũng Tàu đã đón tiếp đoàn công
+                        tác của Hội Doanh nghiệp Nam TP Hồ Chí Minh (SHBA) trong...
+                    </p>
+                </div>
+            </div>
+
+
+                        <div class="group news-card" data-category="tin-hodeco">
+                <a href="news.detail.html" class="block overflow-hidden rounded-[24px]">
+                    <img src="resources/img/news/news-card-1.png" alt="Hodeco News" loading="lazy"
+                        class="aspect-4/3 w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+                </a>
+                <div class="pt-5">
+                    <h3 class="text-[20px] font-bold leading-snug text-primary">
+                        HODECO chuyển đổi mô hình kinh doanh mới
+                    </h3>
+                    <p class="mt-3 text-sm text-gray-500 leading-relaxed">
+                        Ngày 22/5/2026 vừa qua, Công ty Cổ Phần Phát triển Nhà Bà Rịa - Vũng Tàu đã đón tiếp đoàn công
+                        tác của Hội Doanh nghiệp Nam TP Hồ Chí Minh (SHBA) trong...
+                    </p>
+                </div>
+            </div>
+
+            <div class="group news-card" data-category="hoat-dong-doan-the">
+                <a href="news.detail.html" class="block overflow-hidden rounded-[24px]">
+                    <img src="resources/img/news/news-card-1.png" alt="Hodeco News" loading="lazy"
+                        class="aspect-4/3 w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+                </a>
+                <div class="pt-5">
+                    <h3 class="text-[20px] font-bold leading-snug text-primary">
+                        HODECO chuyển đổi mô hình kinh doanh mới
+                    </h3>
+                    <p class="mt-3 text-sm text-gray-500 leading-relaxed">
+                        Ngày 22/5/2026 vừa qua, Công ty Cổ Phần Phát triển Nhà Bà Rịa - Vũng Tàu đã đón tiếp đoàn công
+                        tác của Hội Doanh nghiệp Nam TP Hồ Chí Minh (SHBA) trong...
+                    </p>
+                </div>
+            </div>
+
 
         </div>
 
@@ -357,110 +416,100 @@
 
     <footer id="footer" class="site-footer" itemtype="" itemscope>
         <div id="footer-main-wrap" class="footer-main-wrap bg-primary text-white relative overflow-hidden">
-            <img src="/resources/img/bg-footer-left.png"
-                class="absolute left-0 top-0 pointer-events-none select-none z-0 w-[120px] md:w-[160px] xl:w-auto"
-                alt="">
-            <img src="/resources/img/bg-footer-right.png"
-                class="absolute right-0 bottom-0 pointer-events-none select-none z-0 w-[240px] md:w-[320px] xl:w-auto"
-                alt="">
-            <div class="container pt-16 relative z-10">
-                <div class="footer-brand-overlay text-center overflow-hidden">
-                    <span
-                        class="text-[12vw] font-semibold uppercase tracking-widest text-transparent block leading-none select-none"
-                        style="-webkit-text-stroke: 1px rgba(255,255,255,0.2); font-size: clamp(40px, 15vw, 220px);">
-                        hodeco
-                    </span>
-                </div>
-
-                <div
-                    class="footer-address-container p-8 md:p-12 rounded-3xl border border-white/20 bg-white/5 backdrop-blur-sm relative">
-                    <div
-                        class="footer-address-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 md:gap-x-12">
-
-                        <div class="address-item flex flex-col relative">
-                            <h4 class="address-title text-lg font-bold uppercase mb-4">Trụ sở chính</h4>
-                            <div class="flex flex-col gap-3">
-                                <div class="flex items-start gap-3">
-                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
-                                    <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
-                                </div>
-                                <div class="flex items-center gap-3">
-                                    <i class="fa-solid fa-phone text-white/60 text-sm"></i>
-                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28
-                                        3456 7890</a>
-                                </div>
-                            </div>
-                            <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
-                            <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
-                        </div>
-
-                        <div class="address-item flex flex-col relative">
-                            <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Gò Vấp</h4>
-                            <div class="flex flex-col gap-3">
-                                <div class="flex items-start gap-3">
-                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
-                                    <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
-                                </div>
-                                <div class="flex items-center gap-3">
-                                    <i class="fa-solid fa-phone text-white/60 text-sm"></i>
-                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28
-                                        3456 7890</a>
-                                </div>
-                            </div>
-                            <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
-                            <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
-                        </div>
-
-                        <div class="address-item flex flex-col relative">
-                            <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Thạnh</h4>
-                            <div class="flex flex-col gap-3">
-                                <div class="flex items-start gap-3">
-                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
-                                    <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
-                                </div>
-                                <div class="flex items-center gap-3">
-                                    <i class="fa-solid fa-phone text-white/60 text-sm"></i>
-                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28
-                                        3456 7890</a>
-                                </div>
-                            </div>
-                            <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
-                            <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
-                        </div>
-
-                        <div class="address-item flex flex-col relative">
-                            <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Tân</h4>
-                            <div class="flex flex-col gap-3">
-                                <div class="flex items-start gap-3">
-                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
-                                    <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
-                                </div>
-                                <div class="flex items-center gap-3">
-                                    <i class="fa-solid fa-phone text-white/60 text-sm"></i>
-                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28
-                                        3456 7890</a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+          <img src="/resources/img/bg-footer-left.png" class="absolute left-[-100px] xl:left-[-120px] 2xl:left-[-140px] 3xl:left-0 top-0 pointer-events-none select-none z-0 w-[120px] md:w-[160px] xl:w-auto" alt="">
+          <img src="/resources/img/bg-footer-right.png" class="absolute right-0 bottom-0 pointer-events-none select-none z-0 w-[240px] md:w-[320px] xl:w-auto" alt="">
+          <div class="container pt-16 relative z-10">
+            <div class="footer-brand-overlay text-center overflow-hidden">
+              <span
+                class="font-semibold uppercase tracking-widest text-transparent block leading-none select-none
+                      text-[140px] 2xl:text-[180px] xl:text-[160px] lg:text-[130px] md:text-[100px] text-[72px]"
+                style="-webkit-text-stroke: 1px rgba(255,255,255,0.2);">
+                hodeco
+              </span>
             </div>
 
-            <div class="footer-credit py-8 relative z-10">
-                <div class="container flex flex-col items-center justify-center gap-4 text-center">
-                    <div class="footer-copyright text-sm text-white">
-                        <span class="copyright">© 2026 Hodeco,&nbsp;</span>
-                        <span class="hd">
-                            design by
-                            <a class="hover:text-white transition-colors" href="https://webhd.vn/" target="_blank"
-                                rel="noopener noreferrer nofollow">
-                                HD Agency
-                            </a>
-                        </span>
+            <div class="footer-address-container p-8 md:p-12 rounded-3xl border border-white/20 bg-white/5 backdrop-blur-sm relative">
+              <div class="footer-address-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 md:gap-x-12">
+
+                <div class="address-item flex flex-col relative">
+                  <h4 class="address-title text-lg font-bold uppercase mb-4">Trụ sở chính</h4>
+                  <div class="flex flex-col gap-3">
+                    <div class="flex items-start gap-3">
+                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
                     </div>
+                    <div class="flex items-center gap-3">
+                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
+                    </div>
+                  </div>
+                  <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                  <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
                 </div>
+
+                <div class="address-item flex flex-col relative">
+                  <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Gò Vấp</h4>
+                  <div class="flex flex-col gap-3">
+                    <div class="flex items-start gap-3">
+                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
+                    </div>
+                  </div>
+                  <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                  <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+                </div>
+
+                <div class="address-item flex flex-col relative">
+                  <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Thạnh</h4>
+                  <div class="flex flex-col gap-3">
+                    <div class="flex items-start gap-3">
+                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
+                    </div>
+                  </div>
+                  <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                  <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+                </div>
+
+                <div class="address-item flex flex-col relative">
+                  <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Tân</h4>
+                  <div class="flex flex-col gap-3">
+                    <div class="flex items-start gap-3">
+                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
+                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
             </div>
+          </div>
+
+          <div class="footer-credit py-8 relative z-10">
+            <div class="container flex flex-col items-center justify-center gap-4 text-center">
+              <div class="footer-copyright text-sm text-white">
+                <span class="copyright">© 2026 Hodeco,&nbsp;</span>
+                <span class="hd">
+                  design by
+                  <a class="hover:text-white transition-colors" href="https://webhd.vn/" target="_blank" rel="noopener noreferrer nofollow">
+                    HD Agency
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
 
         </div>
     </footer>
