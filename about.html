@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hodeco</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
+        media="print" onload="this.media='all'">
 </head>
 
 <body>
@@ -114,34 +114,27 @@
     </section>
 
     <section class="section about_vision container overflow-hidden">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+        <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
 
-            <div class="lg:col-span-5 rounded-[20px] lg:rounded-[24px] overflow-hidden will-change-transform"
+            <div class="w-full lg:w-1/2 rounded-[20px] lg:rounded-[24px] overflow-hidden will-change-transform"
                 data-animate="slide-in-left">
-                <div class="aspect-square w-full max-h-[320px] sm:max-h-[400px] lg:max-h-none">
-                    <img src="/resources/img/about/about-vision-left.webp" class="w-full h-full object-cover"
-                        loading="lazy" decoding="async" alt="HODECO Project View" />
-                </div>
+                <img src="/resources/img/about/about-vision-left.webp" class="w-full h-full object-cover"
+                    loading="lazy" decoding="async" alt="HODECO Project View" />
             </div>
 
-            <div class="lg:col-span-7 content flex flex-col justify-between h-full py-2 lg:py-4 will-change-transform"
+            <div class="w-full lg:w-1/2 flex flex-col gap-8 lg:gap-12 py-2 lg:py-4 will-change-transform"
                 data-animate="slide-in-right">
 
-                <div>
-                    <h2 class="heading-title text-center lg:text-left mb-6 lg:mb-8">
+                <div class="flex flex-col gap-4">
+                    <h2 class="heading-title text-center lg:text-left">
                         Tầm nhìn
                     </h2>
-
-                    <div class="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-6 w-full">
-                        <div class="w-fit mx-auto lg:mx-0 flex-shrink-0">
+                    <div class="flex flex-col lg:flex-row lg:items-center gap-4">
+                        <div class="flex-shrink-0 mx-auto lg:mx-0">
                             <div class="h-[3px] bg-[#0B3A7F] w-full"></div>
-                            <span
-                                class="heading-title invisible block pointer-events-none select-none h-0 overflow-hidden">Tầm
-                                nhìn</span>
+                            <span class="heading-title invisible block pointer-events-none select-none h-0 overflow-hidden">Tầm nhìn</span>
                         </div>
-
-                        <p
-                            class="text-[14px] lg:text-[16px] text-[#555] leading-relaxed text-center lg:text-left max-w-full lg:max-w-[580px] mx-auto lg:mx-0">
+                        <p class="text-[14px] lg:text-[16px] text-[#555] leading-relaxed text-center lg:text-left">
                             Với khát vọng tiên phong phát triển một xã hội thịnh vượng, giá trị nhân sinh bền vững,
                             HODECO nỗ lực trở thành tập đoàn kinh tế tư nhân hàng đầu, kiến tạo hệ sinh thái
                             Bất động sản đa dạng, góp phần nâng tầm vị thế Việt Nam trên trường Quốc tế.
@@ -149,9 +142,8 @@
                     </div>
                 </div>
 
-                <div class="mt-8 lg:mt-12 flex items-end justify-center lg:justify-start gap-4 lg:gap-5">
-                    <div
-                        class="text-[52px] sm:text-[64px] lg:text-[80px] font-bold text-[#0B3A7F] leading-none tracking-tight">
+                <div class="flex items-end justify-center lg:justify-start gap-4">
+                    <div class="text-[52px] sm:text-[64px] lg:text-[80px] font-bold text-[#0B3A7F] leading-none tracking-tight">
                         1990
                     </div>
                     <div class="mb-1 lg:mb-1.5 text-left">
@@ -352,7 +344,7 @@
         </div>
     </section>
 
-    <section class="section relative w-full overflow-visible mb-40">
+    <section class="section relative w-full overflow-visible mb-30 lg:mb-60">
         <img src="resources/img/about/bg-about-year-1.png"
             class="absolute lg:top-[-10%] lg:top-[20%] right-0 pointer-events-none select-none scale-80 3xl:scale-100 origin-right"
             alt="">
@@ -372,12 +364,12 @@
                         36
                     </strong>
                     <span
-                        class="text-[#333333] font-['Montserrat'] font-medium pb-2 lg:pb-6 max-w-[120px] sm:max-w-none"
+                        class="text-[#333333] font-medium pb-2 lg:pb-6 max-w-[120px] sm:max-w-none"
                         style="font-size: clamp(13px, 1.8vw, 24px); letter-spacing: 0.2em;">
                         năm phát triển bền vững
                     </span>
                 </div>
-                <p class="text-[#333333] font-['Montserrat'] font-medium mb-2"
+                <p class="text-[#333333] font-medium mb-2"
                     style="font-size: clamp(13px, 1.8vw, 24px); letter-spacing: 0.2em;">
                     1991 - 2026
                 </p>
@@ -580,99 +572,100 @@
         </div>
     </section>
 
-    <section class="section about-ceo container relative pt-8">
-        <div class="mb-16">
-            <h3 class="heading-title text-center mb-8" data-animate="reveal-up">Hội đồng quản trị</h3>
-            <div class="flex flex-wrap justify-center gap-6 lg:gap-8">
+    <section class="section about-ceo container relative">
 
-                <div class="ceo-card">
-                    <img src="resources/img/about/about-ceo-1.jpg" alt="Ông Đoàn Hữu Thuận">
-                    <div class="ceo-overlay"></div>
-                    <div class="ceo-content">
-                        <h4 class="ceo-name">Ông Đoàn Hữu Thuận</h4>
-                        <p class="ceo-role">Chủ tịch Hội đồng quản trị</p>
-                    </div>
+        <h3 class="heading-title text-center mb-8" data-animate="reveal-up">Hội đồng quản trị</h3>
+        <div class="flex flex-wrap justify-center gap-6 lg:gap-8">
+
+            <div class="ceo-card">
+                <img src="resources/img/about/about-ceo-1.jpg" alt="Ông Đoàn Hữu Thuận">
+                <div class="ceo-overlay"></div>
+                <div class="ceo-content">
+                    <h4 class="ceo-name">Ông Đoàn Hữu Thuận</h4>
+                    <p class="ceo-role">Chủ tịch Hội đồng quản trị</p>
                 </div>
-
-                <div class="ceo-card">
-                    <img src="resources/img/about/about-ceo-2.jpg" alt="Ông Lê Viết Liên">
-                    <div class="ceo-overlay"></div>
-                    <div class="ceo-content">
-                        <h4 class="ceo-name">Ông Lê Viết Liên</h4>
-                        <p class="ceo-role">Thành viên Hội đồng quản trị</p>
-                    </div>
-                </div>
-
-                <div class="ceo-card">
-                    <img src="resources/img/about/about-ceo-3.jpg" alt="Ông Đoàn Hữu Hà Vinh">
-                    <div class="ceo-overlay"></div>
-                    <div class="ceo-content">
-                        <h4 class="ceo-name">Ông Đoàn Hữu Hà Vinh</h4>
-                        <p class="ceo-role">Thành viên Hội đồng quản trị</p>
-                    </div>
-                </div>
-
-                <div class="ceo-card">
-                    <img src="resources/img/about/about-ceo-4.jpg" alt="Ông Nguyễn Đình Huy">
-                    <div class="ceo-overlay"></div>
-                    <div class="ceo-content">
-                        <h4 class="ceo-name">Ông Nguyễn Đình Huy</h4>
-                        <p class="ceo-role">Thành viên Hội đồng quản trị</p>
-                    </div>
-                </div>
-
-                <div class="ceo-card">
-                    <img src="resources/img/about/about-ceo-5.jpg" alt="Ông Nguyễn Đình Huy">
-                    <div class="ceo-overlay"></div>
-                    <div class="ceo-content">
-                        <h4 class="ceo-name">Ông Nguyễn Đình Huy</h4>
-                        <p class="ceo-role">Thành viên Hội đồng quản trị</p>
-                    </div>
-                </div>
-
-                <div class="ceo-card">
-                    <img src="resources/img/about/about-ceo-6.jpg" alt="Ông Lê Quốc Trung">
-                    <div class="ceo-overlay"></div>
-                    <div class="ceo-content">
-                        <h4 class="ceo-name">Ông Lê Quốc Trung</h4>
-                        <p class="ceo-role">Thành viên Hội đồng quản trị</p>
-                    </div>
-                </div>
-
-                <div class="ceo-card">
-                    <img src="resources/img/about/about-ceo-7.jpg" alt="Ông Nguyễn Tuấn Anh">
-                    <div class="ceo-overlay"></div>
-                    <div class="ceo-content">
-                        <h4 class="ceo-name">Ông Nguyễn Tuấn Anh</h4>
-                        <p class="ceo-role">Thành viên Hội đồng quản trị</p>
-                    </div>
-                </div>
-
             </div>
 
-            <h3 class="heading-title text-center mb-8 mt-16" data-animate="reveal-up">Ban Tổng Giám đốc</h3>
-            <div class="flex flex-wrap justify-center gap-6 lg:gap-8">
-
-                <div class="ceo-card">
-                    <img src="resources/img/about/about-ceo-2.jpg" alt="Ông Lê Viết Liên">
-                    <div class="ceo-overlay"></div>
-                    <div class="ceo-content">
-                        <h4 class="ceo-name">Ông Lê Viết Liên</h4>
-                        <p class="ceo-role">Tổng Giám đốc</p>
-                    </div>
+            <div class="ceo-card">
+                <img src="resources/img/about/about-ceo-2.jpg" alt="Ông Lê Viết Liên">
+                <div class="ceo-overlay"></div>
+                <div class="ceo-content">
+                    <h4 class="ceo-name">Ông Lê Viết Liên</h4>
+                    <p class="ceo-role">Thành viên Hội đồng quản trị</p>
                 </div>
-
-                <div class="ceo-card">
-                    <img src="resources/img/about/about-ceo-3.jpg" alt="Ông Đoàn Hữu Hà Vinh">
-                    <div class="ceo-overlay"></div>
-                    <div class="ceo-content">
-                        <h4 class="ceo-name">Ông Đoàn Hữu Hà Vinh</h4>
-                        <p class="ceo-role">Phó Tổng Giám đốc</p>
-                    </div>
-                </div>
-
             </div>
+
+            <div class="ceo-card">
+                <img src="resources/img/about/about-ceo-3.jpg" alt="Ông Đoàn Hữu Hà Vinh">
+                <div class="ceo-overlay"></div>
+                <div class="ceo-content">
+                    <h4 class="ceo-name">Ông Đoàn Hữu Hà Vinh</h4>
+                    <p class="ceo-role">Thành viên Hội đồng quản trị</p>
+                </div>
+            </div>
+
+            <div class="ceo-card">
+                <img src="resources/img/about/about-ceo-4.jpg" alt="Ông Nguyễn Đình Huy">
+                <div class="ceo-overlay"></div>
+                <div class="ceo-content">
+                    <h4 class="ceo-name">Ông Nguyễn Đình Huy</h4>
+                    <p class="ceo-role">Thành viên Hội đồng quản trị</p>
+                </div>
+            </div>
+
+            <div class="ceo-card">
+                <img src="resources/img/about/about-ceo-5.jpg" alt="Ông Nguyễn Đình Huy">
+                <div class="ceo-overlay"></div>
+                <div class="ceo-content">
+                    <h4 class="ceo-name">Ông Nguyễn Đình Huy</h4>
+                    <p class="ceo-role">Thành viên Hội đồng quản trị</p>
+                </div>
+            </div>
+
+            <div class="ceo-card">
+                <img src="resources/img/about/about-ceo-6.jpg" alt="Ông Lê Quốc Trung">
+                <div class="ceo-overlay"></div>
+                <div class="ceo-content">
+                    <h4 class="ceo-name">Ông Lê Quốc Trung</h4>
+                    <p class="ceo-role">Thành viên Hội đồng quản trị</p>
+                </div>
+            </div>
+
+            <div class="ceo-card">
+                <img src="resources/img/about/about-ceo-7.jpg" alt="Ông Nguyễn Tuấn Anh">
+                <div class="ceo-overlay"></div>
+                <div class="ceo-content">
+                    <h4 class="ceo-name">Ông Nguyễn Tuấn Anh</h4>
+                    <p class="ceo-role">Thành viên Hội đồng quản trị</p>
+                </div>
+            </div>
+
         </div>
+
+        <h3 class="heading-title text-center mb-8" data-animate="reveal-up">Ban Tổng Giám đốc</h3>
+
+        <div class="flex flex-wrap justify-center gap-6 lg:gap-8">
+
+            <div class="ceo-card">
+                <img src="resources/img/about/about-ceo-2.jpg" alt="Ông Lê Viết Liên">
+                <div class="ceo-overlay"></div>
+                <div class="ceo-content">
+                    <h4 class="ceo-name">Ông Lê Viết Liên</h4>
+                    <p class="ceo-role">Tổng Giám đốc</p>
+                </div>
+            </div>
+
+            <div class="ceo-card">
+                <img src="resources/img/about/about-ceo-3.jpg" alt="Ông Đoàn Hữu Hà Vinh">
+                <div class="ceo-overlay"></div>
+                <div class="ceo-content">
+                    <h4 class="ceo-name">Ông Đoàn Hữu Hà Vinh</h4>
+                    <p class="ceo-role">Phó Tổng Giám đốc</p>
+                </div>
+            </div>
+
+        </div>
+
     </section>
 
     <section class="section about-chart max-w-7xl mx-auto px-4">
@@ -1037,88 +1030,79 @@
 
     <footer id="footer" class="site-footer" itemtype="" itemscope>
         <div id="footer-main-wrap" class="footer-main-wrap bg-primary text-white relative overflow-hidden">
-            <img src="/resources/img/bg-footer-left.png"
-                class="absolute left-[-100px] xl:left-[-120px] 2xl:left-[-140px] 3xl:left-0 top-0 pointer-events-none select-none z-0 w-[120px] md:w-[160px] xl:w-auto"
-                alt="">
-            <img src="/resources/img/bg-footer-right.png"
-                class="absolute right-0 bottom-0 pointer-events-none select-none z-0 w-[240px] md:w-[320px] xl:w-auto"
-                alt="">
-            <div class="container pt-16 relative z-10">
+            <img src="/resources/img/bg-footer-left.png" class="absolute left-[-60px] md:left-[-100px] xl:left-[-120px] 2xl:left-[-140px] 3xl:left-0 top-0 pointer-events-none select-none z-0 w-[80px] md:w-[160px] xl:w-auto" alt="">
+            <img src="/resources/img/bg-footer-right.png" class="absolute right-0 bottom-0 pointer-events-none select-none z-0 w-[160px] md:w-[320px] xl:w-auto" alt="">
+
+            <div class="container pt-10 md:pt-16 relative z-10">
                 <div class="footer-brand-overlay text-center overflow-hidden">
                     <span class="font-semibold uppercase tracking-widest text-transparent block leading-none select-none
-                      text-[140px] 2xl:text-[180px] xl:text-[160px] lg:text-[130px] md:text-[100px] text-[72px]"
+                        text-[56px] md:text-[100px] lg:text-[130px] xl:text-[160px] 2xl:text-[180px]"
                         style="-webkit-text-stroke: 1px rgba(255,255,255,0.2);">
                         hodeco
                     </span>
                 </div>
 
-                <div
-                    class="footer-address-container p-8 md:p-12 rounded-3xl border border-white/20 bg-white/5 backdrop-blur-sm relative">
-                    <div
-                        class="footer-address-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 md:gap-x-12">
+                <div class="footer-address-container p-6 md:p-12 rounded-2xl md:rounded-3xl border border-white/20 bg-white/5 backdrop-blur-sm relative">
+                    <div class="footer-address-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-x-12">
 
                         <div class="address-item flex flex-col relative">
-                            <h4 class="address-title text-lg font-bold uppercase mb-4">Trụ sở chính</h4>
+                            <h4 class="address-title text-base md:text-lg font-bold uppercase mb-3 md:mb-4">Trụ sở chính</h4>
                             <div class="flex flex-col gap-3">
                                 <div class="flex items-start gap-3">
-                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm shrink-0"></i>
                                     <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
                                 </div>
                                 <div class="flex items-center gap-3">
-                                    <i class="fa-solid fa-phone text-white/60 text-sm"></i>
-                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28
-                                        3456 7890</a>
+                                    <i class="fa-solid fa-phone text-white/60 text-sm shrink-0"></i>
+                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
                                 </div>
                             </div>
                             <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
-                            <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+                            <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-8"></div>
                         </div>
 
                         <div class="address-item flex flex-col relative">
-                            <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Gò Vấp</h4>
+                            <h4 class="address-title text-base md:text-lg font-bold uppercase mb-3 md:mb-4">Chi nhánh Gò Vấp</h4>
                             <div class="flex flex-col gap-3">
                                 <div class="flex items-start gap-3">
-                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm shrink-0"></i>
                                     <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
                                 </div>
                                 <div class="flex items-center gap-3">
-                                    <i class="fa-solid fa-phone text-white/60 text-sm"></i>
-                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28
-                                        3456 7890</a>
+                                    <i class="fa-solid fa-phone text-white/60 text-sm shrink-0"></i>
+                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
                                 </div>
                             </div>
                             <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
-                            <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+                            <div class="block sm:hidden w-full h-[1px] bg-white/10 mt-8"></div>
                         </div>
 
                         <div class="address-item flex flex-col relative">
-                            <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Thạnh</h4>
+                            <h4 class="address-title text-base md:text-lg font-bold uppercase mb-3 md:mb-4">Chi nhánh Bình Thạnh</h4>
                             <div class="flex flex-col gap-3">
                                 <div class="flex items-start gap-3">
-                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm shrink-0"></i>
                                     <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
                                 </div>
                                 <div class="flex items-center gap-3">
-                                    <i class="fa-solid fa-phone text-white/60 text-sm"></i>
-                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28
-                                        3456 7890</a>
+                                    <i class="fa-solid fa-phone text-white/60 text-sm shrink-0"></i>
+                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
                                 </div>
                             </div>
                             <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
-                            <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
+                            <div class="block sm:hidden w-full h-[1px] bg-white/10 mt-8"></div>
                         </div>
 
                         <div class="address-item flex flex-col relative">
-                            <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Tân</h4>
+                            <h4 class="address-title text-base md:text-lg font-bold uppercase mb-3 md:mb-4">Chi nhánh Bình Tân</h4>
                             <div class="flex flex-col gap-3">
                                 <div class="flex items-start gap-3">
-                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
+                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm shrink-0"></i>
                                     <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
                                 </div>
                                 <div class="flex items-center gap-3">
-                                    <i class="fa-solid fa-phone text-white/60 text-sm"></i>
-                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28
-                                        3456 7890</a>
+                                    <i class="fa-solid fa-phone text-white/60 text-sm shrink-0"></i>
+                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
                                 </div>
                             </div>
                         </div>
@@ -1127,14 +1111,13 @@
                 </div>
             </div>
 
-            <div class="footer-credit py-8 relative z-10">
+            <div class="footer-credit py-6 md:py-8 relative z-10">
                 <div class="container flex flex-col items-center justify-center gap-4 text-center">
-                    <div class="footer-copyright text-sm text-white">
+                    <div class="footer-copyright text-xs md:text-sm text-white">
                         <span class="copyright">© 2026 Hodeco,&nbsp;</span>
                         <span class="hd">
                             design by
-                            <a class="hover:text-white transition-colors" href="https://webhd.vn/" target="_blank"
-                                rel="noopener noreferrer nofollow">
+                            <a class="hover:text-white transition-colors" href="https://webhd.vn/" target="_blank" rel="noopener noreferrer nofollow">
                                 HD Agency
                             </a>
                         </span>

@@ -176,39 +176,82 @@ const animations = {
 };
 
 function initHero() {
-  const heroImage = document.querySelector(".hero-bg img");
-  if (!heroImage) return;
+  const bannerSection = document.querySelector(".home-banner");
+  if (!bannerSection) return;
 
-  if (isMobile) {
-    gsap.from(".hero-content", { opacity: 0, y: 15, duration: 0.4, ease: "power2.out" });
-    return;
+  const swiperEl = bannerSection.querySelector("[data-fx-slider]");
+  if (!swiperEl) return;
+
+  bannerSection.querySelectorAll(".hero-bg").forEach((bg) => {
+    bg.style.overflow = "hidden";
+  });
+
+  function animateImg(slide) {
+    const img = slide?.querySelector(".hero-bg img");
+    if (!img) return;
+    gsap.killTweensOf(img);
+    gsap.fromTo(img,
+      { scale: 1.06 },
+      { scale: 1, duration: 1.8, ease: "power2.out", force3D: true }
+    );
   }
 
-  gsap.set(heroImage, { willChange: "transform" });
+  function animateTextIn(slide, delay = 0) {
+    const textGroup = slide?.querySelector(".flex.flex-col.items-center.text-center");
+    const bottom = slide?.querySelector(".mb-5, .mb-8, .mb-10");
+    if (textGroup) {
+      gsap.killTweensOf(textGroup);
+      gsap.fromTo(textGroup,
+        { opacity: 0, y: isMobile ? 14 : 26 },
+        { opacity: 1, y: 0, duration: 1, ease: "power3.out", delay }
+      );
+    }
+    if (bottom) {
+      gsap.killTweensOf(bottom);
+      gsap.fromTo(bottom,
+        { opacity: 0, y: 10 },
+        { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: delay + 0.15 }
+      );
+    }
+  }
 
-  const tl = gsap.timeline({ defaults: { ease: "power2.out" }, delay: 4.5 });
-  tl.from(heroImage, { scale: 1.12, duration: 1.8 })
-    .from(".hero-hodeco span", { opacity: 0, duration: 1, stagger: 0.03 }, "-=0.6")
-    .from(".hero-content", { opacity: 0, y: 20, duration: 0.9 }, "-=0.4")
-    .from(".hero-script", { opacity: 0, scale: 0.96, duration: 0.9 }, "-=0.3");
+  function hideText(slide) {
+    const textGroup = slide?.querySelector(".flex.flex-col.items-center.text-center");
+    const bottom = slide?.querySelector(".mb-5, .mb-8, .mb-10");
+    if (textGroup) { gsap.killTweensOf(textGroup); gsap.set(textGroup, { opacity: 0, y: 0 }); }
+    if (bottom)    { gsap.killTweensOf(bottom);    gsap.set(bottom,    { opacity: 0, y: 0 }); }
+  }
+
+  bannerSection.querySelectorAll(".swiper-slide").forEach((slide) => hideText(slide));
+
+  const waitForSwiper = setInterval(() => {
+    const swiper = swiperEl.swiper;
+    if (!swiper) return;
+    clearInterval(waitForSwiper);
+
+    animateImg(swiper.slides[swiper.activeIndex]);
+    animateTextIn(swiper.slides[swiper.activeIndex], 0.4);
+
+    swiper.on("slideChangeTransitionStart", () => {
+      const prev = swiper.slides[swiper.previousIndex];
+      const next = swiper.slides[swiper.activeIndex];
+      hideText(prev);
+      animateImg(next);
+      animateTextIn(next, 0.35);
+    });
+  }, 50);
 
   if (!enableParallax) return;
 
-  gsap.to(".hero-bg img", {
-    yPercent: -12,
+  gsap.to(".home-banner .hero-bg img", {
+    yPercent: -10,
     ease: "none",
-    scrollTrigger: { trigger: ".home-banner", start: "top top", end: "bottom top", scrub: 0.6 },
-  });
-  gsap.to(".hero-script", {
-    y: -60,
-    ease: "none",
-    scrollTrigger: { trigger: ".home-banner", start: "top top", end: "bottom top", scrub: 0.6 },
-  });
-  gsap.to(".hero-bottom", {
-    y: 30,
-    opacity: 0,
-    ease: "none",
-    scrollTrigger: { trigger: ".home-banner", start: "top top", end: "bottom top", scrub: 0.6 },
+    scrollTrigger: {
+      trigger: ".home-banner",
+      start: "top top",
+      end: "bottom top",
+      scrub: 0.6,
+    },
   });
 }
 

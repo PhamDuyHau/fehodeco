@@ -106,12 +106,12 @@
             </div>
         </div>
     </header>
-    <section class="relative w-full h-[80vh]">
-        <img 
-            src="/resources/img/project/project-breadcrumb.webp" 
-            class="w-full h-full object-cover"
-        />
-        <div class="absolute inset-0 pointer-events-none bg-[linear-gradient(180deg,rgba(0,0,0,0.2)_0%,rgba(0,0,0,0)_79.33%)]"></div>
+    <section class="relative w-full h-[90vh]">
+        <img src="/resources/img/project/project-breadcrumb.jpg" class="w-full h-full object-cover" fetchpriority="high"
+            decoding="async" />
+        <div
+            class="absolute inset-0 pointer-events-none bg-[linear-gradient(180deg,rgba(0,0,0,0.2)_0%,rgba(0,0,0,0)_79.33%)]">
+        </div>
     </section>
 
     <section class="section container project_cate">
@@ -134,11 +134,10 @@
                             <option>Đang thực hiện</option>
                             <option>Đang triển khai</option>
                         </select>
-                        <i
-                            class="fa-solid fa-chevron-down absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 text-xs"></i>
+                        <i class="fa-solid fa-chevron-down absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 text-xs"></i>
                     </div>
-                    <button
-                        class="bg-secondary cursor-pointer text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-red-700 transition">
+
+                    <button class="bg-secondary cursor-pointer text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-red-700 transition">
                         Tìm kiếm
                     </button>
                 </div>
@@ -146,12 +145,14 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-            <div data-animate="lift-in-stagger" class="flex flex-col h-full">
+
+            <a href="project_detail.html" data-animate="lift-in-stagger" class="flex flex-col h-full group">
                 <div class="aspect-3/2 overflow-hidden rounded-[24px] mb-4">
-                    <img src="resources/img/project/project-card-1.jpg" class="w-full h-full object-cover"
+                    <img src="resources/img/project/project-card-1.jpg"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         alt="Chung cư NOXH Eco Home 1">
                 </div>
-                <h3 class="text-2xl font-semibold text-primary mb-5 leading-9 min-h-18">
+                <h3 class="text-2xl font-semibold text-primary mb-5 leading-9 min-h-18 group-hover:text-secondary transition-colors duration-300">
                     Chung cư NOXH Eco Home 1
                 </h3>
                 <div class="text-base text-[#333333] space-y-2 grow">
@@ -159,49 +160,63 @@
                     <p><strong>Vị trí:</strong> Mặt tiền đường Trường Chinh, Phường Phú Mỹ, Hồ Chí Minh</p>
                     <p><strong>Quy mô dự án:</strong> 340 căn hộ</p>
                     <p><strong>Tiến độ:</strong> Đang nhận hồ sơ</p>
-                    <p>
-                        <a href="project_detail.html" class="font-semibold">
-                            Link giới thiệu dự án
-                        </a>
-                    </p>
                 </div>
-            </div>
-            <div data-animate="lift-in-stagger" class="flex flex-col h-full">
+            </a>
+
+            <a href="project_detail.html" data-animate="lift-in-stagger" class="flex flex-col h-full group">
                 <div class="aspect-3/2 overflow-hidden rounded-[24px] mb-4">
-                    <img src="resources/img/project/project-card-2.jpg" class="w-full h-full object-cover"
+                    <img src="resources/img/project/project-card-2.jpg"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         alt="The Light City">
                 </div>
-
-                <h3 class="text-2xl font-semibold text-primary mb-5 leading-[36px] min-h-[72px]">
+                <h3 class="text-2xl font-semibold text-primary mb-5 leading-[36px] min-h-[72px] group-hover:text-secondary transition-colors duration-300">
                     The Light City
                 </h3>
-
                 <div class="text-base text-[#333333] space-y-2 flex-grow">
                     <p><strong>Dòng sản phẩm:</strong> Chung cư</p>
                     <p><strong>Vị trí:</strong> Đường Chi Lăng, Phường Phước Thắng, Hồ Chí Minh</p>
                     <p><strong>Quy mô dự án:</strong> 49ha</p>
                     <p><strong>Tiến độ:</strong> Đang thực hiện</p>
                 </div>
-            </div>
+            </a>
 
-            <div data-animate="lift-in-stagger" class="flex flex-col h-full">
+            <a href="project_detail.html" data-animate="lift-in-stagger" class="flex flex-col h-full group">
                 <div class="aspect-3/2 overflow-hidden rounded-[24px] mb-4">
-                    <img src="resources/img/project/project-card-3.png" class="w-full h-full object-cover"
+                    <img src="resources/img/project/project-card-3.png"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         alt="Ecotown Phú Mỹ">
                 </div>
-
-                <h3 class="text-2xl font-semibold text-primary mb-5 leading-[36px] min-h-[72px]">
+                <h3 class="text-2xl font-semibold text-primary mb-5 leading-[36px] min-h-[72px] group-hover:text-secondary transition-colors duration-300">
                     Ecotown Phú Mỹ
                 </h3>
-
                 <div class="text-base text-[#333333] space-y-2 flex-grow">
                     <p><strong>Dòng sản phẩm:</strong> Khu đô thị</p>
                     <p><strong>Vị trí:</strong> Mặt tiền đường Trường Chinh, Phường Phú Mỹ, Hồ Chí Minh</p>
                     <p><strong>Quy mô dự án:</strong> Tổng diện tích 63.133,5m2</p>
                     <p><strong>Tiến độ:</strong> Đang triển khai</p>
                 </div>
-            </div>
+            </a>
 
+        </div>
+
+        <div class="pagination-wrapper flex justify-center items-center gap-3 mt-16" data-animate="reveal-up">
+            <a href="#" class="pagi-item">
+                <i class="fa-solid fa-chevron-left text-sm"></i>
+            </a>
+
+            <a href="#" class="pagi-item active">1</a>
+            <a href="#" class="pagi-item">2</a>
+            <a href="#" class="pagi-item">3</a>
+
+            <span class="pagi-item border-none shadow-none cursor-default text-gray-400">
+                ...
+            </span>
+
+            <a href="#" class="pagi-item">25</a>
+
+            <a href="#" class="pagi-item">
+                <i class="fa-solid fa-chevron-right text-sm"></i>
+            </a>
         </div>
     </section>
 
@@ -237,61 +252,67 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-
-            <div data-animate="lift-in-stagger" class="flex flex-col h-full">
+            <a href="project_detail.html" data-animate="lift-in-stagger" class="flex flex-col h-full group">
                 <div class="aspect-3/2 overflow-hidden rounded-[24px] mb-4">
-                    <img src="resources/img/project/project-card-4.jpg" class="w-full h-full object-cover"
+                    <img src="resources/img/project/project-card-4.jpg"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         alt="Fusion Suites Vũng Tàu">
                 </div>
-
-                <h3 class="text-2xl font-semibold text-primary mb-5 leading-9 min-h-[72px]">
+                <h3 class="text-2xl font-semibold text-primary mb-5 leading-9 min-h-[72px] transition-colors duration-300 group-hover:text-secondary">
                     Fusion Suites Vũng Tàu
                 </h3>
-
                 <div class="text-base text-[#333333] space-y-2 grow">
                     <p><strong>Dòng sản phẩm:</strong> Nghỉ dưỡng</p>
                     <p><strong>Vị trí:</strong> Đường Trương Công Định, Phường Vũng Tàu, Hồ Chí Minh</p>
                     <p><strong>Quy mô dự án:</strong> 171 phòng</p>
                     <p><strong>Tiến độ:</strong> Đã vận hành</p>
                 </div>
-            </div>
+            </a>
 
-            <div data-animate="lift-in-stagger" class="flex flex-col h-full">
+            <a href="project_detail.html" data-animate="lift-in-stagger" class="flex flex-col h-full group">
                 <div class="aspect-3/2 overflow-hidden rounded-[24px] mb-4">
-                    <img src="resources/img/project/project-card-1.jpg" class="w-full h-full object-cover"
+                    <img src="resources/img/project/project-card-1.jpg"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         alt="Khu du lịch Biển Đá Vàng">
                 </div>
-
-                <h3 class="text-2xl font-semibold text-primary mb-5 leading-9 min-h-[72px]">
+                <h3 class="text-2xl font-semibold text-primary mb-5 leading-9 min-h-[72px] transition-colors duration-300 group-hover:text-secondary">
                     Khu du lịch Biển Đá Vàng
                 </h3>
-
                 <div class="text-base text-[#333333] space-y-2 grow">
                     <p><strong>Dòng sản phẩm:</strong> Chung cư</p>
                     <p><strong>Vị trí:</strong> Đường Chi Lăng, Phường Phước Thắng, Hồ Chí Minh</p>
                     <p><strong>Quy mô dự án:</strong> 49ha</p>
                     <p><strong>Tiến độ:</strong> Đang thực hiện</p>
                 </div>
-            </div>
+            </a>
 
-            <div data-animate="lift-in-stagger" class="flex flex-col h-full">
+            <a href="project_detail.html" data-animate="lift-in-stagger" class="flex flex-col h-full group">
                 <div class="aspect-3/2 overflow-hidden rounded-[24px] mb-4">
-                    <img src="resources/img/project/project-card-2.jpg" class="w-full h-full object-cover"
+                    <img src="resources/img/project/project-card-2.jpg"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         alt="Khu du lịch sinh thái Antares Vũng Tàu">
                 </div>
-
-                <h3 class="text-2xl font-semibold text-primary mb-5 leading-9 min-h-[72px]">
+                <h3 class="text-2xl font-semibold text-primary mb-5 leading-9 min-h-[72px] transition-colors duration-300 group-hover:text-secondary">
                     Khu du lịch sinh thái Antares Vũng Tàu
                 </h3>
-
                 <div class="text-base text-[#333333] space-y-2 grow">
                     <p><strong>Dòng sản phẩm:</strong> Nghỉ dưỡng</p>
                     <p><strong>Vị trí:</strong> Phường Phước Thắng, Hồ Chí Minh</p>
                     <p><strong>Quy mô dự án:</strong> 234,4 ha</p>
                     <p><strong>Tiến độ:</strong> Sắp triển khai</p>
                 </div>
-            </div>
+            </a>
 
+        </div>
+
+        <div class="pagination-wrapper flex justify-center items-center gap-3 mt-16" data-animate="reveal-up">
+            <a href="#" class="pagi-item"><i class="fa-solid fa-chevron-left text-sm"></i></a>
+            <a href="#" class="pagi-item active">1</a>
+            <a href="#" class="pagi-item">2</a>
+            <a href="#" class="pagi-item">3</a>
+            <span class="pagi-item border-none shadow-none cursor-default text-gray-400">...</span>
+            <a href="#" class="pagi-item">25</a>
+            <a href="#" class="pagi-item"><i class="fa-solid fa-chevron-right text-sm"></i></a>
         </div>
     </section>
 
@@ -328,159 +349,166 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
 
-            <div data-animate="lift-in-stagger" class="flex flex-col h-full">
+            <a href="project_detail.html" data-animate="lift-in-stagger" class="flex flex-col h-full group">
                 <div class="aspect-3/2 overflow-hidden rounded-[24px] mb-4">
-                    <img src="resources/img/project/project-card-1.jpg" class="w-full h-full object-cover"
+                    <img src="resources/img/project/project-card-1.jpg"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         alt="Chung cư NOXH Eco Home 1">
                 </div>
-
-                <h3 class="text-2xl font-semibold text-primary mb-5 leading-9 min-h-[72px]">
+                <h3 class="text-2xl font-semibold text-primary mb-5 leading-9 min-h-18 group-hover:text-secondary transition-colors duration-300">
                     Chung cư NOXH Eco Home 1
                 </h3>
-
                 <div class="text-base text-[#333333] space-y-2 grow">
                     <p><strong>Dòng sản phẩm:</strong> Chung cư</p>
                     <p><strong>Vị trí:</strong> Mặt tiền đường Trường Chinh, Phường Phú Mỹ, Hồ Chí Minh</p>
                     <p><strong>Quy mô dự án:</strong> 340 căn hộ</p>
                     <p><strong>Tiến độ:</strong> Đang nhận hồ sơ</p>
                 </div>
-            </div>
+            </a>
 
-            <div data-animate="lift-in-stagger" class="flex flex-col h-full">
+            <a href="project_detail.html" data-animate="lift-in-stagger" class="flex flex-col h-full group">
                 <div class="aspect-3/2 overflow-hidden rounded-[24px] mb-4">
-                    <img src="resources/img/project/project-card-2.jpg" class="w-full h-full object-cover"
+                    <img src="resources/img/project/project-card-2.jpg"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         alt="The Light City">
                 </div>
-
-                <h3 class="text-2xl font-semibold text-primary mb-5 leading-9 min-h-[72px]">
+                <h3 class="text-2xl font-semibold text-primary mb-5 leading-[36px] min-h-[72px] group-hover:text-secondary transition-colors duration-300">
                     The Light City
                 </h3>
-
-                <div class="text-base text-[#333333] space-y-2 grow">
+                <div class="text-base text-[#333333] space-y-2 flex-grow">
                     <p><strong>Dòng sản phẩm:</strong> Chung cư</p>
                     <p><strong>Vị trí:</strong> Đường Chi Lăng, Phường Phước Thắng, Hồ Chí Minh</p>
                     <p><strong>Quy mô dự án:</strong> 49ha</p>
                     <p><strong>Tiến độ:</strong> Đang thực hiện</p>
                 </div>
-            </div>
+            </a>
 
-            <div data-animate="lift-in-stagger" class="flex flex-col h-full">
+            <a href="project_detail.html" data-animate="lift-in-stagger" class="flex flex-col h-full group">
                 <div class="aspect-3/2 overflow-hidden rounded-[24px] mb-4">
-                    <img src="resources/img/project/project-card-3.png" class="w-full h-full object-cover"
+                    <img src="resources/img/project/project-card-3.png"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         alt="Ecotown Phú Mỹ">
                 </div>
-
-                <h3 class="text-2xl font-semibold text-primary mb-5 leading-9 min-h-[72px]">
+                <h3 class="text-2xl font-semibold text-primary mb-5 leading-[36px] min-h-[72px] group-hover:text-secondary transition-colors duration-300">
                     Ecotown Phú Mỹ
                 </h3>
-
-                <div class="text-base text-[#333333] space-y-2 grow">
+                <div class="text-base text-[#333333] space-y-2 flex-grow">
                     <p><strong>Dòng sản phẩm:</strong> Khu đô thị</p>
                     <p><strong>Vị trí:</strong> Mặt tiền đường Trường Chinh, Phường Phú Mỹ, Hồ Chí Minh</p>
                     <p><strong>Quy mô dự án:</strong> Tổng diện tích 63.133,5m2</p>
                     <p><strong>Tiến độ:</strong> Đang triển khai</p>
                 </div>
-            </div>
+            </a>
 
+        </div>
+
+        <div class="pagination-wrapper flex justify-center items-center gap-3 mt-16" data-animate="reveal-up">
+            <a href="#" class="pagi-item"><i class="fa-solid fa-chevron-left text-sm"></i></a>
+            <a href="#" class="pagi-item active">1</a>
+            <a href="#" class="pagi-item">2</a>
+            <a href="#" class="pagi-item">3</a>
+            <span class="pagi-item border-none shadow-none cursor-default text-gray-400">...</span>
+            <a href="#" class="pagi-item">25</a>
+            <a href="#" class="pagi-item"><i class="fa-solid fa-chevron-right text-sm"></i></a>
         </div>
     </section>
 
     <footer id="footer" class="site-footer" itemtype="" itemscope>
         <div id="footer-main-wrap" class="footer-main-wrap bg-primary text-white relative overflow-hidden">
-          <img src="/resources/img/bg-footer-left.png" class="absolute left-[-100px] xl:left-[-120px] 2xl:left-[-140px] 3xl:left-0 top-0 pointer-events-none select-none z-0 w-[120px] md:w-[160px] xl:w-auto" alt="">
-          <img src="/resources/img/bg-footer-right.png" class="absolute right-0 bottom-0 pointer-events-none select-none z-0 w-[240px] md:w-[320px] xl:w-auto" alt="">
-          <div class="container pt-16 relative z-10">
-            <div class="footer-brand-overlay text-center overflow-hidden">
-              <span
-                class="font-semibold uppercase tracking-widest text-transparent block leading-none select-none
-                      text-[140px] 2xl:text-[180px] xl:text-[160px] lg:text-[130px] md:text-[100px] text-[72px]"
-                style="-webkit-text-stroke: 1px rgba(255,255,255,0.2);">
-                hodeco
-              </span>
+            <img src="/resources/img/bg-footer-left.png" class="absolute left-[-60px] md:left-[-100px] xl:left-[-120px] 2xl:left-[-140px] 3xl:left-0 top-0 pointer-events-none select-none z-0 w-[80px] md:w-[160px] xl:w-auto" alt="">
+            <img src="/resources/img/bg-footer-right.png" class="absolute right-0 bottom-0 pointer-events-none select-none z-0 w-[160px] md:w-[320px] xl:w-auto" alt="">
+
+            <div class="container pt-10 md:pt-16 relative z-10">
+                <div class="footer-brand-overlay text-center overflow-hidden">
+                    <span class="font-semibold uppercase tracking-widest text-transparent block leading-none select-none
+                        text-[56px] md:text-[100px] lg:text-[130px] xl:text-[160px] 2xl:text-[180px]"
+                        style="-webkit-text-stroke: 1px rgba(255,255,255,0.2);">
+                        hodeco
+                    </span>
+                </div>
+
+                <div class="footer-address-container p-6 md:p-12 rounded-2xl md:rounded-3xl border border-white/20 bg-white/5 backdrop-blur-sm relative">
+                    <div class="footer-address-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-x-12">
+
+                        <div class="address-item flex flex-col relative">
+                            <h4 class="address-title text-base md:text-lg font-bold uppercase mb-3 md:mb-4">Trụ sở chính</h4>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-start gap-3">
+                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm shrink-0"></i>
+                                    <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-phone text-white/60 text-sm shrink-0"></i>
+                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
+                                </div>
+                            </div>
+                            <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                            <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-8"></div>
+                        </div>
+
+                        <div class="address-item flex flex-col relative">
+                            <h4 class="address-title text-base md:text-lg font-bold uppercase mb-3 md:mb-4">Chi nhánh Gò Vấp</h4>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-start gap-3">
+                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm shrink-0"></i>
+                                    <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-phone text-white/60 text-sm shrink-0"></i>
+                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
+                                </div>
+                            </div>
+                            <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                            <div class="block sm:hidden w-full h-[1px] bg-white/10 mt-8"></div>
+                        </div>
+
+                        <div class="address-item flex flex-col relative">
+                            <h4 class="address-title text-base md:text-lg font-bold uppercase mb-3 md:mb-4">Chi nhánh Bình Thạnh</h4>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-start gap-3">
+                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm shrink-0"></i>
+                                    <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-phone text-white/60 text-sm shrink-0"></i>
+                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
+                                </div>
+                            </div>
+                            <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
+                            <div class="block sm:hidden w-full h-[1px] bg-white/10 mt-8"></div>
+                        </div>
+
+                        <div class="address-item flex flex-col relative">
+                            <h4 class="address-title text-base md:text-lg font-bold uppercase mb-3 md:mb-4">Chi nhánh Bình Tân</h4>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-start gap-3">
+                                    <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm shrink-0"></i>
+                                    <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-phone text-white/60 text-sm shrink-0"></i>
+                                    <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
-            <div class="footer-address-container p-8 md:p-12 rounded-3xl border border-white/20 bg-white/5 backdrop-blur-sm relative">
-              <div class="footer-address-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 md:gap-x-12">
-
-                <div class="address-item flex flex-col relative">
-                  <h4 class="address-title text-lg font-bold uppercase mb-4">Trụ sở chính</h4>
-                  <div class="flex flex-col gap-3">
-                    <div class="flex items-start gap-3">
-                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
-                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
+            <div class="footer-credit py-6 md:py-8 relative z-10">
+                <div class="container flex flex-col items-center justify-center gap-4 text-center">
+                    <div class="footer-copyright text-xs md:text-sm text-white">
+                        <span class="copyright">© 2026 Hodeco,&nbsp;</span>
+                        <span class="hd">
+                            design by
+                            <a class="hover:text-white transition-colors" href="https://webhd.vn/" target="_blank" rel="noopener noreferrer nofollow">
+                                HD Agency
+                            </a>
+                        </span>
                     </div>
-                    <div class="flex items-center gap-3">
-                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
-                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
-                    </div>
-                  </div>
-                  <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
-                  <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
                 </div>
-
-                <div class="address-item flex flex-col relative">
-                  <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Gò Vấp</h4>
-                  <div class="flex flex-col gap-3">
-                    <div class="flex items-start gap-3">
-                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
-                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
-                    </div>
-                    <div class="flex items-center gap-3">
-                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
-                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
-                    </div>
-                  </div>
-                  <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
-                  <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
-                </div>
-
-                <div class="address-item flex flex-col relative">
-                  <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Thạnh</h4>
-                  <div class="flex flex-col gap-3">
-                    <div class="flex items-start gap-3">
-                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
-                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
-                    </div>
-                    <div class="flex items-center gap-3">
-                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
-                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
-                    </div>
-                  </div>
-                  <div class="hidden lg:block absolute -right-6 top-0 bottom-0 w-[1px] bg-white/10"></div>
-                  <div class="block lg:hidden w-full h-[1px] bg-white/10 mt-10"></div>
-                </div>
-
-                <div class="address-item flex flex-col relative">
-                  <h4 class="address-title text-lg font-bold uppercase mb-4">Chi nhánh Bình Tân</h4>
-                  <div class="flex flex-col gap-3">
-                    <div class="flex items-start gap-3">
-                      <i class="fa-solid fa-location-dot mt-1 text-white/60 text-sm"></i>
-                      <p class="text-sm leading-relaxed text-white/90">456 Trần Hưng Đạo, Đà Nẵng</p>
-                    </div>
-                    <div class="flex items-center gap-3">
-                      <i class="fa-solid fa-phone text-white/60 text-sm"></i>
-                      <a href="tel:+842834567890" class="text-sm hover:text-white text-white/90">+84 28 3456 7890</a>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
             </div>
-          </div>
-
-          <div class="footer-credit py-8 relative z-10">
-            <div class="container flex flex-col items-center justify-center gap-4 text-center">
-              <div class="footer-copyright text-sm text-white">
-                <span class="copyright">© 2026 Hodeco,&nbsp;</span>
-                <span class="hd">
-                  design by
-                  <a class="hover:text-white transition-colors" href="https://webhd.vn/" target="_blank" rel="noopener noreferrer nofollow">
-                    HD Agency
-                  </a>
-                </span>
-              </div>
-            </div>
-          </div>
 
         </div>
     </footer>
