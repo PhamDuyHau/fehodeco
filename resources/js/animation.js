@@ -222,23 +222,18 @@ function initHero() {
     if (bottom)    { gsap.killTweensOf(bottom);    gsap.set(bottom,    { opacity: 0, y: 0 }); }
   }
 
-  bannerSection.querySelectorAll(".swiper-slide").forEach((slide) => hideText(slide));
-
   const waitForSwiper = setInterval(() => {
-    const swiper = swiperEl.swiper;
-    if (!swiper) return;
-    clearInterval(waitForSwiper);
+      const swiper = swiperEl.swiper;
+      if (!swiper) return;
+      clearInterval(waitForSwiper);
 
-    animateImg(swiper.slides[swiper.activeIndex]);
-    animateTextIn(swiper.slides[swiper.activeIndex], 0.4);
-
-    swiper.on("slideChangeTransitionStart", () => {
-      const prev = swiper.slides[swiper.previousIndex];
-      const next = swiper.slides[swiper.activeIndex];
-      hideText(prev);
-      animateImg(next);
-      animateTextIn(next, 0.35);
-    });
+      swiper.on("slideChangeTransitionStart", () => {
+          const prev = swiper.slides[swiper.previousIndex];
+          const next = swiper.slides[swiper.activeIndex];
+          hideText(prev);
+          animateImg(next);
+          animateTextIn(next, 0.35);
+      });
   }, 50);
 
   if (!enableParallax) return;
@@ -334,12 +329,12 @@ function initRoadAnimation() {
   const path = document.querySelector("#motionPath");
   if (!path) return;
 
-  const slots = [0, 1, 2, 3, 4, 5, 6].map((i) => document.querySelector(`#dot-slot-${i}`));
-  const labels = [0, 1, 2, 3, 4, 5, 6].map((i) => document.querySelector(`#label-slot-${i}`));
+  const slots = [0, 1, 2, 3, 4, 5, 6, 7].map((i) => document.querySelector(`#dot-slot-${i}`));
+  const labels = [0, 1, 2, 3, 4, 5, 6, 7].map((i) => document.querySelector(`#label-slot-${i}`));
 
   if (!slots[0] || !labels[0]) return;
 
-  const endPositions = [0.23, 0.34, 0.44, 0.54, 0.73, 0.80, 0.93];
+  const endPositions = [0.15, 0.30, 0.43, 0.51, 0.60, 0.69, 0.785, 0.89];
 
   slots.forEach((slot) => {
     gsap.set(slot, {

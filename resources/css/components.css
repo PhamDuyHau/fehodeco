@@ -3,28 +3,18 @@
   @apply py-10;
 }
 
-#introSvg path {
-  fill: transparent;
-  stroke: transparent;
+#introSvg > g[transform] {
+  transform-origin: center;
+  transform: scale(0.2);
+}
+
+#introSvg defs mask g {
+  transform-origin: center;
+  transform: scale(0.2);
 }
 
 #intro-overlay.fade-out {
   opacity: 0;
-}
-
-body.intro-playing .home-banner {
-  opacity: 0;
-  transition: opacity 0.8s ease;
-}
-
-.home-banner {
-  transition: opacity 0.8s ease;
-}
-
-#intro-overlay svg {
-  width: 80vw;
-  max-width: 200px;
-  height: auto;
 }
 
 @keyframes draw {
@@ -41,13 +31,19 @@ body.intro-playing .home-banner {
   @apply flex items-center gap-6 xl:gap-8;
 
   & li a {
-    @apply text-white font-bold text-[15px] uppercase transition-colors duration-300 no-underline;
+    @apply relative text-white font-bold text-[15px] uppercase transition-all duration-300;
+
     &::after {
-      content: none;
+      content: '';
+      @apply absolute bottom-[-6px] left-1/2 -translate-x-1/2 w-0 h-[2px] bg-white opacity-0 transition-all duration-300;
     }
 
     &:hover {
-      @apply text-secondary no-underline;
+      @apply text-blue-200;
+
+      &::after {
+        @apply w-full opacity-100;
+      }
     }
   }
 }
@@ -105,7 +101,7 @@ body.intro-playing .home-banner {
 }
 
 .heading-title {
-  @apply text-[24px] md:text-[32px] lg:text-[44px] font-bold text-primary uppercase mt-8;
+  @apply text-[24px] md:text-[32px] lg:text-[44px] font-bold text-primary uppercase mt-4;
 }
 
 .activity-btn {
@@ -179,51 +175,7 @@ body.intro-playing .home-banner {
   }
 }
 
-.section.home-activity {
-  .activity-tab-wrap {
-    @apply flex flex-wrap justify-center gap-3 mb-10;
-  }
 
-  .activity-tab-btn {
-    @apply cursor-pointer px-6 py-3 rounded-full text-[14px] font-medium border border-slate-300 text-slate-700 bg-transparent transition-colors;
-    
-    &.activity-btn-active {
-      @apply bg-secondary text-white border-transparent;
-    }
-  }
-
-  .activity-layout {
-    @apply grid grid-cols-1 lg:grid-cols-[60%_40%] lg:items-center;
-  }
-
-  .activity-media {
-    @apply w-full relative z-10 mb-[-20px] lg:mb-0 lg:translate-x-[15px];
-  }
-
-  .activity-media-img {
-    @apply w-full h-auto object-cover rounded-[20px] shadow-sm;
-  }
-
-  .activity-card {
-    @apply px-0 lg:px-12 py-8 lg:py-24 
-          relative flex flex-col 
-          items-center text-center  
-          lg:items-start lg:text-left
-          lg:-translate-x-[15px];
-  }
-
-  .activity-title {
-    @apply text-[24px] lg:text-[28px] font-bold mb-4 text-slate-800 uppercase tracking-wide leading-tight;
-  }
-
-  .activity-description {
-    @apply text-[15px] leading-[26px] text-slate-600 mb-6;
-  }
-
-  .activity-action-btn {
-    @apply px-8 py-3 bg-[#0A3B8C] text-white text-[14px] font-medium rounded-full hover:bg-blue-900 transition-colors inline-block text-center whitespace-nowrap;
-  }
-}
 
 .section.home-project {
   .project-slider {
@@ -257,6 +209,7 @@ body.intro-playing .home-banner {
     @apply top-1/2 -translate-y-1/2 left-[5%] lg:left-[20%] w-[60%] lg:w-[58%] h-[80%] lg:h-[88%] rounded-[24px] shadow-2xl z-10;
   }
 }
+
 
 .section.home-partner {
   .partner-interactive-card {
@@ -300,13 +253,12 @@ body.intro-playing .home-banner {
 
     img {
       @apply absolute inset-0 h-full w-full object-cover;
-      transform: scale(1);
-      transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transition: transform 0.7s ease;
       will-change: transform;
     }
 
     &:hover img {
-      transform: scale(1.08);
+      @apply scale-110;
     }
 
     .ceo-overlay {
@@ -365,11 +317,11 @@ body.intro-playing .home-banner {
   }
 
   .dual-bridge {
-    @apply relative pt-0 md:pt-16 md:col-span-2;
+    @apply relative pt-16 md:col-span-2;
 
     &::before {
       content: "";
-      @apply hidden md:block absolute top-8 -left-3 w-[105%] h-85 z-0;
+      @apply absolute top-8 -left-3 w-[105%] h-85 z-0;
       background-image: url("resources/img/svg/dual-arrow-short.svg");
       background-repeat: no-repeat;
       background-position: center top;
